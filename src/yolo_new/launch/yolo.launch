@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+  <rosparam command="load" file="$(find table_arm)/config/ik.yaml" />
+  <!-- 开启RGB摄像头  -->
+  <include file="$(find usb_cam)/launch/usb_cam-test.launch" />
+
+  <include file='$(find table_streeing_arm_moveit_config)/launch/demo.launch' />
+
+  <include file="$(find table_arm)/launch/base_serial.launch" />
+
+  <node name='pick_color' pkg="yolo_new" type="yolo_execute" output="screen">
+  </node>
+ 
+ <node name='yolo_detect' pkg="yolo_new" type="find_color.py" output="screen">
+  <param name='x_offset' value='0.00' type='double' />
+  <param name='y_offset' value='0.006' type='double' />
+  </node>
+
+  <!-- Load Parameter -->
+  
+  <param name="yolov5_path"       value="$(find yolov5_ros)/yolov5"/>
+  <param name="use_cpu"           value="true" />
+
+  <!-- Start yolov5 and ros wrapper -->
+  <node pkg="yolov5_ros" type="yolo_v5.py" name="yolov5_ros" output="screen" >
+    <param name="weight_path"       value="$(find yolov5_ros)/weights/best_v6.pt"/>
+    <param name="image_topic"       value="/usb_cam/image_raw" />
+    <param name="pub_topic"         value="/yolov5/BoundingBoxes" />
+    <param name="camera_frame"       value="camera_color_frame"/>
+    <param name="conf"              value="0.6" />
+  </node>
+
+</launch>

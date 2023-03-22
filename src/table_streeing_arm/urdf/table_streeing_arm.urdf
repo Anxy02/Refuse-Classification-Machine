@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="table_streeing_arm">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0097006 -0.0059776 0.025103"
+        rpy="0 0 0" />
+      <mass
+        value="0.36024" />
+      <inertia
+        ixx="0.00067894"
+        ixy="-7.1727E-05"
+        ixz="-0.00020981"
+        iyy="0.0019957"
+        iyz="2.0787E-05"
+        izz="0.0021275" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://table_streeing_arm/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://table_streeing_arm/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="0.0066789 0.00061793 0.0064455"
+        rpy="0 0 0" />
+      <mass
+        value="0.05865" />
+      <inertia
+        ixx="2.1409E-05"
+        ixy="-2.9508E-07"
+        ixz="-2.7202E-06"
+        iyy="2.3067E-05"
+        iyz="-2.9756E-08"
+        izz="2.9134E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://table_streeing_arm/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://table_streeing_arm/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="revolute">
+    <origin
+      xyz="0.072548 -3.1954E-05 0.083"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="100"
+      velocity="3" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="4.0473E-16 0.024507 0.0525"
+        rpy="0 0 0" />
+      <mass
+        value="0.018296" />
+      <inertia
+        ixx="3.0233E-05"
+        ixy="1.4958E-20"
+        ixz="-1.7717E-19"
+        iyy="2.0571E-05"
+        iyz="-1.1753E-19"
+        izz="1.1505E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://table_streeing_arm/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://table_streeing_arm/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="revolute">
+    <origin
+      xyz="0.0005 -0.0285 0.0145"
+      rpy="0 0 0" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="100"
+      velocity="3" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="-0.001124 0.029687 0.022151"
+        rpy="0 0 0" />
+      <mass
+        value="0.049761" />
+      <inertia
+        ixx="4.8731E-05"
+        ixy="1.7297E-07"
+        ixz="-7.7563E-07"
+        iyy="4.0019E-05"
+        iyz="-1.4349E-06"
+        izz="1.3659E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://table_streeing_arm/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://table_streeing_arm/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="revolute">
+    <origin
+      xyz="0 0 0.105"
+      rpy="0 0 0" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="100"
+      velocity="3" />
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="-0.023971 0.030448 0.0096738"
+        rpy="0 0 0" />
+      <mass
+        value="0.091895" />
+      <inertia
+        ixx="4.2063E-05"
+        ixy="1.7444E-06"
+        ixz="-1.9067E-05"
+        iyy="9.3754E-05"
+        iyz="-3.3549E-06"
+        izz="8.5724E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://table_streeing_arm/meshes/link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://table_streeing_arm/meshes/link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_4"
+    type="revolute">
+    <origin
+      xyz="0.001 0.0015 0.0975"
+      rpy="0 0 0" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.57"
+      upper="1.0"
+      effort="100"
+      velocity="3" />
+  </joint>
+  <link
+    name="link_5">
+    <inertial>
+      <origin
+        xyz="0.017024 -0.0018442 0.03644"
+        rpy="0 0 0" />
+      <mass
+        value="0.043121" />
+      <inertia
+        ixx="1.2402E-05"
+        ixy="7.0394E-07"
+        ixz="-1.6181E-06"
+        iyy="1.1921E-05"
+        iyz="1.7177E-07"
+        izz="1.7218E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://table_streeing_arm/meshes/link_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://table_streeing_arm/meshes/link_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_5"
+    type="revolute">
+    <origin
+      xyz="-0.027 0.027 0.042"
+      rpy="0 0 0" />
+    <parent
+      link="link_4" />
+    <child
+      link="link_5" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="100"
+      velocity="3" />
+  </joint>
+  <link
+    name="link_6">
+    <inertial>
+      <origin
+        xyz="0.0025 0.0056473 0.006408"
+        rpy="0 0 0" />
+      <mass
+        value="0.001976" />
+      <inertia
+        ixx="3.9985E-07"
+        ixy="-6.0525E-21"
+        ixz="-8.2462E-21"
+        iyy="1.9537E-07"
+        iyz="-1.5175E-07"
+        izz="2.0744E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://table_streeing_arm/meshes/link_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://table_streeing_arm/meshes/link_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_6"
+    type="revolute">
+    <origin
+      xyz="-0.0085 0.0125 0.0386"
+      rpy="0 0 0" />
+    <parent
+      link="link_5" />
+    <child
+      link="link_6" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.9"
+      upper="0.9"
+      effort="100"
+      velocity="3" />
+  </joint>
+  <link
+    name="link_10">
+    <inertial>
+      <origin
+        xyz="0.011605 0.0059668 0.02039"
+        rpy="0 0 0" />
+      <mass
+        value="0.0097376" />
+      <inertia
+        ixx="4.1487E-06"
+        ixy="-1.9122E-08"
+        ixz="-5.1925E-09"
+        iyy="3.9123E-06"
+        iyz="7.1057E-07"
+        izz="1.0119E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://table_streeing_arm/meshes/link_10.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://table_streeing_arm/meshes/link_10.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_10"
+    type="revolute">
+    <origin
+      xyz="-0.0043 0.024471 0.025023"
+      rpy="0 0 0" />
+    <parent
+      link="link_6" />
+    <child
+      link="link_10" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.9"
+      upper="0.9"
+      effort="100"
+      velocity="3" />
+  </joint>
+  <link
+    name="link_7">
+    <inertial>
+      <origin
+        xyz="0.00073507 -0.0036936 0.0043613"
+        rpy="0 0 0" />
+      <mass
+        value="0.0029711" />
+      <inertia
+        ixx="4.9451E-07"
+        ixy="-8.0667E-09"
+        ixz="9.525E-09"
+        iyy="2.6231E-07"
+        iyz="1.738E-07"
+        izz="2.5861E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://table_streeing_arm/meshes/link_7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://table_streeing_arm/meshes/link_7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_7"
+    type="revolute">
+    <origin
+      xyz="-0.006 -0.0125 0.0386"
+      rpy="0 0 0" />
+    <parent
+      link="link_5" />
+    <child
+      link="link_7" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.9"
+      upper="0.9"
+      effort="100"
+      velocity="3" />
+  </joint>
+  <link
+    name="link_11">
+    <inertial>
+      <origin
+        xyz="0.011605 -0.0064719 0.020479"
+        rpy="0 0 0" />
+      <mass
+        value="0.0097376" />
+      <inertia
+        ixx="4.1448E-06"
+        ixy="1.8986E-08"
+        ixz="-5.1676E-09"
+        iyy="3.9269E-06"
+        iyz="-6.7081E-07"
+        izz="9.935E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://table_streeing_arm/meshes/link_11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://table_streeing_arm/meshes/link_11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_11"
+    type="revolute">
+    <origin
+      xyz="-0.0068 -0.024099 0.025382"
+      rpy="0 0 0" />
+    <parent
+      link="link_7" />
+    <child
+      link="link_11" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.9"
+      upper="0.9"
+      effort="100"
+      velocity="3" />
+  </joint>
+  <link
+    name="link_8">
+    <inertial>
+      <origin
+        xyz="0.0083 0.012951 0.011812"
+        rpy="0 0 0" />
+      <mass
+        value="0.0010878" />
+      <inertia
+        ixx="1.7192E-07"
+        ixy="-2.6483E-16"
+        ixz="-2.7081E-16"
+        iyy="1.2153E-07"
+        iyz="-8.3002E-08"
+        izz="1.1783E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://table_streeing_arm/meshes/link_8.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://table_streeing_arm/meshes/link_8.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_8"
+    type="revolute">
+    <origin
+      xyz="-0.0088 0.032703 0.031247"
+      rpy="0 0 0" />
+    <parent
+      link="link_5" />
+    <child
+      link="link_8" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.9"
+      upper="0.9"
+      effort="100"
+      velocity="3" />
+  </joint>
+  <link
+    name="link_9">
+    <inertial>
+      <origin
+        xyz="0.0083 -0.012775 0.012002"
+        rpy="0 0 0" />
+      <mass
+        value="0.0010878" />
+      <inertia
+        ixx="1.7192E-07"
+        ixy="1.5085E-21"
+        ixz="-6.9214E-21"
+        iyy="1.2398E-07"
+        iyz="8.2911E-08"
+        izz="1.1538E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://table_streeing_arm/meshes/link_9.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://table_streeing_arm/meshes/link_9.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_9"
+    type="revolute">
+    <origin
+      xyz="-0.0088 -0.032703 0.031247"
+      rpy="0 0 0" />
+    <parent
+      link="link_5" />
+    <child
+      link="link_9" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.9"
+      upper="0.9"
+      effort="100"
+      velocity="3" />
+  </joint>
+</robot>

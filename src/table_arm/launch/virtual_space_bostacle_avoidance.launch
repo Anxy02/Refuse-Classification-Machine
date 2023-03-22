@@ -1,0 +1,7 @@
+<launch>
+
+  <include file='$(find table_streeing_arm_moveit_config)/launch/demo.launch' />
+
+  <include file="$(find table_arm)/launch/base_serial.launch" />
+
+</launch>

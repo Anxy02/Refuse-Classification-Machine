@@ -1,0 +1,11 @@
+<launch>
+    <rosparam command="load" file="$(find table_arm)/config/ik.yaml" />
+  <!-- 开启RGB摄像头  -->
+  <include file="$(find table_arm)/launch/ar.launch" />
+
+  <include file='$(find table_streeing_arm_moveit_config)/launch/demo.launch' />
+
+  <include file="$(find table_arm)/launch/base_serial.launch" />
+
+  <node name='pick_ar' pkg="table_arm" type="ar_label_stack" output="screen"/>
+</launch>

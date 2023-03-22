@@ -1,0 +1,14 @@
+<launch>
+  <!--设置一些静态TF坐标关系-->
+    <node pkg="tf" type="static_transform_publisher" name="base_to_link" args="0 0 0 0 0 0 base_footprint base_link 100" />
+    <node pkg="tf" type="static_transform_publisher" name="base_to_gyro" args="0 0 0 0 0 0 base_footprint gyro_link 100" />
+
+  <!--打开节点wheeltec_robot，初始化串口等操作-->
+    <node pkg="table_arm" type="wheeltec_table_arm" name="wheeltec_table_arm" respawn="true">
+    <param name="usart_port_name"    type="string" value="/dev/wheeltec_controller"/>  
+    <param name="serial_baud_rate"   type="int"    value="115200"/>
+  </node>
+</launch>
+
+
+

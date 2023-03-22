@@ -1,0 +1,8 @@
+prefix=/home/moyu/wheeltec_arm/install
+
+Name: yolov5_ros_msgs
+Description: Description of yolov5_ros_msgs
+Version: 1.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

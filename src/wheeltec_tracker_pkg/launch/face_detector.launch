@@ -1,0 +1,13 @@
+<launch>
+    <node pkg="wheeltec_tracker_pkg" name="face_detector" type="face_decetor.py" output="screen">
+        <remap from="input_rgb_image" to="/usb_cam/image_raw" />
+        <rosparam>
+            haar_scaleFactor: 1.2
+            haar_minNeighbors: 2
+            haar_minSize: 40
+            haar_maxSize: 60
+        </rosparam>
+        <param name="cascade_1" value="$(find wheeltec_tracker_pkg)/data/haarcascade_frontalface_alt.xml" />
+        <param name="cascade_2" value="$(find wheeltec_tracker_pkg)/data/haarcascade_profileface.xml" />
+    </node>
+</launch>

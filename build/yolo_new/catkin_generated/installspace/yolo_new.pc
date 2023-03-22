@@ -1,0 +1,8 @@
+prefix=/home/moyu/wheeltec_arm/install
+
+Name: yolo_new
+Description: Description of yolo_new
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

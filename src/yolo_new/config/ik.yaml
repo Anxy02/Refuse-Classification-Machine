@@ -1,0 +1,11 @@
+auxiliary_angle: 0.20
+link_a: 0.105
+link_b: 0.100
+link_c: 0.170
+link_h: 0.105
+
+ar_x_offset: 0.00
+ar_y_offset: 0.00
+
+color_x_offset: 0.000
+color_y_offset: 0.001

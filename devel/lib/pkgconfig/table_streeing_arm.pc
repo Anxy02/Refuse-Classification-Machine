@@ -1,0 +1,8 @@
+prefix=/home/moyu/wheeltec_arm/devel
+
+Name: table_streeing_arm
+Description: Description of table_streeing_arm
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

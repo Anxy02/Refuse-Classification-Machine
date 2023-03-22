@@ -1,0 +1,10 @@
+<launch>
+  <!-- 开启机器人底层相关节点  -->
+  <include file="$(find table_arm)/launch/base_serial.launch" />
+  <!-- 开启RGB摄像头  -->
+  <include file="$(find usb_cam)/launch/usb_cam-test.launch" />
+  <!-- 开启gesture节点  -->
+  <node name="gesture_recognition" pkg="wheeltec_tracker_pkg" type="gesture_recognition.py"  output="screen"/>
+  <node name="gesture_recognition_execute" pkg="wheeltec_tracker_pkg" type="gesture_recognition_execute" output="screen"/>
+  <include file='$(find table_streeing_arm_moveit_config)/launch/demo.launch' />
+</launch>

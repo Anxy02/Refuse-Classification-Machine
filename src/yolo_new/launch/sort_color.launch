@@ -1,0 +1,18 @@
+<launch>
+  <rosparam command="load" file="$(find table_arm)/config/ik.yaml" />
+  <!-- 开启RGB摄像头  -->
+  <include file="$(find usb_cam)/launch/usb_cam-test.launch" />
+
+  <include file='$(find table_streeing_arm_moveit_config)/launch/demo.launch' />
+
+  <include file="$(find table_arm)/launch/base_serial.launch" />
+
+  <node name='pick_color' pkg="table_arm" type="color_sort_execute" output="screen">
+  </node>
+ 
+ <node name='find_color' pkg="table_arm" type="find_color.py" output="screen">
+  <param name='x_offset' value='0.00' type='double' />
+  <param name='y_offset' value='0.006' type='double' />
+  </node>
+
+</launch>

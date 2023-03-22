@@ -1,0 +1,11 @@
+<launch>
+  <include file='$(find table_streeing_arm_moveit_config)/launch/demo.launch' />
+  <include file="$(find usb_cam)/launch/usb_cam-test.launch" />
+  <include file="$(find table_arm)/launch/base_serial.launch" />
+  <!--打开节点wheeltec_robot，初始化串口等操作-->
+    <node pkg="table_arm" type="arm_pose_init" name="arm_pose_init" respawn="true" output="screen">
+    <param name="usart_port_name"    type="string" value="/dev/wheeltec_controller"/>  
+    <param name="serial_baud_rate"   type="int"    value="115200"/>
+  </node>
+
+</launch>

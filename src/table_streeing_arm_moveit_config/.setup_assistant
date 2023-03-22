@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: table_streeing_arm
+    relative_path: urdf/table_streeing_arm.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/table_streeing_arm.srdf
+  CONFIG:
+    author_name: passoni
+    author_email: passoni@163.com
+    generated_timestamp: 1625639745

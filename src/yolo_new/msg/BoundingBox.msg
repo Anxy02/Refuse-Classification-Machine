@@ -1,0 +1,10 @@
+float64 probability
+int64 xmin
+int64 ymin
+int64 xmax
+int64 ymax
+int16 num
+float64 distance
+string Class
+int64 xmid
+int64 ymid

@@ -1,0 +1,25 @@
+<launch>
+  <!-- 开启机器人底层相关节点  -->
+  <!-- <include file="$(find table_arm)/launch/base_serial.launch" />  -->
+  <!-- 开启RGB摄像头  -->
+  <include file="$(find usb_cam)/launch/usb_cam-test.launch" />
+  <!-- 开启色块识别节点  -->
+  <node name="color_decetor" pkg="wheeltec_tracker_pkg" type="visualTracker.py" output="screen">
+    <param name ="verticalAngle" value="0.5" type="double" />
+    <param name ="horizontalAngle" value="0.08" type="double" />
+    <param name ="pictureHeight" value="480" type="double" />
+    <param name ="pictureWidth" value="640" type="double" />
+
+    <param name ="x_bias" value="0.9851310701631576" type="double" />
+    <param name ="y_bias" value="1.024100854788955" type="double" />
+  </node>
+  <!-- 开启色块追踪节点  -->
+  <node name="color_follower" pkg="wheeltec_tracker_pkg" type="color_detector.py">
+    <param name ="Kp_x" value="1.4" type="double" />
+    <param name ="Kp_y" value="1.4" type="double" />
+    <param name ="scope_min" value="12" type="double" />
+    <param name ="scope_max" value="15" type="double" />
+  </node>
+
+  <node name="help_control" pkg="table_arm" type="help_control"/>
+</launch>

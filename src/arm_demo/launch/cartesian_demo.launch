@@ -1,0 +1,8 @@
+<launch>
+  <!-- 开启机器人底层相关节点  -->
+  <node name='base_serial' pkg="table_arm" type="wheeltec_table_arm" output="screen"/>
+
+  <include file='$(find table_streeing_arm_moveit_config)/launch/demo.launch' />
+  <!-- 开启机械臂例程的 节点  -->
+  <node name='cartesian_demo' pkg="arm_demo" type="arm_cartesian_demo" output="screen"/>
+</launch>

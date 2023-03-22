@@ -1,0 +1,27 @@
+<launch>
+  <node name='visual_tracker' pkg="wheeltec_arm_pick" type="visualTracker.py">
+    <!-- color or the target in HSV color space -->
+    <rosparam ns='target'>
+      upper : [0, 43, 46]
+      lower : [10, 255, 255]
+      red_upper : [0, 43, 46]
+      red_lower : [10, 255, 255]
+      green_upper : [35, 43, 46]
+      green_lower : [77, 255, 255]
+      blue_upper : [100, 43, 46]
+      blue_lower : [124, 255, 255]
+      yellow_upper : [26, 43, 46]
+      yellow_lower : [34, 255, 255]
+      black_upper : [0, 0, 0]
+      black_lower : [180, 255, 46]
+    </rosparam>
+    <rosparam ns='pictureDimensions'>
+      <!-- Picture dimensions in pixel -->
+      pictureHeight: 480
+      pictureWidth: 640
+      <!-- Viewing angle of the camera in one direction in Radians -->
+      verticalAngle: 0.43196898986859655
+      horizontalAngle: 0.5235987755982988
+    </rosparam>
+  </node>
+</launch>

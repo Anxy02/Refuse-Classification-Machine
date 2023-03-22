@@ -1,0 +1,14 @@
+<launch>
+  <!-- 开启机器人底层相关节点  -->
+  <include file="$(find table_arm)/launch/base_serial.launch" />
+  <!-- 开启RGB摄像头  -->
+  <include file="$(find usb_cam)/launch/usb_cam-test.launch" />
+  <!-- 开启人脸检测节点  -->
+  <rosparam file="$(find wheeltec_tracker_pkg)/config/track.yaml" command="load"/>
+  <node name="face_tracker" pkg="wheeltec_tracker_pkg" type="face_tracker_node" />
+  <!-- 开启人脸追踪节点  -->
+  <node name="face_follower" pkg="wheeltec_tracker_pkg" type="face_decetor.py" output="screen" >
+    <param name ="pictureHeight" value="480" type="double" />
+    <param name ="pictureWidth" value="640" type="double" />
+  </node>
+</launch>

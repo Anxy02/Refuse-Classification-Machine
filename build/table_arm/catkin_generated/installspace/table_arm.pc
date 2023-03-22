@@ -1,0 +1,8 @@
+prefix=/home/moyu/wheeltec_arm/install
+
+Name: table_arm
+Description: Description of table_arm
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

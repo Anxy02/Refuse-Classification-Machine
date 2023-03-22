@@ -1,0 +1,21 @@
+<launch>
+    <!-- 开启摄像头 -->
+    <include file="$(find usb_cam)/launch/usb_cam-test.launch" />
+	<arg name="marker_size" default="4.4" />
+	<arg name="max_new_marker_error" default="0.08" />
+	<arg name="max_track_error" default="0.2" />
+
+	<arg name="cam_image_topic" default="/usb_cam/image_raw" />
+	<arg name="cam_info_topic" default="/usb_cam/camera_info" />
+
+	<arg name="output_frame" default="ar_link" />
+    <arg name="bundle_files" default="$(find ar_track_alvar)/bundles/truthTableLeg.xml $(find ar_track_alvar)/bundles/table_8_9_10.xml" />
+    
+    <!--连接camera_link和ar_link，连接tf树 -->
+    <node pkg="tf" type="static_transform_publisher" name="base_to_camera" args="-0.08 0.025 -0.01 0 -1.57 0 link_4 usb_cam 100" />
+    <node pkg="tf" type="static_transform_publisher" name="camera_to_ar" args="0 0 0 0 0 0  usb_cam ar_link 100" />
+
+	<node name="ar_track_alvar" pkg="ar_track_alvar" type="findMarkerBundlesNoKinect" respawn="false" output="log"
+args=" $(arg marker_size) $(arg max_new_marker_error) $(arg max_track_error) $(arg cam_image_topic) $(arg cam_info_topic)   $(arg output_frame)  $(arg bundle_files) "/>
+
+</launch>
