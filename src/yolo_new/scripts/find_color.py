@@ -74,29 +74,39 @@ class Find_Color:
         count=0
         for i in msg.bounding_boxes:
             count+=1
-        
-        for box in msg.bounding_boxes:
-            Xmid=box.xmid/2
-            Ymid=box.ymid/2
 
-            # self.Class=box.Class
-            # rospy.loginfo("class is %s ,X is %f, Y is %f", self.Class,Xmid,Ymid)
+        if count == 1:
             self.Class = self.switch_class(box.Class)   #传入垃圾类别并进行判断分类
+            self.single_send(self.Class)  #单目标直接用刷子发送
 
-            angleX = self.calculateAngleX(Xmid) #做数学转换获取色块在画幅中的坐标
-            angleY = self.calculateAngleY(Ymid)
-            # rospy.loginfo('X=%f , Y=%f',Xmid,Ymid)
-            # rospy.loginfo('X=%f , Y=%f',angleX,angleY)
-            rotation=0#待定
-            self.publishPosition(angleX,angleY,rotation,count) #发布话题：色块的位置（原始数据）
-            self.publishArm_Angle(angleX,angleY,rotation,count)	 #发布话题：根据色块位置求解的机械臂关节目标弧度话题
-        
-        #没有检测到目标
-        angleX = 999
-        angleY = 999
-        rotation=999
-        self.publishPosition(angleX,angleY,rotation,count)
-        self.publishArm_Angle(angleX,angleY,rotation,count)
+        elif count > 1:
+            for box in msg.bounding_boxes:
+                Xmid=box.xmid/2
+                Ymid=box.ymid/2
+                Xmin=box.xmin
+                Xmax=box.xmax
+                Ymin=box.ymin
+                Ymax=box.ymax
+
+                # self.Class=box.Class
+                # rospy.loginfo("class is %s ,X is %f, Y is %f", self.Class,Xmid,Ymid)
+                self.Class = self.switch_class(box.Class)   #传入垃圾类别并进行判断分类
+
+                angleX = self.calculateAngleX(Xmid) #做数学转换获取色块在画幅中的坐标
+                angleY = self.calculateAngleY(Ymid)
+                # rospy.loginfo('X=%f , Y=%f',Xmid,Ymid)
+                # rospy.loginfo('X=%f , Y=%f',angleX,angleY)
+                rotation=self.calculateRotation(Xmin,Xmax,Ymin,Ymax)#角度位姿 待测试
+
+                self.publishPosition(angleX,angleY,rotation,count) #发布话题：色块的位置（原始数据）
+                self.publishArm_Angle(angleX,angleY,rotation,count)	 #发布话题：根据色块位置求解的机械臂关节目标弧度话题
+        else:
+            #没有检测到目标
+            angleX = 999
+            angleY = 999
+            rotation=999
+            self.publishPosition(angleX,angleY,rotation,count)
+            self.publishArm_Angle(angleX,angleY,rotation,count)
         
     # def image_callback(self, msg):#重写
 
@@ -118,10 +128,29 @@ class Find_Color:
         angle = -1*np.arctan(displacement*self.tanVertical)
         return angle
     
+    def calculateRotation(Xmin,Xmax,Ymin,Ymax):
+        if abs((Xmax-Xmin)/(Ymax-Ymin)) <= 1 :
+            return 0
+        else :
+            return -90  #待测 或90
+
+    def single_send(Class): #串口发送 待写（注意数据统计）
+        if Class == 1:
+            print('recycle')
+        elif Class == 2:
+            print('harm')
+        elif Class == 3:
+            print('kitchen')
+        elif Class == 4:
+            print('others')
+        else:
+            print('none')
+
+    
     def switch_class(self,bclass):# 根据yolo返回类别进行类别分类
         if bclass == 'recycle_cans1' or 'recycle_cans2' or 'recycle_bottle' or 'recycle_paper':
             return 1
-        elif bclass == 'harm_battery ':
+        elif bclass == 'harm_battery':
             return 2
         elif bclass == 'kitchen_potato' or 'kitchen_raddish' or 'kitchen_carrot' :
             return 3

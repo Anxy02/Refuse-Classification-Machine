@@ -10,7 +10,6 @@
 #include <fcntl.h> 
 #include <stdbool.h>
 #include <locale>
-//using namespace std; 
 
 #include <std_msgs/Float32.h>
 #include <std_msgs/String.h>
@@ -23,17 +22,13 @@ int yolo_sequence=1;  //夹取顺序
 int sequence[4]={0};  //夹取顺序排序数组
 int yolo_confirmed_flag =0; //启动夹取的标志位
 int grasp_mode=0;//抓取模式 0：单目标抓取  1：单目标刷子  2：多目标抓取
-int isBusy=0;//回调函数中忙状态
-int i_cb,j_cb=0;//回调函数循环变量
 
 float auxiliary_angle; 
 int recycle_count_cb=0,harm_count_cb=0,kitchen_count_cb=0,others_count_cb=0; //接收到该数据帧的回调函数次数callback
 int recycle_count=0,harm_count=0,kitchen_count=0,others_count=0; //垃圾计数
 int count=0;//识别到的垃圾总数量
 int recycle_ready=0,harm_ready=0,kitchen_ready=0,others_ready=0; //色块位置确认标志位
-int sort_done=0;  //色块是否已经夹取标志位
-float cb_target_data[10][3]={0};  //回调函数目标值保存
-std::string cb_class[10]={};
+int kitchen_done=0,recycle_done=0,harm_done=0,others_done=0;  //色块是否已经夹取标志位
 float recycle_target_data[3]={0},harm_target_data[3]={0},kitchen_target_data[3]={0},others_target_data[3]={0};//色块的目标位置对应的关节运动弧度数组
 float joint_target1=0,joint_target2=0,joint_target3=0; //赋值给moveit做正解的目标关节值
 float link_a,link_b,link_c,link_h; //机械参数
@@ -48,39 +43,72 @@ std::vector<double> joint_group_positions(5); //机械臂正解的目标关节�
 //目标色块对应逆解的目标关节角度回调函数
 void color_ik_result_callback(const yolo_new::color_ik_result_new &msg)
 {
-  count=msg.count;//总数量
+   //count=msg.count;//总数量
    //if(count == 1) grasp_mode = 0;
    //else grasp_mode = 0;//后续修改!!!!!
-  ROS_INFO("msg sort is :%s ",msg.sort);
+  ROS_INFO("msg sort is :%s ",msg.color);
+   if(msg.color=="recycle") 
+  {
+     if(recycle_ready== 0 )  
+       {
+         recycle_count_cb++;
+         recycle_target_data[0]=msg.pedestal_angle;  //云台的目标角度
+         recycle_target_data[1]=msg.arm_angle;       //控制机械臂臂长的目标角度
+         recycle_target_data[2]=msg.hand_angle;      //控制夹取色块旋转的目标角度
+         if(recycle_count_cb>10)
+         {
+           recycle_ready=2;
+           ROS_INFO("recycle_target_is  :(%4.2f)-(%4.2f)-(%4.2f)",recycle_target_data[0],recycle_target_data[1],recycle_target_data[2]);
+         }
 
-  if(i_cb < count && isBusy == 0)
+       }
+  } 
+    
+  else if(msg.color=="harm") 
   {
-    cb_target_data[i_cb][0]=msg.pedestal_angle;  //云台的目标角度
-    cb_target_data[i_cb][1]=msg.arm_angle;       //控制机械臂臂长的目标角度
-    cb_target_data[i_cb][2]=msg.hand_angle;      //控制夹取色块旋转的目标角度
-    ROS_INFO("cb_target_is  :(%4.2f)-(%4.2f)-(%4.2f)",cb_target_data[i_cb][0],cb_target_data[i_cb][1],cb_target_data[i_cb][2]);
-    std::cb_class[i_cb] = msg.sort; //二选一
-    // if(msg.sort=="recycle") 
-    // {
-    //   cb_class[i_cb] = "recycle";
-    // }
-    // else if(msg.sort=="harm")
-    // {
-    //   cb_class[i_cb] = "harm";
-    // }
-    // else if(msg.sort=="kitchen")
-    // {
-    //   cb_class[i_cb] = "kitchen";
-    // }
-    // else if(msg.sort=="others")
-    // {
-    //   cb_class[i_cb] = "others";
-    // }
-    ++i_cb;
-  }
-  else
+     if(harm_ready== 0 )  
+       {
+         harm_count_cb++;
+         harm_target_data[0]=msg.pedestal_angle;  //云台的目标角度
+         harm_target_data[1]=msg.arm_angle;       //控制机械臂臂长的目标角度
+         harm_target_data[2]=msg.hand_angle;      //控制夹取色块旋转的目标角度
+         if(recycle_count_cb>10)
+         {
+           harm_ready=2;
+           ROS_INFO("harm_target_is :(%4.2f)-(%4.2f)-(%4.2f)",harm_target_data[0],harm_target_data[1],harm_target_data[2]); 
+         }
+       }
+  } 
+
+  else if(msg.color=="kitchen") 
   {
-    isBusy = 1;
+     if(kitchen_ready== 0 )  
+       {
+         kitchen_count_cb++;
+         kitchen_target_data[0]=msg.pedestal_angle;  //云台的目标角度
+         kitchen_target_data[1]=msg.arm_angle;       //控制机械臂臂长的目标角度
+         kitchen_target_data[2]=msg.hand_angle;      //控制夹取色块旋转的目标角度
+         if(kitchen_count_cb>10)
+         {
+           kitchen_ready=2;
+           ROS_INFO("kitchen_target_is:(%4.2f)-(%4.2f)-(%4.2f)",kitchen_target_data[0],kitchen_target_data[1],kitchen_target_data[2]);
+         }
+       }
+  } 
+  else if(msg.color=="others")
+  {
+    if(others_ready== 0 )  
+       {
+         others_count_cb++;
+         others_target_data[0]=msg.pedestal_angle;  //云台的目标角度
+         others_target_data[1]=msg.arm_angle;       //控制机械臂臂长的目标角度
+         others_target_data[2]=msg.hand_angle;      //控制夹取色块旋转的目标角度
+         if(others_count_cb>10)
+         {
+           others_ready=2;
+           ROS_INFO("others_target_is:(%4.2f)-(%4.2f)-(%4.2f)",kitchen_target_data[0],kitchen_target_data[1],kitchen_target_data[2]);
+         }
+       }
   }
 }
 
@@ -98,7 +126,6 @@ int main(int argc, char **argv)
     nprivate.param<float>("/link_b", link_b, 0.100);
     nprivate.param<float>("/link_c", link_c, 0.175);
     nprivate.param<float>("/link_h", link_h, 0.105);
-    i_cb=0;j_cb=0;  //初始化i,j
 
     base_angle=acos((link_c-link_h)/link_a);  //计算机械臂夹爪可触底的关节基础角度
 
@@ -121,10 +148,10 @@ int main(int argc, char **argv)
 
     while(ros::ok())
    {
-      // mode_object();//根据模式执行相应决策
+      mode_object();//根据模式执行相应决策
       // single_object()//单目标->刷子
       // single_grasp()//单目标->抓取
-      multi_grasp_sequence()//多目标抓取顺序判断函数
+      // multi_grasp_sequence()//多目标抓取顺序判断函数
       // color_gripping_sequence(); //色块抓取顺序判断函数
       if( arm_state=="ready" )
       {
@@ -157,7 +184,7 @@ int main(int argc, char **argv)
  
         arm.setNamedTarget("arm_look");   arm.move();  sleep(1);    //机械臂运动到观测色块的位置
         arm.setNamedTarget("color_put_interval");  arm.move();  sleep(1); //机械臂臂身运动到放置色块的预位置后，再放置色块
-        arm_put(target_color); //根据颜色将色块放置到对应位置 
+        arm_put(target_color); //根据颜色将色块放置到对应位置 !!!!!!!!!!!!!!!target_color在原排序函数中
       }
     ros::spinOnce();
   }
@@ -174,18 +201,11 @@ void arm_put(std::string color)
     //arm.setMaxAccelerationScalingFactor(0.2);
     //arm.setMaxVelocityScalingFactor(0.6);
    //根据色块的颜色判断放置位置                       根据实际修改
-         if (color == "recycle") {arm.setNamedTarget("yellow_put");  arm.move();  sleep(1);}
-    else if (color == "harm")   {arm.setNamedTarget("blue_put");    arm.move();  sleep(1);}
-    else if (color == "kitchen")  {arm.setNamedTarget("green_put");   arm.move();  sleep(1);}
-    else if (color == "others")  {arm.setNamedTarget("green_put");   arm.move();  sleep(1);ROS_INFO("sorting is done");}
+         if (color == "recycle") {arm.setNamedTarget("yellow_put");  arm.move();  sleep(1); recycle_done=0;}
+    else if (color == "harm")   {arm.setNamedTarget("blue_put");    arm.move();  sleep(1); harm_done=0;}
+    else if (color == "kitchen")  {arm.setNamedTarget("green_put");   arm.move();  sleep(1); kitchen_done=0;}
+    else if (color == "others")  {arm.setNamedTarget("green_put");   arm.move();  sleep(1); others_done=0; ROS_INFO("sorting is done");}
     hand.setNamedTarget("hand_open");   //机械爪张开
-    sort_done=0;  //标志位清零
-    if(j_cb >= count)//标志位清零
-    {
-      i_cb = 0;
-      j_cb = 0;
-      isBusy = 0 ;
-    }
     while( !hand_open_success )  //判断是否规划成功，如果不成功则继续规划
     { 
        hand_open_success = ((hand.move() == moveit::planning_interface::MoveItErrorCode::SUCCESS)); //规划路径
@@ -206,13 +226,12 @@ void arm_put(std::string color)
     arm_state="working";
     // yolo_sequence=yolo_sequence+1; //放置完成后，开始夹取下一个色块
 }
-/*
 int mode_object()//根据模式执行相应决策
 {
   //抓取模式 0：单目标抓取  1：单目标刷子  2：多目标抓取
   if(grasp_mode == 0) single_grasp();
   else if(grasp_mode == 1)  single_object();
-  // else multi_grasp_sequence();
+  //else multi_grasp_sequence();
 }
 int single_object()
 {
@@ -245,48 +264,34 @@ int single_object()
     others_count += 1;
     ROS_INFO("sorting is:   others");
   }
-*/
+
 }
-int multi_grasp_sequence()//多目标抓取
+int single_grasp()//单目标抓取
 {
-  //ROS_INFO("多目标---->>>抓取");
-  if(isBusy == 1 && j_cb < count && sort_done == 0)
-  {
-    joint_target1=cb_target_data[j_cb][0];//关节目标值赋值
-    joint_target2=cb_target_data[j_cb][1];
-    joint_target3=cb_target_data[j_cb][2];
-    if(std::cb_class[j_cb] == "recycle")
-    {
-      target_color="recycle";
-      arm_state="ready";
-      recycle_count += 1;
-      ROS_INFO("sorting is:   recycle");
-    }
-    else if(std::cb_class[j_cb] == "harm")
-    {
-      target_color="harm";
-      arm_state="ready";
-      harm_count += 1;
-      ROS_INFO("sorting is:   harm");
-    }
-    else if(std::cb_class[j_cb] == "kitchen")
-    {
-      target_color="kitchen";
-      arm_state="ready";
-      kitchen_count += 1;
-      ROS_INFO("sorting is:   kitchen");
-    }
-    else if(std::cb_class[j_cb] == "others")
-    {
-      target_color="others";
-      arm_state="ready";
-      others_count += 1;
-      ROS_INFO("sorting is:   others");
-    }
-    sort_done=1;
-    ++j_cb;
-
-
+  //ROS_INFO("单分类模式---->>>抓取");
+  if(recycle_ready == 2 && recycle_done == 0){
+    joint_target1=recycle_target_data[0],joint_target2=recycle_target_data[1],joint_target3=recycle_target_data[2]  ,target_color="recycle",recycle_done=1;//关节目标值赋值
+    arm_state="ready";
+    recycle_count += 1;
+    ROS_INFO("sorting is:   recycle");
+  }
+  else if(harm_ready == 2 && harm_done == 0){
+    joint_target1=harm_target_data[0],joint_target2=harm_target_data[1],joint_target3=harm_target_data[2]  ,target_color="harm",harm_done=1;//关节目标值赋值
+    arm_state="ready";
+    harm_count += 1;
+    ROS_INFO("sorting is:   harm");
+  }
+  else if(kitchen_ready == 2 && kitchen_done == 0){
+    joint_target1=kitchen_target_data[0],joint_target2=kitchen_target_data[1],joint_target3=kitchen_target_data[2]  ,target_color="kitchen",kitchen_done=1;//关节目标值赋值
+    arm_state="ready";
+    kitchen_count += 1;
+    ROS_INFO("sorting is:   kitchen");
+  }
+  else if(others_ready == 2 && others_done == 0){
+    joint_target1=others_target_data[0],joint_target2=others_target_data[1],joint_target3=others_target_data[2]  ,target_color="others",others_done=1;//关节目标值赋值
+    arm_state="ready";
+    others_count += 1;
+    ROS_INFO("sorting is:   others");
   }
 
 }
