@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/h264_streamer.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/h264_streamer.h
 image_transport/image_transport.h
 -
 web_video_server/libav_streamer.h
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/web_video_server/libav_streamer.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/web_video_server/libav_streamer.h
 async_web_server_cpp/http_request.hpp
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/async_web_server_cpp/http_request.hpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/async_web_server_cpp/http_request.hpp
 async_web_server_cpp/http_connection.hpp
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/async_web_server_cpp/http_connection.hpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/async_web_server_cpp/http_connection.hpp
 
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/image_streamer.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/image_streamer.h
 ros/ros.h
 -
 image_transport/image_transport.h
@@ -24,33 +24,33 @@ image_transport/image_transport.h
 opencv2/opencv.hpp
 -
 async_web_server_cpp/http_server.hpp
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/async_web_server_cpp/http_server.hpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/async_web_server_cpp/http_server.hpp
 async_web_server_cpp/http_request.hpp
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/async_web_server_cpp/http_request.hpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/async_web_server_cpp/http_request.hpp
 
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/jpeg_streamers.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/jpeg_streamers.h
 image_transport/image_transport.h
 -
 opencv2/imgcodecs.hpp
 -
 web_video_server/image_streamer.h
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/web_video_server/image_streamer.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/web_video_server/image_streamer.h
 async_web_server_cpp/http_request.hpp
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/async_web_server_cpp/http_request.hpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/async_web_server_cpp/http_request.hpp
 async_web_server_cpp/http_connection.hpp
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/async_web_server_cpp/http_connection.hpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/async_web_server_cpp/http_connection.hpp
 web_video_server/multipart_stream.h
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/web_video_server/multipart_stream.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/web_video_server/multipart_stream.h
 
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/libav_streamer.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/libav_streamer.h
 image_transport/image_transport.h
 -
 web_video_server/image_streamer.h
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/web_video_server/image_streamer.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/web_video_server/image_streamer.h
 async_web_server_cpp/http_request.hpp
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/async_web_server_cpp/http_request.hpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/async_web_server_cpp/http_request.hpp
 async_web_server_cpp/http_connection.hpp
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/async_web_server_cpp/http_connection.hpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/async_web_server_cpp/http_connection.hpp
 libavcodec/avcodec.h
 -
 libavformat/avformat.h
@@ -68,7 +68,7 @@ libavutil/mathematics.h
 libavutil/imgutils.h
 -
 
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/multipart_stream.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/multipart_stream.h
 ros/ros.h
 -
 async_web_server_cpp/http_connection.hpp
@@ -76,53 +76,53 @@ async_web_server_cpp/http_connection.hpp
 queue
 -
 
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/png_streamers.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/png_streamers.h
 image_transport/image_transport.h
 -
 opencv2/imgcodecs.hpp
 -
 web_video_server/image_streamer.h
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/web_video_server/image_streamer.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/web_video_server/image_streamer.h
 async_web_server_cpp/http_request.hpp
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/async_web_server_cpp/http_request.hpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/async_web_server_cpp/http_request.hpp
 async_web_server_cpp/http_connection.hpp
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/async_web_server_cpp/http_connection.hpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/async_web_server_cpp/http_connection.hpp
 web_video_server/multipart_stream.h
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/web_video_server/multipart_stream.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/web_video_server/multipart_stream.h
 
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/ros_compressed_streamer.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/ros_compressed_streamer.h
 sensor_msgs/CompressedImage.h
 -
 web_video_server/image_streamer.h
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/web_video_server/image_streamer.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/web_video_server/image_streamer.h
 async_web_server_cpp/http_request.hpp
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/async_web_server_cpp/http_request.hpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/async_web_server_cpp/http_request.hpp
 async_web_server_cpp/http_connection.hpp
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/async_web_server_cpp/http_connection.hpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/async_web_server_cpp/http_connection.hpp
 web_video_server/multipart_stream.h
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/web_video_server/multipart_stream.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/web_video_server/multipart_stream.h
 
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/vp8_streamer.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/vp8_streamer.h
 image_transport/image_transport.h
 -
 web_video_server/libav_streamer.h
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/web_video_server/libav_streamer.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/web_video_server/libav_streamer.h
 async_web_server_cpp/http_request.hpp
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/async_web_server_cpp/http_request.hpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/async_web_server_cpp/http_request.hpp
 async_web_server_cpp/http_connection.hpp
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/async_web_server_cpp/http_connection.hpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/async_web_server_cpp/http_connection.hpp
 
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/vp9_streamer.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/vp9_streamer.h
 image_transport/image_transport.h
 -
 web_video_server/libav_streamer.h
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/web_video_server/libav_streamer.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/web_video_server/libav_streamer.h
 async_web_server_cpp/http_request.hpp
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/async_web_server_cpp/http_request.hpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/async_web_server_cpp/http_request.hpp
 async_web_server_cpp/http_connection.hpp
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/async_web_server_cpp/http_connection.hpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/async_web_server_cpp/http_connection.hpp
 
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/web_video_server.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/web_video_server.h
 ros/ros.h
 -
 cv_bridge/cv_bridge.h
@@ -130,63 +130,63 @@ cv_bridge/cv_bridge.h
 vector
 -
 web_video_server/image_streamer.h
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/web_video_server/image_streamer.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/web_video_server/image_streamer.h
 async_web_server_cpp/http_server.hpp
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/async_web_server_cpp/http_server.hpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/async_web_server_cpp/http_server.hpp
 async_web_server_cpp/http_request.hpp
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/async_web_server_cpp/http_request.hpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/async_web_server_cpp/http_request.hpp
 async_web_server_cpp/http_connection.hpp
-/home/moyu/wheeltec_arm/src/web_video_server/include/web_video_server/async_web_server_cpp/http_connection.hpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/web_video_server/async_web_server_cpp/http_connection.hpp
 
-/home/moyu/wheeltec_arm/src/web_video_server/src/h264_streamer.cpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/h264_streamer.cpp
 web_video_server/h264_streamer.h
-/home/moyu/wheeltec_arm/src/web_video_server/src/web_video_server/h264_streamer.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/web_video_server/h264_streamer.h
 
-/home/moyu/wheeltec_arm/src/web_video_server/src/image_streamer.cpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/image_streamer.cpp
 web_video_server/image_streamer.h
-/home/moyu/wheeltec_arm/src/web_video_server/src/web_video_server/image_streamer.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/web_video_server/image_streamer.h
 cv_bridge/cv_bridge.h
 -
 iostream
 -
 
-/home/moyu/wheeltec_arm/src/web_video_server/src/jpeg_streamers.cpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/jpeg_streamers.cpp
 web_video_server/jpeg_streamers.h
-/home/moyu/wheeltec_arm/src/web_video_server/src/web_video_server/jpeg_streamers.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/web_video_server/jpeg_streamers.h
 async_web_server_cpp/http_reply.hpp
-/home/moyu/wheeltec_arm/src/web_video_server/src/async_web_server_cpp/http_reply.hpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/async_web_server_cpp/http_reply.hpp
 
-/home/moyu/wheeltec_arm/src/web_video_server/src/libav_streamer.cpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/libav_streamer.cpp
 web_video_server/libav_streamer.h
-/home/moyu/wheeltec_arm/src/web_video_server/src/web_video_server/libav_streamer.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/web_video_server/libav_streamer.h
 async_web_server_cpp/http_reply.hpp
-/home/moyu/wheeltec_arm/src/web_video_server/src/async_web_server_cpp/http_reply.hpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/async_web_server_cpp/http_reply.hpp
 
-/home/moyu/wheeltec_arm/src/web_video_server/src/multipart_stream.cpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/multipart_stream.cpp
 web_video_server/multipart_stream.h
-/home/moyu/wheeltec_arm/src/web_video_server/src/web_video_server/multipart_stream.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/web_video_server/multipart_stream.h
 async_web_server_cpp/http_reply.hpp
-/home/moyu/wheeltec_arm/src/web_video_server/src/async_web_server_cpp/http_reply.hpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/async_web_server_cpp/http_reply.hpp
 
-/home/moyu/wheeltec_arm/src/web_video_server/src/png_streamers.cpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/png_streamers.cpp
 web_video_server/png_streamers.h
-/home/moyu/wheeltec_arm/src/web_video_server/src/web_video_server/png_streamers.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/web_video_server/png_streamers.h
 async_web_server_cpp/http_reply.hpp
-/home/moyu/wheeltec_arm/src/web_video_server/src/async_web_server_cpp/http_reply.hpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/async_web_server_cpp/http_reply.hpp
 
-/home/moyu/wheeltec_arm/src/web_video_server/src/ros_compressed_streamer.cpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/ros_compressed_streamer.cpp
 web_video_server/ros_compressed_streamer.h
-/home/moyu/wheeltec_arm/src/web_video_server/src/web_video_server/ros_compressed_streamer.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/web_video_server/ros_compressed_streamer.h
 
-/home/moyu/wheeltec_arm/src/web_video_server/src/vp8_streamer.cpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/vp8_streamer.cpp
 web_video_server/vp8_streamer.h
-/home/moyu/wheeltec_arm/src/web_video_server/src/web_video_server/vp8_streamer.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/web_video_server/vp8_streamer.h
 
-/home/moyu/wheeltec_arm/src/web_video_server/src/vp9_streamer.cpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/vp9_streamer.cpp
 web_video_server/vp9_streamer.h
-/home/moyu/wheeltec_arm/src/web_video_server/src/web_video_server/vp9_streamer.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/web_video_server/vp9_streamer.h
 
-/home/moyu/wheeltec_arm/src/web_video_server/src/web_video_server.cpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/web_video_server.cpp
 boost/foreach.hpp
 -
 boost/lexical_cast.hpp
@@ -200,21 +200,21 @@ sensor_msgs/image_encodings.h
 opencv2/opencv.hpp
 -
 web_video_server/web_video_server.h
-/home/moyu/wheeltec_arm/src/web_video_server/src/web_video_server/web_video_server.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/web_video_server/web_video_server.h
 web_video_server/ros_compressed_streamer.h
-/home/moyu/wheeltec_arm/src/web_video_server/src/web_video_server/ros_compressed_streamer.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/web_video_server/ros_compressed_streamer.h
 web_video_server/jpeg_streamers.h
-/home/moyu/wheeltec_arm/src/web_video_server/src/web_video_server/jpeg_streamers.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/web_video_server/jpeg_streamers.h
 web_video_server/png_streamers.h
-/home/moyu/wheeltec_arm/src/web_video_server/src/web_video_server/png_streamers.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/web_video_server/png_streamers.h
 web_video_server/vp8_streamer.h
-/home/moyu/wheeltec_arm/src/web_video_server/src/web_video_server/vp8_streamer.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/web_video_server/vp8_streamer.h
 web_video_server/h264_streamer.h
-/home/moyu/wheeltec_arm/src/web_video_server/src/web_video_server/h264_streamer.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/web_video_server/h264_streamer.h
 web_video_server/vp9_streamer.h
-/home/moyu/wheeltec_arm/src/web_video_server/src/web_video_server/vp9_streamer.h
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/web_video_server/vp9_streamer.h
 async_web_server_cpp/http_reply.hpp
-/home/moyu/wheeltec_arm/src/web_video_server/src/async_web_server_cpp/http_reply.hpp
+/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/async_web_server_cpp/http_reply.hpp
 
 /opt/ros/noetic/include/async_web_server_cpp/http_connection.hpp
 async_web_server_cpp/http_request.hpp

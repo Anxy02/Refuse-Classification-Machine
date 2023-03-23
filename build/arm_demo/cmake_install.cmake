@@ -1,8 +1,8 @@
-# Install script for directory: /home/moyu/wheeltec_arm/src/arm_demo
+# Install script for directory: /home/moyu/Refuse-Classification-Machine/src/arm_demo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/moyu/wheeltec_arm/install")
+  set(CMAKE_INSTALL_PREFIX "/home/moyu/Refuse-Classification-Machine/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/moyu/wheeltec_arm/build/arm_demo/catkin_generated/installspace/arm_demo.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/moyu/Refuse-Classification-Machine/build/arm_demo/catkin_generated/installspace/arm_demo.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm_demo/cmake" TYPE FILE FILES
-    "/home/moyu/wheeltec_arm/build/arm_demo/catkin_generated/installspace/arm_demoConfig.cmake"
-    "/home/moyu/wheeltec_arm/build/arm_demo/catkin_generated/installspace/arm_demoConfig-version.cmake"
+    "/home/moyu/Refuse-Classification-Machine/build/arm_demo/catkin_generated/installspace/arm_demoConfig.cmake"
+    "/home/moyu/Refuse-Classification-Machine/build/arm_demo/catkin_generated/installspace/arm_demoConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm_demo" TYPE FILE FILES "/home/moyu/wheeltec_arm/src/arm_demo/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm_demo" TYPE FILE FILES "/home/moyu/Refuse-Classification-Machine/src/arm_demo/package.xml")
 endif()
 

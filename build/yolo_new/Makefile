@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moyu/wheeltec_arm/src
+CMAKE_SOURCE_DIR = /home/moyu/Refuse-Classification-Machine/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moyu/wheeltec_arm/build
+CMAKE_BINARY_DIR = /home/moyu/Refuse-Classification-Machine/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/wheeltec_arm/build/CMakeFiles /home/moyu/wheeltec_arm/build/yolo_new/CMakeFiles/progress.marks
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/wheeltec_arm/build/CMakeFiles 0
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles /home/moyu/Refuse-Classification-Machine/build/yolo_new/CMakeFiles/progress.marks
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/clean
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/preinstall
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/preinstall
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 yolo_new/CMakeFiles/yolo_execute.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_execute.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_execute.dir/rule
 .PHONY : yolo_new/CMakeFiles/yolo_execute.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ yolo_execute: yolo_new/CMakeFiles/yolo_execute.dir/rule
 
 # fast build rule for target.
 yolo_execute/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_execute.dir/build.make yolo_new/CMakeFiles/yolo_execute.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_execute.dir/build.make yolo_new/CMakeFiles/yolo_execute.dir/build
 .PHONY : yolo_execute/fast
 
 # Convenience name for target.
 yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/rule
 .PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -194,12 +194,12 @@ yolo_new_generate_messages_py: yolo_new/CMakeFiles/yolo_new_generate_messages_py
 
 # fast build rule for target.
 yolo_new_generate_messages_py/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/build
 .PHONY : yolo_new_generate_messages_py/fast
 
 # Convenience name for target.
 yolo_new/CMakeFiles/yolo_new_gennodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_gennodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_gennodejs.dir/rule
 .PHONY : yolo_new/CMakeFiles/yolo_new_gennodejs.dir/rule
 
 # Convenience name for target.
@@ -209,12 +209,12 @@ yolo_new_gennodejs: yolo_new/CMakeFiles/yolo_new_gennodejs.dir/rule
 
 # fast build rule for target.
 yolo_new_gennodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_gennodejs.dir/build.make yolo_new/CMakeFiles/yolo_new_gennodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_gennodejs.dir/build.make yolo_new/CMakeFiles/yolo_new_gennodejs.dir/build
 .PHONY : yolo_new_gennodejs/fast
 
 # Convenience name for target.
 yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/rule
 .PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -224,12 +224,12 @@ yolo_new_generate_messages_nodejs: yolo_new/CMakeFiles/yolo_new_generate_message
 
 # fast build rule for target.
 yolo_new_generate_messages_nodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/build
 .PHONY : yolo_new_generate_messages_nodejs/fast
 
 # Convenience name for target.
 yolo_new/CMakeFiles/yolo_new_generate_messages.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_generate_messages.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_generate_messages.dir/rule
 .PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages.dir/rule
 
 # Convenience name for target.
@@ -239,12 +239,12 @@ yolo_new_generate_messages: yolo_new/CMakeFiles/yolo_new_generate_messages.dir/r
 
 # fast build rule for target.
 yolo_new_generate_messages/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages.dir/build
 .PHONY : yolo_new_generate_messages/fast
 
 # Convenience name for target.
 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/rule
 .PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/rule
 
 # Convenience name for target.
@@ -254,12 +254,12 @@ _yolo_new_generate_messages_check_deps_position_color: yolo_new/CMakeFiles/_yolo
 
 # fast build rule for target.
 _yolo_new_generate_messages_check_deps_position_color/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/build
 .PHONY : _yolo_new_generate_messages_check_deps_position_color/fast
 
 # Convenience name for target.
 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/rule
 .PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/rule
 
 # Convenience name for target.
@@ -269,12 +269,12 @@ _yolo_new_generate_messages_check_deps_BoundingBox: yolo_new/CMakeFiles/_yolo_ne
 
 # fast build rule for target.
 _yolo_new_generate_messages_check_deps_BoundingBox/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/build
 .PHONY : _yolo_new_generate_messages_check_deps_BoundingBox/fast
 
 # Convenience name for target.
 yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/rule
 .PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -284,12 +284,12 @@ yolo_new_generate_messages_cpp: yolo_new/CMakeFiles/yolo_new_generate_messages_c
 
 # fast build rule for target.
 yolo_new_generate_messages_cpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/build
 .PHONY : yolo_new_generate_messages_cpp/fast
 
 # Convenience name for target.
 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target.dir/rule
 .PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target.dir/rule
 
 # Convenience name for target.
@@ -299,12 +299,12 @@ _yolo_new_generate_messages_check_deps_arm_target: yolo_new/CMakeFiles/_yolo_new
 
 # fast build rule for target.
 _yolo_new_generate_messages_check_deps_arm_target/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target.dir/build
 .PHONY : _yolo_new_generate_messages_check_deps_arm_target/fast
 
 # Convenience name for target.
 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_color_ik_result_new.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_color_ik_result_new.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_color_ik_result_new.dir/rule
 .PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_color_ik_result_new.dir/rule
 
 # Convenience name for target.
@@ -314,12 +314,12 @@ _yolo_new_generate_messages_check_deps_color_ik_result_new: yolo_new/CMakeFiles/
 
 # fast build rule for target.
 _yolo_new_generate_messages_check_deps_color_ik_result_new/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_color_ik_result_new.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_color_ik_result_new.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_color_ik_result_new.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_color_ik_result_new.dir/build
 .PHONY : _yolo_new_generate_messages_check_deps_color_ik_result_new/fast
 
 # Convenience name for target.
 yolo_new/CMakeFiles/yolo_new_geneus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_geneus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_geneus.dir/rule
 .PHONY : yolo_new/CMakeFiles/yolo_new_geneus.dir/rule
 
 # Convenience name for target.
@@ -329,12 +329,12 @@ yolo_new_geneus: yolo_new/CMakeFiles/yolo_new_geneus.dir/rule
 
 # fast build rule for target.
 yolo_new_geneus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_geneus.dir/build.make yolo_new/CMakeFiles/yolo_new_geneus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_geneus.dir/build.make yolo_new/CMakeFiles/yolo_new_geneus.dir/build
 .PHONY : yolo_new_geneus/fast
 
 # Convenience name for target.
 yolo_new/CMakeFiles/yolo_new_genpy.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_genpy.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_genpy.dir/rule
 .PHONY : yolo_new/CMakeFiles/yolo_new_genpy.dir/rule
 
 # Convenience name for target.
@@ -344,12 +344,12 @@ yolo_new_genpy: yolo_new/CMakeFiles/yolo_new_genpy.dir/rule
 
 # fast build rule for target.
 yolo_new_genpy/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_genpy.dir/build.make yolo_new/CMakeFiles/yolo_new_genpy.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_genpy.dir/build.make yolo_new/CMakeFiles/yolo_new_genpy.dir/build
 .PHONY : yolo_new_genpy/fast
 
 # Convenience name for target.
 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_init_position.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_init_position.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_init_position.dir/rule
 .PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_init_position.dir/rule
 
 # Convenience name for target.
@@ -359,12 +359,12 @@ _yolo_new_generate_messages_check_deps_arm_init_position: yolo_new/CMakeFiles/_y
 
 # fast build rule for target.
 _yolo_new_generate_messages_check_deps_arm_init_position/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_init_position.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_init_position.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_init_position.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_init_position.dir/build
 .PHONY : _yolo_new_generate_messages_check_deps_arm_init_position/fast
 
 # Convenience name for target.
 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/rule
 .PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/rule
 
 # Convenience name for target.
@@ -374,12 +374,12 @@ _yolo_new_generate_messages_check_deps_BoundingBoxes: yolo_new/CMakeFiles/_yolo_
 
 # fast build rule for target.
 _yolo_new_generate_messages_check_deps_BoundingBoxes/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/build
 .PHONY : _yolo_new_generate_messages_check_deps_BoundingBoxes/fast
 
 # Convenience name for target.
 yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/rule
 .PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -389,12 +389,12 @@ yolo_new_generate_messages_eus: yolo_new/CMakeFiles/yolo_new_generate_messages_e
 
 # fast build rule for target.
 yolo_new_generate_messages_eus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/build
 .PHONY : yolo_new_generate_messages_eus/fast
 
 # Convenience name for target.
 yolo_new/CMakeFiles/yolo_new_genlisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_genlisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_genlisp.dir/rule
 .PHONY : yolo_new/CMakeFiles/yolo_new_genlisp.dir/rule
 
 # Convenience name for target.
@@ -404,12 +404,12 @@ yolo_new_genlisp: yolo_new/CMakeFiles/yolo_new_genlisp.dir/rule
 
 # fast build rule for target.
 yolo_new_genlisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_genlisp.dir/build.make yolo_new/CMakeFiles/yolo_new_genlisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_genlisp.dir/build.make yolo_new/CMakeFiles/yolo_new_genlisp.dir/build
 .PHONY : yolo_new_genlisp/fast
 
 # Convenience name for target.
 yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/rule
 .PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -419,12 +419,12 @@ yolo_new_generate_messages_lisp: yolo_new/CMakeFiles/yolo_new_generate_messages_
 
 # fast build rule for target.
 yolo_new_generate_messages_lisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/build
 .PHONY : yolo_new_generate_messages_lisp/fast
 
 # Convenience name for target.
 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target_position.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target_position.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target_position.dir/rule
 .PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target_position.dir/rule
 
 # Convenience name for target.
@@ -434,12 +434,12 @@ _yolo_new_generate_messages_check_deps_arm_target_position: yolo_new/CMakeFiles/
 
 # fast build rule for target.
 _yolo_new_generate_messages_check_deps_arm_target_position/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target_position.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target_position.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target_position.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target_position.dir/build
 .PHONY : _yolo_new_generate_messages_check_deps_arm_target_position/fast
 
 # Convenience name for target.
 yolo_new/CMakeFiles/yolo_new_gencpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_gencpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_gencpp.dir/rule
 .PHONY : yolo_new/CMakeFiles/yolo_new_gencpp.dir/rule
 
 # Convenience name for target.
@@ -449,7 +449,7 @@ yolo_new_gencpp: yolo_new/CMakeFiles/yolo_new_gencpp.dir/rule
 
 # fast build rule for target.
 yolo_new_gencpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_gencpp.dir/build.make yolo_new/CMakeFiles/yolo_new_gencpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_gencpp.dir/build.make yolo_new/CMakeFiles/yolo_new_gencpp.dir/build
 .PHONY : yolo_new_gencpp/fast
 
 src/yolo_execute.o: src/yolo_execute.cpp.o
@@ -458,7 +458,7 @@ src/yolo_execute.o: src/yolo_execute.cpp.o
 
 # target to build an object file
 src/yolo_execute.cpp.o:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_execute.dir/build.make yolo_new/CMakeFiles/yolo_execute.dir/src/yolo_execute.cpp.o
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_execute.dir/build.make yolo_new/CMakeFiles/yolo_execute.dir/src/yolo_execute.cpp.o
 .PHONY : src/yolo_execute.cpp.o
 
 src/yolo_execute.i: src/yolo_execute.cpp.i
@@ -467,7 +467,7 @@ src/yolo_execute.i: src/yolo_execute.cpp.i
 
 # target to preprocess a source file
 src/yolo_execute.cpp.i:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_execute.dir/build.make yolo_new/CMakeFiles/yolo_execute.dir/src/yolo_execute.cpp.i
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_execute.dir/build.make yolo_new/CMakeFiles/yolo_execute.dir/src/yolo_execute.cpp.i
 .PHONY : src/yolo_execute.cpp.i
 
 src/yolo_execute.s: src/yolo_execute.cpp.s
@@ -476,7 +476,7 @@ src/yolo_execute.s: src/yolo_execute.cpp.s
 
 # target to generate assembly for a file
 src/yolo_execute.cpp.s:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_execute.dir/build.make yolo_new/CMakeFiles/yolo_execute.dir/src/yolo_execute.cpp.s
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_execute.dir/build.make yolo_new/CMakeFiles/yolo_execute.dir/src/yolo_execute.cpp.s
 .PHONY : src/yolo_execute.cpp.s
 
 # Help Target
@@ -525,6 +525,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

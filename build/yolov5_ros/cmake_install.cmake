@@ -1,8 +1,8 @@
-# Install script for directory: /home/moyu/wheeltec_arm/src/yolov5_ros
+# Install script for directory: /home/moyu/Refuse-Classification-Machine/src/yolov5_ros
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/moyu/wheeltec_arm/install")
+  set(CMAKE_INSTALL_PREFIX "/home/moyu/Refuse-Classification-Machine/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/moyu/wheeltec_arm/build/yolov5_ros/catkin_generated/installspace/yolov5_ros.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/moyu/Refuse-Classification-Machine/build/yolov5_ros/catkin_generated/installspace/yolov5_ros.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/yolov5_ros/cmake" TYPE FILE FILES
-    "/home/moyu/wheeltec_arm/build/yolov5_ros/catkin_generated/installspace/yolov5_rosConfig.cmake"
-    "/home/moyu/wheeltec_arm/build/yolov5_ros/catkin_generated/installspace/yolov5_rosConfig-version.cmake"
+    "/home/moyu/Refuse-Classification-Machine/build/yolov5_ros/catkin_generated/installspace/yolov5_rosConfig.cmake"
+    "/home/moyu/Refuse-Classification-Machine/build/yolov5_ros/catkin_generated/installspace/yolov5_rosConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/yolov5_ros" TYPE FILE FILES "/home/moyu/wheeltec_arm/src/yolov5_ros/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/yolov5_ros" TYPE FILE FILES "/home/moyu/Refuse-Classification-Machine/src/yolov5_ros/package.xml")
 endif()
 

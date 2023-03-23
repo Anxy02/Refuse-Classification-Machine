@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/moyu/wheeltec_arm/devel/include/wheeltec_tracker_pkg/centroid.h
+/home/moyu/Refuse-Classification-Machine/devel/include/wheeltec_tracker_pkg/centroid.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/src/face_tracker_node.cpp
+/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/src/face_tracker_node.cpp
 ros/ros.h
 -
 image_transport/image_transport.h
@@ -36,11 +36,11 @@ std_msgs/Int8.h
 opencv2/highgui/highgui.hpp
 -
 opencv2/objdetect.hpp
-/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/src/opencv2/objdetect.hpp
+/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/src/opencv2/objdetect.hpp
 opencv2/imgproc/imgproc_c.h
 -
 wheeltec_tracker_pkg/centroid.h
-/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/src/wheeltec_tracker_pkg/centroid.h
+/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/src/wheeltec_tracker_pkg/centroid.h
 
 /opt/ros/noetic/include/cv_bridge/cv_bridge.h
 sensor_msgs/Image.h

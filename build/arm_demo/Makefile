@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moyu/wheeltec_arm/src
+CMAKE_SOURCE_DIR = /home/moyu/Refuse-Classification-Machine/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moyu/wheeltec_arm/build
+CMAKE_BINARY_DIR = /home/moyu/Refuse-Classification-Machine/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/wheeltec_arm/build/CMakeFiles /home/moyu/wheeltec_arm/build/arm_demo/CMakeFiles/progress.marks
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/wheeltec_arm/build/CMakeFiles 0
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles /home/moyu/Refuse-Classification-Machine/build/arm_demo/CMakeFiles/progress.marks
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/clean
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/preinstall
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/preinstall
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 arm_demo/CMakeFiles/arm_cartesian_demo.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/arm_cartesian_demo.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/arm_cartesian_demo.dir/rule
 .PHONY : arm_demo/CMakeFiles/arm_cartesian_demo.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ arm_cartesian_demo: arm_demo/CMakeFiles/arm_cartesian_demo.dir/rule
 
 # fast build rule for target.
 arm_cartesian_demo/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/arm_cartesian_demo.dir/build.make arm_demo/CMakeFiles/arm_cartesian_demo.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/arm_cartesian_demo.dir/build.make arm_demo/CMakeFiles/arm_cartesian_demo.dir/build
 .PHONY : arm_cartesian_demo/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/arm_ik_demo.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/arm_ik_demo.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/arm_ik_demo.dir/rule
 .PHONY : arm_demo/CMakeFiles/arm_ik_demo.dir/rule
 
 # Convenience name for target.
@@ -194,12 +194,12 @@ arm_ik_demo: arm_demo/CMakeFiles/arm_ik_demo.dir/rule
 
 # fast build rule for target.
 arm_ik_demo/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/arm_ik_demo.dir/build.make arm_demo/CMakeFiles/arm_ik_demo.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/arm_ik_demo.dir/build.make arm_demo/CMakeFiles/arm_ik_demo.dir/build
 .PHONY : arm_ik_demo/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/arm_fk_demo.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/arm_fk_demo.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/arm_fk_demo.dir/rule
 .PHONY : arm_demo/CMakeFiles/arm_fk_demo.dir/rule
 
 # Convenience name for target.
@@ -209,12 +209,12 @@ arm_fk_demo: arm_demo/CMakeFiles/arm_fk_demo.dir/rule
 
 # fast build rule for target.
 arm_fk_demo/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/arm_fk_demo.dir/build.make arm_demo/CMakeFiles/arm_fk_demo.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/arm_fk_demo.dir/build.make arm_demo/CMakeFiles/arm_fk_demo.dir/build
 .PHONY : arm_fk_demo/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
 .PHONY : arm_demo/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -224,12 +224,12 @@ std_srvs_generate_messages_lisp: arm_demo/CMakeFiles/std_srvs_generate_messages_
 
 # fast build rule for target.
 std_srvs_generate_messages_lisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
 .PHONY : std_srvs_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/std_srvs_generate_messages_eus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
 .PHONY : arm_demo/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -239,12 +239,12 @@ std_srvs_generate_messages_eus: arm_demo/CMakeFiles/std_srvs_generate_messages_e
 
 # fast build rule for target.
 std_srvs_generate_messages_eus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/std_srvs_generate_messages_eus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/std_srvs_generate_messages_eus.dir/build
 .PHONY : std_srvs_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
 .PHONY : arm_demo/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -254,12 +254,12 @@ std_srvs_generate_messages_cpp: arm_demo/CMakeFiles/std_srvs_generate_messages_c
 
 # fast build rule for target.
 std_srvs_generate_messages_cpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
 .PHONY : std_srvs_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/tf_generate_messages_nodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/tf_generate_messages_nodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/tf_generate_messages_nodejs.dir/rule
 .PHONY : arm_demo/CMakeFiles/tf_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -269,12 +269,12 @@ tf_generate_messages_nodejs: arm_demo/CMakeFiles/tf_generate_messages_nodejs.dir
 
 # fast build rule for target.
 tf_generate_messages_nodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/tf_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/tf_generate_messages_nodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/tf_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/tf_generate_messages_nodejs.dir/build
 .PHONY : tf_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/tf_generate_messages_lisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/tf_generate_messages_lisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/tf_generate_messages_lisp.dir/rule
 .PHONY : arm_demo/CMakeFiles/tf_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -284,12 +284,12 @@ tf_generate_messages_lisp: arm_demo/CMakeFiles/tf_generate_messages_lisp.dir/rul
 
 # fast build rule for target.
 tf_generate_messages_lisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/tf_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/tf_generate_messages_lisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/tf_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/tf_generate_messages_lisp.dir/build
 .PHONY : tf_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/tf_generate_messages_cpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/tf_generate_messages_cpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/tf_generate_messages_cpp.dir/rule
 .PHONY : arm_demo/CMakeFiles/tf_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -299,12 +299,12 @@ tf_generate_messages_cpp: arm_demo/CMakeFiles/tf_generate_messages_cpp.dir/rule
 
 # fast build rule for target.
 tf_generate_messages_cpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/tf_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/tf_generate_messages_cpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/tf_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/tf_generate_messages_cpp.dir/build
 .PHONY : tf_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/bond_generate_messages_py.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/bond_generate_messages_py.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/bond_generate_messages_py.dir/rule
 .PHONY : arm_demo/CMakeFiles/bond_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -314,12 +314,12 @@ bond_generate_messages_py: arm_demo/CMakeFiles/bond_generate_messages_py.dir/rul
 
 # fast build rule for target.
 bond_generate_messages_py/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/bond_generate_messages_py.dir/build.make arm_demo/CMakeFiles/bond_generate_messages_py.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/bond_generate_messages_py.dir/build.make arm_demo/CMakeFiles/bond_generate_messages_py.dir/build
 .PHONY : bond_generate_messages_py/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/bond_generate_messages_lisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/bond_generate_messages_lisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/bond_generate_messages_lisp.dir/rule
 .PHONY : arm_demo/CMakeFiles/bond_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -329,12 +329,12 @@ bond_generate_messages_lisp: arm_demo/CMakeFiles/bond_generate_messages_lisp.dir
 
 # fast build rule for target.
 bond_generate_messages_lisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/bond_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/bond_generate_messages_lisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/bond_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/bond_generate_messages_lisp.dir/build
 .PHONY : bond_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/bond_generate_messages_eus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/bond_generate_messages_eus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/bond_generate_messages_eus.dir/rule
 .PHONY : arm_demo/CMakeFiles/bond_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -344,12 +344,12 @@ bond_generate_messages_eus: arm_demo/CMakeFiles/bond_generate_messages_eus.dir/r
 
 # fast build rule for target.
 bond_generate_messages_eus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/bond_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/bond_generate_messages_eus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/bond_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/bond_generate_messages_eus.dir/build
 .PHONY : bond_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
 .PHONY : arm_demo/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -359,12 +359,12 @@ std_srvs_generate_messages_nodejs: arm_demo/CMakeFiles/std_srvs_generate_message
 
 # fast build rule for target.
 std_srvs_generate_messages_nodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
 .PHONY : std_srvs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/nodelet_generate_messages_py.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/nodelet_generate_messages_py.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/nodelet_generate_messages_py.dir/rule
 .PHONY : arm_demo/CMakeFiles/nodelet_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -374,12 +374,12 @@ nodelet_generate_messages_py: arm_demo/CMakeFiles/nodelet_generate_messages_py.d
 
 # fast build rule for target.
 nodelet_generate_messages_py/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/nodelet_generate_messages_py.dir/build.make arm_demo/CMakeFiles/nodelet_generate_messages_py.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/nodelet_generate_messages_py.dir/build.make arm_demo/CMakeFiles/nodelet_generate_messages_py.dir/build
 .PHONY : nodelet_generate_messages_py/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
 .PHONY : arm_demo/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -389,12 +389,12 @@ nodelet_generate_messages_nodejs: arm_demo/CMakeFiles/nodelet_generate_messages_
 
 # fast build rule for target.
 nodelet_generate_messages_nodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
 .PHONY : nodelet_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/nodelet_generate_messages_eus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/nodelet_generate_messages_eus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/nodelet_generate_messages_eus.dir/rule
 .PHONY : arm_demo/CMakeFiles/nodelet_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -404,12 +404,12 @@ nodelet_generate_messages_eus: arm_demo/CMakeFiles/nodelet_generate_messages_eus
 
 # fast build rule for target.
 nodelet_generate_messages_eus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/nodelet_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/nodelet_generate_messages_eus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/nodelet_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/nodelet_generate_messages_eus.dir/build
 .PHONY : nodelet_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/nodelet_generate_messages_cpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
 .PHONY : arm_demo/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -419,12 +419,12 @@ nodelet_generate_messages_cpp: arm_demo/CMakeFiles/nodelet_generate_messages_cpp
 
 # fast build rule for target.
 nodelet_generate_messages_cpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/nodelet_generate_messages_cpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/nodelet_generate_messages_cpp.dir/build
 .PHONY : nodelet_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
 .PHONY : arm_demo/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
 
 # Convenience name for target.
@@ -434,12 +434,12 @@ dynamic_reconfigure_gencfg: arm_demo/CMakeFiles/dynamic_reconfigure_gencfg.dir/r
 
 # fast build rule for target.
 dynamic_reconfigure_gencfg/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make arm_demo/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make arm_demo/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
 .PHONY : dynamic_reconfigure_gencfg/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
 .PHONY : arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -449,12 +449,12 @@ dynamic_reconfigure_generate_messages_cpp: arm_demo/CMakeFiles/dynamic_reconfigu
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_cpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/actionlib_generate_messages_py.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/actionlib_generate_messages_py.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/actionlib_generate_messages_py.dir/rule
 .PHONY : arm_demo/CMakeFiles/actionlib_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -464,12 +464,12 @@ actionlib_generate_messages_py: arm_demo/CMakeFiles/actionlib_generate_messages_
 
 # fast build rule for target.
 actionlib_generate_messages_py/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/actionlib_generate_messages_py.dir/build.make arm_demo/CMakeFiles/actionlib_generate_messages_py.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/actionlib_generate_messages_py.dir/build.make arm_demo/CMakeFiles/actionlib_generate_messages_py.dir/build
 .PHONY : actionlib_generate_messages_py/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
 .PHONY : arm_demo/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -479,12 +479,12 @@ actionlib_generate_messages_nodejs: arm_demo/CMakeFiles/actionlib_generate_messa
 
 # fast build rule for target.
 actionlib_generate_messages_nodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
 .PHONY : actionlib_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
 .PHONY : arm_demo/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -494,12 +494,12 @@ actionlib_generate_messages_lisp: arm_demo/CMakeFiles/actionlib_generate_message
 
 # fast build rule for target.
 actionlib_generate_messages_lisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/actionlib_generate_messages_lisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/actionlib_generate_messages_lisp.dir/build
 .PHONY : actionlib_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
 .PHONY : arm_demo/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -509,12 +509,12 @@ actionlib_generate_messages_cpp: arm_demo/CMakeFiles/actionlib_generate_messages
 
 # fast build rule for target.
 actionlib_generate_messages_cpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/actionlib_generate_messages_cpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/actionlib_generate_messages_cpp.dir/build
 .PHONY : actionlib_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/bond_generate_messages_cpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/bond_generate_messages_cpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/bond_generate_messages_cpp.dir/rule
 .PHONY : arm_demo/CMakeFiles/bond_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -524,12 +524,12 @@ bond_generate_messages_cpp: arm_demo/CMakeFiles/bond_generate_messages_cpp.dir/r
 
 # fast build rule for target.
 bond_generate_messages_cpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/bond_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/bond_generate_messages_cpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/bond_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/bond_generate_messages_cpp.dir/build
 .PHONY : bond_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
 .PHONY : arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -539,12 +539,12 @@ dynamic_reconfigure_generate_messages_nodejs: arm_demo/CMakeFiles/dynamic_reconf
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_nodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
 .PHONY : arm_demo/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -554,12 +554,12 @@ tf2_msgs_generate_messages_py: arm_demo/CMakeFiles/tf2_msgs_generate_messages_py
 
 # fast build rule for target.
 tf2_msgs_generate_messages_py/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
 .PHONY : tf2_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
 .PHONY : arm_demo/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -569,12 +569,12 @@ tf2_msgs_generate_messages_lisp: arm_demo/CMakeFiles/tf2_msgs_generate_messages_
 
 # fast build rule for target.
 tf2_msgs_generate_messages_lisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
 .PHONY : tf2_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
 .PHONY : arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -584,12 +584,12 @@ dynamic_reconfigure_generate_messages_lisp: arm_demo/CMakeFiles/dynamic_reconfig
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_lisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
 .PHONY : arm_demo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -599,12 +599,12 @@ tf2_msgs_generate_messages_cpp: arm_demo/CMakeFiles/tf2_msgs_generate_messages_c
 
 # fast build rule for target.
 tf2_msgs_generate_messages_cpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
 .PHONY : tf2_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
 .PHONY : arm_demo/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -614,12 +614,12 @@ visualization_msgs_generate_messages_py: arm_demo/CMakeFiles/visualization_msgs_
 
 # fast build rule for target.
 visualization_msgs_generate_messages_py/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/visualization_msgs_generate_messages_py.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/visualization_msgs_generate_messages_py.dir/build
 .PHONY : visualization_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
 .PHONY : arm_demo/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -629,12 +629,12 @@ actionlib_msgs_generate_messages_py: arm_demo/CMakeFiles/actionlib_msgs_generate
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_py/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
 .PHONY : actionlib_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/moveit_msgs_generate_messages_py.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/moveit_msgs_generate_messages_py.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/moveit_msgs_generate_messages_py.dir/rule
 .PHONY : arm_demo/CMakeFiles/moveit_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -644,12 +644,12 @@ moveit_msgs_generate_messages_py: arm_demo/CMakeFiles/moveit_msgs_generate_messa
 
 # fast build rule for target.
 moveit_msgs_generate_messages_py/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/moveit_msgs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/moveit_msgs_generate_messages_py.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/moveit_msgs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/moveit_msgs_generate_messages_py.dir/build
 .PHONY : moveit_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
 .PHONY : arm_demo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -659,12 +659,12 @@ geometry_msgs_generate_messages_cpp: arm_demo/CMakeFiles/geometry_msgs_generate_
 
 # fast build rule for target.
 geometry_msgs_generate_messages_cpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
 .PHONY : geometry_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/rule
 .PHONY : arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -674,12 +674,12 @@ object_recognition_msgs_generate_messages_lisp: arm_demo/CMakeFiles/object_recog
 
 # fast build rule for target.
 object_recognition_msgs_generate_messages_lisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/build
 .PHONY : object_recognition_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
 .PHONY : arm_demo/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -689,12 +689,12 @@ visualization_msgs_generate_messages_eus: arm_demo/CMakeFiles/visualization_msgs
 
 # fast build rule for target.
 visualization_msgs_generate_messages_eus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build
 .PHONY : visualization_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/rule
 .PHONY : arm_demo/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -704,12 +704,12 @@ moveit_msgs_generate_messages_nodejs: arm_demo/CMakeFiles/moveit_msgs_generate_m
 
 # fast build rule for target.
 moveit_msgs_generate_messages_nodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/build
 .PHONY : moveit_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
 .PHONY : arm_demo/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -719,12 +719,12 @@ tf2_msgs_generate_messages_nodejs: arm_demo/CMakeFiles/tf2_msgs_generate_message
 
 # fast build rule for target.
 tf2_msgs_generate_messages_nodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
 .PHONY : tf2_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/rule
 .PHONY : arm_demo/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -734,12 +734,12 @@ moveit_msgs_generate_messages_lisp: arm_demo/CMakeFiles/moveit_msgs_generate_mes
 
 # fast build rule for target.
 moveit_msgs_generate_messages_lisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/build
 .PHONY : moveit_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 .PHONY : arm_demo/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -749,12 +749,12 @@ std_msgs_generate_messages_lisp: arm_demo/CMakeFiles/std_msgs_generate_messages_
 
 # fast build rule for target.
 std_msgs_generate_messages_lisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/rule
 .PHONY : arm_demo/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -764,12 +764,12 @@ moveit_msgs_generate_messages_cpp: arm_demo/CMakeFiles/moveit_msgs_generate_mess
 
 # fast build rule for target.
 moveit_msgs_generate_messages_cpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/build
 .PHONY : moveit_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 .PHONY : arm_demo/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -779,12 +779,12 @@ sensor_msgs_generate_messages_cpp: arm_demo/CMakeFiles/sensor_msgs_generate_mess
 
 # fast build rule for target.
 sensor_msgs_generate_messages_cpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
 .PHONY : sensor_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 .PHONY : arm_demo/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -794,12 +794,12 @@ std_msgs_generate_messages_py: arm_demo/CMakeFiles/std_msgs_generate_messages_py
 
 # fast build rule for target.
 std_msgs_generate_messages_py/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/std_msgs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/std_msgs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/nodelet_generate_messages_lisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
 .PHONY : arm_demo/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -809,12 +809,12 @@ nodelet_generate_messages_lisp: arm_demo/CMakeFiles/nodelet_generate_messages_li
 
 # fast build rule for target.
 nodelet_generate_messages_lisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/nodelet_generate_messages_lisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/nodelet_generate_messages_lisp.dir/build
 .PHONY : nodelet_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 .PHONY : arm_demo/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -824,12 +824,12 @@ std_msgs_generate_messages_nodejs: arm_demo/CMakeFiles/std_msgs_generate_message
 
 # fast build rule for target.
 std_msgs_generate_messages_nodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
 .PHONY : arm_demo/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -839,12 +839,12 @@ geometry_msgs_generate_messages_eus: arm_demo/CMakeFiles/geometry_msgs_generate_
 
 # fast build rule for target.
 geometry_msgs_generate_messages_eus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
 .PHONY : geometry_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/rule
 .PHONY : arm_demo/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -854,12 +854,12 @@ octomap_msgs_generate_messages_lisp: arm_demo/CMakeFiles/octomap_msgs_generate_m
 
 # fast build rule for target.
 octomap_msgs_generate_messages_lisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/build
 .PHONY : octomap_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 .PHONY : arm_demo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -869,12 +869,12 @@ sensor_msgs_generate_messages_nodejs: arm_demo/CMakeFiles/sensor_msgs_generate_m
 
 # fast build rule for target.
 sensor_msgs_generate_messages_nodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
 .PHONY : sensor_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 .PHONY : arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -884,12 +884,12 @@ rosgraph_msgs_generate_messages_nodejs: arm_demo/CMakeFiles/rosgraph_msgs_genera
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_nodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/rule
 .PHONY : arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -899,12 +899,12 @@ object_recognition_msgs_generate_messages_py: arm_demo/CMakeFiles/object_recogni
 
 # fast build rule for target.
 object_recognition_msgs_generate_messages_py/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/build
 .PHONY : object_recognition_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 .PHONY : arm_demo/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -914,12 +914,12 @@ roscpp_generate_messages_cpp: arm_demo/CMakeFiles/roscpp_generate_messages_cpp.d
 
 # fast build rule for target.
 roscpp_generate_messages_cpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 .PHONY : arm_demo/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -929,12 +929,12 @@ roscpp_generate_messages_eus: arm_demo/CMakeFiles/roscpp_generate_messages_eus.d
 
 # fast build rule for target.
 roscpp_generate_messages_eus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/roscpp_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/roscpp_generate_messages_eus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/roscpp_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/roscpp_generate_messages_eus.dir/build
 .PHONY : roscpp_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
 .PHONY : arm_demo/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -944,12 +944,12 @@ actionlib_msgs_generate_messages_cpp: arm_demo/CMakeFiles/actionlib_msgs_generat
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_cpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
 .PHONY : actionlib_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 .PHONY : arm_demo/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -959,12 +959,12 @@ sensor_msgs_generate_messages_lisp: arm_demo/CMakeFiles/sensor_msgs_generate_mes
 
 # fast build rule for target.
 sensor_msgs_generate_messages_lisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
 .PHONY : sensor_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
 .PHONY : arm_demo/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -974,12 +974,12 @@ sensor_msgs_generate_messages_eus: arm_demo/CMakeFiles/sensor_msgs_generate_mess
 
 # fast build rule for target.
 sensor_msgs_generate_messages_eus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
 .PHONY : sensor_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
 .PHONY : arm_demo/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -989,12 +989,12 @@ visualization_msgs_generate_messages_cpp: arm_demo/CMakeFiles/visualization_msgs
 
 # fast build rule for target.
 visualization_msgs_generate_messages_cpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build
 .PHONY : visualization_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 .PHONY : arm_demo/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1004,12 +1004,12 @@ roscpp_generate_messages_nodejs: arm_demo/CMakeFiles/roscpp_generate_messages_no
 
 # fast build rule for target.
 roscpp_generate_messages_nodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 .PHONY : arm_demo/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1019,12 +1019,12 @@ std_msgs_generate_messages_cpp: arm_demo/CMakeFiles/std_msgs_generate_messages_c
 
 # fast build rule for target.
 std_msgs_generate_messages_cpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/std_srvs_generate_messages_py.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/std_srvs_generate_messages_py.dir/rule
 .PHONY : arm_demo/CMakeFiles/std_srvs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1034,12 +1034,12 @@ std_srvs_generate_messages_py: arm_demo/CMakeFiles/std_srvs_generate_messages_py
 
 # fast build rule for target.
 std_srvs_generate_messages_py/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/std_srvs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/std_srvs_generate_messages_py.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/std_srvs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/std_srvs_generate_messages_py.dir/build
 .PHONY : std_srvs_generate_messages_py/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/moveit_ros_planning_gencfg.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/moveit_ros_planning_gencfg.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/moveit_ros_planning_gencfg.dir/rule
 .PHONY : arm_demo/CMakeFiles/moveit_ros_planning_gencfg.dir/rule
 
 # Convenience name for target.
@@ -1049,12 +1049,12 @@ moveit_ros_planning_gencfg: arm_demo/CMakeFiles/moveit_ros_planning_gencfg.dir/r
 
 # fast build rule for target.
 moveit_ros_planning_gencfg/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/moveit_ros_planning_gencfg.dir/build.make arm_demo/CMakeFiles/moveit_ros_planning_gencfg.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/moveit_ros_planning_gencfg.dir/build.make arm_demo/CMakeFiles/moveit_ros_planning_gencfg.dir/build
 .PHONY : moveit_ros_planning_gencfg/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 .PHONY : arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1064,12 +1064,12 @@ rosgraph_msgs_generate_messages_eus: arm_demo/CMakeFiles/rosgraph_msgs_generate_
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_eus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/tf_generate_messages_py.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/tf_generate_messages_py.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/tf_generate_messages_py.dir/rule
 .PHONY : arm_demo/CMakeFiles/tf_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1079,12 +1079,12 @@ tf_generate_messages_py: arm_demo/CMakeFiles/tf_generate_messages_py.dir/rule
 
 # fast build rule for target.
 tf_generate_messages_py/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/tf_generate_messages_py.dir/build.make arm_demo/CMakeFiles/tf_generate_messages_py.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/tf_generate_messages_py.dir/build.make arm_demo/CMakeFiles/tf_generate_messages_py.dir/build
 .PHONY : tf_generate_messages_py/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
 .PHONY : arm_demo/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1094,12 +1094,12 @@ actionlib_msgs_generate_messages_lisp: arm_demo/CMakeFiles/actionlib_msgs_genera
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_lisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
 .PHONY : actionlib_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
 .PHONY : arm_demo/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1109,12 +1109,12 @@ std_msgs_generate_messages_eus: arm_demo/CMakeFiles/std_msgs_generate_messages_e
 
 # fast build rule for target.
 std_msgs_generate_messages_eus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/std_msgs_generate_messages_eus.dir/build
 .PHONY : std_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
 .PHONY : arm_demo/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1124,12 +1124,12 @@ actionlib_msgs_generate_messages_nodejs: arm_demo/CMakeFiles/actionlib_msgs_gene
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_nodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
 .PHONY : actionlib_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
 .PHONY : arm_demo/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1139,12 +1139,12 @@ trajectory_msgs_generate_messages_cpp: arm_demo/CMakeFiles/trajectory_msgs_gener
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_cpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
 .PHONY : trajectory_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/moveit_msgs_generate_messages_eus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/moveit_msgs_generate_messages_eus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/moveit_msgs_generate_messages_eus.dir/rule
 .PHONY : arm_demo/CMakeFiles/moveit_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1154,12 +1154,12 @@ moveit_msgs_generate_messages_eus: arm_demo/CMakeFiles/moveit_msgs_generate_mess
 
 # fast build rule for target.
 moveit_msgs_generate_messages_eus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/moveit_msgs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/moveit_msgs_generate_messages_eus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/moveit_msgs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/moveit_msgs_generate_messages_eus.dir/build
 .PHONY : moveit_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
 .PHONY : arm_demo/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1169,12 +1169,12 @@ tf2_msgs_generate_messages_eus: arm_demo/CMakeFiles/tf2_msgs_generate_messages_e
 
 # fast build rule for target.
 tf2_msgs_generate_messages_eus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
 .PHONY : tf2_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 .PHONY : arm_demo/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1184,12 +1184,12 @@ sensor_msgs_generate_messages_py: arm_demo/CMakeFiles/sensor_msgs_generate_messa
 
 # fast build rule for target.
 sensor_msgs_generate_messages_py/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
 .PHONY : sensor_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
 .PHONY : arm_demo/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1199,12 +1199,12 @@ geometry_msgs_generate_messages_py: arm_demo/CMakeFiles/geometry_msgs_generate_m
 
 # fast build rule for target.
 geometry_msgs_generate_messages_py/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
 .PHONY : geometry_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/tf_generate_messages_eus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/tf_generate_messages_eus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/tf_generate_messages_eus.dir/rule
 .PHONY : arm_demo/CMakeFiles/tf_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1214,12 +1214,12 @@ tf_generate_messages_eus: arm_demo/CMakeFiles/tf_generate_messages_eus.dir/rule
 
 # fast build rule for target.
 tf_generate_messages_eus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/tf_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/tf_generate_messages_eus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/tf_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/tf_generate_messages_eus.dir/build
 .PHONY : tf_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 .PHONY : arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1229,12 +1229,12 @@ rosgraph_msgs_generate_messages_lisp: arm_demo/CMakeFiles/rosgraph_msgs_generate
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
 .PHONY : arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1244,12 +1244,12 @@ dynamic_reconfigure_generate_messages_py: arm_demo/CMakeFiles/dynamic_reconfigur
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_py/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_py/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
 .PHONY : arm_demo/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1259,12 +1259,12 @@ actionlib_msgs_generate_messages_eus: arm_demo/CMakeFiles/actionlib_msgs_generat
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_eus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
 .PHONY : actionlib_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 .PHONY : arm_demo/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1274,12 +1274,12 @@ roscpp_generate_messages_lisp: arm_demo/CMakeFiles/roscpp_generate_messages_lisp
 
 # fast build rule for target.
 roscpp_generate_messages_lisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 .PHONY : roscpp_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/moveit_ros_manipulation_gencfg.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/moveit_ros_manipulation_gencfg.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/moveit_ros_manipulation_gencfg.dir/rule
 .PHONY : arm_demo/CMakeFiles/moveit_ros_manipulation_gencfg.dir/rule
 
 # Convenience name for target.
@@ -1289,12 +1289,12 @@ moveit_ros_manipulation_gencfg: arm_demo/CMakeFiles/moveit_ros_manipulation_genc
 
 # fast build rule for target.
 moveit_ros_manipulation_gencfg/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/moveit_ros_manipulation_gencfg.dir/build.make arm_demo/CMakeFiles/moveit_ros_manipulation_gencfg.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/moveit_ros_manipulation_gencfg.dir/build.make arm_demo/CMakeFiles/moveit_ros_manipulation_gencfg.dir/build
 .PHONY : moveit_ros_manipulation_gencfg/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/shape_msgs_generate_messages_cpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/shape_msgs_generate_messages_cpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/shape_msgs_generate_messages_cpp.dir/rule
 .PHONY : arm_demo/CMakeFiles/shape_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1304,12 +1304,12 @@ shape_msgs_generate_messages_cpp: arm_demo/CMakeFiles/shape_msgs_generate_messag
 
 # fast build rule for target.
 shape_msgs_generate_messages_cpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/shape_msgs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/shape_msgs_generate_messages_cpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/shape_msgs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/shape_msgs_generate_messages_cpp.dir/build
 .PHONY : shape_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/rule
 .PHONY : arm_demo/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1319,12 +1319,12 @@ shape_msgs_generate_messages_nodejs: arm_demo/CMakeFiles/shape_msgs_generate_mes
 
 # fast build rule for target.
 shape_msgs_generate_messages_nodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/build
 .PHONY : shape_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 .PHONY : arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1334,12 +1334,12 @@ rosgraph_msgs_generate_messages_py: arm_demo/CMakeFiles/rosgraph_msgs_generate_m
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_py/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
 .PHONY : arm_demo/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1349,12 +1349,12 @@ geometry_msgs_generate_messages_lisp: arm_demo/CMakeFiles/geometry_msgs_generate
 
 # fast build rule for target.
 geometry_msgs_generate_messages_lisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
 .PHONY : geometry_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
 .PHONY : arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1364,12 +1364,12 @@ dynamic_reconfigure_generate_messages_eus: arm_demo/CMakeFiles/dynamic_reconfigu
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_eus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
 .PHONY : arm_demo/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1379,12 +1379,12 @@ geometry_msgs_generate_messages_nodejs: arm_demo/CMakeFiles/geometry_msgs_genera
 
 # fast build rule for target.
 geometry_msgs_generate_messages_nodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
 .PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
 .PHONY : arm_demo/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1394,12 +1394,12 @@ visualization_msgs_generate_messages_lisp: arm_demo/CMakeFiles/visualization_msg
 
 # fast build rule for target.
 visualization_msgs_generate_messages_lisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build
 .PHONY : visualization_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/roscpp_generate_messages_py.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/roscpp_generate_messages_py.dir/rule
 .PHONY : arm_demo/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1409,12 +1409,12 @@ roscpp_generate_messages_py: arm_demo/CMakeFiles/roscpp_generate_messages_py.dir
 
 # fast build rule for target.
 roscpp_generate_messages_py/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/roscpp_generate_messages_py.dir/build.make arm_demo/CMakeFiles/roscpp_generate_messages_py.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/roscpp_generate_messages_py.dir/build.make arm_demo/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
 .PHONY : arm_demo/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1424,12 +1424,12 @@ trajectory_msgs_generate_messages_eus: arm_demo/CMakeFiles/trajectory_msgs_gener
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_eus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
 .PHONY : trajectory_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
 .PHONY : arm_demo/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1439,12 +1439,12 @@ trajectory_msgs_generate_messages_nodejs: arm_demo/CMakeFiles/trajectory_msgs_ge
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_nodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build
 .PHONY : trajectory_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/rule
 .PHONY : arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1454,12 +1454,12 @@ object_recognition_msgs_generate_messages_cpp: arm_demo/CMakeFiles/object_recogn
 
 # fast build rule for target.
 object_recognition_msgs_generate_messages_cpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/build
 .PHONY : object_recognition_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/octomap_msgs_generate_messages_eus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/octomap_msgs_generate_messages_eus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/octomap_msgs_generate_messages_eus.dir/rule
 .PHONY : arm_demo/CMakeFiles/octomap_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1469,12 +1469,12 @@ octomap_msgs_generate_messages_eus: arm_demo/CMakeFiles/octomap_msgs_generate_me
 
 # fast build rule for target.
 octomap_msgs_generate_messages_eus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/octomap_msgs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/octomap_msgs_generate_messages_eus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/octomap_msgs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/octomap_msgs_generate_messages_eus.dir/build
 .PHONY : octomap_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/shape_msgs_generate_messages_lisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/shape_msgs_generate_messages_lisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/shape_msgs_generate_messages_lisp.dir/rule
 .PHONY : arm_demo/CMakeFiles/shape_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1484,12 +1484,12 @@ shape_msgs_generate_messages_lisp: arm_demo/CMakeFiles/shape_msgs_generate_messa
 
 # fast build rule for target.
 shape_msgs_generate_messages_lisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/shape_msgs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/shape_msgs_generate_messages_lisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/shape_msgs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/shape_msgs_generate_messages_lisp.dir/build
 .PHONY : shape_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
 .PHONY : arm_demo/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1499,12 +1499,12 @@ trajectory_msgs_generate_messages_lisp: arm_demo/CMakeFiles/trajectory_msgs_gene
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_lisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make arm_demo/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
 .PHONY : trajectory_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/actionlib_generate_messages_eus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/actionlib_generate_messages_eus.dir/rule
 .PHONY : arm_demo/CMakeFiles/actionlib_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1514,12 +1514,12 @@ actionlib_generate_messages_eus: arm_demo/CMakeFiles/actionlib_generate_messages
 
 # fast build rule for target.
 actionlib_generate_messages_eus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/actionlib_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/actionlib_generate_messages_eus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/actionlib_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/actionlib_generate_messages_eus.dir/build
 .PHONY : actionlib_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 .PHONY : arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1529,12 +1529,12 @@ rosgraph_msgs_generate_messages_cpp: arm_demo/CMakeFiles/rosgraph_msgs_generate_
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
 .PHONY : arm_demo/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1544,12 +1544,12 @@ trajectory_msgs_generate_messages_py: arm_demo/CMakeFiles/trajectory_msgs_genera
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_py/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
 .PHONY : trajectory_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
 .PHONY : arm_demo/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1559,12 +1559,12 @@ visualization_msgs_generate_messages_nodejs: arm_demo/CMakeFiles/visualization_m
 
 # fast build rule for target.
 visualization_msgs_generate_messages_nodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build
 .PHONY : visualization_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/shape_msgs_generate_messages_eus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/shape_msgs_generate_messages_eus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/shape_msgs_generate_messages_eus.dir/rule
 .PHONY : arm_demo/CMakeFiles/shape_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1574,12 +1574,12 @@ shape_msgs_generate_messages_eus: arm_demo/CMakeFiles/shape_msgs_generate_messag
 
 # fast build rule for target.
 shape_msgs_generate_messages_eus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/shape_msgs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/shape_msgs_generate_messages_eus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/shape_msgs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/shape_msgs_generate_messages_eus.dir/build
 .PHONY : shape_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/shape_msgs_generate_messages_py.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/shape_msgs_generate_messages_py.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/shape_msgs_generate_messages_py.dir/rule
 .PHONY : arm_demo/CMakeFiles/shape_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1589,12 +1589,12 @@ shape_msgs_generate_messages_py: arm_demo/CMakeFiles/shape_msgs_generate_message
 
 # fast build rule for target.
 shape_msgs_generate_messages_py/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/shape_msgs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/shape_msgs_generate_messages_py.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/shape_msgs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/shape_msgs_generate_messages_py.dir/build
 .PHONY : shape_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/rule
 .PHONY : arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1604,12 +1604,12 @@ object_recognition_msgs_generate_messages_eus: arm_demo/CMakeFiles/object_recogn
 
 # fast build rule for target.
 object_recognition_msgs_generate_messages_eus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/build.make arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/build
 .PHONY : object_recognition_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/rule
 .PHONY : arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1619,12 +1619,12 @@ object_recognition_msgs_generate_messages_nodejs: arm_demo/CMakeFiles/object_rec
 
 # fast build rule for target.
 object_recognition_msgs_generate_messages_nodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/build
 .PHONY : object_recognition_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/rule
 .PHONY : arm_demo/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1634,12 +1634,12 @@ octomap_msgs_generate_messages_cpp: arm_demo/CMakeFiles/octomap_msgs_generate_me
 
 # fast build rule for target.
 octomap_msgs_generate_messages_cpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/build.make arm_demo/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/build
 .PHONY : octomap_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/rule
 .PHONY : arm_demo/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1649,12 +1649,12 @@ octomap_msgs_generate_messages_nodejs: arm_demo/CMakeFiles/octomap_msgs_generate
 
 # fast build rule for target.
 octomap_msgs_generate_messages_nodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/build
 .PHONY : octomap_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/bond_generate_messages_nodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/bond_generate_messages_nodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/bond_generate_messages_nodejs.dir/rule
 .PHONY : arm_demo/CMakeFiles/bond_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1664,12 +1664,12 @@ bond_generate_messages_nodejs: arm_demo/CMakeFiles/bond_generate_messages_nodejs
 
 # fast build rule for target.
 bond_generate_messages_nodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/bond_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/bond_generate_messages_nodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/bond_generate_messages_nodejs.dir/build.make arm_demo/CMakeFiles/bond_generate_messages_nodejs.dir/build
 .PHONY : bond_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_demo/CMakeFiles/octomap_msgs_generate_messages_py.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/octomap_msgs_generate_messages_py.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/octomap_msgs_generate_messages_py.dir/rule
 .PHONY : arm_demo/CMakeFiles/octomap_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1679,7 +1679,7 @@ octomap_msgs_generate_messages_py: arm_demo/CMakeFiles/octomap_msgs_generate_mes
 
 # fast build rule for target.
 octomap_msgs_generate_messages_py/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/octomap_msgs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/octomap_msgs_generate_messages_py.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/octomap_msgs_generate_messages_py.dir/build.make arm_demo/CMakeFiles/octomap_msgs_generate_messages_py.dir/build
 .PHONY : octomap_msgs_generate_messages_py/fast
 
 src/arm_cartesian_demo.o: src/arm_cartesian_demo.cpp.o
@@ -1688,7 +1688,7 @@ src/arm_cartesian_demo.o: src/arm_cartesian_demo.cpp.o
 
 # target to build an object file
 src/arm_cartesian_demo.cpp.o:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/arm_cartesian_demo.dir/build.make arm_demo/CMakeFiles/arm_cartesian_demo.dir/src/arm_cartesian_demo.cpp.o
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/arm_cartesian_demo.dir/build.make arm_demo/CMakeFiles/arm_cartesian_demo.dir/src/arm_cartesian_demo.cpp.o
 .PHONY : src/arm_cartesian_demo.cpp.o
 
 src/arm_cartesian_demo.i: src/arm_cartesian_demo.cpp.i
@@ -1697,7 +1697,7 @@ src/arm_cartesian_demo.i: src/arm_cartesian_demo.cpp.i
 
 # target to preprocess a source file
 src/arm_cartesian_demo.cpp.i:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/arm_cartesian_demo.dir/build.make arm_demo/CMakeFiles/arm_cartesian_demo.dir/src/arm_cartesian_demo.cpp.i
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/arm_cartesian_demo.dir/build.make arm_demo/CMakeFiles/arm_cartesian_demo.dir/src/arm_cartesian_demo.cpp.i
 .PHONY : src/arm_cartesian_demo.cpp.i
 
 src/arm_cartesian_demo.s: src/arm_cartesian_demo.cpp.s
@@ -1706,7 +1706,7 @@ src/arm_cartesian_demo.s: src/arm_cartesian_demo.cpp.s
 
 # target to generate assembly for a file
 src/arm_cartesian_demo.cpp.s:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/arm_cartesian_demo.dir/build.make arm_demo/CMakeFiles/arm_cartesian_demo.dir/src/arm_cartesian_demo.cpp.s
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/arm_cartesian_demo.dir/build.make arm_demo/CMakeFiles/arm_cartesian_demo.dir/src/arm_cartesian_demo.cpp.s
 .PHONY : src/arm_cartesian_demo.cpp.s
 
 src/arm_fk_demo.o: src/arm_fk_demo.cpp.o
@@ -1715,7 +1715,7 @@ src/arm_fk_demo.o: src/arm_fk_demo.cpp.o
 
 # target to build an object file
 src/arm_fk_demo.cpp.o:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/arm_fk_demo.dir/build.make arm_demo/CMakeFiles/arm_fk_demo.dir/src/arm_fk_demo.cpp.o
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/arm_fk_demo.dir/build.make arm_demo/CMakeFiles/arm_fk_demo.dir/src/arm_fk_demo.cpp.o
 .PHONY : src/arm_fk_demo.cpp.o
 
 src/arm_fk_demo.i: src/arm_fk_demo.cpp.i
@@ -1724,7 +1724,7 @@ src/arm_fk_demo.i: src/arm_fk_demo.cpp.i
 
 # target to preprocess a source file
 src/arm_fk_demo.cpp.i:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/arm_fk_demo.dir/build.make arm_demo/CMakeFiles/arm_fk_demo.dir/src/arm_fk_demo.cpp.i
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/arm_fk_demo.dir/build.make arm_demo/CMakeFiles/arm_fk_demo.dir/src/arm_fk_demo.cpp.i
 .PHONY : src/arm_fk_demo.cpp.i
 
 src/arm_fk_demo.s: src/arm_fk_demo.cpp.s
@@ -1733,7 +1733,7 @@ src/arm_fk_demo.s: src/arm_fk_demo.cpp.s
 
 # target to generate assembly for a file
 src/arm_fk_demo.cpp.s:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/arm_fk_demo.dir/build.make arm_demo/CMakeFiles/arm_fk_demo.dir/src/arm_fk_demo.cpp.s
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/arm_fk_demo.dir/build.make arm_demo/CMakeFiles/arm_fk_demo.dir/src/arm_fk_demo.cpp.s
 .PHONY : src/arm_fk_demo.cpp.s
 
 src/arm_ik_demo.o: src/arm_ik_demo.cpp.o
@@ -1742,7 +1742,7 @@ src/arm_ik_demo.o: src/arm_ik_demo.cpp.o
 
 # target to build an object file
 src/arm_ik_demo.cpp.o:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/arm_ik_demo.dir/build.make arm_demo/CMakeFiles/arm_ik_demo.dir/src/arm_ik_demo.cpp.o
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/arm_ik_demo.dir/build.make arm_demo/CMakeFiles/arm_ik_demo.dir/src/arm_ik_demo.cpp.o
 .PHONY : src/arm_ik_demo.cpp.o
 
 src/arm_ik_demo.i: src/arm_ik_demo.cpp.i
@@ -1751,7 +1751,7 @@ src/arm_ik_demo.i: src/arm_ik_demo.cpp.i
 
 # target to preprocess a source file
 src/arm_ik_demo.cpp.i:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/arm_ik_demo.dir/build.make arm_demo/CMakeFiles/arm_ik_demo.dir/src/arm_ik_demo.cpp.i
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/arm_ik_demo.dir/build.make arm_demo/CMakeFiles/arm_ik_demo.dir/src/arm_ik_demo.cpp.i
 .PHONY : src/arm_ik_demo.cpp.i
 
 src/arm_ik_demo.s: src/arm_ik_demo.cpp.s
@@ -1760,7 +1760,7 @@ src/arm_ik_demo.s: src/arm_ik_demo.cpp.s
 
 # target to generate assembly for a file
 src/arm_ik_demo.cpp.s:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f arm_demo/CMakeFiles/arm_ik_demo.dir/build.make arm_demo/CMakeFiles/arm_ik_demo.dir/src/arm_ik_demo.cpp.s
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f arm_demo/CMakeFiles/arm_ik_demo.dir/build.make arm_demo/CMakeFiles/arm_ik_demo.dir/src/arm_ik_demo.cpp.s
 .PHONY : src/arm_ik_demo.cpp.s
 
 # Help Target
@@ -1897,6 +1897,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

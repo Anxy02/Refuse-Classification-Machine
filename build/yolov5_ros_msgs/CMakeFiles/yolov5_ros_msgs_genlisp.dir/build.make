@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moyu/wheeltec_arm/src
+CMAKE_SOURCE_DIR = /home/moyu/Refuse-Classification-Machine/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moyu/wheeltec_arm/build
+CMAKE_BINARY_DIR = /home/moyu/Refuse-Classification-Machine/build
 
 # Utility rule file for yolov5_ros_msgs_genlisp.
 
@@ -63,10 +63,10 @@ yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genlisp.dir/build: yolov5_ros_msgs_ge
 .PHONY : yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genlisp.dir/build
 
 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genlisp.dir/clean:
-	cd /home/moyu/wheeltec_arm/build/yolov5_ros_msgs && $(CMAKE_COMMAND) -P CMakeFiles/yolov5_ros_msgs_genlisp.dir/cmake_clean.cmake
+	cd /home/moyu/Refuse-Classification-Machine/build/yolov5_ros_msgs && $(CMAKE_COMMAND) -P CMakeFiles/yolov5_ros_msgs_genlisp.dir/cmake_clean.cmake
 .PHONY : yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genlisp.dir/clean
 
 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genlisp.dir/depend:
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/wheeltec_arm/src /home/moyu/wheeltec_arm/src/yolov5_ros_msgs /home/moyu/wheeltec_arm/build /home/moyu/wheeltec_arm/build/yolov5_ros_msgs /home/moyu/wheeltec_arm/build/yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genlisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/Refuse-Classification-Machine/src /home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs /home/moyu/Refuse-Classification-Machine/build /home/moyu/Refuse-Classification-Machine/build/yolov5_ros_msgs /home/moyu/Refuse-Classification-Machine/build/yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genlisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genlisp.dir/depend
 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/moyu/wheeltec_arm/devel/lib/table_arm/ar_label_stack"
-  "/home/moyu/wheeltec_arm/devel/lib/table_arm/ar_label_stack.pdb"
+  "/home/moyu/Refuse-Classification-Machine/devel/lib/table_arm/ar_label_stack"
+  "/home/moyu/Refuse-Classification-Machine/devel/lib/table_arm/ar_label_stack.pdb"
   "CMakeFiles/ar_label_stack.dir/src/ar_label_stack.cpp.o"
 )
 

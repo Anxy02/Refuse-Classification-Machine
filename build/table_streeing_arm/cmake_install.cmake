@@ -1,8 +1,8 @@
-# Install script for directory: /home/moyu/wheeltec_arm/src/table_streeing_arm
+# Install script for directory: /home/moyu/Refuse-Classification-Machine/src/table_streeing_arm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/moyu/wheeltec_arm/install")
+  set(CMAKE_INSTALL_PREFIX "/home/moyu/Refuse-Classification-Machine/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,33 +38,33 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/moyu/wheeltec_arm/build/table_streeing_arm/catkin_generated/installspace/table_streeing_arm.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/moyu/Refuse-Classification-Machine/build/table_streeing_arm/catkin_generated/installspace/table_streeing_arm.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/table_streeing_arm/cmake" TYPE FILE FILES
-    "/home/moyu/wheeltec_arm/build/table_streeing_arm/catkin_generated/installspace/table_streeing_armConfig.cmake"
-    "/home/moyu/wheeltec_arm/build/table_streeing_arm/catkin_generated/installspace/table_streeing_armConfig-version.cmake"
+    "/home/moyu/Refuse-Classification-Machine/build/table_streeing_arm/catkin_generated/installspace/table_streeing_armConfig.cmake"
+    "/home/moyu/Refuse-Classification-Machine/build/table_streeing_arm/catkin_generated/installspace/table_streeing_armConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/table_streeing_arm" TYPE FILE FILES "/home/moyu/wheeltec_arm/src/table_streeing_arm/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/table_streeing_arm" TYPE FILE FILES "/home/moyu/Refuse-Classification-Machine/src/table_streeing_arm/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/table_streeing_arm/config" TYPE DIRECTORY FILES "/home/moyu/wheeltec_arm/src/table_streeing_arm/config/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/table_streeing_arm/config" TYPE DIRECTORY FILES "/home/moyu/Refuse-Classification-Machine/src/table_streeing_arm/config/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/table_streeing_arm/launch" TYPE DIRECTORY FILES "/home/moyu/wheeltec_arm/src/table_streeing_arm/launch/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/table_streeing_arm/launch" TYPE DIRECTORY FILES "/home/moyu/Refuse-Classification-Machine/src/table_streeing_arm/launch/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/table_streeing_arm/meshes" TYPE DIRECTORY FILES "/home/moyu/wheeltec_arm/src/table_streeing_arm/meshes/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/table_streeing_arm/meshes" TYPE DIRECTORY FILES "/home/moyu/Refuse-Classification-Machine/src/table_streeing_arm/meshes/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/table_streeing_arm/urdf" TYPE DIRECTORY FILES "/home/moyu/wheeltec_arm/src/table_streeing_arm/urdf/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/table_streeing_arm/urdf" TYPE DIRECTORY FILES "/home/moyu/Refuse-Classification-Machine/src/table_streeing_arm/urdf/")
 endif()
 

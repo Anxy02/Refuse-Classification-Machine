@@ -1,4 +1,4 @@
-prefix=/home/moyu/wheeltec_arm/install
+prefix=/home/moyu/Refuse-Classification-Machine/install
 
 Name: web_video_server
 Description: Description of web_video_server

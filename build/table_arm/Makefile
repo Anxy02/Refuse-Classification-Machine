@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moyu/wheeltec_arm/src
+CMAKE_SOURCE_DIR = /home/moyu/Refuse-Classification-Machine/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moyu/wheeltec_arm/build
+CMAKE_BINARY_DIR = /home/moyu/Refuse-Classification-Machine/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ list_install_components/fast: list_install_components
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/wheeltec_arm/build/CMakeFiles /home/moyu/wheeltec_arm/build/table_arm/CMakeFiles/progress.marks
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/wheeltec_arm/build/CMakeFiles 0
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles /home/moyu/Refuse-Classification-Machine/build/table_arm/CMakeFiles/progress.marks
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/clean
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/preinstall
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/preinstall
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 table_arm/CMakeFiles/table_arm_generate_messages_nodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/table_arm_generate_messages_nodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/table_arm_generate_messages_nodejs.dir/rule
 .PHONY : table_arm/CMakeFiles/table_arm_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ table_arm_generate_messages_nodejs: table_arm/CMakeFiles/table_arm_generate_mess
 
 # fast build rule for target.
 table_arm_generate_messages_nodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/table_arm_generate_messages_nodejs.dir/build.make table_arm/CMakeFiles/table_arm_generate_messages_nodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/table_arm_generate_messages_nodejs.dir/build.make table_arm/CMakeFiles/table_arm_generate_messages_nodejs.dir/build
 .PHONY : table_arm_generate_messages_nodejs/fast
 
 # Convenience name for target.
 table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_position_color.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_position_color.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_position_color.dir/rule
 .PHONY : table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_position_color.dir/rule
 
 # Convenience name for target.
@@ -194,12 +194,12 @@ _table_arm_generate_messages_check_deps_position_color: table_arm/CMakeFiles/_ta
 
 # fast build rule for target.
 _table_arm_generate_messages_check_deps_position_color/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_position_color.dir/build.make table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_position_color.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_position_color.dir/build.make table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_position_color.dir/build
 .PHONY : _table_arm_generate_messages_check_deps_position_color/fast
 
 # Convenience name for target.
 table_arm/CMakeFiles/table_arm_genlisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/table_arm_genlisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/table_arm_genlisp.dir/rule
 .PHONY : table_arm/CMakeFiles/table_arm_genlisp.dir/rule
 
 # Convenience name for target.
@@ -209,12 +209,12 @@ table_arm_genlisp: table_arm/CMakeFiles/table_arm_genlisp.dir/rule
 
 # fast build rule for target.
 table_arm_genlisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/table_arm_genlisp.dir/build.make table_arm/CMakeFiles/table_arm_genlisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/table_arm_genlisp.dir/build.make table_arm/CMakeFiles/table_arm_genlisp.dir/build
 .PHONY : table_arm_genlisp/fast
 
 # Convenience name for target.
 table_arm/CMakeFiles/table_arm_gencpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/table_arm_gencpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/table_arm_gencpp.dir/rule
 .PHONY : table_arm/CMakeFiles/table_arm_gencpp.dir/rule
 
 # Convenience name for target.
@@ -224,12 +224,12 @@ table_arm_gencpp: table_arm/CMakeFiles/table_arm_gencpp.dir/rule
 
 # fast build rule for target.
 table_arm_gencpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/table_arm_gencpp.dir/build.make table_arm/CMakeFiles/table_arm_gencpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/table_arm_gencpp.dir/build.make table_arm/CMakeFiles/table_arm_gencpp.dir/build
 .PHONY : table_arm_gencpp/fast
 
 # Convenience name for target.
 table_arm/CMakeFiles/color_stack_execute.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/color_stack_execute.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/color_stack_execute.dir/rule
 .PHONY : table_arm/CMakeFiles/color_stack_execute.dir/rule
 
 # Convenience name for target.
@@ -239,12 +239,12 @@ color_stack_execute: table_arm/CMakeFiles/color_stack_execute.dir/rule
 
 # fast build rule for target.
 color_stack_execute/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/color_stack_execute.dir/build.make table_arm/CMakeFiles/color_stack_execute.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/color_stack_execute.dir/build.make table_arm/CMakeFiles/color_stack_execute.dir/build
 .PHONY : color_stack_execute/fast
 
 # Convenience name for target.
 table_arm/CMakeFiles/table_arm_generate_messages_cpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/table_arm_generate_messages_cpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/table_arm_generate_messages_cpp.dir/rule
 .PHONY : table_arm/CMakeFiles/table_arm_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -254,12 +254,12 @@ table_arm_generate_messages_cpp: table_arm/CMakeFiles/table_arm_generate_message
 
 # fast build rule for target.
 table_arm_generate_messages_cpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/table_arm_generate_messages_cpp.dir/build.make table_arm/CMakeFiles/table_arm_generate_messages_cpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/table_arm_generate_messages_cpp.dir/build.make table_arm/CMakeFiles/table_arm_generate_messages_cpp.dir/build
 .PHONY : table_arm_generate_messages_cpp/fast
 
 # Convenience name for target.
 table_arm/CMakeFiles/table_arm_generate_messages_lisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/table_arm_generate_messages_lisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/table_arm_generate_messages_lisp.dir/rule
 .PHONY : table_arm/CMakeFiles/table_arm_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -269,12 +269,12 @@ table_arm_generate_messages_lisp: table_arm/CMakeFiles/table_arm_generate_messag
 
 # fast build rule for target.
 table_arm_generate_messages_lisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/table_arm_generate_messages_lisp.dir/build.make table_arm/CMakeFiles/table_arm_generate_messages_lisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/table_arm_generate_messages_lisp.dir/build.make table_arm/CMakeFiles/table_arm_generate_messages_lisp.dir/build
 .PHONY : table_arm_generate_messages_lisp/fast
 
 # Convenience name for target.
 table_arm/CMakeFiles/ar_label_stack.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/ar_label_stack.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/ar_label_stack.dir/rule
 .PHONY : table_arm/CMakeFiles/ar_label_stack.dir/rule
 
 # Convenience name for target.
@@ -284,12 +284,12 @@ ar_label_stack: table_arm/CMakeFiles/ar_label_stack.dir/rule
 
 # fast build rule for target.
 ar_label_stack/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/ar_label_stack.dir/build.make table_arm/CMakeFiles/ar_label_stack.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/ar_label_stack.dir/build.make table_arm/CMakeFiles/ar_label_stack.dir/build
 .PHONY : ar_label_stack/fast
 
 # Convenience name for target.
 table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_target_position.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_target_position.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_target_position.dir/rule
 .PHONY : table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_target_position.dir/rule
 
 # Convenience name for target.
@@ -299,12 +299,12 @@ _table_arm_generate_messages_check_deps_arm_target_position: table_arm/CMakeFile
 
 # fast build rule for target.
 _table_arm_generate_messages_check_deps_arm_target_position/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_target_position.dir/build.make table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_target_position.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_target_position.dir/build.make table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_target_position.dir/build
 .PHONY : _table_arm_generate_messages_check_deps_arm_target_position/fast
 
 # Convenience name for target.
 table_arm/CMakeFiles/table_arm_gennodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/table_arm_gennodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/table_arm_gennodejs.dir/rule
 .PHONY : table_arm/CMakeFiles/table_arm_gennodejs.dir/rule
 
 # Convenience name for target.
@@ -314,12 +314,12 @@ table_arm_gennodejs: table_arm/CMakeFiles/table_arm_gennodejs.dir/rule
 
 # fast build rule for target.
 table_arm_gennodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/table_arm_gennodejs.dir/build.make table_arm/CMakeFiles/table_arm_gennodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/table_arm_gennodejs.dir/build.make table_arm/CMakeFiles/table_arm_gennodejs.dir/build
 .PHONY : table_arm_gennodejs/fast
 
 # Convenience name for target.
 table_arm/CMakeFiles/table_arm_generate_messages_eus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/table_arm_generate_messages_eus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/table_arm_generate_messages_eus.dir/rule
 .PHONY : table_arm/CMakeFiles/table_arm_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -329,12 +329,12 @@ table_arm_generate_messages_eus: table_arm/CMakeFiles/table_arm_generate_message
 
 # fast build rule for target.
 table_arm_generate_messages_eus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/table_arm_generate_messages_eus.dir/build.make table_arm/CMakeFiles/table_arm_generate_messages_eus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/table_arm_generate_messages_eus.dir/build.make table_arm/CMakeFiles/table_arm_generate_messages_eus.dir/build
 .PHONY : table_arm_generate_messages_eus/fast
 
 # Convenience name for target.
 table_arm/CMakeFiles/color_sort_execute.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/color_sort_execute.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/color_sort_execute.dir/rule
 .PHONY : table_arm/CMakeFiles/color_sort_execute.dir/rule
 
 # Convenience name for target.
@@ -344,12 +344,12 @@ color_sort_execute: table_arm/CMakeFiles/color_sort_execute.dir/rule
 
 # fast build rule for target.
 color_sort_execute/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/color_sort_execute.dir/build.make table_arm/CMakeFiles/color_sort_execute.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/color_sort_execute.dir/build.make table_arm/CMakeFiles/color_sort_execute.dir/build
 .PHONY : color_sort_execute/fast
 
 # Convenience name for target.
 table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_target.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_target.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_target.dir/rule
 .PHONY : table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_target.dir/rule
 
 # Convenience name for target.
@@ -359,12 +359,12 @@ _table_arm_generate_messages_check_deps_arm_target: table_arm/CMakeFiles/_table_
 
 # fast build rule for target.
 _table_arm_generate_messages_check_deps_arm_target/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_target.dir/build.make table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_target.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_target.dir/build.make table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_target.dir/build
 .PHONY : _table_arm_generate_messages_check_deps_arm_target/fast
 
 # Convenience name for target.
 table_arm/CMakeFiles/table_arm_geneus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/table_arm_geneus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/table_arm_geneus.dir/rule
 .PHONY : table_arm/CMakeFiles/table_arm_geneus.dir/rule
 
 # Convenience name for target.
@@ -374,12 +374,12 @@ table_arm_geneus: table_arm/CMakeFiles/table_arm_geneus.dir/rule
 
 # fast build rule for target.
 table_arm_geneus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/table_arm_geneus.dir/build.make table_arm/CMakeFiles/table_arm_geneus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/table_arm_geneus.dir/build.make table_arm/CMakeFiles/table_arm_geneus.dir/build
 .PHONY : table_arm_geneus/fast
 
 # Convenience name for target.
 table_arm/CMakeFiles/help_control.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/help_control.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/help_control.dir/rule
 .PHONY : table_arm/CMakeFiles/help_control.dir/rule
 
 # Convenience name for target.
@@ -389,12 +389,12 @@ help_control: table_arm/CMakeFiles/help_control.dir/rule
 
 # fast build rule for target.
 help_control/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/help_control.dir/build.make table_arm/CMakeFiles/help_control.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/help_control.dir/build.make table_arm/CMakeFiles/help_control.dir/build
 .PHONY : help_control/fast
 
 # Convenience name for target.
 table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_color_ik_result.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_color_ik_result.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_color_ik_result.dir/rule
 .PHONY : table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_color_ik_result.dir/rule
 
 # Convenience name for target.
@@ -404,12 +404,12 @@ _table_arm_generate_messages_check_deps_color_ik_result: table_arm/CMakeFiles/_t
 
 # fast build rule for target.
 _table_arm_generate_messages_check_deps_color_ik_result/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_color_ik_result.dir/build.make table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_color_ik_result.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_color_ik_result.dir/build.make table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_color_ik_result.dir/build
 .PHONY : _table_arm_generate_messages_check_deps_color_ik_result/fast
 
 # Convenience name for target.
 table_arm/CMakeFiles/table_arm_generate_messages.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/table_arm_generate_messages.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/table_arm_generate_messages.dir/rule
 .PHONY : table_arm/CMakeFiles/table_arm_generate_messages.dir/rule
 
 # Convenience name for target.
@@ -419,12 +419,12 @@ table_arm_generate_messages: table_arm/CMakeFiles/table_arm_generate_messages.di
 
 # fast build rule for target.
 table_arm_generate_messages/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/table_arm_generate_messages.dir/build.make table_arm/CMakeFiles/table_arm_generate_messages.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/table_arm_generate_messages.dir/build.make table_arm/CMakeFiles/table_arm_generate_messages.dir/build
 .PHONY : table_arm_generate_messages/fast
 
 # Convenience name for target.
 table_arm/CMakeFiles/arm_pose_init.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/arm_pose_init.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/arm_pose_init.dir/rule
 .PHONY : table_arm/CMakeFiles/arm_pose_init.dir/rule
 
 # Convenience name for target.
@@ -434,12 +434,12 @@ arm_pose_init: table_arm/CMakeFiles/arm_pose_init.dir/rule
 
 # fast build rule for target.
 arm_pose_init/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/arm_pose_init.dir/build.make table_arm/CMakeFiles/arm_pose_init.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/arm_pose_init.dir/build.make table_arm/CMakeFiles/arm_pose_init.dir/build
 .PHONY : arm_pose_init/fast
 
 # Convenience name for target.
 table_arm/CMakeFiles/table_arm_generate_messages_py.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/table_arm_generate_messages_py.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/table_arm_generate_messages_py.dir/rule
 .PHONY : table_arm/CMakeFiles/table_arm_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -449,12 +449,12 @@ table_arm_generate_messages_py: table_arm/CMakeFiles/table_arm_generate_messages
 
 # fast build rule for target.
 table_arm_generate_messages_py/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/table_arm_generate_messages_py.dir/build.make table_arm/CMakeFiles/table_arm_generate_messages_py.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/table_arm_generate_messages_py.dir/build.make table_arm/CMakeFiles/table_arm_generate_messages_py.dir/build
 .PHONY : table_arm_generate_messages_py/fast
 
 # Convenience name for target.
 table_arm/CMakeFiles/ar_label_sort.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/ar_label_sort.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/ar_label_sort.dir/rule
 .PHONY : table_arm/CMakeFiles/ar_label_sort.dir/rule
 
 # Convenience name for target.
@@ -464,12 +464,12 @@ ar_label_sort: table_arm/CMakeFiles/ar_label_sort.dir/rule
 
 # fast build rule for target.
 ar_label_sort/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/ar_label_sort.dir/build.make table_arm/CMakeFiles/ar_label_sort.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/ar_label_sort.dir/build.make table_arm/CMakeFiles/ar_label_sort.dir/build
 .PHONY : ar_label_sort/fast
 
 # Convenience name for target.
 table_arm/CMakeFiles/wheeltec_table_arm.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/wheeltec_table_arm.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/wheeltec_table_arm.dir/rule
 .PHONY : table_arm/CMakeFiles/wheeltec_table_arm.dir/rule
 
 # Convenience name for target.
@@ -479,12 +479,12 @@ wheeltec_table_arm: table_arm/CMakeFiles/wheeltec_table_arm.dir/rule
 
 # fast build rule for target.
 wheeltec_table_arm/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/wheeltec_table_arm.dir/build.make table_arm/CMakeFiles/wheeltec_table_arm.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/wheeltec_table_arm.dir/build.make table_arm/CMakeFiles/wheeltec_table_arm.dir/build
 .PHONY : wheeltec_table_arm/fast
 
 # Convenience name for target.
 table_arm/CMakeFiles/voice_control_arm.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/voice_control_arm.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/voice_control_arm.dir/rule
 .PHONY : table_arm/CMakeFiles/voice_control_arm.dir/rule
 
 # Convenience name for target.
@@ -494,12 +494,12 @@ voice_control_arm: table_arm/CMakeFiles/voice_control_arm.dir/rule
 
 # fast build rule for target.
 voice_control_arm/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/voice_control_arm.dir/build.make table_arm/CMakeFiles/voice_control_arm.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/voice_control_arm.dir/build.make table_arm/CMakeFiles/voice_control_arm.dir/build
 .PHONY : voice_control_arm/fast
 
 # Convenience name for target.
 table_arm/CMakeFiles/node_feedback.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/node_feedback.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/node_feedback.dir/rule
 .PHONY : table_arm/CMakeFiles/node_feedback.dir/rule
 
 # Convenience name for target.
@@ -509,12 +509,12 @@ node_feedback: table_arm/CMakeFiles/node_feedback.dir/rule
 
 # fast build rule for target.
 node_feedback/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/node_feedback.dir/build.make table_arm/CMakeFiles/node_feedback.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/node_feedback.dir/build.make table_arm/CMakeFiles/node_feedback.dir/build
 .PHONY : node_feedback/fast
 
 # Convenience name for target.
 table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position.dir/rule
 .PHONY : table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position.dir/rule
 
 # Convenience name for target.
@@ -524,12 +524,12 @@ _table_arm_generate_messages_check_deps_arm_init_position: table_arm/CMakeFiles/
 
 # fast build rule for target.
 _table_arm_generate_messages_check_deps_arm_init_position/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position.dir/build.make table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position.dir/build.make table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position.dir/build
 .PHONY : _table_arm_generate_messages_check_deps_arm_init_position/fast
 
 # Convenience name for target.
 table_arm/CMakeFiles/table_arm_genpy.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/table_arm_genpy.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/table_arm_genpy.dir/rule
 .PHONY : table_arm/CMakeFiles/table_arm_genpy.dir/rule
 
 # Convenience name for target.
@@ -539,7 +539,7 @@ table_arm_genpy: table_arm/CMakeFiles/table_arm_genpy.dir/rule
 
 # fast build rule for target.
 table_arm_genpy/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/table_arm_genpy.dir/build.make table_arm/CMakeFiles/table_arm_genpy.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/table_arm_genpy.dir/build.make table_arm/CMakeFiles/table_arm_genpy.dir/build
 .PHONY : table_arm_genpy/fast
 
 src/ar_label_sort.o: src/ar_label_sort.cpp.o
@@ -548,7 +548,7 @@ src/ar_label_sort.o: src/ar_label_sort.cpp.o
 
 # target to build an object file
 src/ar_label_sort.cpp.o:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/ar_label_sort.dir/build.make table_arm/CMakeFiles/ar_label_sort.dir/src/ar_label_sort.cpp.o
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/ar_label_sort.dir/build.make table_arm/CMakeFiles/ar_label_sort.dir/src/ar_label_sort.cpp.o
 .PHONY : src/ar_label_sort.cpp.o
 
 src/ar_label_sort.i: src/ar_label_sort.cpp.i
@@ -557,7 +557,7 @@ src/ar_label_sort.i: src/ar_label_sort.cpp.i
 
 # target to preprocess a source file
 src/ar_label_sort.cpp.i:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/ar_label_sort.dir/build.make table_arm/CMakeFiles/ar_label_sort.dir/src/ar_label_sort.cpp.i
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/ar_label_sort.dir/build.make table_arm/CMakeFiles/ar_label_sort.dir/src/ar_label_sort.cpp.i
 .PHONY : src/ar_label_sort.cpp.i
 
 src/ar_label_sort.s: src/ar_label_sort.cpp.s
@@ -566,7 +566,7 @@ src/ar_label_sort.s: src/ar_label_sort.cpp.s
 
 # target to generate assembly for a file
 src/ar_label_sort.cpp.s:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/ar_label_sort.dir/build.make table_arm/CMakeFiles/ar_label_sort.dir/src/ar_label_sort.cpp.s
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/ar_label_sort.dir/build.make table_arm/CMakeFiles/ar_label_sort.dir/src/ar_label_sort.cpp.s
 .PHONY : src/ar_label_sort.cpp.s
 
 src/ar_label_stack.o: src/ar_label_stack.cpp.o
@@ -575,7 +575,7 @@ src/ar_label_stack.o: src/ar_label_stack.cpp.o
 
 # target to build an object file
 src/ar_label_stack.cpp.o:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/ar_label_stack.dir/build.make table_arm/CMakeFiles/ar_label_stack.dir/src/ar_label_stack.cpp.o
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/ar_label_stack.dir/build.make table_arm/CMakeFiles/ar_label_stack.dir/src/ar_label_stack.cpp.o
 .PHONY : src/ar_label_stack.cpp.o
 
 src/ar_label_stack.i: src/ar_label_stack.cpp.i
@@ -584,7 +584,7 @@ src/ar_label_stack.i: src/ar_label_stack.cpp.i
 
 # target to preprocess a source file
 src/ar_label_stack.cpp.i:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/ar_label_stack.dir/build.make table_arm/CMakeFiles/ar_label_stack.dir/src/ar_label_stack.cpp.i
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/ar_label_stack.dir/build.make table_arm/CMakeFiles/ar_label_stack.dir/src/ar_label_stack.cpp.i
 .PHONY : src/ar_label_stack.cpp.i
 
 src/ar_label_stack.s: src/ar_label_stack.cpp.s
@@ -593,7 +593,7 @@ src/ar_label_stack.s: src/ar_label_stack.cpp.s
 
 # target to generate assembly for a file
 src/ar_label_stack.cpp.s:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/ar_label_stack.dir/build.make table_arm/CMakeFiles/ar_label_stack.dir/src/ar_label_stack.cpp.s
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/ar_label_stack.dir/build.make table_arm/CMakeFiles/ar_label_stack.dir/src/ar_label_stack.cpp.s
 .PHONY : src/ar_label_stack.cpp.s
 
 src/arm_pose_init.o: src/arm_pose_init.cpp.o
@@ -602,7 +602,7 @@ src/arm_pose_init.o: src/arm_pose_init.cpp.o
 
 # target to build an object file
 src/arm_pose_init.cpp.o:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/arm_pose_init.dir/build.make table_arm/CMakeFiles/arm_pose_init.dir/src/arm_pose_init.cpp.o
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/arm_pose_init.dir/build.make table_arm/CMakeFiles/arm_pose_init.dir/src/arm_pose_init.cpp.o
 .PHONY : src/arm_pose_init.cpp.o
 
 src/arm_pose_init.i: src/arm_pose_init.cpp.i
@@ -611,7 +611,7 @@ src/arm_pose_init.i: src/arm_pose_init.cpp.i
 
 # target to preprocess a source file
 src/arm_pose_init.cpp.i:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/arm_pose_init.dir/build.make table_arm/CMakeFiles/arm_pose_init.dir/src/arm_pose_init.cpp.i
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/arm_pose_init.dir/build.make table_arm/CMakeFiles/arm_pose_init.dir/src/arm_pose_init.cpp.i
 .PHONY : src/arm_pose_init.cpp.i
 
 src/arm_pose_init.s: src/arm_pose_init.cpp.s
@@ -620,7 +620,7 @@ src/arm_pose_init.s: src/arm_pose_init.cpp.s
 
 # target to generate assembly for a file
 src/arm_pose_init.cpp.s:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/arm_pose_init.dir/build.make table_arm/CMakeFiles/arm_pose_init.dir/src/arm_pose_init.cpp.s
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/arm_pose_init.dir/build.make table_arm/CMakeFiles/arm_pose_init.dir/src/arm_pose_init.cpp.s
 .PHONY : src/arm_pose_init.cpp.s
 
 src/color_sort_execute.o: src/color_sort_execute.cpp.o
@@ -629,7 +629,7 @@ src/color_sort_execute.o: src/color_sort_execute.cpp.o
 
 # target to build an object file
 src/color_sort_execute.cpp.o:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/color_sort_execute.dir/build.make table_arm/CMakeFiles/color_sort_execute.dir/src/color_sort_execute.cpp.o
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/color_sort_execute.dir/build.make table_arm/CMakeFiles/color_sort_execute.dir/src/color_sort_execute.cpp.o
 .PHONY : src/color_sort_execute.cpp.o
 
 src/color_sort_execute.i: src/color_sort_execute.cpp.i
@@ -638,7 +638,7 @@ src/color_sort_execute.i: src/color_sort_execute.cpp.i
 
 # target to preprocess a source file
 src/color_sort_execute.cpp.i:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/color_sort_execute.dir/build.make table_arm/CMakeFiles/color_sort_execute.dir/src/color_sort_execute.cpp.i
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/color_sort_execute.dir/build.make table_arm/CMakeFiles/color_sort_execute.dir/src/color_sort_execute.cpp.i
 .PHONY : src/color_sort_execute.cpp.i
 
 src/color_sort_execute.s: src/color_sort_execute.cpp.s
@@ -647,7 +647,7 @@ src/color_sort_execute.s: src/color_sort_execute.cpp.s
 
 # target to generate assembly for a file
 src/color_sort_execute.cpp.s:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/color_sort_execute.dir/build.make table_arm/CMakeFiles/color_sort_execute.dir/src/color_sort_execute.cpp.s
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/color_sort_execute.dir/build.make table_arm/CMakeFiles/color_sort_execute.dir/src/color_sort_execute.cpp.s
 .PHONY : src/color_sort_execute.cpp.s
 
 src/color_stack_execute.o: src/color_stack_execute.cpp.o
@@ -656,7 +656,7 @@ src/color_stack_execute.o: src/color_stack_execute.cpp.o
 
 # target to build an object file
 src/color_stack_execute.cpp.o:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/color_stack_execute.dir/build.make table_arm/CMakeFiles/color_stack_execute.dir/src/color_stack_execute.cpp.o
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/color_stack_execute.dir/build.make table_arm/CMakeFiles/color_stack_execute.dir/src/color_stack_execute.cpp.o
 .PHONY : src/color_stack_execute.cpp.o
 
 src/color_stack_execute.i: src/color_stack_execute.cpp.i
@@ -665,7 +665,7 @@ src/color_stack_execute.i: src/color_stack_execute.cpp.i
 
 # target to preprocess a source file
 src/color_stack_execute.cpp.i:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/color_stack_execute.dir/build.make table_arm/CMakeFiles/color_stack_execute.dir/src/color_stack_execute.cpp.i
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/color_stack_execute.dir/build.make table_arm/CMakeFiles/color_stack_execute.dir/src/color_stack_execute.cpp.i
 .PHONY : src/color_stack_execute.cpp.i
 
 src/color_stack_execute.s: src/color_stack_execute.cpp.s
@@ -674,7 +674,7 @@ src/color_stack_execute.s: src/color_stack_execute.cpp.s
 
 # target to generate assembly for a file
 src/color_stack_execute.cpp.s:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/color_stack_execute.dir/build.make table_arm/CMakeFiles/color_stack_execute.dir/src/color_stack_execute.cpp.s
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/color_stack_execute.dir/build.make table_arm/CMakeFiles/color_stack_execute.dir/src/color_stack_execute.cpp.s
 .PHONY : src/color_stack_execute.cpp.s
 
 src/help_control.o: src/help_control.cpp.o
@@ -683,7 +683,7 @@ src/help_control.o: src/help_control.cpp.o
 
 # target to build an object file
 src/help_control.cpp.o:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/help_control.dir/build.make table_arm/CMakeFiles/help_control.dir/src/help_control.cpp.o
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/help_control.dir/build.make table_arm/CMakeFiles/help_control.dir/src/help_control.cpp.o
 .PHONY : src/help_control.cpp.o
 
 src/help_control.i: src/help_control.cpp.i
@@ -692,7 +692,7 @@ src/help_control.i: src/help_control.cpp.i
 
 # target to preprocess a source file
 src/help_control.cpp.i:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/help_control.dir/build.make table_arm/CMakeFiles/help_control.dir/src/help_control.cpp.i
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/help_control.dir/build.make table_arm/CMakeFiles/help_control.dir/src/help_control.cpp.i
 .PHONY : src/help_control.cpp.i
 
 src/help_control.s: src/help_control.cpp.s
@@ -701,7 +701,7 @@ src/help_control.s: src/help_control.cpp.s
 
 # target to generate assembly for a file
 src/help_control.cpp.s:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/help_control.dir/build.make table_arm/CMakeFiles/help_control.dir/src/help_control.cpp.s
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/help_control.dir/build.make table_arm/CMakeFiles/help_control.dir/src/help_control.cpp.s
 .PHONY : src/help_control.cpp.s
 
 src/node_feedback.o: src/node_feedback.cpp.o
@@ -710,7 +710,7 @@ src/node_feedback.o: src/node_feedback.cpp.o
 
 # target to build an object file
 src/node_feedback.cpp.o:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/node_feedback.dir/build.make table_arm/CMakeFiles/node_feedback.dir/src/node_feedback.cpp.o
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/node_feedback.dir/build.make table_arm/CMakeFiles/node_feedback.dir/src/node_feedback.cpp.o
 .PHONY : src/node_feedback.cpp.o
 
 src/node_feedback.i: src/node_feedback.cpp.i
@@ -719,7 +719,7 @@ src/node_feedback.i: src/node_feedback.cpp.i
 
 # target to preprocess a source file
 src/node_feedback.cpp.i:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/node_feedback.dir/build.make table_arm/CMakeFiles/node_feedback.dir/src/node_feedback.cpp.i
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/node_feedback.dir/build.make table_arm/CMakeFiles/node_feedback.dir/src/node_feedback.cpp.i
 .PHONY : src/node_feedback.cpp.i
 
 src/node_feedback.s: src/node_feedback.cpp.s
@@ -728,7 +728,7 @@ src/node_feedback.s: src/node_feedback.cpp.s
 
 # target to generate assembly for a file
 src/node_feedback.cpp.s:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/node_feedback.dir/build.make table_arm/CMakeFiles/node_feedback.dir/src/node_feedback.cpp.s
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/node_feedback.dir/build.make table_arm/CMakeFiles/node_feedback.dir/src/node_feedback.cpp.s
 .PHONY : src/node_feedback.cpp.s
 
 src/voice_control.o: src/voice_control.cpp.o
@@ -737,7 +737,7 @@ src/voice_control.o: src/voice_control.cpp.o
 
 # target to build an object file
 src/voice_control.cpp.o:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/voice_control_arm.dir/build.make table_arm/CMakeFiles/voice_control_arm.dir/src/voice_control.cpp.o
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/voice_control_arm.dir/build.make table_arm/CMakeFiles/voice_control_arm.dir/src/voice_control.cpp.o
 .PHONY : src/voice_control.cpp.o
 
 src/voice_control.i: src/voice_control.cpp.i
@@ -746,7 +746,7 @@ src/voice_control.i: src/voice_control.cpp.i
 
 # target to preprocess a source file
 src/voice_control.cpp.i:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/voice_control_arm.dir/build.make table_arm/CMakeFiles/voice_control_arm.dir/src/voice_control.cpp.i
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/voice_control_arm.dir/build.make table_arm/CMakeFiles/voice_control_arm.dir/src/voice_control.cpp.i
 .PHONY : src/voice_control.cpp.i
 
 src/voice_control.s: src/voice_control.cpp.s
@@ -755,7 +755,7 @@ src/voice_control.s: src/voice_control.cpp.s
 
 # target to generate assembly for a file
 src/voice_control.cpp.s:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/voice_control_arm.dir/build.make table_arm/CMakeFiles/voice_control_arm.dir/src/voice_control.cpp.s
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/voice_control_arm.dir/build.make table_arm/CMakeFiles/voice_control_arm.dir/src/voice_control.cpp.s
 .PHONY : src/voice_control.cpp.s
 
 src/wheeltec_table_arm.o: src/wheeltec_table_arm.cpp.o
@@ -764,7 +764,7 @@ src/wheeltec_table_arm.o: src/wheeltec_table_arm.cpp.o
 
 # target to build an object file
 src/wheeltec_table_arm.cpp.o:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/wheeltec_table_arm.dir/build.make table_arm/CMakeFiles/wheeltec_table_arm.dir/src/wheeltec_table_arm.cpp.o
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/wheeltec_table_arm.dir/build.make table_arm/CMakeFiles/wheeltec_table_arm.dir/src/wheeltec_table_arm.cpp.o
 .PHONY : src/wheeltec_table_arm.cpp.o
 
 src/wheeltec_table_arm.i: src/wheeltec_table_arm.cpp.i
@@ -773,7 +773,7 @@ src/wheeltec_table_arm.i: src/wheeltec_table_arm.cpp.i
 
 # target to preprocess a source file
 src/wheeltec_table_arm.cpp.i:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/wheeltec_table_arm.dir/build.make table_arm/CMakeFiles/wheeltec_table_arm.dir/src/wheeltec_table_arm.cpp.i
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/wheeltec_table_arm.dir/build.make table_arm/CMakeFiles/wheeltec_table_arm.dir/src/wheeltec_table_arm.cpp.i
 .PHONY : src/wheeltec_table_arm.cpp.i
 
 src/wheeltec_table_arm.s: src/wheeltec_table_arm.cpp.s
@@ -782,7 +782,7 @@ src/wheeltec_table_arm.s: src/wheeltec_table_arm.cpp.s
 
 # target to generate assembly for a file
 src/wheeltec_table_arm.cpp.s:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f table_arm/CMakeFiles/wheeltec_table_arm.dir/build.make table_arm/CMakeFiles/wheeltec_table_arm.dir/src/wheeltec_table_arm.cpp.s
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f table_arm/CMakeFiles/wheeltec_table_arm.dir/build.make table_arm/CMakeFiles/wheeltec_table_arm.dir/src/wheeltec_table_arm.cpp.s
 .PHONY : src/wheeltec_table_arm.cpp.s
 
 # Help Target
@@ -861,6 +861,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

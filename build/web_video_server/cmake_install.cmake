@@ -1,8 +1,8 @@
-# Install script for directory: /home/moyu/wheeltec_arm/src/web_video_server
+# Install script for directory: /home/moyu/Refuse-Classification-Machine/src/web_video_server
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/moyu/wheeltec_arm/install")
+  set(CMAKE_INSTALL_PREFIX "/home/moyu/Refuse-Classification-Machine/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/moyu/wheeltec_arm/build/web_video_server/catkin_generated/installspace/web_video_server.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/moyu/Refuse-Classification-Machine/build/web_video_server/catkin_generated/installspace/web_video_server.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/web_video_server/cmake" TYPE FILE FILES
-    "/home/moyu/wheeltec_arm/build/web_video_server/catkin_generated/installspace/web_video_serverConfig.cmake"
-    "/home/moyu/wheeltec_arm/build/web_video_server/catkin_generated/installspace/web_video_serverConfig-version.cmake"
+    "/home/moyu/Refuse-Classification-Machine/build/web_video_server/catkin_generated/installspace/web_video_serverConfig.cmake"
+    "/home/moyu/Refuse-Classification-Machine/build/web_video_server/catkin_generated/installspace/web_video_serverConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/web_video_server" TYPE FILE FILES "/home/moyu/wheeltec_arm/src/web_video_server/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/web_video_server" TYPE FILE FILES "/home/moyu/Refuse-Classification-Machine/src/web_video_server/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -59,7 +59,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/web_video_server/web_video_server"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/web_video_server" TYPE EXECUTABLE FILES "/home/moyu/wheeltec_arm/devel/lib/web_video_server/web_video_server")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/web_video_server" TYPE EXECUTABLE FILES "/home/moyu/Refuse-Classification-Machine/devel/lib/web_video_server/web_video_server")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/web_video_server/web_video_server" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/web_video_server/web_video_server")
     file(RPATH_CHANGE
@@ -73,6 +73,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/web_video_server" TYPE DIRECTORY FILES "/home/moyu/wheeltec_arm/src/web_video_server/include/" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/[^/]*\\.hpp$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/web_video_server" TYPE DIRECTORY FILES "/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/[^/]*\\.hpp$")
 endif()
 

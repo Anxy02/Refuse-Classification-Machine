@@ -43,54 +43,54 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moyu/wheeltec_arm/src
+CMAKE_SOURCE_DIR = /home/moyu/Refuse-Classification-Machine/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moyu/wheeltec_arm/build
+CMAKE_BINARY_DIR = /home/moyu/Refuse-Classification-Machine/build
 
 # Utility rule file for table_arm_generate_messages_nodejs.
 
 # Include the progress variables for this target.
 include table_arm/CMakeFiles/table_arm_generate_messages_nodejs.dir/progress.make
 
-table_arm/CMakeFiles/table_arm_generate_messages_nodejs: /home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm/msg/position_color.js
-table_arm/CMakeFiles/table_arm_generate_messages_nodejs: /home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm/msg/arm_target.js
-table_arm/CMakeFiles/table_arm_generate_messages_nodejs: /home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm/msg/color_ik_result.js
-table_arm/CMakeFiles/table_arm_generate_messages_nodejs: /home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm/msg/arm_target_position.js
-table_arm/CMakeFiles/table_arm_generate_messages_nodejs: /home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm/msg/arm_init_position.js
+table_arm/CMakeFiles/table_arm_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm/msg/position_color.js
+table_arm/CMakeFiles/table_arm_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm/msg/arm_target.js
+table_arm/CMakeFiles/table_arm_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm/msg/color_ik_result.js
+table_arm/CMakeFiles/table_arm_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm/msg/arm_target_position.js
+table_arm/CMakeFiles/table_arm_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm/msg/arm_init_position.js
 
 
-/home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm/msg/position_color.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm/msg/position_color.js: /home/moyu/wheeltec_arm/src/table_arm/msg/position_color.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from table_arm/position_color.msg"
-	cd /home/moyu/wheeltec_arm/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/moyu/wheeltec_arm/src/table_arm/msg/position_color.msg -Itable_arm:/home/moyu/wheeltec_arm/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm/msg
+/home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm/msg/position_color.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm/msg/position_color.js: /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/position_color.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from table_arm/position_color.msg"
+	cd /home/moyu/Refuse-Classification-Machine/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/position_color.msg -Itable_arm:/home/moyu/Refuse-Classification-Machine/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm/msg
 
-/home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm/msg/arm_target.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm/msg/arm_target.js: /home/moyu/wheeltec_arm/src/table_arm/msg/arm_target.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from table_arm/arm_target.msg"
-	cd /home/moyu/wheeltec_arm/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/moyu/wheeltec_arm/src/table_arm/msg/arm_target.msg -Itable_arm:/home/moyu/wheeltec_arm/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm/msg
+/home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm/msg/arm_target.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm/msg/arm_target.js: /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/arm_target.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from table_arm/arm_target.msg"
+	cd /home/moyu/Refuse-Classification-Machine/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/arm_target.msg -Itable_arm:/home/moyu/Refuse-Classification-Machine/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm/msg
 
-/home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm/msg/color_ik_result.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm/msg/color_ik_result.js: /home/moyu/wheeltec_arm/src/table_arm/msg/color_ik_result.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from table_arm/color_ik_result.msg"
-	cd /home/moyu/wheeltec_arm/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/moyu/wheeltec_arm/src/table_arm/msg/color_ik_result.msg -Itable_arm:/home/moyu/wheeltec_arm/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm/msg
+/home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm/msg/color_ik_result.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm/msg/color_ik_result.js: /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/color_ik_result.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from table_arm/color_ik_result.msg"
+	cd /home/moyu/Refuse-Classification-Machine/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/color_ik_result.msg -Itable_arm:/home/moyu/Refuse-Classification-Machine/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm/msg
 
-/home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm/msg/arm_target_position.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm/msg/arm_target_position.js: /home/moyu/wheeltec_arm/src/table_arm/msg/arm_target_position.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from table_arm/arm_target_position.msg"
-	cd /home/moyu/wheeltec_arm/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/moyu/wheeltec_arm/src/table_arm/msg/arm_target_position.msg -Itable_arm:/home/moyu/wheeltec_arm/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm/msg
+/home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm/msg/arm_target_position.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm/msg/arm_target_position.js: /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/arm_target_position.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from table_arm/arm_target_position.msg"
+	cd /home/moyu/Refuse-Classification-Machine/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/arm_target_position.msg -Itable_arm:/home/moyu/Refuse-Classification-Machine/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm/msg
 
-/home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm/msg/arm_init_position.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm/msg/arm_init_position.js: /home/moyu/wheeltec_arm/src/table_arm/msg/arm_init_position.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from table_arm/arm_init_position.msg"
-	cd /home/moyu/wheeltec_arm/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/moyu/wheeltec_arm/src/table_arm/msg/arm_init_position.msg -Itable_arm:/home/moyu/wheeltec_arm/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm/msg
+/home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm/msg/arm_init_position.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm/msg/arm_init_position.js: /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/arm_init_position.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from table_arm/arm_init_position.msg"
+	cd /home/moyu/Refuse-Classification-Machine/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/arm_init_position.msg -Itable_arm:/home/moyu/Refuse-Classification-Machine/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm/msg
 
 table_arm_generate_messages_nodejs: table_arm/CMakeFiles/table_arm_generate_messages_nodejs
-table_arm_generate_messages_nodejs: /home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm/msg/position_color.js
-table_arm_generate_messages_nodejs: /home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm/msg/arm_target.js
-table_arm_generate_messages_nodejs: /home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm/msg/color_ik_result.js
-table_arm_generate_messages_nodejs: /home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm/msg/arm_target_position.js
-table_arm_generate_messages_nodejs: /home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm/msg/arm_init_position.js
+table_arm_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm/msg/position_color.js
+table_arm_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm/msg/arm_target.js
+table_arm_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm/msg/color_ik_result.js
+table_arm_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm/msg/arm_target_position.js
+table_arm_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm/msg/arm_init_position.js
 table_arm_generate_messages_nodejs: table_arm/CMakeFiles/table_arm_generate_messages_nodejs.dir/build.make
 
 .PHONY : table_arm_generate_messages_nodejs
@@ -101,10 +101,10 @@ table_arm/CMakeFiles/table_arm_generate_messages_nodejs.dir/build: table_arm_gen
 .PHONY : table_arm/CMakeFiles/table_arm_generate_messages_nodejs.dir/build
 
 table_arm/CMakeFiles/table_arm_generate_messages_nodejs.dir/clean:
-	cd /home/moyu/wheeltec_arm/build/table_arm && $(CMAKE_COMMAND) -P CMakeFiles/table_arm_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/moyu/Refuse-Classification-Machine/build/table_arm && $(CMAKE_COMMAND) -P CMakeFiles/table_arm_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : table_arm/CMakeFiles/table_arm_generate_messages_nodejs.dir/clean
 
 table_arm/CMakeFiles/table_arm_generate_messages_nodejs.dir/depend:
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/wheeltec_arm/src /home/moyu/wheeltec_arm/src/table_arm /home/moyu/wheeltec_arm/build /home/moyu/wheeltec_arm/build/table_arm /home/moyu/wheeltec_arm/build/table_arm/CMakeFiles/table_arm_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/Refuse-Classification-Machine/src /home/moyu/Refuse-Classification-Machine/src/table_arm /home/moyu/Refuse-Classification-Machine/build /home/moyu/Refuse-Classification-Machine/build/table_arm /home/moyu/Refuse-Classification-Machine/build/table_arm/CMakeFiles/table_arm_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : table_arm/CMakeFiles/table_arm_generate_messages_nodejs.dir/depend
 

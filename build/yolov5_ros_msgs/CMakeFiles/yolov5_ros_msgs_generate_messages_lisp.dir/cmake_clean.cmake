@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/moyu/wheeltec_arm/devel/share/common-lisp/ros/yolov5_ros_msgs/msg/BoundingBox.lisp"
-  "/home/moyu/wheeltec_arm/devel/share/common-lisp/ros/yolov5_ros_msgs/msg/BoundingBoxes.lisp"
+  "/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolov5_ros_msgs/msg/BoundingBox.lisp"
+  "/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolov5_ros_msgs/msg/BoundingBoxes.lisp"
   "CMakeFiles/yolov5_ros_msgs_generate_messages_lisp"
 )
 

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/moyu/wheeltec_arm/src/yolo_new/src/yolo_execute.cpp" "/home/moyu/wheeltec_arm/build/yolo_new/CMakeFiles/yolo_execute.dir/src/yolo_execute.cpp.o"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/src/yolo_execute.cpp" "/home/moyu/Refuse-Classification-Machine/build/yolo_new/CMakeFiles/yolo_execute.dir/src/yolo_execute.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,13 +17,13 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/moyu/wheeltec_arm/devel/include"
-  "/home/moyu/wheeltec_arm/src/yolo_new/include"
+  "/home/moyu/Refuse-Classification-Machine/devel/include"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/eigen3"
   "/usr/include/bullet"
-  "/home/moyu/wheeltec_arm/src/yolo_new/incliude/yolo_new"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/incliude/yolo_new"
   )
 
 # Targets to which this target links.

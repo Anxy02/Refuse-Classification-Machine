@@ -27,14 +27,14 @@ struct color_ik_result_new_
     : pedestal_angle(0.0)
     , arm_angle(0.0)
     , hand_angle(0.0)
-    , color()
+    , sort()
     , count(0)  {
     }
   color_ik_result_new_(const ContainerAllocator& _alloc)
     : pedestal_angle(0.0)
     , arm_angle(0.0)
     , hand_angle(0.0)
-    , color(_alloc)
+    , sort(_alloc)
     , count(0)  {
   (void)_alloc;
     }
@@ -50,8 +50,8 @@ struct color_ik_result_new_
    typedef float _hand_angle_type;
   _hand_angle_type hand_angle;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _color_type;
-  _color_type color;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _sort_type;
+  _sort_type sort;
 
    typedef int32_t _count_type;
   _count_type count;
@@ -88,7 +88,7 @@ bool operator==(const ::yolo_new::color_ik_result_new_<ContainerAllocator1> & lh
   return lhs.pedestal_angle == rhs.pedestal_angle &&
     lhs.arm_angle == rhs.arm_angle &&
     lhs.hand_angle == rhs.hand_angle &&
-    lhs.color == rhs.color &&
+    lhs.sort == rhs.sort &&
     lhs.count == rhs.count;
 }
 
@@ -146,12 +146,12 @@ struct MD5Sum< ::yolo_new::color_ik_result_new_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "7a157a2786c3a90ccdf183915a4169d1";
+    return "72875b09b8c68c6e926739b0b0152e3a";
   }
 
   static const char* value(const ::yolo_new::color_ik_result_new_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x7a157a2786c3a90cULL;
-  static const uint64_t static_value2 = 0xcdf183915a4169d1ULL;
+  static const uint64_t static_value1 = 0x72875b09b8c68c6eULL;
+  static const uint64_t static_value2 = 0x926739b0b0152e3aULL;
 };
 
 template<class ContainerAllocator>
@@ -173,7 +173,7 @@ struct Definition< ::yolo_new::color_ik_result_new_<ContainerAllocator> >
     return "float32 pedestal_angle\n"
 "float32 arm_angle\n"
 "float32 hand_angle\n"
-"string  color\n"
+"string  sort\n"
 "int32   count\n"
 "\n"
 ;
@@ -197,7 +197,7 @@ namespace serialization
       stream.next(m.pedestal_angle);
       stream.next(m.arm_angle);
       stream.next(m.hand_angle);
-      stream.next(m.color);
+      stream.next(m.sort);
       stream.next(m.count);
     }
 
@@ -223,8 +223,8 @@ struct Printer< ::yolo_new::color_ik_result_new_<ContainerAllocator> >
     Printer<float>::stream(s, indent + "  ", v.arm_angle);
     s << indent << "hand_angle: ";
     Printer<float>::stream(s, indent + "  ", v.hand_angle);
-    s << indent << "color: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.color);
+    s << indent << "sort: ";
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.sort);
     s << indent << "count: ";
     Printer<int32_t>::stream(s, indent + "  ", v.count);
   }

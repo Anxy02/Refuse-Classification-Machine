@@ -43,40 +43,40 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moyu/wheeltec_arm/src
+CMAKE_SOURCE_DIR = /home/moyu/Refuse-Classification-Machine/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moyu/wheeltec_arm/build
+CMAKE_BINARY_DIR = /home/moyu/Refuse-Classification-Machine/build
 
 # Utility rule file for wheeltec_tracker_pkg_generate_messages_lisp.
 
 # Include the progress variables for this target.
 include wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/progress.make
 
-wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp: /home/moyu/wheeltec_arm/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg/color.lisp
-wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp: /home/moyu/wheeltec_arm/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg/centroid.lisp
-wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp: /home/moyu/wheeltec_arm/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg/gesture.lisp
+wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg/color.lisp
+wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg/centroid.lisp
+wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg/gesture.lisp
 
 
-/home/moyu/wheeltec_arm/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg/color.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/moyu/wheeltec_arm/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg/color.lisp: /home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/color.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from wheeltec_tracker_pkg/color.msg"
-	cd /home/moyu/wheeltec_arm/build/wheeltec_tracker_pkg && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/color.msg -Iwheeltec_tracker_pkg:/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p wheeltec_tracker_pkg -o /home/moyu/wheeltec_arm/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg
+/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg/color.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg/color.lisp: /home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/color.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from wheeltec_tracker_pkg/color.msg"
+	cd /home/moyu/Refuse-Classification-Machine/build/wheeltec_tracker_pkg && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/color.msg -Iwheeltec_tracker_pkg:/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p wheeltec_tracker_pkg -o /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg
 
-/home/moyu/wheeltec_arm/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg/centroid.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/moyu/wheeltec_arm/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg/centroid.lisp: /home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/centroid.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from wheeltec_tracker_pkg/centroid.msg"
-	cd /home/moyu/wheeltec_arm/build/wheeltec_tracker_pkg && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/centroid.msg -Iwheeltec_tracker_pkg:/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p wheeltec_tracker_pkg -o /home/moyu/wheeltec_arm/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg
+/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg/centroid.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg/centroid.lisp: /home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/centroid.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from wheeltec_tracker_pkg/centroid.msg"
+	cd /home/moyu/Refuse-Classification-Machine/build/wheeltec_tracker_pkg && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/centroid.msg -Iwheeltec_tracker_pkg:/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p wheeltec_tracker_pkg -o /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg
 
-/home/moyu/wheeltec_arm/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg/gesture.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/moyu/wheeltec_arm/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg/gesture.lisp: /home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/gesture.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from wheeltec_tracker_pkg/gesture.msg"
-	cd /home/moyu/wheeltec_arm/build/wheeltec_tracker_pkg && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/gesture.msg -Iwheeltec_tracker_pkg:/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p wheeltec_tracker_pkg -o /home/moyu/wheeltec_arm/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg
+/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg/gesture.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg/gesture.lisp: /home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/gesture.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from wheeltec_tracker_pkg/gesture.msg"
+	cd /home/moyu/Refuse-Classification-Machine/build/wheeltec_tracker_pkg && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/gesture.msg -Iwheeltec_tracker_pkg:/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p wheeltec_tracker_pkg -o /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg
 
 wheeltec_tracker_pkg_generate_messages_lisp: wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp
-wheeltec_tracker_pkg_generate_messages_lisp: /home/moyu/wheeltec_arm/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg/color.lisp
-wheeltec_tracker_pkg_generate_messages_lisp: /home/moyu/wheeltec_arm/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg/centroid.lisp
-wheeltec_tracker_pkg_generate_messages_lisp: /home/moyu/wheeltec_arm/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg/gesture.lisp
+wheeltec_tracker_pkg_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg/color.lisp
+wheeltec_tracker_pkg_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg/centroid.lisp
+wheeltec_tracker_pkg_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/wheeltec_tracker_pkg/msg/gesture.lisp
 wheeltec_tracker_pkg_generate_messages_lisp: wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/build.make
 
 .PHONY : wheeltec_tracker_pkg_generate_messages_lisp
@@ -87,10 +87,10 @@ wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/build
 
 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/clean:
-	cd /home/moyu/wheeltec_arm/build/wheeltec_tracker_pkg && $(CMAKE_COMMAND) -P CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/moyu/Refuse-Classification-Machine/build/wheeltec_tracker_pkg && $(CMAKE_COMMAND) -P CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/clean
 
 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/depend:
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/wheeltec_arm/src /home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg /home/moyu/wheeltec_arm/build /home/moyu/wheeltec_arm/build/wheeltec_tracker_pkg /home/moyu/wheeltec_arm/build/wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/Refuse-Classification-Machine/src /home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg /home/moyu/Refuse-Classification-Machine/build /home/moyu/Refuse-Classification-Machine/build/wheeltec_tracker_pkg /home/moyu/Refuse-Classification-Machine/build/wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/depend
 

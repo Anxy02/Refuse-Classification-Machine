@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/moyu/wheeltec_arm/devel/lib/yolo_new/yolo_execute"
-  "/home/moyu/wheeltec_arm/devel/lib/yolo_new/yolo_execute.pdb"
+  "/home/moyu/Refuse-Classification-Machine/devel/lib/yolo_new/yolo_execute"
+  "/home/moyu/Refuse-Classification-Machine/devel/lib/yolo_new/yolo_execute.pdb"
   "CMakeFiles/yolo_execute.dir/src/yolo_execute.cpp.o"
 )
 

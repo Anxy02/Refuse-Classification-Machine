@@ -43,65 +43,65 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moyu/wheeltec_arm/src
+CMAKE_SOURCE_DIR = /home/moyu/Refuse-Classification-Machine/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moyu/wheeltec_arm/build
+CMAKE_BINARY_DIR = /home/moyu/Refuse-Classification-Machine/build
 
 # Utility rule file for table_arm_generate_messages_py.
 
 # Include the progress variables for this target.
 include table_arm/CMakeFiles/table_arm_generate_messages_py.dir/progress.make
 
-table_arm/CMakeFiles/table_arm_generate_messages_py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/_position_color.py
-table_arm/CMakeFiles/table_arm_generate_messages_py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/_arm_target.py
-table_arm/CMakeFiles/table_arm_generate_messages_py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/_color_ik_result.py
-table_arm/CMakeFiles/table_arm_generate_messages_py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/_arm_target_position.py
-table_arm/CMakeFiles/table_arm_generate_messages_py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/_arm_init_position.py
-table_arm/CMakeFiles/table_arm_generate_messages_py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/__init__.py
+table_arm/CMakeFiles/table_arm_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/_position_color.py
+table_arm/CMakeFiles/table_arm_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/_arm_target.py
+table_arm/CMakeFiles/table_arm_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/_color_ik_result.py
+table_arm/CMakeFiles/table_arm_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/_arm_target_position.py
+table_arm/CMakeFiles/table_arm_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/_arm_init_position.py
+table_arm/CMakeFiles/table_arm_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/__init__.py
 
 
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/_position_color.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/_position_color.py: /home/moyu/wheeltec_arm/src/table_arm/msg/position_color.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG table_arm/position_color"
-	cd /home/moyu/wheeltec_arm/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/moyu/wheeltec_arm/src/table_arm/msg/position_color.msg -Itable_arm:/home/moyu/wheeltec_arm/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/_position_color.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/_position_color.py: /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/position_color.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG table_arm/position_color"
+	cd /home/moyu/Refuse-Classification-Machine/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/position_color.msg -Itable_arm:/home/moyu/Refuse-Classification-Machine/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg
 
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/_arm_target.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/_arm_target.py: /home/moyu/wheeltec_arm/src/table_arm/msg/arm_target.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG table_arm/arm_target"
-	cd /home/moyu/wheeltec_arm/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/moyu/wheeltec_arm/src/table_arm/msg/arm_target.msg -Itable_arm:/home/moyu/wheeltec_arm/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/_arm_target.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/_arm_target.py: /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/arm_target.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG table_arm/arm_target"
+	cd /home/moyu/Refuse-Classification-Machine/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/arm_target.msg -Itable_arm:/home/moyu/Refuse-Classification-Machine/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg
 
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/_color_ik_result.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/_color_ik_result.py: /home/moyu/wheeltec_arm/src/table_arm/msg/color_ik_result.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG table_arm/color_ik_result"
-	cd /home/moyu/wheeltec_arm/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/moyu/wheeltec_arm/src/table_arm/msg/color_ik_result.msg -Itable_arm:/home/moyu/wheeltec_arm/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/_color_ik_result.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/_color_ik_result.py: /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/color_ik_result.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG table_arm/color_ik_result"
+	cd /home/moyu/Refuse-Classification-Machine/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/color_ik_result.msg -Itable_arm:/home/moyu/Refuse-Classification-Machine/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg
 
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/_arm_target_position.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/_arm_target_position.py: /home/moyu/wheeltec_arm/src/table_arm/msg/arm_target_position.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python from MSG table_arm/arm_target_position"
-	cd /home/moyu/wheeltec_arm/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/moyu/wheeltec_arm/src/table_arm/msg/arm_target_position.msg -Itable_arm:/home/moyu/wheeltec_arm/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/_arm_target_position.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/_arm_target_position.py: /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/arm_target_position.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python from MSG table_arm/arm_target_position"
+	cd /home/moyu/Refuse-Classification-Machine/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/arm_target_position.msg -Itable_arm:/home/moyu/Refuse-Classification-Machine/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg
 
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/_arm_init_position.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/_arm_init_position.py: /home/moyu/wheeltec_arm/src/table_arm/msg/arm_init_position.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python from MSG table_arm/arm_init_position"
-	cd /home/moyu/wheeltec_arm/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/moyu/wheeltec_arm/src/table_arm/msg/arm_init_position.msg -Itable_arm:/home/moyu/wheeltec_arm/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/_arm_init_position.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/_arm_init_position.py: /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/arm_init_position.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python from MSG table_arm/arm_init_position"
+	cd /home/moyu/Refuse-Classification-Machine/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/arm_init_position.msg -Itable_arm:/home/moyu/Refuse-Classification-Machine/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg
 
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/__init__.py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/_position_color.py
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/__init__.py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/_arm_target.py
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/__init__.py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/_color_ik_result.py
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/__init__.py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/_arm_target_position.py
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/__init__.py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/_arm_init_position.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python msg __init__.py for table_arm"
-	cd /home/moyu/wheeltec_arm/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg --initpy
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/__init__.py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/_position_color.py
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/__init__.py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/_arm_target.py
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/__init__.py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/_color_ik_result.py
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/__init__.py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/_arm_target_position.py
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/__init__.py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/_arm_init_position.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python msg __init__.py for table_arm"
+	cd /home/moyu/Refuse-Classification-Machine/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg --initpy
 
 table_arm_generate_messages_py: table_arm/CMakeFiles/table_arm_generate_messages_py
-table_arm_generate_messages_py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/_position_color.py
-table_arm_generate_messages_py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/_arm_target.py
-table_arm_generate_messages_py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/_color_ik_result.py
-table_arm_generate_messages_py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/_arm_target_position.py
-table_arm_generate_messages_py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/_arm_init_position.py
-table_arm_generate_messages_py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm/msg/__init__.py
+table_arm_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/_position_color.py
+table_arm_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/_arm_target.py
+table_arm_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/_color_ik_result.py
+table_arm_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/_arm_target_position.py
+table_arm_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/_arm_init_position.py
+table_arm_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm/msg/__init__.py
 table_arm_generate_messages_py: table_arm/CMakeFiles/table_arm_generate_messages_py.dir/build.make
 
 .PHONY : table_arm_generate_messages_py
@@ -112,10 +112,10 @@ table_arm/CMakeFiles/table_arm_generate_messages_py.dir/build: table_arm_generat
 .PHONY : table_arm/CMakeFiles/table_arm_generate_messages_py.dir/build
 
 table_arm/CMakeFiles/table_arm_generate_messages_py.dir/clean:
-	cd /home/moyu/wheeltec_arm/build/table_arm && $(CMAKE_COMMAND) -P CMakeFiles/table_arm_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/moyu/Refuse-Classification-Machine/build/table_arm && $(CMAKE_COMMAND) -P CMakeFiles/table_arm_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : table_arm/CMakeFiles/table_arm_generate_messages_py.dir/clean
 
 table_arm/CMakeFiles/table_arm_generate_messages_py.dir/depend:
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/wheeltec_arm/src /home/moyu/wheeltec_arm/src/table_arm /home/moyu/wheeltec_arm/build /home/moyu/wheeltec_arm/build/table_arm /home/moyu/wheeltec_arm/build/table_arm/CMakeFiles/table_arm_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/Refuse-Classification-Machine/src /home/moyu/Refuse-Classification-Machine/src/table_arm /home/moyu/Refuse-Classification-Machine/build /home/moyu/Refuse-Classification-Machine/build/table_arm /home/moyu/Refuse-Classification-Machine/build/table_arm/CMakeFiles/table_arm_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : table_arm/CMakeFiles/table_arm_generate_messages_py.dir/depend
 

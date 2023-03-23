@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/moyu/wheeltec_arm/devel/include/table_arm/color_ik_result.h
+/home/moyu/Refuse-Classification-Machine/devel/include/table_arm/color_ik_result.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/moyu/wheeltec_arm/src/table_arm/include/color_stack_execute.h
+/home/moyu/Refuse-Classification-Machine/src/table_arm/include/color_stack_execute.h
 ros/ros.h
 -
 iostream
@@ -54,7 +54,7 @@ table_arm/color_ik_result.h
 moveit/move_group_interface/move_group_interface.h
 -
 
-/home/moyu/wheeltec_arm/src/table_arm/src/color_stack_execute.cpp
+/home/moyu/Refuse-Classification-Machine/src/table_arm/src/color_stack_execute.cpp
 ros/ros.h
 -
 iostream
@@ -84,7 +84,7 @@ std_msgs/String.h
 moveit/move_group_interface/move_group_interface.h
 -
 color_stack_execute.h
-/home/moyu/wheeltec_arm/src/table_arm/src/color_stack_execute.h
+/home/moyu/Refuse-Classification-Machine/src/table_arm/src/color_stack_execute.h
 
 /opt/ros/noetic/include/actionlib/action_definition.h
 

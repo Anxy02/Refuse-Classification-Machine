@@ -43,49 +43,49 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moyu/wheeltec_arm/src
+CMAKE_SOURCE_DIR = /home/moyu/Refuse-Classification-Machine/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moyu/wheeltec_arm/build
+CMAKE_BINARY_DIR = /home/moyu/Refuse-Classification-Machine/build
 
 # Utility rule file for wheeltec_tracker_pkg_generate_messages_py.
 
 # Include the progress variables for this target.
 include wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/progress.make
 
-wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_color.py
-wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_centroid.py
-wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_gesture.py
-wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/__init__.py
+wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_color.py
+wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_centroid.py
+wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_gesture.py
+wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/__init__.py
 
 
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_color.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_color.py: /home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/color.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG wheeltec_tracker_pkg/color"
-	cd /home/moyu/wheeltec_arm/build/wheeltec_tracker_pkg && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/color.msg -Iwheeltec_tracker_pkg:/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p wheeltec_tracker_pkg -o /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_color.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_color.py: /home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/color.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG wheeltec_tracker_pkg/color"
+	cd /home/moyu/Refuse-Classification-Machine/build/wheeltec_tracker_pkg && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/color.msg -Iwheeltec_tracker_pkg:/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p wheeltec_tracker_pkg -o /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg
 
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_centroid.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_centroid.py: /home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/centroid.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG wheeltec_tracker_pkg/centroid"
-	cd /home/moyu/wheeltec_arm/build/wheeltec_tracker_pkg && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/centroid.msg -Iwheeltec_tracker_pkg:/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p wheeltec_tracker_pkg -o /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_centroid.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_centroid.py: /home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/centroid.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG wheeltec_tracker_pkg/centroid"
+	cd /home/moyu/Refuse-Classification-Machine/build/wheeltec_tracker_pkg && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/centroid.msg -Iwheeltec_tracker_pkg:/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p wheeltec_tracker_pkg -o /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg
 
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_gesture.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_gesture.py: /home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/gesture.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG wheeltec_tracker_pkg/gesture"
-	cd /home/moyu/wheeltec_arm/build/wheeltec_tracker_pkg && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/gesture.msg -Iwheeltec_tracker_pkg:/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p wheeltec_tracker_pkg -o /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_gesture.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_gesture.py: /home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/gesture.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG wheeltec_tracker_pkg/gesture"
+	cd /home/moyu/Refuse-Classification-Machine/build/wheeltec_tracker_pkg && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/gesture.msg -Iwheeltec_tracker_pkg:/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p wheeltec_tracker_pkg -o /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg
 
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/__init__.py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_color.py
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/__init__.py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_centroid.py
-/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/__init__.py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_gesture.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python msg __init__.py for wheeltec_tracker_pkg"
-	cd /home/moyu/wheeltec_arm/build/wheeltec_tracker_pkg && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg --initpy
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/__init__.py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_color.py
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/__init__.py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_centroid.py
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/__init__.py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_gesture.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python msg __init__.py for wheeltec_tracker_pkg"
+	cd /home/moyu/Refuse-Classification-Machine/build/wheeltec_tracker_pkg && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg --initpy
 
 wheeltec_tracker_pkg_generate_messages_py: wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py
-wheeltec_tracker_pkg_generate_messages_py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_color.py
-wheeltec_tracker_pkg_generate_messages_py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_centroid.py
-wheeltec_tracker_pkg_generate_messages_py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_gesture.py
-wheeltec_tracker_pkg_generate_messages_py: /home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/__init__.py
+wheeltec_tracker_pkg_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_color.py
+wheeltec_tracker_pkg_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_centroid.py
+wheeltec_tracker_pkg_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/_gesture.py
+wheeltec_tracker_pkg_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/wheeltec_tracker_pkg/msg/__init__.py
 wheeltec_tracker_pkg_generate_messages_py: wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/build.make
 
 .PHONY : wheeltec_tracker_pkg_generate_messages_py
@@ -96,10 +96,10 @@ wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/bu
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/build
 
 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/clean:
-	cd /home/moyu/wheeltec_arm/build/wheeltec_tracker_pkg && $(CMAKE_COMMAND) -P CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/moyu/Refuse-Classification-Machine/build/wheeltec_tracker_pkg && $(CMAKE_COMMAND) -P CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/clean
 
 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/depend:
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/wheeltec_arm/src /home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg /home/moyu/wheeltec_arm/build /home/moyu/wheeltec_arm/build/wheeltec_tracker_pkg /home/moyu/wheeltec_arm/build/wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/Refuse-Classification-Machine/src /home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg /home/moyu/Refuse-Classification-Machine/build /home/moyu/Refuse-Classification-Machine/build/wheeltec_tracker_pkg /home/moyu/Refuse-Classification-Machine/build/wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/depend
 

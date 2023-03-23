@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/moyu/wheeltec_arm/src/table_arm/include/ar_label_sort.h
+/home/moyu/Refuse-Classification-Machine/src/table_arm/include/ar_label_sort.h
 ros/ros.h
 -
 iostream
@@ -36,9 +36,9 @@ std_msgs/String.h
 moveit/move_group_interface/move_group_interface.h
 -
 tf/transform_datatypes.h
-/home/moyu/wheeltec_arm/src/table_arm/include/tf/transform_datatypes.h
+/home/moyu/Refuse-Classification-Machine/src/table_arm/include/tf/transform_datatypes.h
 
-/home/moyu/wheeltec_arm/src/table_arm/src/ar_label_sort.cpp
+/home/moyu/Refuse-Classification-Machine/src/table_arm/src/ar_label_sort.cpp
 ros/ros.h
 -
 iostream
@@ -70,7 +70,7 @@ std_msgs/String.h
 moveit/move_group_interface/move_group_interface.h
 -
 ar_label_sort.h
-/home/moyu/wheeltec_arm/src/table_arm/src/ar_label_sort.h
+/home/moyu/Refuse-Classification-Machine/src/table_arm/src/ar_label_sort.h
 
 /opt/ros/noetic/include/actionlib/action_definition.h
 

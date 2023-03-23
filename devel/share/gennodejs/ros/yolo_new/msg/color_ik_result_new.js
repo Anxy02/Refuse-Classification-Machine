@@ -21,7 +21,7 @@ class color_ik_result_new {
       this.pedestal_angle = null;
       this.arm_angle = null;
       this.hand_angle = null;
-      this.color = null;
+      this.sort = null;
       this.count = null;
     }
     else {
@@ -43,11 +43,11 @@ class color_ik_result_new {
       else {
         this.hand_angle = 0.0;
       }
-      if (initObj.hasOwnProperty('color')) {
-        this.color = initObj.color
+      if (initObj.hasOwnProperty('sort')) {
+        this.sort = initObj.sort
       }
       else {
-        this.color = '';
+        this.sort = '';
       }
       if (initObj.hasOwnProperty('count')) {
         this.count = initObj.count
@@ -66,8 +66,8 @@ class color_ik_result_new {
     bufferOffset = _serializer.float32(obj.arm_angle, buffer, bufferOffset);
     // Serialize message field [hand_angle]
     bufferOffset = _serializer.float32(obj.hand_angle, buffer, bufferOffset);
-    // Serialize message field [color]
-    bufferOffset = _serializer.string(obj.color, buffer, bufferOffset);
+    // Serialize message field [sort]
+    bufferOffset = _serializer.string(obj.sort, buffer, bufferOffset);
     // Serialize message field [count]
     bufferOffset = _serializer.int32(obj.count, buffer, bufferOffset);
     return bufferOffset;
@@ -83,8 +83,8 @@ class color_ik_result_new {
     data.arm_angle = _deserializer.float32(buffer, bufferOffset);
     // Deserialize message field [hand_angle]
     data.hand_angle = _deserializer.float32(buffer, bufferOffset);
-    // Deserialize message field [color]
-    data.color = _deserializer.string(buffer, bufferOffset);
+    // Deserialize message field [sort]
+    data.sort = _deserializer.string(buffer, bufferOffset);
     // Deserialize message field [count]
     data.count = _deserializer.int32(buffer, bufferOffset);
     return data;
@@ -92,7 +92,7 @@ class color_ik_result_new {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.color);
+    length += _getByteLength(object.sort);
     return length + 20;
   }
 
@@ -103,7 +103,7 @@ class color_ik_result_new {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '7a157a2786c3a90ccdf183915a4169d1';
+    return '72875b09b8c68c6e926739b0b0152e3a';
   }
 
   static messageDefinition() {
@@ -112,7 +112,7 @@ class color_ik_result_new {
     float32 pedestal_angle
     float32 arm_angle
     float32 hand_angle
-    string  color
+    string  sort
     int32   count
     
     
@@ -146,11 +146,11 @@ class color_ik_result_new {
       resolved.hand_angle = 0.0
     }
 
-    if (msg.color !== undefined) {
-      resolved.color = msg.color;
+    if (msg.sort !== undefined) {
+      resolved.sort = msg.sort;
     }
     else {
-      resolved.color = ''
+      resolved.sort = ''
     }
 
     if (msg.count !== undefined) {

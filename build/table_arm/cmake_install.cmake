@@ -1,8 +1,8 @@
-# Install script for directory: /home/moyu/wheeltec_arm/src/table_arm
+# Install script for directory: /home/moyu/Refuse-Classification-Machine/src/table_arm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/moyu/wheeltec_arm/install")
+  set(CMAKE_INSTALL_PREFIX "/home/moyu/Refuse-Classification-Machine/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,58 +39,58 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/table_arm/msg" TYPE FILE FILES
-    "/home/moyu/wheeltec_arm/src/table_arm/msg/position_color.msg"
-    "/home/moyu/wheeltec_arm/src/table_arm/msg/arm_target.msg"
-    "/home/moyu/wheeltec_arm/src/table_arm/msg/color_ik_result.msg"
-    "/home/moyu/wheeltec_arm/src/table_arm/msg/arm_target_position.msg"
-    "/home/moyu/wheeltec_arm/src/table_arm/msg/arm_init_position.msg"
+    "/home/moyu/Refuse-Classification-Machine/src/table_arm/msg/position_color.msg"
+    "/home/moyu/Refuse-Classification-Machine/src/table_arm/msg/arm_target.msg"
+    "/home/moyu/Refuse-Classification-Machine/src/table_arm/msg/color_ik_result.msg"
+    "/home/moyu/Refuse-Classification-Machine/src/table_arm/msg/arm_target_position.msg"
+    "/home/moyu/Refuse-Classification-Machine/src/table_arm/msg/arm_init_position.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/table_arm/cmake" TYPE FILE FILES "/home/moyu/wheeltec_arm/build/table_arm/catkin_generated/installspace/table_arm-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/table_arm/cmake" TYPE FILE FILES "/home/moyu/Refuse-Classification-Machine/build/table_arm/catkin_generated/installspace/table_arm-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/moyu/wheeltec_arm/devel/include/table_arm")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/moyu/Refuse-Classification-Machine/devel/include/table_arm")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/moyu/wheeltec_arm/devel/share/roseus/ros/table_arm")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/table_arm")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/moyu/wheeltec_arm/devel/share/gennodejs/ros/table_arm")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/table_arm")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/home/moyu/anaconda3/bin/python3" -m compileall "/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm")
+  execute_process(COMMAND "/home/moyu/anaconda3/bin/python3" -m compileall "/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/moyu/wheeltec_arm/devel/lib/python3/dist-packages/table_arm")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/table_arm")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/moyu/wheeltec_arm/build/table_arm/catkin_generated/installspace/table_arm.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/moyu/Refuse-Classification-Machine/build/table_arm/catkin_generated/installspace/table_arm.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/table_arm/cmake" TYPE FILE FILES "/home/moyu/wheeltec_arm/build/table_arm/catkin_generated/installspace/table_arm-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/table_arm/cmake" TYPE FILE FILES "/home/moyu/Refuse-Classification-Machine/build/table_arm/catkin_generated/installspace/table_arm-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/table_arm/cmake" TYPE FILE FILES
-    "/home/moyu/wheeltec_arm/build/table_arm/catkin_generated/installspace/table_armConfig.cmake"
-    "/home/moyu/wheeltec_arm/build/table_arm/catkin_generated/installspace/table_armConfig-version.cmake"
+    "/home/moyu/Refuse-Classification-Machine/build/table_arm/catkin_generated/installspace/table_armConfig.cmake"
+    "/home/moyu/Refuse-Classification-Machine/build/table_arm/catkin_generated/installspace/table_armConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/table_arm" TYPE FILE FILES "/home/moyu/wheeltec_arm/src/table_arm/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/table_arm" TYPE FILE FILES "/home/moyu/Refuse-Classification-Machine/src/table_arm/package.xml")
 endif()
 

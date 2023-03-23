@@ -1,4 +1,4 @@
-prefix=/home/moyu/wheeltec_arm/devel
+prefix=/home/moyu/Refuse-Classification-Machine/devel
 
 Name: table_streeing_arm
 Description: Description of table_streeing_arm

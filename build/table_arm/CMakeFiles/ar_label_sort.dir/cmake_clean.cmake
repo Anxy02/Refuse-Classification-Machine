@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/moyu/wheeltec_arm/devel/lib/table_arm/ar_label_sort"
-  "/home/moyu/wheeltec_arm/devel/lib/table_arm/ar_label_sort.pdb"
+  "/home/moyu/Refuse-Classification-Machine/devel/lib/table_arm/ar_label_sort"
+  "/home/moyu/Refuse-Classification-Machine/devel/lib/table_arm/ar_label_sort.pdb"
   "CMakeFiles/ar_label_sort.dir/src/ar_label_sort.cpp.o"
 )
 

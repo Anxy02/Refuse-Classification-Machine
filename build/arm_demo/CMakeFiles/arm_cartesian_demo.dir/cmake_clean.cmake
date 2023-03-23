@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/moyu/wheeltec_arm/devel/lib/arm_demo/arm_cartesian_demo"
-  "/home/moyu/wheeltec_arm/devel/lib/arm_demo/arm_cartesian_demo.pdb"
+  "/home/moyu/Refuse-Classification-Machine/devel/lib/arm_demo/arm_cartesian_demo"
+  "/home/moyu/Refuse-Classification-Machine/devel/lib/arm_demo/arm_cartesian_demo.pdb"
   "CMakeFiles/arm_cartesian_demo.dir/src/arm_cartesian_demo.cpp.o"
 )
 

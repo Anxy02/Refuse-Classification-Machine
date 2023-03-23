@@ -1,4 +1,4 @@
-prefix=/home/moyu/wheeltec_arm/install
+prefix=/home/moyu/Refuse-Classification-Machine/install
 
 Name: wheeltec_tracker_pkg
 Description: Description of wheeltec_tracker_pkg

@@ -2,7 +2,7 @@
 
 message(STATUS "wheeltec_tracker_pkg: 3 messages, 0 services")
 
-set(MSG_I_FLAGS "-Iwheeltec_tracker_pkg:/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Iwheeltec_tracker_pkg:/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,19 +17,19 @@ add_custom_target(wheeltec_tracker_pkg_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/color.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/color.msg" NAME_WE)
 add_custom_target(_wheeltec_tracker_pkg_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wheeltec_tracker_pkg" "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/color.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wheeltec_tracker_pkg" "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/color.msg" ""
 )
 
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/centroid.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/centroid.msg" NAME_WE)
 add_custom_target(_wheeltec_tracker_pkg_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wheeltec_tracker_pkg" "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/centroid.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wheeltec_tracker_pkg" "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/centroid.msg" ""
 )
 
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/gesture.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/gesture.msg" NAME_WE)
 add_custom_target(_wheeltec_tracker_pkg_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wheeltec_tracker_pkg" "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/gesture.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wheeltec_tracker_pkg" "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/gesture.msg" ""
 )
 
 #
@@ -39,19 +39,19 @@ add_custom_target(_wheeltec_tracker_pkg_generate_messages_check_deps_${_filename
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(wheeltec_tracker_pkg
-  "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/color.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/color.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/wheeltec_tracker_pkg
 )
 _generate_msg_cpp(wheeltec_tracker_pkg
-  "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/centroid.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/centroid.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/wheeltec_tracker_pkg
 )
 _generate_msg_cpp(wheeltec_tracker_pkg
-  "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/gesture.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/gesture.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/wheeltec_tracker_pkg
@@ -71,11 +71,11 @@ add_custom_target(wheeltec_tracker_pkg_generate_messages_cpp
 add_dependencies(wheeltec_tracker_pkg_generate_messages wheeltec_tracker_pkg_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/color.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/color.msg" NAME_WE)
 add_dependencies(wheeltec_tracker_pkg_generate_messages_cpp _wheeltec_tracker_pkg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/centroid.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/centroid.msg" NAME_WE)
 add_dependencies(wheeltec_tracker_pkg_generate_messages_cpp _wheeltec_tracker_pkg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/gesture.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/gesture.msg" NAME_WE)
 add_dependencies(wheeltec_tracker_pkg_generate_messages_cpp _wheeltec_tracker_pkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -88,19 +88,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS wheeltec_tracker_pkg_generate_messa
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(wheeltec_tracker_pkg
-  "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/color.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/color.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/wheeltec_tracker_pkg
 )
 _generate_msg_eus(wheeltec_tracker_pkg
-  "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/centroid.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/centroid.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/wheeltec_tracker_pkg
 )
 _generate_msg_eus(wheeltec_tracker_pkg
-  "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/gesture.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/gesture.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/wheeltec_tracker_pkg
@@ -120,11 +120,11 @@ add_custom_target(wheeltec_tracker_pkg_generate_messages_eus
 add_dependencies(wheeltec_tracker_pkg_generate_messages wheeltec_tracker_pkg_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/color.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/color.msg" NAME_WE)
 add_dependencies(wheeltec_tracker_pkg_generate_messages_eus _wheeltec_tracker_pkg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/centroid.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/centroid.msg" NAME_WE)
 add_dependencies(wheeltec_tracker_pkg_generate_messages_eus _wheeltec_tracker_pkg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/gesture.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/gesture.msg" NAME_WE)
 add_dependencies(wheeltec_tracker_pkg_generate_messages_eus _wheeltec_tracker_pkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -137,19 +137,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS wheeltec_tracker_pkg_generate_messa
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(wheeltec_tracker_pkg
-  "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/color.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/color.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/wheeltec_tracker_pkg
 )
 _generate_msg_lisp(wheeltec_tracker_pkg
-  "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/centroid.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/centroid.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/wheeltec_tracker_pkg
 )
 _generate_msg_lisp(wheeltec_tracker_pkg
-  "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/gesture.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/gesture.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/wheeltec_tracker_pkg
@@ -169,11 +169,11 @@ add_custom_target(wheeltec_tracker_pkg_generate_messages_lisp
 add_dependencies(wheeltec_tracker_pkg_generate_messages wheeltec_tracker_pkg_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/color.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/color.msg" NAME_WE)
 add_dependencies(wheeltec_tracker_pkg_generate_messages_lisp _wheeltec_tracker_pkg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/centroid.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/centroid.msg" NAME_WE)
 add_dependencies(wheeltec_tracker_pkg_generate_messages_lisp _wheeltec_tracker_pkg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/gesture.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/gesture.msg" NAME_WE)
 add_dependencies(wheeltec_tracker_pkg_generate_messages_lisp _wheeltec_tracker_pkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -186,19 +186,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS wheeltec_tracker_pkg_generate_messa
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(wheeltec_tracker_pkg
-  "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/color.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/color.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/wheeltec_tracker_pkg
 )
 _generate_msg_nodejs(wheeltec_tracker_pkg
-  "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/centroid.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/centroid.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/wheeltec_tracker_pkg
 )
 _generate_msg_nodejs(wheeltec_tracker_pkg
-  "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/gesture.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/gesture.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/wheeltec_tracker_pkg
@@ -218,11 +218,11 @@ add_custom_target(wheeltec_tracker_pkg_generate_messages_nodejs
 add_dependencies(wheeltec_tracker_pkg_generate_messages wheeltec_tracker_pkg_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/color.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/color.msg" NAME_WE)
 add_dependencies(wheeltec_tracker_pkg_generate_messages_nodejs _wheeltec_tracker_pkg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/centroid.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/centroid.msg" NAME_WE)
 add_dependencies(wheeltec_tracker_pkg_generate_messages_nodejs _wheeltec_tracker_pkg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/gesture.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/gesture.msg" NAME_WE)
 add_dependencies(wheeltec_tracker_pkg_generate_messages_nodejs _wheeltec_tracker_pkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -235,19 +235,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS wheeltec_tracker_pkg_generate_messa
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(wheeltec_tracker_pkg
-  "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/color.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/color.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/wheeltec_tracker_pkg
 )
 _generate_msg_py(wheeltec_tracker_pkg
-  "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/centroid.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/centroid.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/wheeltec_tracker_pkg
 )
 _generate_msg_py(wheeltec_tracker_pkg
-  "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/gesture.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/gesture.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/wheeltec_tracker_pkg
@@ -267,11 +267,11 @@ add_custom_target(wheeltec_tracker_pkg_generate_messages_py
 add_dependencies(wheeltec_tracker_pkg_generate_messages wheeltec_tracker_pkg_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/color.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/color.msg" NAME_WE)
 add_dependencies(wheeltec_tracker_pkg_generate_messages_py _wheeltec_tracker_pkg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/centroid.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/centroid.msg" NAME_WE)
 add_dependencies(wheeltec_tracker_pkg_generate_messages_py _wheeltec_tracker_pkg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/gesture.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/gesture.msg" NAME_WE)
 add_dependencies(wheeltec_tracker_pkg_generate_messages_py _wheeltec_tracker_pkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

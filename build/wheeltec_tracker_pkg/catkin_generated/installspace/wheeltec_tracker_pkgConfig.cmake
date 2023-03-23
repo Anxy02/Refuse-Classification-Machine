@@ -67,14 +67,14 @@ set(wheeltec_tracker_pkg_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(wheeltec_tracker_pkg_SOURCE_PREFIX /home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg)
-  set(wheeltec_tracker_pkg_DEVEL_PREFIX /home/moyu/wheeltec_arm/devel)
+  set(wheeltec_tracker_pkg_SOURCE_PREFIX /home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg)
+  set(wheeltec_tracker_pkg_DEVEL_PREFIX /home/moyu/Refuse-Classification-Machine/devel)
   set(wheeltec_tracker_pkg_INSTALL_PREFIX "")
   set(wheeltec_tracker_pkg_PREFIX ${wheeltec_tracker_pkg_DEVEL_PREFIX})
 else()
   set(wheeltec_tracker_pkg_SOURCE_PREFIX "")
   set(wheeltec_tracker_pkg_DEVEL_PREFIX "")
-  set(wheeltec_tracker_pkg_INSTALL_PREFIX /home/moyu/wheeltec_arm/install)
+  set(wheeltec_tracker_pkg_INSTALL_PREFIX /home/moyu/Refuse-Classification-Machine/install)
   set(wheeltec_tracker_pkg_PREFIX ${wheeltec_tracker_pkg_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/moyu/wheeltec_arm/install/lib;/home/moyu/wheeltec_arm/devel/lib;/home/moyu/ros_yolov5/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/moyu/Refuse-Classification-Machine/install/lib;/home/moyu/ros_yolov5/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

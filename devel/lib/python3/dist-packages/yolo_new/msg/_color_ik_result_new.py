@@ -8,17 +8,17 @@ import struct
 
 
 class color_ik_result_new(genpy.Message):
-  _md5sum = "7a157a2786c3a90ccdf183915a4169d1"
+  _md5sum = "72875b09b8c68c6e926739b0b0152e3a"
   _type = "yolo_new/color_ik_result_new"
   _has_header = False  # flag to mark the presence of a Header object
   _full_text = """float32 pedestal_angle
 float32 arm_angle
 float32 hand_angle
-string  color
+string  sort
 int32   count
 
 """
-  __slots__ = ['pedestal_angle','arm_angle','hand_angle','color','count']
+  __slots__ = ['pedestal_angle','arm_angle','hand_angle','sort','count']
   _slot_types = ['float32','float32','float32','string','int32']
 
   def __init__(self, *args, **kwds):
@@ -29,7 +29,7 @@ int32   count
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       pedestal_angle,arm_angle,hand_angle,color,count
+       pedestal_angle,arm_angle,hand_angle,sort,count
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -44,15 +44,15 @@ int32   count
         self.arm_angle = 0.
       if self.hand_angle is None:
         self.hand_angle = 0.
-      if self.color is None:
-        self.color = ''
+      if self.sort is None:
+        self.sort = ''
       if self.count is None:
         self.count = 0
     else:
       self.pedestal_angle = 0.
       self.arm_angle = 0.
       self.hand_angle = 0.
-      self.color = ''
+      self.sort = ''
       self.count = 0
 
   def _get_types(self):
@@ -69,7 +69,7 @@ int32   count
     try:
       _x = self
       buff.write(_get_struct_3f().pack(_x.pedestal_angle, _x.arm_angle, _x.hand_angle))
-      _x = self.color
+      _x = self.sort
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -99,9 +99,9 @@ int32   count
       start = end
       end += length
       if python3:
-        self.color = str[start:end].decode('utf-8', 'rosmsg')
+        self.sort = str[start:end].decode('utf-8', 'rosmsg')
       else:
-        self.color = str[start:end]
+        self.sort = str[start:end]
       start = end
       end += 4
       (self.count,) = _get_struct_i().unpack(str[start:end])
@@ -119,7 +119,7 @@ int32   count
     try:
       _x = self
       buff.write(_get_struct_3f().pack(_x.pedestal_angle, _x.arm_angle, _x.hand_angle))
-      _x = self.color
+      _x = self.sort
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -150,9 +150,9 @@ int32   count
       start = end
       end += length
       if python3:
-        self.color = str[start:end].decode('utf-8', 'rosmsg')
+        self.sort = str[start:end].decode('utf-8', 'rosmsg')
       else:
-        self.color = str[start:end]
+        self.sort = str[start:end]
       start = end
       end += 4
       (self.count,) = _get_struct_i().unpack(str[start:end])

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moyu/wheeltec_arm/src
+CMAKE_SOURCE_DIR = /home/moyu/Refuse-Classification-Machine/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moyu/wheeltec_arm/build
+CMAKE_BINARY_DIR = /home/moyu/Refuse-Classification-Machine/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/wheeltec_arm/build/CMakeFiles /home/moyu/wheeltec_arm/build/wheeltec_tracker_pkg/CMakeFiles/progress.marks
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/wheeltec_arm/build/CMakeFiles 0
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles /home/moyu/Refuse-Classification-Machine/build/wheeltec_tracker_pkg/CMakeFiles/progress.marks
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/clean
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/preinstall
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/preinstall
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/rule
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ gesture_recognition_execute: wheeltec_tracker_pkg/CMakeFiles/gesture_recognition
 
 # fast build rule for target.
 gesture_recognition_execute/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/build.make wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/build.make wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/build
 .PHONY : gesture_recognition_execute/fast
 
 # Convenience name for target.
 wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/rule
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/rule
 
 # Convenience name for target.
@@ -194,12 +194,12 @@ face_tracker_node: wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/rule
 
 # fast build rule for target.
 face_tracker_node/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/build.make wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/build.make wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/build
 .PHONY : face_tracker_node/fast
 
 # Convenience name for target.
 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_genpy.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_genpy.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_genpy.dir/rule
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_genpy.dir/rule
 
 # Convenience name for target.
@@ -209,12 +209,12 @@ wheeltec_tracker_pkg_genpy: wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg
 
 # fast build rule for target.
 wheeltec_tracker_pkg_genpy/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_genpy.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_genpy.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_genpy.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_genpy.dir/build
 .PHONY : wheeltec_tracker_pkg_genpy/fast
 
 # Convenience name for target.
 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages.dir/rule
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages.dir/rule
 
 # Convenience name for target.
@@ -224,12 +224,12 @@ wheeltec_tracker_pkg_generate_messages: wheeltec_tracker_pkg/CMakeFiles/wheeltec
 
 # fast build rule for target.
 wheeltec_tracker_pkg_generate_messages/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages.dir/build
 .PHONY : wheeltec_tracker_pkg_generate_messages/fast
 
 # Convenience name for target.
 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_nodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_nodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_nodejs.dir/rule
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -239,12 +239,12 @@ wheeltec_tracker_pkg_generate_messages_nodejs: wheeltec_tracker_pkg/CMakeFiles/w
 
 # fast build rule for target.
 wheeltec_tracker_pkg_generate_messages_nodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_nodejs.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_nodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_nodejs.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_nodejs.dir/build
 .PHONY : wheeltec_tracker_pkg_generate_messages_nodejs/fast
 
 # Convenience name for target.
 wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_color.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_color.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_color.dir/rule
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_color.dir/rule
 
 # Convenience name for target.
@@ -254,12 +254,12 @@ _wheeltec_tracker_pkg_generate_messages_check_deps_color: wheeltec_tracker_pkg/C
 
 # fast build rule for target.
 _wheeltec_tracker_pkg_generate_messages_check_deps_color/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_color.dir/build.make wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_color.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_color.dir/build.make wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_color.dir/build
 .PHONY : _wheeltec_tracker_pkg_generate_messages_check_deps_color/fast
 
 # Convenience name for target.
 wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_centroid.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_centroid.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_centroid.dir/rule
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_centroid.dir/rule
 
 # Convenience name for target.
@@ -269,12 +269,12 @@ _wheeltec_tracker_pkg_generate_messages_check_deps_centroid: wheeltec_tracker_pk
 
 # fast build rule for target.
 _wheeltec_tracker_pkg_generate_messages_check_deps_centroid/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_centroid.dir/build.make wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_centroid.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_centroid.dir/build.make wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_centroid.dir/build
 .PHONY : _wheeltec_tracker_pkg_generate_messages_check_deps_centroid/fast
 
 # Convenience name for target.
 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/rule
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -284,12 +284,12 @@ wheeltec_tracker_pkg_generate_messages_eus: wheeltec_tracker_pkg/CMakeFiles/whee
 
 # fast build rule for target.
 wheeltec_tracker_pkg_generate_messages_eus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/build
 .PHONY : wheeltec_tracker_pkg_generate_messages_eus/fast
 
 # Convenience name for target.
 wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_gesture.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_gesture.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_gesture.dir/rule
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_gesture.dir/rule
 
 # Convenience name for target.
@@ -299,12 +299,12 @@ _wheeltec_tracker_pkg_generate_messages_check_deps_gesture: wheeltec_tracker_pkg
 
 # fast build rule for target.
 _wheeltec_tracker_pkg_generate_messages_check_deps_gesture/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_gesture.dir/build.make wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_gesture.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_gesture.dir/build.make wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_gesture.dir/build
 .PHONY : _wheeltec_tracker_pkg_generate_messages_check_deps_gesture/fast
 
 # Convenience name for target.
 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_cpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_cpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_cpp.dir/rule
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -314,12 +314,12 @@ wheeltec_tracker_pkg_generate_messages_cpp: wheeltec_tracker_pkg/CMakeFiles/whee
 
 # fast build rule for target.
 wheeltec_tracker_pkg_generate_messages_cpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_cpp.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_cpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_cpp.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_cpp.dir/build
 .PHONY : wheeltec_tracker_pkg_generate_messages_cpp/fast
 
 # Convenience name for target.
 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_geneus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_geneus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_geneus.dir/rule
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_geneus.dir/rule
 
 # Convenience name for target.
@@ -329,12 +329,12 @@ wheeltec_tracker_pkg_geneus: wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pk
 
 # fast build rule for target.
 wheeltec_tracker_pkg_geneus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_geneus.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_geneus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_geneus.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_geneus.dir/build
 .PHONY : wheeltec_tracker_pkg_geneus/fast
 
 # Convenience name for target.
 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_gencpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_gencpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_gencpp.dir/rule
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_gencpp.dir/rule
 
 # Convenience name for target.
@@ -344,12 +344,12 @@ wheeltec_tracker_pkg_gencpp: wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pk
 
 # fast build rule for target.
 wheeltec_tracker_pkg_gencpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_gencpp.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_gencpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_gencpp.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_gencpp.dir/build
 .PHONY : wheeltec_tracker_pkg_gencpp/fast
 
 # Convenience name for target.
 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_genlisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_genlisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_genlisp.dir/rule
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_genlisp.dir/rule
 
 # Convenience name for target.
@@ -359,12 +359,12 @@ wheeltec_tracker_pkg_genlisp: wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_p
 
 # fast build rule for target.
 wheeltec_tracker_pkg_genlisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_genlisp.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_genlisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_genlisp.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_genlisp.dir/build
 .PHONY : wheeltec_tracker_pkg_genlisp/fast
 
 # Convenience name for target.
 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/rule
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -374,12 +374,12 @@ wheeltec_tracker_pkg_generate_messages_lisp: wheeltec_tracker_pkg/CMakeFiles/whe
 
 # fast build rule for target.
 wheeltec_tracker_pkg_generate_messages_lisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/build
 .PHONY : wheeltec_tracker_pkg_generate_messages_lisp/fast
 
 # Convenience name for target.
 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_gennodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_gennodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_gennodejs.dir/rule
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_gennodejs.dir/rule
 
 # Convenience name for target.
@@ -389,12 +389,12 @@ wheeltec_tracker_pkg_gennodejs: wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker
 
 # fast build rule for target.
 wheeltec_tracker_pkg_gennodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_gennodejs.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_gennodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_gennodejs.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_gennodejs.dir/build
 .PHONY : wheeltec_tracker_pkg_gennodejs/fast
 
 # Convenience name for target.
 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/rule
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -404,7 +404,7 @@ wheeltec_tracker_pkg_generate_messages_py: wheeltec_tracker_pkg/CMakeFiles/wheel
 
 # fast build rule for target.
 wheeltec_tracker_pkg_generate_messages_py/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/build
 .PHONY : wheeltec_tracker_pkg_generate_messages_py/fast
 
 src/face_tracker_node.o: src/face_tracker_node.cpp.o
@@ -413,7 +413,7 @@ src/face_tracker_node.o: src/face_tracker_node.cpp.o
 
 # target to build an object file
 src/face_tracker_node.cpp.o:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/build.make wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/src/face_tracker_node.cpp.o
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/build.make wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/src/face_tracker_node.cpp.o
 .PHONY : src/face_tracker_node.cpp.o
 
 src/face_tracker_node.i: src/face_tracker_node.cpp.i
@@ -422,7 +422,7 @@ src/face_tracker_node.i: src/face_tracker_node.cpp.i
 
 # target to preprocess a source file
 src/face_tracker_node.cpp.i:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/build.make wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/src/face_tracker_node.cpp.i
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/build.make wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/src/face_tracker_node.cpp.i
 .PHONY : src/face_tracker_node.cpp.i
 
 src/face_tracker_node.s: src/face_tracker_node.cpp.s
@@ -431,7 +431,7 @@ src/face_tracker_node.s: src/face_tracker_node.cpp.s
 
 # target to generate assembly for a file
 src/face_tracker_node.cpp.s:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/build.make wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/src/face_tracker_node.cpp.s
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/build.make wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/src/face_tracker_node.cpp.s
 .PHONY : src/face_tracker_node.cpp.s
 
 src/gesture_recognition.o: src/gesture_recognition.cpp.o
@@ -440,7 +440,7 @@ src/gesture_recognition.o: src/gesture_recognition.cpp.o
 
 # target to build an object file
 src/gesture_recognition.cpp.o:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/build.make wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/src/gesture_recognition.cpp.o
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/build.make wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/src/gesture_recognition.cpp.o
 .PHONY : src/gesture_recognition.cpp.o
 
 src/gesture_recognition.i: src/gesture_recognition.cpp.i
@@ -449,7 +449,7 @@ src/gesture_recognition.i: src/gesture_recognition.cpp.i
 
 # target to preprocess a source file
 src/gesture_recognition.cpp.i:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/build.make wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/src/gesture_recognition.cpp.i
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/build.make wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/src/gesture_recognition.cpp.i
 .PHONY : src/gesture_recognition.cpp.i
 
 src/gesture_recognition.s: src/gesture_recognition.cpp.s
@@ -458,7 +458,7 @@ src/gesture_recognition.s: src/gesture_recognition.cpp.s
 
 # target to generate assembly for a file
 src/gesture_recognition.cpp.s:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/build.make wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/src/gesture_recognition.cpp.s
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/build.make wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/src/gesture_recognition.cpp.s
 .PHONY : src/gesture_recognition.cpp.s
 
 # Help Target
@@ -507,6 +507,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

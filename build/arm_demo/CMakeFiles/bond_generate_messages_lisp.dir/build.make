@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moyu/wheeltec_arm/src
+CMAKE_SOURCE_DIR = /home/moyu/Refuse-Classification-Machine/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moyu/wheeltec_arm/build
+CMAKE_BINARY_DIR = /home/moyu/Refuse-Classification-Machine/build
 
 # Utility rule file for bond_generate_messages_lisp.
 
@@ -63,10 +63,10 @@ arm_demo/CMakeFiles/bond_generate_messages_lisp.dir/build: bond_generate_message
 .PHONY : arm_demo/CMakeFiles/bond_generate_messages_lisp.dir/build
 
 arm_demo/CMakeFiles/bond_generate_messages_lisp.dir/clean:
-	cd /home/moyu/wheeltec_arm/build/arm_demo && $(CMAKE_COMMAND) -P CMakeFiles/bond_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/moyu/Refuse-Classification-Machine/build/arm_demo && $(CMAKE_COMMAND) -P CMakeFiles/bond_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : arm_demo/CMakeFiles/bond_generate_messages_lisp.dir/clean
 
 arm_demo/CMakeFiles/bond_generate_messages_lisp.dir/depend:
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/wheeltec_arm/src /home/moyu/wheeltec_arm/src/arm_demo /home/moyu/wheeltec_arm/build /home/moyu/wheeltec_arm/build/arm_demo /home/moyu/wheeltec_arm/build/arm_demo/CMakeFiles/bond_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/Refuse-Classification-Machine/src /home/moyu/Refuse-Classification-Machine/src/arm_demo /home/moyu/Refuse-Classification-Machine/build /home/moyu/Refuse-Classification-Machine/build/arm_demo /home/moyu/Refuse-Classification-Machine/build/arm_demo/CMakeFiles/bond_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : arm_demo/CMakeFiles/bond_generate_messages_lisp.dir/depend
 

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moyu/wheeltec_arm/src
+CMAKE_SOURCE_DIR = /home/moyu/Refuse-Classification-Machine/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moyu/wheeltec_arm/build
+CMAKE_BINARY_DIR = /home/moyu/Refuse-Classification-Machine/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/wheeltec_arm/build/CMakeFiles /home/moyu/wheeltec_arm/build/yolov5_ros_msgs/CMakeFiles/progress.marks
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/wheeltec_arm/build/CMakeFiles 0
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles /home/moyu/Refuse-Classification-Machine/build/yolov5_ros_msgs/CMakeFiles/progress.marks
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/clean
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/preinstall
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/preinstall
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_cpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_cpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_cpp.dir/rule
 .PHONY : yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ yolov5_ros_msgs_generate_messages_cpp: yolov5_ros_msgs/CMakeFiles/yolov5_ros_msg
 
 # fast build rule for target.
 yolov5_ros_msgs_generate_messages_cpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_cpp.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_cpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_cpp.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_cpp.dir/build
 .PHONY : yolov5_ros_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBox.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBox.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBox.dir/rule
 .PHONY : yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBox.dir/rule
 
 # Convenience name for target.
@@ -194,12 +194,12 @@ _yolov5_ros_msgs_generate_messages_check_deps_BoundingBox: yolov5_ros_msgs/CMake
 
 # fast build rule for target.
 _yolov5_ros_msgs_generate_messages_check_deps_BoundingBox/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBox.dir/build.make yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBox.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBox.dir/build.make yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBox.dir/build
 .PHONY : _yolov5_ros_msgs_generate_messages_check_deps_BoundingBox/fast
 
 # Convenience name for target.
 yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBoxes.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBoxes.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBoxes.dir/rule
 .PHONY : yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBoxes.dir/rule
 
 # Convenience name for target.
@@ -209,12 +209,12 @@ _yolov5_ros_msgs_generate_messages_check_deps_BoundingBoxes: yolov5_ros_msgs/CMa
 
 # fast build rule for target.
 _yolov5_ros_msgs_generate_messages_check_deps_BoundingBoxes/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBoxes.dir/build.make yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBoxes.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBoxes.dir/build.make yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBoxes.dir/build
 .PHONY : _yolov5_ros_msgs_generate_messages_check_deps_BoundingBoxes/fast
 
 # Convenience name for target.
 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_nodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_nodejs.dir/rule
 .PHONY : yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -224,12 +224,12 @@ yolov5_ros_msgs_generate_messages_nodejs: yolov5_ros_msgs/CMakeFiles/yolov5_ros_
 
 # fast build rule for target.
 yolov5_ros_msgs_generate_messages_nodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_nodejs.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_nodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_nodejs.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_nodejs.dir/build
 .PHONY : yolov5_ros_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_py.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_py.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_py.dir/rule
 .PHONY : yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -239,12 +239,12 @@ yolov5_ros_msgs_generate_messages_py: yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs
 
 # fast build rule for target.
 yolov5_ros_msgs_generate_messages_py/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_py.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_py.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_py.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_py.dir/build
 .PHONY : yolov5_ros_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages.dir/rule
 .PHONY : yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages.dir/rule
 
 # Convenience name for target.
@@ -254,12 +254,12 @@ yolov5_ros_msgs_generate_messages: yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_ge
 
 # fast build rule for target.
 yolov5_ros_msgs_generate_messages/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages.dir/build
 .PHONY : yolov5_ros_msgs_generate_messages/fast
 
 # Convenience name for target.
 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_gencpp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_gencpp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_gencpp.dir/rule
 .PHONY : yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_gencpp.dir/rule
 
 # Convenience name for target.
@@ -269,12 +269,12 @@ yolov5_ros_msgs_gencpp: yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_gencpp.dir/ru
 
 # fast build rule for target.
 yolov5_ros_msgs_gencpp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_gencpp.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_gencpp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_gencpp.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_gencpp.dir/build
 .PHONY : yolov5_ros_msgs_gencpp/fast
 
 # Convenience name for target.
 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_eus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_eus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_eus.dir/rule
 .PHONY : yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -284,12 +284,12 @@ yolov5_ros_msgs_generate_messages_eus: yolov5_ros_msgs/CMakeFiles/yolov5_ros_msg
 
 # fast build rule for target.
 yolov5_ros_msgs_generate_messages_eus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_eus.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_eus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_eus.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_eus.dir/build
 .PHONY : yolov5_ros_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_geneus.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_geneus.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_geneus.dir/rule
 .PHONY : yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_geneus.dir/rule
 
 # Convenience name for target.
@@ -299,12 +299,12 @@ yolov5_ros_msgs_geneus: yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_geneus.dir/ru
 
 # fast build rule for target.
 yolov5_ros_msgs_geneus/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_geneus.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_geneus.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_geneus.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_geneus.dir/build
 .PHONY : yolov5_ros_msgs_geneus/fast
 
 # Convenience name for target.
 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genlisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genlisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genlisp.dir/rule
 .PHONY : yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genlisp.dir/rule
 
 # Convenience name for target.
@@ -314,12 +314,12 @@ yolov5_ros_msgs_genlisp: yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genlisp.dir/
 
 # fast build rule for target.
 yolov5_ros_msgs_genlisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genlisp.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genlisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genlisp.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genlisp.dir/build
 .PHONY : yolov5_ros_msgs_genlisp/fast
 
 # Convenience name for target.
 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_lisp.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_lisp.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_lisp.dir/rule
 .PHONY : yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -329,12 +329,12 @@ yolov5_ros_msgs_generate_messages_lisp: yolov5_ros_msgs/CMakeFiles/yolov5_ros_ms
 
 # fast build rule for target.
 yolov5_ros_msgs_generate_messages_lisp/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_lisp.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_lisp.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_lisp.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_lisp.dir/build
 .PHONY : yolov5_ros_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_gennodejs.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_gennodejs.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_gennodejs.dir/rule
 .PHONY : yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_gennodejs.dir/rule
 
 # Convenience name for target.
@@ -344,12 +344,12 @@ yolov5_ros_msgs_gennodejs: yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_gennodejs.
 
 # fast build rule for target.
 yolov5_ros_msgs_gennodejs/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_gennodejs.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_gennodejs.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_gennodejs.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_gennodejs.dir/build
 .PHONY : yolov5_ros_msgs_gennodejs/fast
 
 # Convenience name for target.
 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genpy.dir/rule:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genpy.dir/rule
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genpy.dir/rule
 .PHONY : yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genpy.dir/rule
 
 # Convenience name for target.
@@ -359,7 +359,7 @@ yolov5_ros_msgs_genpy: yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genpy.dir/rule
 
 # fast build rule for target.
 yolov5_ros_msgs_genpy/fast:
-	cd /home/moyu/wheeltec_arm/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genpy.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genpy.dir/build
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genpy.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_genpy.dir/build
 .PHONY : yolov5_ros_msgs_genpy/fast
 
 # Help Target
@@ -399,6 +399,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

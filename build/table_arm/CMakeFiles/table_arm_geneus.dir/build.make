@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moyu/wheeltec_arm/src
+CMAKE_SOURCE_DIR = /home/moyu/Refuse-Classification-Machine/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moyu/wheeltec_arm/build
+CMAKE_BINARY_DIR = /home/moyu/Refuse-Classification-Machine/build
 
 # Utility rule file for table_arm_geneus.
 
@@ -63,10 +63,10 @@ table_arm/CMakeFiles/table_arm_geneus.dir/build: table_arm_geneus
 .PHONY : table_arm/CMakeFiles/table_arm_geneus.dir/build
 
 table_arm/CMakeFiles/table_arm_geneus.dir/clean:
-	cd /home/moyu/wheeltec_arm/build/table_arm && $(CMAKE_COMMAND) -P CMakeFiles/table_arm_geneus.dir/cmake_clean.cmake
+	cd /home/moyu/Refuse-Classification-Machine/build/table_arm && $(CMAKE_COMMAND) -P CMakeFiles/table_arm_geneus.dir/cmake_clean.cmake
 .PHONY : table_arm/CMakeFiles/table_arm_geneus.dir/clean
 
 table_arm/CMakeFiles/table_arm_geneus.dir/depend:
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/wheeltec_arm/src /home/moyu/wheeltec_arm/src/table_arm /home/moyu/wheeltec_arm/build /home/moyu/wheeltec_arm/build/table_arm /home/moyu/wheeltec_arm/build/table_arm/CMakeFiles/table_arm_geneus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/Refuse-Classification-Machine/src /home/moyu/Refuse-Classification-Machine/src/table_arm /home/moyu/Refuse-Classification-Machine/build /home/moyu/Refuse-Classification-Machine/build/table_arm /home/moyu/Refuse-Classification-Machine/build/table_arm/CMakeFiles/table_arm_geneus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : table_arm/CMakeFiles/table_arm_geneus.dir/depend
 

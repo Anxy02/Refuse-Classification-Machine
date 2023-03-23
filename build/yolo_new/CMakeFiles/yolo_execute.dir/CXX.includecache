@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/moyu/wheeltec_arm/devel/include/table_arm/color_ik_result.h
+/home/moyu/Refuse-Classification-Machine/devel/include/table_arm/color_ik_result.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/moyu/wheeltec_arm/devel/include/yolo_new/color_ik_result_new.h
+/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/color_ik_result_new.h
 string
 -
 vector
@@ -38,7 +38,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/moyu/wheeltec_arm/src/yolo_new/include/yolo_execute.h
+/home/moyu/Refuse-Classification-Machine/src/yolo_new/include/yolo_execute.h
 ros/ros.h
 -
 iostream
@@ -74,7 +74,7 @@ yolo_new/color_ik_result_new.h
 moveit/move_group_interface/move_group_interface.h
 -
 
-/home/moyu/wheeltec_arm/src/yolo_new/src/yolo_execute.cpp
+/home/moyu/Refuse-Classification-Machine/src/yolo_new/src/yolo_execute.cpp
 ros/ros.h
 -
 iostream
@@ -106,7 +106,7 @@ std_msgs/String.h
 moveit/move_group_interface/move_group_interface.h
 -
 yolo_execute.h
-/home/moyu/wheeltec_arm/src/yolo_new/src/yolo_execute.h
+/home/moyu/Refuse-Classification-Machine/src/yolo_new/src/yolo_execute.h
 locale
 -
 

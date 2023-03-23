@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/moyu/wheeltec_arm/devel/lib/web_video_server/web_video_server"
-  "/home/moyu/wheeltec_arm/devel/lib/web_video_server/web_video_server.pdb"
+  "/home/moyu/Refuse-Classification-Machine/devel/lib/web_video_server/web_video_server"
+  "/home/moyu/Refuse-Classification-Machine/devel/lib/web_video_server/web_video_server.pdb"
   "CMakeFiles/web_video_server.dir/src/h264_streamer.cpp.o"
   "CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o"
   "CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o"

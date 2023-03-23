@@ -43,46 +43,46 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moyu/wheeltec_arm/src
+CMAKE_SOURCE_DIR = /home/moyu/Refuse-Classification-Machine/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moyu/wheeltec_arm/build
+CMAKE_BINARY_DIR = /home/moyu/Refuse-Classification-Machine/build
 
 # Utility rule file for wheeltec_tracker_pkg_generate_messages_eus.
 
 # Include the progress variables for this target.
 include wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/progress.make
 
-wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus: /home/moyu/wheeltec_arm/devel/share/roseus/ros/wheeltec_tracker_pkg/msg/color.l
-wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus: /home/moyu/wheeltec_arm/devel/share/roseus/ros/wheeltec_tracker_pkg/msg/centroid.l
-wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus: /home/moyu/wheeltec_arm/devel/share/roseus/ros/wheeltec_tracker_pkg/msg/gesture.l
-wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus: /home/moyu/wheeltec_arm/devel/share/roseus/ros/wheeltec_tracker_pkg/manifest.l
+wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus: /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/wheeltec_tracker_pkg/msg/color.l
+wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus: /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/wheeltec_tracker_pkg/msg/centroid.l
+wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus: /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/wheeltec_tracker_pkg/msg/gesture.l
+wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus: /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/wheeltec_tracker_pkg/manifest.l
 
 
-/home/moyu/wheeltec_arm/devel/share/roseus/ros/wheeltec_tracker_pkg/msg/color.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-/home/moyu/wheeltec_arm/devel/share/roseus/ros/wheeltec_tracker_pkg/msg/color.l: /home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/color.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from wheeltec_tracker_pkg/color.msg"
-	cd /home/moyu/wheeltec_arm/build/wheeltec_tracker_pkg && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/color.msg -Iwheeltec_tracker_pkg:/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p wheeltec_tracker_pkg -o /home/moyu/wheeltec_arm/devel/share/roseus/ros/wheeltec_tracker_pkg/msg
+/home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/wheeltec_tracker_pkg/msg/color.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/wheeltec_tracker_pkg/msg/color.l: /home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/color.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from wheeltec_tracker_pkg/color.msg"
+	cd /home/moyu/Refuse-Classification-Machine/build/wheeltec_tracker_pkg && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/color.msg -Iwheeltec_tracker_pkg:/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p wheeltec_tracker_pkg -o /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/wheeltec_tracker_pkg/msg
 
-/home/moyu/wheeltec_arm/devel/share/roseus/ros/wheeltec_tracker_pkg/msg/centroid.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-/home/moyu/wheeltec_arm/devel/share/roseus/ros/wheeltec_tracker_pkg/msg/centroid.l: /home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/centroid.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from wheeltec_tracker_pkg/centroid.msg"
-	cd /home/moyu/wheeltec_arm/build/wheeltec_tracker_pkg && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/centroid.msg -Iwheeltec_tracker_pkg:/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p wheeltec_tracker_pkg -o /home/moyu/wheeltec_arm/devel/share/roseus/ros/wheeltec_tracker_pkg/msg
+/home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/wheeltec_tracker_pkg/msg/centroid.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/wheeltec_tracker_pkg/msg/centroid.l: /home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/centroid.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from wheeltec_tracker_pkg/centroid.msg"
+	cd /home/moyu/Refuse-Classification-Machine/build/wheeltec_tracker_pkg && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/centroid.msg -Iwheeltec_tracker_pkg:/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p wheeltec_tracker_pkg -o /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/wheeltec_tracker_pkg/msg
 
-/home/moyu/wheeltec_arm/devel/share/roseus/ros/wheeltec_tracker_pkg/msg/gesture.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-/home/moyu/wheeltec_arm/devel/share/roseus/ros/wheeltec_tracker_pkg/msg/gesture.l: /home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/gesture.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from wheeltec_tracker_pkg/gesture.msg"
-	cd /home/moyu/wheeltec_arm/build/wheeltec_tracker_pkg && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg/gesture.msg -Iwheeltec_tracker_pkg:/home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p wheeltec_tracker_pkg -o /home/moyu/wheeltec_arm/devel/share/roseus/ros/wheeltec_tracker_pkg/msg
+/home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/wheeltec_tracker_pkg/msg/gesture.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/wheeltec_tracker_pkg/msg/gesture.l: /home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/gesture.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from wheeltec_tracker_pkg/gesture.msg"
+	cd /home/moyu/Refuse-Classification-Machine/build/wheeltec_tracker_pkg && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg/gesture.msg -Iwheeltec_tracker_pkg:/home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p wheeltec_tracker_pkg -o /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/wheeltec_tracker_pkg/msg
 
-/home/moyu/wheeltec_arm/devel/share/roseus/ros/wheeltec_tracker_pkg/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp manifest code for wheeltec_tracker_pkg"
-	cd /home/moyu/wheeltec_arm/build/wheeltec_tracker_pkg && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/moyu/wheeltec_arm/devel/share/roseus/ros/wheeltec_tracker_pkg wheeltec_tracker_pkg std_msgs
+/home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/wheeltec_tracker_pkg/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp manifest code for wheeltec_tracker_pkg"
+	cd /home/moyu/Refuse-Classification-Machine/build/wheeltec_tracker_pkg && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/wheeltec_tracker_pkg wheeltec_tracker_pkg std_msgs
 
 wheeltec_tracker_pkg_generate_messages_eus: wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus
-wheeltec_tracker_pkg_generate_messages_eus: /home/moyu/wheeltec_arm/devel/share/roseus/ros/wheeltec_tracker_pkg/msg/color.l
-wheeltec_tracker_pkg_generate_messages_eus: /home/moyu/wheeltec_arm/devel/share/roseus/ros/wheeltec_tracker_pkg/msg/centroid.l
-wheeltec_tracker_pkg_generate_messages_eus: /home/moyu/wheeltec_arm/devel/share/roseus/ros/wheeltec_tracker_pkg/msg/gesture.l
-wheeltec_tracker_pkg_generate_messages_eus: /home/moyu/wheeltec_arm/devel/share/roseus/ros/wheeltec_tracker_pkg/manifest.l
+wheeltec_tracker_pkg_generate_messages_eus: /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/wheeltec_tracker_pkg/msg/color.l
+wheeltec_tracker_pkg_generate_messages_eus: /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/wheeltec_tracker_pkg/msg/centroid.l
+wheeltec_tracker_pkg_generate_messages_eus: /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/wheeltec_tracker_pkg/msg/gesture.l
+wheeltec_tracker_pkg_generate_messages_eus: /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/wheeltec_tracker_pkg/manifest.l
 wheeltec_tracker_pkg_generate_messages_eus: wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/build.make
 
 .PHONY : wheeltec_tracker_pkg_generate_messages_eus
@@ -93,10 +93,10 @@ wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/b
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/build
 
 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/clean:
-	cd /home/moyu/wheeltec_arm/build/wheeltec_tracker_pkg && $(CMAKE_COMMAND) -P CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/cmake_clean.cmake
+	cd /home/moyu/Refuse-Classification-Machine/build/wheeltec_tracker_pkg && $(CMAKE_COMMAND) -P CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/cmake_clean.cmake
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/clean
 
 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/depend:
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/wheeltec_arm/src /home/moyu/wheeltec_arm/src/wheeltec_tracker_pkg /home/moyu/wheeltec_arm/build /home/moyu/wheeltec_arm/build/wheeltec_tracker_pkg /home/moyu/wheeltec_arm/build/wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/Refuse-Classification-Machine/src /home/moyu/Refuse-Classification-Machine/src/wheeltec_tracker_pkg /home/moyu/Refuse-Classification-Machine/build /home/moyu/Refuse-Classification-Machine/build/wheeltec_tracker_pkg /home/moyu/Refuse-Classification-Machine/build/wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/depend
 

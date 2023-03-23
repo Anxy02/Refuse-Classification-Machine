@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moyu/wheeltec_arm/src
+CMAKE_SOURCE_DIR = /home/moyu/Refuse-Classification-Machine/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moyu/wheeltec_arm/build
+CMAKE_BINARY_DIR = /home/moyu/Refuse-Classification-Machine/build
 
 # Utility rule file for _yolov5_ros_msgs_generate_messages_check_deps_BoundingBox.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/moyu/wheeltec_arm/build
 include yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBox.dir/progress.make
 
 yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBox:
-	cd /home/moyu/wheeltec_arm/build/yolov5_ros_msgs && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py yolov5_ros_msgs /home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBox.msg 
+	cd /home/moyu/Refuse-Classification-Machine/build/yolov5_ros_msgs && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py yolov5_ros_msgs /home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBox.msg 
 
 _yolov5_ros_msgs_generate_messages_check_deps_BoundingBox: yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBox
 _yolov5_ros_msgs_generate_messages_check_deps_BoundingBox: yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBox.dir/build.make
@@ -67,10 +67,10 @@ yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_Boundin
 .PHONY : yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBox.dir/build
 
 yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBox.dir/clean:
-	cd /home/moyu/wheeltec_arm/build/yolov5_ros_msgs && $(CMAKE_COMMAND) -P CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBox.dir/cmake_clean.cmake
+	cd /home/moyu/Refuse-Classification-Machine/build/yolov5_ros_msgs && $(CMAKE_COMMAND) -P CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBox.dir/cmake_clean.cmake
 .PHONY : yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBox.dir/clean
 
 yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBox.dir/depend:
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/wheeltec_arm/src /home/moyu/wheeltec_arm/src/yolov5_ros_msgs /home/moyu/wheeltec_arm/build /home/moyu/wheeltec_arm/build/yolov5_ros_msgs /home/moyu/wheeltec_arm/build/yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBox.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/Refuse-Classification-Machine/src /home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs /home/moyu/Refuse-Classification-Machine/build /home/moyu/Refuse-Classification-Machine/build/yolov5_ros_msgs /home/moyu/Refuse-Classification-Machine/build/yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBox.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBox.dir/depend
 

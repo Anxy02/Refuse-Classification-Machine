@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/moyu/wheeltec_arm/devel/lib/wheeltec_tracker_pkg/face_tracker_node"
-  "/home/moyu/wheeltec_arm/devel/lib/wheeltec_tracker_pkg/face_tracker_node.pdb"
+  "/home/moyu/Refuse-Classification-Machine/devel/lib/wheeltec_tracker_pkg/face_tracker_node"
+  "/home/moyu/Refuse-Classification-Machine/devel/lib/wheeltec_tracker_pkg/face_tracker_node.pdb"
   "CMakeFiles/face_tracker_node.dir/src/face_tracker_node.cpp.o"
 )
 

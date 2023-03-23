@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/moyu/wheeltec_arm/src/arm_demo/src/arm_cartesian_demo.cpp" "/home/moyu/wheeltec_arm/build/arm_demo/CMakeFiles/arm_cartesian_demo.dir/src/arm_cartesian_demo.cpp.o"
+  "/home/moyu/Refuse-Classification-Machine/src/arm_demo/src/arm_cartesian_demo.cpp" "/home/moyu/Refuse-Classification-Machine/build/arm_demo/CMakeFiles/arm_cartesian_demo.dir/src/arm_cartesian_demo.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

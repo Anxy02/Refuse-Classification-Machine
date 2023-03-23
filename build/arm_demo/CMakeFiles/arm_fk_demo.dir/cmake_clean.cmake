@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/moyu/wheeltec_arm/devel/lib/arm_demo/arm_fk_demo"
-  "/home/moyu/wheeltec_arm/devel/lib/arm_demo/arm_fk_demo.pdb"
+  "/home/moyu/Refuse-Classification-Machine/devel/lib/arm_demo/arm_fk_demo"
+  "/home/moyu/Refuse-Classification-Machine/devel/lib/arm_demo/arm_fk_demo.pdb"
   "CMakeFiles/arm_fk_demo.dir/src/arm_fk_demo.cpp.o"
 )
 

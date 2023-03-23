@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "/home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg/arm_init_position.lisp"
-  "/home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg/arm_target.lisp"
-  "/home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg/arm_target_position.lisp"
-  "/home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg/color_ik_result.lisp"
-  "/home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg/position_color.lisp"
+  "/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg/arm_init_position.lisp"
+  "/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg/arm_target.lisp"
+  "/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg/arm_target_position.lisp"
+  "/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg/color_ik_result.lisp"
+  "/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg/position_color.lisp"
   "CMakeFiles/table_arm_generate_messages_lisp"
 )
 

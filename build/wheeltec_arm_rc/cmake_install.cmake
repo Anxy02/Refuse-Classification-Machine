@@ -1,8 +1,8 @@
-# Install script for directory: /home/moyu/wheeltec_arm/src/wheeltec_arm_rc
+# Install script for directory: /home/moyu/Refuse-Classification-Machine/src/wheeltec_arm_rc
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/moyu/wheeltec_arm/install")
+  set(CMAKE_INSTALL_PREFIX "/home/moyu/Refuse-Classification-Machine/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/moyu/wheeltec_arm/build/wheeltec_arm_rc/catkin_generated/installspace/wheeltec_arm_rc.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/moyu/Refuse-Classification-Machine/build/wheeltec_arm_rc/catkin_generated/installspace/wheeltec_arm_rc.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/wheeltec_arm_rc/cmake" TYPE FILE FILES
-    "/home/moyu/wheeltec_arm/build/wheeltec_arm_rc/catkin_generated/installspace/wheeltec_arm_rcConfig.cmake"
-    "/home/moyu/wheeltec_arm/build/wheeltec_arm_rc/catkin_generated/installspace/wheeltec_arm_rcConfig-version.cmake"
+    "/home/moyu/Refuse-Classification-Machine/build/wheeltec_arm_rc/catkin_generated/installspace/wheeltec_arm_rcConfig.cmake"
+    "/home/moyu/Refuse-Classification-Machine/build/wheeltec_arm_rc/catkin_generated/installspace/wheeltec_arm_rcConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/wheeltec_arm_rc" TYPE FILE FILES "/home/moyu/wheeltec_arm/src/wheeltec_arm_rc/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/wheeltec_arm_rc" TYPE FILE FILES "/home/moyu/Refuse-Classification-Machine/src/wheeltec_arm_rc/package.xml")
 endif()
 

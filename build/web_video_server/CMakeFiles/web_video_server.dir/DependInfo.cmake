@@ -4,16 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/moyu/wheeltec_arm/src/web_video_server/src/h264_streamer.cpp" "/home/moyu/wheeltec_arm/build/web_video_server/CMakeFiles/web_video_server.dir/src/h264_streamer.cpp.o"
-  "/home/moyu/wheeltec_arm/src/web_video_server/src/image_streamer.cpp" "/home/moyu/wheeltec_arm/build/web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o"
-  "/home/moyu/wheeltec_arm/src/web_video_server/src/jpeg_streamers.cpp" "/home/moyu/wheeltec_arm/build/web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o"
-  "/home/moyu/wheeltec_arm/src/web_video_server/src/libav_streamer.cpp" "/home/moyu/wheeltec_arm/build/web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o"
-  "/home/moyu/wheeltec_arm/src/web_video_server/src/multipart_stream.cpp" "/home/moyu/wheeltec_arm/build/web_video_server/CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o"
-  "/home/moyu/wheeltec_arm/src/web_video_server/src/png_streamers.cpp" "/home/moyu/wheeltec_arm/build/web_video_server/CMakeFiles/web_video_server.dir/src/png_streamers.cpp.o"
-  "/home/moyu/wheeltec_arm/src/web_video_server/src/ros_compressed_streamer.cpp" "/home/moyu/wheeltec_arm/build/web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o"
-  "/home/moyu/wheeltec_arm/src/web_video_server/src/vp8_streamer.cpp" "/home/moyu/wheeltec_arm/build/web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o"
-  "/home/moyu/wheeltec_arm/src/web_video_server/src/vp9_streamer.cpp" "/home/moyu/wheeltec_arm/build/web_video_server/CMakeFiles/web_video_server.dir/src/vp9_streamer.cpp.o"
-  "/home/moyu/wheeltec_arm/src/web_video_server/src/web_video_server.cpp" "/home/moyu/wheeltec_arm/build/web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o"
+  "/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/h264_streamer.cpp" "/home/moyu/Refuse-Classification-Machine/build/web_video_server/CMakeFiles/web_video_server.dir/src/h264_streamer.cpp.o"
+  "/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/image_streamer.cpp" "/home/moyu/Refuse-Classification-Machine/build/web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o"
+  "/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/jpeg_streamers.cpp" "/home/moyu/Refuse-Classification-Machine/build/web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o"
+  "/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/libav_streamer.cpp" "/home/moyu/Refuse-Classification-Machine/build/web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o"
+  "/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/multipart_stream.cpp" "/home/moyu/Refuse-Classification-Machine/build/web_video_server/CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o"
+  "/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/png_streamers.cpp" "/home/moyu/Refuse-Classification-Machine/build/web_video_server/CMakeFiles/web_video_server.dir/src/png_streamers.cpp.o"
+  "/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/ros_compressed_streamer.cpp" "/home/moyu/Refuse-Classification-Machine/build/web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o"
+  "/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/vp8_streamer.cpp" "/home/moyu/Refuse-Classification-Machine/build/web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o"
+  "/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/vp9_streamer.cpp" "/home/moyu/Refuse-Classification-Machine/build/web_video_server/CMakeFiles/web_video_server.dir/src/vp9_streamer.cpp.o"
+  "/home/moyu/Refuse-Classification-Machine/src/web_video_server/src/web_video_server.cpp" "/home/moyu/Refuse-Classification-Machine/build/web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -29,7 +29,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/moyu/wheeltec_arm/src/web_video_server/include"
+  "/home/moyu/Refuse-Classification-Machine/src/web_video_server/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/opencv4"

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/moyu/wheeltec_arm/devel/include/wheeltec_tracker_pkg/centroid.h"
-  "/home/moyu/wheeltec_arm/devel/include/wheeltec_tracker_pkg/color.h"
-  "/home/moyu/wheeltec_arm/devel/include/wheeltec_tracker_pkg/gesture.h"
+  "/home/moyu/Refuse-Classification-Machine/devel/include/wheeltec_tracker_pkg/centroid.h"
+  "/home/moyu/Refuse-Classification-Machine/devel/include/wheeltec_tracker_pkg/color.h"
+  "/home/moyu/Refuse-Classification-Machine/devel/include/wheeltec_tracker_pkg/gesture.h"
   "CMakeFiles/wheeltec_tracker_pkg_generate_messages_cpp"
 )
 

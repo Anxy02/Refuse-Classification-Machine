@@ -1,4 +1,4 @@
-prefix=/home/moyu/wheeltec_arm/install
+prefix=/home/moyu/Refuse-Classification-Machine/install
 
 Name: yolo_new
 Description: Description of yolo_new

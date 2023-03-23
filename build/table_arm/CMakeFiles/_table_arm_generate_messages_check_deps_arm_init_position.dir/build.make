@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moyu/wheeltec_arm/src
+CMAKE_SOURCE_DIR = /home/moyu/Refuse-Classification-Machine/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moyu/wheeltec_arm/build
+CMAKE_BINARY_DIR = /home/moyu/Refuse-Classification-Machine/build
 
 # Utility rule file for _table_arm_generate_messages_check_deps_arm_init_position.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/moyu/wheeltec_arm/build
 include table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position.dir/progress.make
 
 table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position:
-	cd /home/moyu/wheeltec_arm/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py table_arm /home/moyu/wheeltec_arm/src/table_arm/msg/arm_init_position.msg 
+	cd /home/moyu/Refuse-Classification-Machine/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py table_arm /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/arm_init_position.msg 
 
 _table_arm_generate_messages_check_deps_arm_init_position: table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position
 _table_arm_generate_messages_check_deps_arm_init_position: table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position.dir/build.make
@@ -67,10 +67,10 @@ table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position.d
 .PHONY : table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position.dir/build
 
 table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position.dir/clean:
-	cd /home/moyu/wheeltec_arm/build/table_arm && $(CMAKE_COMMAND) -P CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position.dir/cmake_clean.cmake
+	cd /home/moyu/Refuse-Classification-Machine/build/table_arm && $(CMAKE_COMMAND) -P CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position.dir/cmake_clean.cmake
 .PHONY : table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position.dir/clean
 
 table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position.dir/depend:
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/wheeltec_arm/src /home/moyu/wheeltec_arm/src/table_arm /home/moyu/wheeltec_arm/build /home/moyu/wheeltec_arm/build/table_arm /home/moyu/wheeltec_arm/build/table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/Refuse-Classification-Machine/src /home/moyu/Refuse-Classification-Machine/src/table_arm /home/moyu/Refuse-Classification-Machine/build /home/moyu/Refuse-Classification-Machine/build/table_arm /home/moyu/Refuse-Classification-Machine/build/table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position.dir/depend
 

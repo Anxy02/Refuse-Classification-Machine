@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "web_video_server"
-PROJECT_SPACE_DIR = "/home/moyu/wheeltec_arm/devel"
+PROJECT_SPACE_DIR = "/home/moyu/Refuse-Classification-Machine/devel"
 PROJECT_VERSION = "0.2.1"

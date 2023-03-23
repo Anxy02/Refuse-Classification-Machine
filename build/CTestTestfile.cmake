@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/moyu/wheeltec_arm/src
-# Build directory: /home/moyu/wheeltec_arm/build
+# Source directory: /home/moyu/Refuse-Classification-Machine/src
+# Build directory: /home/moyu/Refuse-Classification-Machine/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

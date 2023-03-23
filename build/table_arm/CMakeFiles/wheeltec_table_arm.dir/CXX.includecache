@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/moyu/wheeltec_arm/devel/include/table_arm/arm_target_position.h
+/home/moyu/Refuse-Classification-Machine/devel/include/table_arm/arm_target_position.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/moyu/wheeltec_arm/devel/include/table_arm/color_ik_result.h
+/home/moyu/Refuse-Classification-Machine/devel/include/table_arm/color_ik_result.h
 string
 -
 vector
@@ -38,7 +38,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/moyu/wheeltec_arm/devel/include/wheeltec_tracker_pkg/gesture.h
+/home/moyu/Refuse-Classification-Machine/devel/include/wheeltec_tracker_pkg/gesture.h
 string
 -
 vector
@@ -54,9 +54,9 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/moyu/wheeltec_arm/src/table_arm/include/wheeltec_table_arm.h
+/home/moyu/Refuse-Classification-Machine/src/table_arm/include/wheeltec_table_arm.h
 ros/ros.h
-/home/moyu/wheeltec_arm/src/table_arm/include/ros/ros.h
+/home/moyu/Refuse-Classification-Machine/src/table_arm/include/ros/ros.h
 iostream
 -
 string.h
@@ -106,9 +106,9 @@ table_arm/arm_target_position.h
 wheeltec_tracker_pkg/gesture.h
 -
 
-/home/moyu/wheeltec_arm/src/table_arm/src/wheeltec_table_arm.cpp
+/home/moyu/Refuse-Classification-Machine/src/table_arm/src/wheeltec_table_arm.cpp
 wheeltec_table_arm.h
-/home/moyu/wheeltec_arm/src/table_arm/src/wheeltec_table_arm.h
+/home/moyu/Refuse-Classification-Machine/src/table_arm/src/wheeltec_table_arm.h
 
 /opt/ros/noetic/include/geometry_msgs/Point.h
 string

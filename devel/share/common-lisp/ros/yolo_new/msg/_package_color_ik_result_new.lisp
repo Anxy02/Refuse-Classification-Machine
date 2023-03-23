@@ -5,8 +5,8 @@
           ARM_ANGLE
           HAND_ANGLE-VAL
           HAND_ANGLE
-          COLOR-VAL
-          COLOR
+          SORT-VAL
+          SORT
           COUNT-VAL
           COUNT
 ))

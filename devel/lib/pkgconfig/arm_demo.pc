@@ -1,4 +1,4 @@
-prefix=/home/moyu/wheeltec_arm/devel
+prefix=/home/moyu/Refuse-Classification-Machine/devel
 
 Name: arm_demo
 Description: Description of arm_demo

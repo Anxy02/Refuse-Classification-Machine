@@ -1,4 +1,4 @@
-prefix=/home/moyu/wheeltec_arm/install
+prefix=/home/moyu/Refuse-Classification-Machine/install
 
 Name: yolov5_ros
 Description: Description of yolov5_ros

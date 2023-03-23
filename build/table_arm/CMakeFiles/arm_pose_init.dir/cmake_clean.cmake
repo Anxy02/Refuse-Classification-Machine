@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/moyu/wheeltec_arm/devel/lib/table_arm/arm_pose_init"
-  "/home/moyu/wheeltec_arm/devel/lib/table_arm/arm_pose_init.pdb"
+  "/home/moyu/Refuse-Classification-Machine/devel/lib/table_arm/arm_pose_init"
+  "/home/moyu/Refuse-Classification-Machine/devel/lib/table_arm/arm_pose_init.pdb"
   "CMakeFiles/arm_pose_init.dir/src/arm_pose_init.cpp.o"
 )
 

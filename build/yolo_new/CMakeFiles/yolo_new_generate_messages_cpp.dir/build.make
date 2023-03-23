@@ -43,77 +43,77 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moyu/wheeltec_arm/src
+CMAKE_SOURCE_DIR = /home/moyu/Refuse-Classification-Machine/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moyu/wheeltec_arm/build
+CMAKE_BINARY_DIR = /home/moyu/Refuse-Classification-Machine/build
 
 # Utility rule file for yolo_new_generate_messages_cpp.
 
 # Include the progress variables for this target.
 include yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/progress.make
 
-yolo_new/CMakeFiles/yolo_new_generate_messages_cpp: /home/moyu/wheeltec_arm/devel/include/yolo_new/position_color.h
-yolo_new/CMakeFiles/yolo_new_generate_messages_cpp: /home/moyu/wheeltec_arm/devel/include/yolo_new/arm_target.h
-yolo_new/CMakeFiles/yolo_new_generate_messages_cpp: /home/moyu/wheeltec_arm/devel/include/yolo_new/color_ik_result_new.h
-yolo_new/CMakeFiles/yolo_new_generate_messages_cpp: /home/moyu/wheeltec_arm/devel/include/yolo_new/arm_target_position.h
-yolo_new/CMakeFiles/yolo_new_generate_messages_cpp: /home/moyu/wheeltec_arm/devel/include/yolo_new/arm_init_position.h
-yolo_new/CMakeFiles/yolo_new_generate_messages_cpp: /home/moyu/wheeltec_arm/devel/include/yolo_new/BoundingBox.h
-yolo_new/CMakeFiles/yolo_new_generate_messages_cpp: /home/moyu/wheeltec_arm/devel/include/yolo_new/BoundingBoxes.h
+yolo_new/CMakeFiles/yolo_new_generate_messages_cpp: /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/position_color.h
+yolo_new/CMakeFiles/yolo_new_generate_messages_cpp: /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/arm_target.h
+yolo_new/CMakeFiles/yolo_new_generate_messages_cpp: /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/color_ik_result_new.h
+yolo_new/CMakeFiles/yolo_new_generate_messages_cpp: /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/arm_target_position.h
+yolo_new/CMakeFiles/yolo_new_generate_messages_cpp: /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/arm_init_position.h
+yolo_new/CMakeFiles/yolo_new_generate_messages_cpp: /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/BoundingBox.h
+yolo_new/CMakeFiles/yolo_new_generate_messages_cpp: /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/BoundingBoxes.h
 
 
-/home/moyu/wheeltec_arm/devel/include/yolo_new/position_color.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/moyu/wheeltec_arm/devel/include/yolo_new/position_color.h: /home/moyu/wheeltec_arm/src/yolo_new/msg/position_color.msg
-/home/moyu/wheeltec_arm/devel/include/yolo_new/position_color.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from yolo_new/position_color.msg"
-	cd /home/moyu/wheeltec_arm/src/yolo_new && /home/moyu/wheeltec_arm/build/catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/moyu/wheeltec_arm/src/yolo_new/msg/position_color.msg -Iyolo_new:/home/moyu/wheeltec_arm/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/wheeltec_arm/devel/include/yolo_new -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/position_color.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/position_color.h: /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/position_color.msg
+/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/position_color.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from yolo_new/position_color.msg"
+	cd /home/moyu/Refuse-Classification-Machine/src/yolo_new && /home/moyu/Refuse-Classification-Machine/build/catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/position_color.msg -Iyolo_new:/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/moyu/wheeltec_arm/devel/include/yolo_new/arm_target.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/moyu/wheeltec_arm/devel/include/yolo_new/arm_target.h: /home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target.msg
-/home/moyu/wheeltec_arm/devel/include/yolo_new/arm_target.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from yolo_new/arm_target.msg"
-	cd /home/moyu/wheeltec_arm/src/yolo_new && /home/moyu/wheeltec_arm/build/catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target.msg -Iyolo_new:/home/moyu/wheeltec_arm/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/wheeltec_arm/devel/include/yolo_new -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/arm_target.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/arm_target.h: /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target.msg
+/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/arm_target.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from yolo_new/arm_target.msg"
+	cd /home/moyu/Refuse-Classification-Machine/src/yolo_new && /home/moyu/Refuse-Classification-Machine/build/catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target.msg -Iyolo_new:/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/moyu/wheeltec_arm/devel/include/yolo_new/color_ik_result_new.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/moyu/wheeltec_arm/devel/include/yolo_new/color_ik_result_new.h: /home/moyu/wheeltec_arm/src/yolo_new/msg/color_ik_result_new.msg
-/home/moyu/wheeltec_arm/devel/include/yolo_new/color_ik_result_new.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from yolo_new/color_ik_result_new.msg"
-	cd /home/moyu/wheeltec_arm/src/yolo_new && /home/moyu/wheeltec_arm/build/catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/moyu/wheeltec_arm/src/yolo_new/msg/color_ik_result_new.msg -Iyolo_new:/home/moyu/wheeltec_arm/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/wheeltec_arm/devel/include/yolo_new -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/color_ik_result_new.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/color_ik_result_new.h: /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/color_ik_result_new.msg
+/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/color_ik_result_new.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from yolo_new/color_ik_result_new.msg"
+	cd /home/moyu/Refuse-Classification-Machine/src/yolo_new && /home/moyu/Refuse-Classification-Machine/build/catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/color_ik_result_new.msg -Iyolo_new:/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/moyu/wheeltec_arm/devel/include/yolo_new/arm_target_position.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/moyu/wheeltec_arm/devel/include/yolo_new/arm_target_position.h: /home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target_position.msg
-/home/moyu/wheeltec_arm/devel/include/yolo_new/arm_target_position.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from yolo_new/arm_target_position.msg"
-	cd /home/moyu/wheeltec_arm/src/yolo_new && /home/moyu/wheeltec_arm/build/catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target_position.msg -Iyolo_new:/home/moyu/wheeltec_arm/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/wheeltec_arm/devel/include/yolo_new -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/arm_target_position.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/arm_target_position.h: /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target_position.msg
+/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/arm_target_position.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from yolo_new/arm_target_position.msg"
+	cd /home/moyu/Refuse-Classification-Machine/src/yolo_new && /home/moyu/Refuse-Classification-Machine/build/catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target_position.msg -Iyolo_new:/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/moyu/wheeltec_arm/devel/include/yolo_new/arm_init_position.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/moyu/wheeltec_arm/devel/include/yolo_new/arm_init_position.h: /home/moyu/wheeltec_arm/src/yolo_new/msg/arm_init_position.msg
-/home/moyu/wheeltec_arm/devel/include/yolo_new/arm_init_position.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from yolo_new/arm_init_position.msg"
-	cd /home/moyu/wheeltec_arm/src/yolo_new && /home/moyu/wheeltec_arm/build/catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/moyu/wheeltec_arm/src/yolo_new/msg/arm_init_position.msg -Iyolo_new:/home/moyu/wheeltec_arm/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/wheeltec_arm/devel/include/yolo_new -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/arm_init_position.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/arm_init_position.h: /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_init_position.msg
+/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/arm_init_position.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from yolo_new/arm_init_position.msg"
+	cd /home/moyu/Refuse-Classification-Machine/src/yolo_new && /home/moyu/Refuse-Classification-Machine/build/catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_init_position.msg -Iyolo_new:/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/moyu/wheeltec_arm/devel/include/yolo_new/BoundingBox.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/moyu/wheeltec_arm/devel/include/yolo_new/BoundingBox.h: /home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBox.msg
-/home/moyu/wheeltec_arm/devel/include/yolo_new/BoundingBox.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating C++ code from yolo_new/BoundingBox.msg"
-	cd /home/moyu/wheeltec_arm/src/yolo_new && /home/moyu/wheeltec_arm/build/catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBox.msg -Iyolo_new:/home/moyu/wheeltec_arm/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/wheeltec_arm/devel/include/yolo_new -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/BoundingBox.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/BoundingBox.h: /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg
+/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/BoundingBox.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating C++ code from yolo_new/BoundingBox.msg"
+	cd /home/moyu/Refuse-Classification-Machine/src/yolo_new && /home/moyu/Refuse-Classification-Machine/build/catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg -Iyolo_new:/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new -e /opt/ros/noetic/share/gencpp/cmake/..
 
-/home/moyu/wheeltec_arm/devel/include/yolo_new/BoundingBoxes.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/moyu/wheeltec_arm/devel/include/yolo_new/BoundingBoxes.h: /home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBoxes.msg
-/home/moyu/wheeltec_arm/devel/include/yolo_new/BoundingBoxes.h: /home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBox.msg
-/home/moyu/wheeltec_arm/devel/include/yolo_new/BoundingBoxes.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/moyu/wheeltec_arm/devel/include/yolo_new/BoundingBoxes.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating C++ code from yolo_new/BoundingBoxes.msg"
-	cd /home/moyu/wheeltec_arm/src/yolo_new && /home/moyu/wheeltec_arm/build/catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBoxes.msg -Iyolo_new:/home/moyu/wheeltec_arm/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/wheeltec_arm/devel/include/yolo_new -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/BoundingBoxes.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/BoundingBoxes.h: /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg
+/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/BoundingBoxes.h: /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg
+/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/BoundingBoxes.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/BoundingBoxes.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating C++ code from yolo_new/BoundingBoxes.msg"
+	cd /home/moyu/Refuse-Classification-Machine/src/yolo_new && /home/moyu/Refuse-Classification-Machine/build/catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg -Iyolo_new:/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new -e /opt/ros/noetic/share/gencpp/cmake/..
 
 yolo_new_generate_messages_cpp: yolo_new/CMakeFiles/yolo_new_generate_messages_cpp
-yolo_new_generate_messages_cpp: /home/moyu/wheeltec_arm/devel/include/yolo_new/position_color.h
-yolo_new_generate_messages_cpp: /home/moyu/wheeltec_arm/devel/include/yolo_new/arm_target.h
-yolo_new_generate_messages_cpp: /home/moyu/wheeltec_arm/devel/include/yolo_new/color_ik_result_new.h
-yolo_new_generate_messages_cpp: /home/moyu/wheeltec_arm/devel/include/yolo_new/arm_target_position.h
-yolo_new_generate_messages_cpp: /home/moyu/wheeltec_arm/devel/include/yolo_new/arm_init_position.h
-yolo_new_generate_messages_cpp: /home/moyu/wheeltec_arm/devel/include/yolo_new/BoundingBox.h
-yolo_new_generate_messages_cpp: /home/moyu/wheeltec_arm/devel/include/yolo_new/BoundingBoxes.h
+yolo_new_generate_messages_cpp: /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/position_color.h
+yolo_new_generate_messages_cpp: /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/arm_target.h
+yolo_new_generate_messages_cpp: /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/color_ik_result_new.h
+yolo_new_generate_messages_cpp: /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/arm_target_position.h
+yolo_new_generate_messages_cpp: /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/arm_init_position.h
+yolo_new_generate_messages_cpp: /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/BoundingBox.h
+yolo_new_generate_messages_cpp: /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/BoundingBoxes.h
 yolo_new_generate_messages_cpp: yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/build.make
 
 .PHONY : yolo_new_generate_messages_cpp
@@ -124,10 +124,10 @@ yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/build: yolo_new_generate_
 .PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/build
 
 yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/clean:
-	cd /home/moyu/wheeltec_arm/build/yolo_new && $(CMAKE_COMMAND) -P CMakeFiles/yolo_new_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/moyu/Refuse-Classification-Machine/build/yolo_new && $(CMAKE_COMMAND) -P CMakeFiles/yolo_new_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/clean
 
 yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/depend:
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/wheeltec_arm/src /home/moyu/wheeltec_arm/src/yolo_new /home/moyu/wheeltec_arm/build /home/moyu/wheeltec_arm/build/yolo_new /home/moyu/wheeltec_arm/build/yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/Refuse-Classification-Machine/src /home/moyu/Refuse-Classification-Machine/src/yolo_new /home/moyu/Refuse-Classification-Machine/build /home/moyu/Refuse-Classification-Machine/build/yolo_new /home/moyu/Refuse-Classification-Machine/build/yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/depend
 

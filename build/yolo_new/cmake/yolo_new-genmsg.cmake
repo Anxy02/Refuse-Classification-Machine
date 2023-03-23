@@ -2,7 +2,7 @@
 
 message(STATUS "yolo_new: 7 messages, 0 services")
 
-set(MSG_I_FLAGS "-Iyolo_new:/home/moyu/wheeltec_arm/src/yolo_new/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Iyolo_new:/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,39 +17,39 @@ add_custom_target(yolo_new_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/position_color.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/position_color.msg" NAME_WE)
 add_custom_target(_yolo_new_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "yolo_new" "/home/moyu/wheeltec_arm/src/yolo_new/msg/position_color.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "yolo_new" "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/position_color.msg" ""
 )
 
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target.msg" NAME_WE)
 add_custom_target(_yolo_new_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "yolo_new" "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "yolo_new" "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target.msg" ""
 )
 
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/color_ik_result_new.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/color_ik_result_new.msg" NAME_WE)
 add_custom_target(_yolo_new_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "yolo_new" "/home/moyu/wheeltec_arm/src/yolo_new/msg/color_ik_result_new.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "yolo_new" "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/color_ik_result_new.msg" ""
 )
 
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target_position.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target_position.msg" NAME_WE)
 add_custom_target(_yolo_new_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "yolo_new" "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target_position.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "yolo_new" "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target_position.msg" ""
 )
 
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_init_position.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_init_position.msg" NAME_WE)
 add_custom_target(_yolo_new_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "yolo_new" "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_init_position.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "yolo_new" "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_init_position.msg" ""
 )
 
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBox.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg" NAME_WE)
 add_custom_target(_yolo_new_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "yolo_new" "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBox.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "yolo_new" "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg" ""
 )
 
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBoxes.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg" NAME_WE)
 add_custom_target(_yolo_new_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "yolo_new" "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBoxes.msg" "yolo_new/BoundingBox:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "yolo_new" "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg" "yolo_new/BoundingBox:std_msgs/Header"
 )
 
 #
@@ -59,45 +59,45 @@ add_custom_target(_yolo_new_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/position_color.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/position_color.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/yolo_new
 )
 _generate_msg_cpp(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/yolo_new
 )
 _generate_msg_cpp(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/color_ik_result_new.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/color_ik_result_new.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/yolo_new
 )
 _generate_msg_cpp(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target_position.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target_position.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/yolo_new
 )
 _generate_msg_cpp(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_init_position.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_init_position.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/yolo_new
 )
 _generate_msg_cpp(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBox.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/yolo_new
 )
 _generate_msg_cpp(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBoxes.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg"
   "${MSG_I_FLAGS}"
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBox.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/yolo_new
 )
 
@@ -115,19 +115,19 @@ add_custom_target(yolo_new_generate_messages_cpp
 add_dependencies(yolo_new_generate_messages yolo_new_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/position_color.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/position_color.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_cpp _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_cpp _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/color_ik_result_new.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/color_ik_result_new.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_cpp _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target_position.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target_position.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_cpp _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_init_position.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_init_position.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_cpp _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBox.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_cpp _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBoxes.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_cpp _yolo_new_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -140,45 +140,45 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS yolo_new_generate_messages_cpp)
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/position_color.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/position_color.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/yolo_new
 )
 _generate_msg_eus(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/yolo_new
 )
 _generate_msg_eus(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/color_ik_result_new.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/color_ik_result_new.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/yolo_new
 )
 _generate_msg_eus(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target_position.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target_position.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/yolo_new
 )
 _generate_msg_eus(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_init_position.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_init_position.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/yolo_new
 )
 _generate_msg_eus(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBox.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/yolo_new
 )
 _generate_msg_eus(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBoxes.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg"
   "${MSG_I_FLAGS}"
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBox.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/yolo_new
 )
 
@@ -196,19 +196,19 @@ add_custom_target(yolo_new_generate_messages_eus
 add_dependencies(yolo_new_generate_messages yolo_new_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/position_color.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/position_color.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_eus _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_eus _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/color_ik_result_new.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/color_ik_result_new.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_eus _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target_position.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target_position.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_eus _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_init_position.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_init_position.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_eus _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBox.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_eus _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBoxes.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_eus _yolo_new_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -221,45 +221,45 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS yolo_new_generate_messages_eus)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/position_color.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/position_color.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/yolo_new
 )
 _generate_msg_lisp(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/yolo_new
 )
 _generate_msg_lisp(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/color_ik_result_new.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/color_ik_result_new.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/yolo_new
 )
 _generate_msg_lisp(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target_position.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target_position.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/yolo_new
 )
 _generate_msg_lisp(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_init_position.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_init_position.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/yolo_new
 )
 _generate_msg_lisp(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBox.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/yolo_new
 )
 _generate_msg_lisp(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBoxes.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg"
   "${MSG_I_FLAGS}"
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBox.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/yolo_new
 )
 
@@ -277,19 +277,19 @@ add_custom_target(yolo_new_generate_messages_lisp
 add_dependencies(yolo_new_generate_messages yolo_new_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/position_color.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/position_color.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_lisp _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_lisp _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/color_ik_result_new.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/color_ik_result_new.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_lisp _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target_position.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target_position.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_lisp _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_init_position.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_init_position.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_lisp _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBox.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_lisp _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBoxes.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_lisp _yolo_new_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -302,45 +302,45 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS yolo_new_generate_messages_lisp)
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/position_color.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/position_color.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/yolo_new
 )
 _generate_msg_nodejs(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/yolo_new
 )
 _generate_msg_nodejs(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/color_ik_result_new.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/color_ik_result_new.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/yolo_new
 )
 _generate_msg_nodejs(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target_position.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target_position.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/yolo_new
 )
 _generate_msg_nodejs(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_init_position.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_init_position.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/yolo_new
 )
 _generate_msg_nodejs(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBox.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/yolo_new
 )
 _generate_msg_nodejs(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBoxes.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg"
   "${MSG_I_FLAGS}"
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBox.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/yolo_new
 )
 
@@ -358,19 +358,19 @@ add_custom_target(yolo_new_generate_messages_nodejs
 add_dependencies(yolo_new_generate_messages yolo_new_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/position_color.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/position_color.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_nodejs _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_nodejs _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/color_ik_result_new.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/color_ik_result_new.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_nodejs _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target_position.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target_position.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_nodejs _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_init_position.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_init_position.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_nodejs _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBox.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_nodejs _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBoxes.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_nodejs _yolo_new_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -383,45 +383,45 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS yolo_new_generate_messages_nodejs)
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/position_color.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/position_color.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/yolo_new
 )
 _generate_msg_py(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/yolo_new
 )
 _generate_msg_py(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/color_ik_result_new.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/color_ik_result_new.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/yolo_new
 )
 _generate_msg_py(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target_position.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target_position.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/yolo_new
 )
 _generate_msg_py(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_init_position.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_init_position.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/yolo_new
 )
 _generate_msg_py(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBox.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/yolo_new
 )
 _generate_msg_py(yolo_new
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBoxes.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg"
   "${MSG_I_FLAGS}"
-  "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBox.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/yolo_new
 )
 
@@ -439,19 +439,19 @@ add_custom_target(yolo_new_generate_messages_py
 add_dependencies(yolo_new_generate_messages yolo_new_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/position_color.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/position_color.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_py _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_py _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/color_ik_result_new.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/color_ik_result_new.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_py _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_target_position.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target_position.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_py _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/arm_init_position.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_init_position.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_py _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBox.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_py _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolo_new/msg/BoundingBoxes.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_py _yolo_new_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

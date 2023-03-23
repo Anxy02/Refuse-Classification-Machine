@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/moyu/wheeltec_arm/devel/share/gennodejs/ros/wheeltec_tracker_pkg/msg/centroid.js"
-  "/home/moyu/wheeltec_arm/devel/share/gennodejs/ros/wheeltec_tracker_pkg/msg/color.js"
-  "/home/moyu/wheeltec_arm/devel/share/gennodejs/ros/wheeltec_tracker_pkg/msg/gesture.js"
+  "/home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/wheeltec_tracker_pkg/msg/centroid.js"
+  "/home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/wheeltec_tracker_pkg/msg/color.js"
+  "/home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/wheeltec_tracker_pkg/msg/gesture.js"
   "CMakeFiles/wheeltec_tracker_pkg_generate_messages_nodejs"
 )
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moyu/wheeltec_arm/src
+CMAKE_SOURCE_DIR = /home/moyu/Refuse-Classification-Machine/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moyu/wheeltec_arm/build
+CMAKE_BINARY_DIR = /home/moyu/Refuse-Classification-Machine/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -63,10 +63,10 @@ table_streeing_arm_moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/bu
 .PHONY : table_streeing_arm_moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 table_streeing_arm_moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /home/moyu/wheeltec_arm/build/table_streeing_arm_moveit_config && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /home/moyu/Refuse-Classification-Machine/build/table_streeing_arm_moveit_config && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : table_streeing_arm_moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 table_streeing_arm_moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/wheeltec_arm/src /home/moyu/wheeltec_arm/src/table_streeing_arm_moveit_config /home/moyu/wheeltec_arm/build /home/moyu/wheeltec_arm/build/table_streeing_arm_moveit_config /home/moyu/wheeltec_arm/build/table_streeing_arm_moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/Refuse-Classification-Machine/src /home/moyu/Refuse-Classification-Machine/src/table_streeing_arm_moveit_config /home/moyu/Refuse-Classification-Machine/build /home/moyu/Refuse-Classification-Machine/build/table_streeing_arm_moveit_config /home/moyu/Refuse-Classification-Machine/build/table_streeing_arm_moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : table_streeing_arm_moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/depend
 

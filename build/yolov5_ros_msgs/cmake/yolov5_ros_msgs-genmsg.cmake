@@ -2,7 +2,7 @@
 
 message(STATUS "yolov5_ros_msgs: 2 messages, 0 services")
 
-set(MSG_I_FLAGS "-Iyolov5_ros_msgs:/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Iyolov5_ros_msgs:/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,14 +17,14 @@ add_custom_target(yolov5_ros_msgs_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBox.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBox.msg" NAME_WE)
 add_custom_target(_yolov5_ros_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "yolov5_ros_msgs" "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBox.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "yolov5_ros_msgs" "/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBox.msg" ""
 )
 
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBoxes.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBoxes.msg" NAME_WE)
 add_custom_target(_yolov5_ros_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "yolov5_ros_msgs" "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBoxes.msg" "yolov5_ros_msgs/BoundingBox:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "yolov5_ros_msgs" "/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBoxes.msg" "std_msgs/Header:yolov5_ros_msgs/BoundingBox"
 )
 
 #
@@ -34,15 +34,15 @@ add_custom_target(_yolov5_ros_msgs_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(yolov5_ros_msgs
-  "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBox.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBox.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/yolov5_ros_msgs
 )
 _generate_msg_cpp(yolov5_ros_msgs
-  "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBoxes.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBoxes.msg"
   "${MSG_I_FLAGS}"
-  "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBox.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBox.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/yolov5_ros_msgs
 )
 
@@ -60,9 +60,9 @@ add_custom_target(yolov5_ros_msgs_generate_messages_cpp
 add_dependencies(yolov5_ros_msgs_generate_messages yolov5_ros_msgs_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBox.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBox.msg" NAME_WE)
 add_dependencies(yolov5_ros_msgs_generate_messages_cpp _yolov5_ros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBoxes.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBoxes.msg" NAME_WE)
 add_dependencies(yolov5_ros_msgs_generate_messages_cpp _yolov5_ros_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -75,15 +75,15 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS yolov5_ros_msgs_generate_messages_c
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(yolov5_ros_msgs
-  "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBox.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBox.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/yolov5_ros_msgs
 )
 _generate_msg_eus(yolov5_ros_msgs
-  "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBoxes.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBoxes.msg"
   "${MSG_I_FLAGS}"
-  "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBox.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBox.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/yolov5_ros_msgs
 )
 
@@ -101,9 +101,9 @@ add_custom_target(yolov5_ros_msgs_generate_messages_eus
 add_dependencies(yolov5_ros_msgs_generate_messages yolov5_ros_msgs_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBox.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBox.msg" NAME_WE)
 add_dependencies(yolov5_ros_msgs_generate_messages_eus _yolov5_ros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBoxes.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBoxes.msg" NAME_WE)
 add_dependencies(yolov5_ros_msgs_generate_messages_eus _yolov5_ros_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -116,15 +116,15 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS yolov5_ros_msgs_generate_messages_e
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(yolov5_ros_msgs
-  "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBox.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBox.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/yolov5_ros_msgs
 )
 _generate_msg_lisp(yolov5_ros_msgs
-  "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBoxes.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBoxes.msg"
   "${MSG_I_FLAGS}"
-  "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBox.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBox.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/yolov5_ros_msgs
 )
 
@@ -142,9 +142,9 @@ add_custom_target(yolov5_ros_msgs_generate_messages_lisp
 add_dependencies(yolov5_ros_msgs_generate_messages yolov5_ros_msgs_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBox.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBox.msg" NAME_WE)
 add_dependencies(yolov5_ros_msgs_generate_messages_lisp _yolov5_ros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBoxes.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBoxes.msg" NAME_WE)
 add_dependencies(yolov5_ros_msgs_generate_messages_lisp _yolov5_ros_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -157,15 +157,15 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS yolov5_ros_msgs_generate_messages_l
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(yolov5_ros_msgs
-  "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBox.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBox.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/yolov5_ros_msgs
 )
 _generate_msg_nodejs(yolov5_ros_msgs
-  "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBoxes.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBoxes.msg"
   "${MSG_I_FLAGS}"
-  "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBox.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBox.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/yolov5_ros_msgs
 )
 
@@ -183,9 +183,9 @@ add_custom_target(yolov5_ros_msgs_generate_messages_nodejs
 add_dependencies(yolov5_ros_msgs_generate_messages yolov5_ros_msgs_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBox.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBox.msg" NAME_WE)
 add_dependencies(yolov5_ros_msgs_generate_messages_nodejs _yolov5_ros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBoxes.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBoxes.msg" NAME_WE)
 add_dependencies(yolov5_ros_msgs_generate_messages_nodejs _yolov5_ros_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -198,15 +198,15 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS yolov5_ros_msgs_generate_messages_n
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(yolov5_ros_msgs
-  "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBox.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBox.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/yolov5_ros_msgs
 )
 _generate_msg_py(yolov5_ros_msgs
-  "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBoxes.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBoxes.msg"
   "${MSG_I_FLAGS}"
-  "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBox.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBox.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/yolov5_ros_msgs
 )
 
@@ -224,9 +224,9 @@ add_custom_target(yolov5_ros_msgs_generate_messages_py
 add_dependencies(yolov5_ros_msgs_generate_messages yolov5_ros_msgs_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBox.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBox.msg" NAME_WE)
 add_dependencies(yolov5_ros_msgs_generate_messages_py _yolov5_ros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/wheeltec_arm/src/yolov5_ros_msgs/msg/BoundingBoxes.msg" NAME_WE)
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolov5_ros_msgs/msg/BoundingBoxes.msg" NAME_WE)
 add_dependencies(yolov5_ros_msgs_generate_messages_py _yolov5_ros_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

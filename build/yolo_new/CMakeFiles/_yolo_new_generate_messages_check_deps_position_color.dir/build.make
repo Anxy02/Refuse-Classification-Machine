@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moyu/wheeltec_arm/src
+CMAKE_SOURCE_DIR = /home/moyu/Refuse-Classification-Machine/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moyu/wheeltec_arm/build
+CMAKE_BINARY_DIR = /home/moyu/Refuse-Classification-Machine/build
 
 # Utility rule file for _yolo_new_generate_messages_check_deps_position_color.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/moyu/wheeltec_arm/build
 include yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/progress.make
 
 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color:
-	cd /home/moyu/wheeltec_arm/build/yolo_new && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py yolo_new /home/moyu/wheeltec_arm/src/yolo_new/msg/position_color.msg 
+	cd /home/moyu/Refuse-Classification-Machine/build/yolo_new && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py yolo_new /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/position_color.msg 
 
 _yolo_new_generate_messages_check_deps_position_color: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color
 _yolo_new_generate_messages_check_deps_position_color: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/build.make
@@ -67,10 +67,10 @@ yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/bu
 .PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/build
 
 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/clean:
-	cd /home/moyu/wheeltec_arm/build/yolo_new && $(CMAKE_COMMAND) -P CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/cmake_clean.cmake
+	cd /home/moyu/Refuse-Classification-Machine/build/yolo_new && $(CMAKE_COMMAND) -P CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/cmake_clean.cmake
 .PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/clean
 
 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/depend:
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/wheeltec_arm/src /home/moyu/wheeltec_arm/src/yolo_new /home/moyu/wheeltec_arm/build /home/moyu/wheeltec_arm/build/yolo_new /home/moyu/wheeltec_arm/build/yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/Refuse-Classification-Machine/src /home/moyu/Refuse-Classification-Machine/src/yolo_new /home/moyu/Refuse-Classification-Machine/build /home/moyu/Refuse-Classification-Machine/build/yolo_new /home/moyu/Refuse-Classification-Machine/build/yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/depend
 

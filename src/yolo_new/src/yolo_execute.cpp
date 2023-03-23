@@ -54,7 +54,7 @@ void color_ik_result_callback(const yolo_new::color_ik_result_new &msg)
     cb_target_data[i_cb][1]=msg.arm_angle;       //控制机械臂臂长的目标角度
     cb_target_data[i_cb][2]=msg.hand_angle;      //控制夹取色块旋转的目标角度
     ROS_INFO("cb_target_is  :(%4.2f)-(%4.2f)-(%4.2f)",cb_target_data[i_cb][0],cb_target_data[i_cb][1],cb_target_data[i_cb][2]);
-    std::cb_class[i_cb] = msg.sort; //二选一
+    cb_class[i_cb] = msg.sort; //二选一
     // if(msg.sort=="recycle") 
     // {
     //   cb_class[i_cb] = "recycle";
@@ -119,7 +119,7 @@ int main(int argc, char **argv)
       // mode_object();//根据模式执行相应决策
       // single_object()//单目标->刷子
       // single_grasp()//单目标->抓取
-      multi_grasp_sequence()//多目标抓取顺序判断函数
+      multi_grasp_sequence();//多目标抓取顺序判断函数
       if( arm_state=="ready" )
       {
         arm_state="working";
@@ -240,8 +240,8 @@ int single_object()
     others_count += 1;
     ROS_INFO("sorting is:   others");
   }
-*/
 }
+*/
 int multi_grasp_sequence()//多目标抓取
 {
   //ROS_INFO("多目标---->>>抓取");
@@ -250,28 +250,28 @@ int multi_grasp_sequence()//多目标抓取
     joint_target1=cb_target_data[j_cb][0];//关节目标值赋值
     joint_target2=cb_target_data[j_cb][1];
     joint_target3=cb_target_data[j_cb][2];
-    if(std::cb_class[j_cb] == "recycle")
+    if(cb_class[j_cb] == "recycle")
     {
       target_sort="recycle";
       arm_state="ready";
       recycle_count += 1;
       ROS_INFO("sorting is:   recycle");
     }
-    else if(std::cb_class[j_cb] == "harm")
+    else if(cb_class[j_cb] == "harm")
     {
       target_sort="harm";
       arm_state="ready";
       harm_count += 1;
       ROS_INFO("sorting is:   harm");
     }
-    else if(std::cb_class[j_cb] == "kitchen")
+    else if(cb_class[j_cb] == "kitchen")
     {
       target_sort="kitchen";
       arm_state="ready";
       kitchen_count += 1;
       ROS_INFO("sorting is:   kitchen");
     }
-    else if(std::cb_class[j_cb] == "others")
+    else if(cb_class[j_cb] == "others")
     {
       target_sort="others";
       arm_state="ready";

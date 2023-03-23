@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/moyu/wheeltec_arm/devel/share/gennodejs/ros/yolov5_ros_msgs/msg/BoundingBox.js"
-  "/home/moyu/wheeltec_arm/devel/share/gennodejs/ros/yolov5_ros_msgs/msg/BoundingBoxes.js"
+  "/home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolov5_ros_msgs/msg/BoundingBox.js"
+  "/home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolov5_ros_msgs/msg/BoundingBoxes.js"
   "CMakeFiles/yolov5_ros_msgs_generate_messages_nodejs"
 )
 

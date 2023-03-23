@@ -43,54 +43,54 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moyu/wheeltec_arm/src
+CMAKE_SOURCE_DIR = /home/moyu/Refuse-Classification-Machine/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moyu/wheeltec_arm/build
+CMAKE_BINARY_DIR = /home/moyu/Refuse-Classification-Machine/build
 
 # Utility rule file for table_arm_generate_messages_lisp.
 
 # Include the progress variables for this target.
 include table_arm/CMakeFiles/table_arm_generate_messages_lisp.dir/progress.make
 
-table_arm/CMakeFiles/table_arm_generate_messages_lisp: /home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg/position_color.lisp
-table_arm/CMakeFiles/table_arm_generate_messages_lisp: /home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg/arm_target.lisp
-table_arm/CMakeFiles/table_arm_generate_messages_lisp: /home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg/color_ik_result.lisp
-table_arm/CMakeFiles/table_arm_generate_messages_lisp: /home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg/arm_target_position.lisp
-table_arm/CMakeFiles/table_arm_generate_messages_lisp: /home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg/arm_init_position.lisp
+table_arm/CMakeFiles/table_arm_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg/position_color.lisp
+table_arm/CMakeFiles/table_arm_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg/arm_target.lisp
+table_arm/CMakeFiles/table_arm_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg/color_ik_result.lisp
+table_arm/CMakeFiles/table_arm_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg/arm_target_position.lisp
+table_arm/CMakeFiles/table_arm_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg/arm_init_position.lisp
 
 
-/home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg/position_color.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg/position_color.lisp: /home/moyu/wheeltec_arm/src/table_arm/msg/position_color.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from table_arm/position_color.msg"
-	cd /home/moyu/wheeltec_arm/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/moyu/wheeltec_arm/src/table_arm/msg/position_color.msg -Itable_arm:/home/moyu/wheeltec_arm/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg
+/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg/position_color.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg/position_color.lisp: /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/position_color.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from table_arm/position_color.msg"
+	cd /home/moyu/Refuse-Classification-Machine/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/position_color.msg -Itable_arm:/home/moyu/Refuse-Classification-Machine/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg
 
-/home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg/arm_target.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg/arm_target.lisp: /home/moyu/wheeltec_arm/src/table_arm/msg/arm_target.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from table_arm/arm_target.msg"
-	cd /home/moyu/wheeltec_arm/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/moyu/wheeltec_arm/src/table_arm/msg/arm_target.msg -Itable_arm:/home/moyu/wheeltec_arm/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg
+/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg/arm_target.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg/arm_target.lisp: /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/arm_target.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from table_arm/arm_target.msg"
+	cd /home/moyu/Refuse-Classification-Machine/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/arm_target.msg -Itable_arm:/home/moyu/Refuse-Classification-Machine/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg
 
-/home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg/color_ik_result.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg/color_ik_result.lisp: /home/moyu/wheeltec_arm/src/table_arm/msg/color_ik_result.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from table_arm/color_ik_result.msg"
-	cd /home/moyu/wheeltec_arm/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/moyu/wheeltec_arm/src/table_arm/msg/color_ik_result.msg -Itable_arm:/home/moyu/wheeltec_arm/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg
+/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg/color_ik_result.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg/color_ik_result.lisp: /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/color_ik_result.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from table_arm/color_ik_result.msg"
+	cd /home/moyu/Refuse-Classification-Machine/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/color_ik_result.msg -Itable_arm:/home/moyu/Refuse-Classification-Machine/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg
 
-/home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg/arm_target_position.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg/arm_target_position.lisp: /home/moyu/wheeltec_arm/src/table_arm/msg/arm_target_position.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Lisp code from table_arm/arm_target_position.msg"
-	cd /home/moyu/wheeltec_arm/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/moyu/wheeltec_arm/src/table_arm/msg/arm_target_position.msg -Itable_arm:/home/moyu/wheeltec_arm/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg
+/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg/arm_target_position.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg/arm_target_position.lisp: /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/arm_target_position.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Lisp code from table_arm/arm_target_position.msg"
+	cd /home/moyu/Refuse-Classification-Machine/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/arm_target_position.msg -Itable_arm:/home/moyu/Refuse-Classification-Machine/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg
 
-/home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg/arm_init_position.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg/arm_init_position.lisp: /home/moyu/wheeltec_arm/src/table_arm/msg/arm_init_position.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/wheeltec_arm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Lisp code from table_arm/arm_init_position.msg"
-	cd /home/moyu/wheeltec_arm/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/moyu/wheeltec_arm/src/table_arm/msg/arm_init_position.msg -Itable_arm:/home/moyu/wheeltec_arm/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg
+/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg/arm_init_position.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg/arm_init_position.lisp: /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/arm_init_position.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Lisp code from table_arm/arm_init_position.msg"
+	cd /home/moyu/Refuse-Classification-Machine/build/table_arm && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/moyu/Refuse-Classification-Machine/src/table_arm/msg/arm_init_position.msg -Itable_arm:/home/moyu/Refuse-Classification-Machine/src/table_arm/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p table_arm -o /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg
 
 table_arm_generate_messages_lisp: table_arm/CMakeFiles/table_arm_generate_messages_lisp
-table_arm_generate_messages_lisp: /home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg/position_color.lisp
-table_arm_generate_messages_lisp: /home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg/arm_target.lisp
-table_arm_generate_messages_lisp: /home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg/color_ik_result.lisp
-table_arm_generate_messages_lisp: /home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg/arm_target_position.lisp
-table_arm_generate_messages_lisp: /home/moyu/wheeltec_arm/devel/share/common-lisp/ros/table_arm/msg/arm_init_position.lisp
+table_arm_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg/position_color.lisp
+table_arm_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg/arm_target.lisp
+table_arm_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg/color_ik_result.lisp
+table_arm_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg/arm_target_position.lisp
+table_arm_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/table_arm/msg/arm_init_position.lisp
 table_arm_generate_messages_lisp: table_arm/CMakeFiles/table_arm_generate_messages_lisp.dir/build.make
 
 .PHONY : table_arm_generate_messages_lisp
@@ -101,10 +101,10 @@ table_arm/CMakeFiles/table_arm_generate_messages_lisp.dir/build: table_arm_gener
 .PHONY : table_arm/CMakeFiles/table_arm_generate_messages_lisp.dir/build
 
 table_arm/CMakeFiles/table_arm_generate_messages_lisp.dir/clean:
-	cd /home/moyu/wheeltec_arm/build/table_arm && $(CMAKE_COMMAND) -P CMakeFiles/table_arm_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/moyu/Refuse-Classification-Machine/build/table_arm && $(CMAKE_COMMAND) -P CMakeFiles/table_arm_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : table_arm/CMakeFiles/table_arm_generate_messages_lisp.dir/clean
 
 table_arm/CMakeFiles/table_arm_generate_messages_lisp.dir/depend:
-	cd /home/moyu/wheeltec_arm/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/wheeltec_arm/src /home/moyu/wheeltec_arm/src/table_arm /home/moyu/wheeltec_arm/build /home/moyu/wheeltec_arm/build/table_arm /home/moyu/wheeltec_arm/build/table_arm/CMakeFiles/table_arm_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/moyu/Refuse-Classification-Machine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moyu/Refuse-Classification-Machine/src /home/moyu/Refuse-Classification-Machine/src/table_arm /home/moyu/Refuse-Classification-Machine/build /home/moyu/Refuse-Classification-Machine/build/table_arm /home/moyu/Refuse-Classification-Machine/build/table_arm/CMakeFiles/table_arm_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : table_arm/CMakeFiles/table_arm_generate_messages_lisp.dir/depend
 
