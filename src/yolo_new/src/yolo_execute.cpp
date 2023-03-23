@@ -20,7 +20,6 @@
 #include<locale>
 
 int yolo_sequence=1;  //夹取顺序
-int sequence[4]={0};  //夹取顺序排序数组
 int yolo_confirmed_flag =0; //启动夹取的标志位
 int grasp_mode=0;//抓取模式 0：单目标抓取  1：单目标刷子  2：多目标抓取
 int isBusy=0;//回调函数中忙状态
@@ -30,15 +29,13 @@ float auxiliary_angle;
 int recycle_count_cb=0,harm_count_cb=0,kitchen_count_cb=0,others_count_cb=0; //接收到该数据帧的回调函数次数callback
 int recycle_count=0,harm_count=0,kitchen_count=0,others_count=0; //垃圾计数
 int count=0;//识别到的垃圾总数量
-int recycle_ready=0,harm_ready=0,kitchen_ready=0,others_ready=0; //色块位置确认标志位
 int sort_done=0;  //色块是否已经夹取标志位
 float cb_target_data[10][3]={0};  //回调函数目标值保存
 std::string cb_class[10]={};
-float recycle_target_data[3]={0},harm_target_data[3]={0},kitchen_target_data[3]={0},others_target_data[3]={0};//色块的目标位置对应的关节运动弧度数组
 float joint_target1=0,joint_target2=0,joint_target3=0; //赋值给moveit做正解的目标关节值
 float link_a,link_b,link_c,link_h; //机械参数
 float base_angle;
-std::string arm_state="none",target_color="noon";  //机械臂状态，夹取目标色块的颜色
+std::string arm_state="none",target_sort="noon";  //机械臂状态，夹取目标色块的颜色
 
 bool arm_success,hand_close_success,hand_open_success; //moveit正解计算（返回值）是否成功的标志位
 
@@ -49,8 +46,6 @@ std::vector<double> joint_group_positions(5); //机械臂正解的目标关节�
 void color_ik_result_callback(const yolo_new::color_ik_result_new &msg)
 {
   count=msg.count;//总数量
-   //if(count == 1) grasp_mode = 0;
-   //else grasp_mode = 0;//后续修改!!!!!
   ROS_INFO("msg sort is :%s ",msg.sort);
 
   if(i_cb < count && isBusy == 0)
@@ -125,7 +120,6 @@ int main(int argc, char **argv)
       // single_object()//单目标->刷子
       // single_grasp()//单目标->抓取
       multi_grasp_sequence()//多目标抓取顺序判断函数
-      // color_gripping_sequence(); //色块抓取顺序判断函数
       if( arm_state=="ready" )
       {
         arm_state="working";
@@ -157,7 +151,7 @@ int main(int argc, char **argv)
  
         arm.setNamedTarget("arm_look");   arm.move();  sleep(1);    //机械臂运动到观测色块的位置
         arm.setNamedTarget("color_put_interval");  arm.move();  sleep(1); //机械臂臂身运动到放置色块的预位置后，再放置色块
-        arm_put(target_color); //根据颜色将色块放置到对应位置 
+        arm_put(target_sort); //根据颜色将色块放置到对应位置 
       }
     ros::spinOnce();
   }
@@ -166,7 +160,7 @@ int main(int argc, char **argv)
 }
 
 //一个完整的放置动作
-void arm_put(std::string color)
+void arm_put(std::string sort)
 {
     moveit::planning_interface::MoveGroupInterface arm("arm");
     moveit::planning_interface::MoveGroupInterface hand("hand");
@@ -174,18 +168,12 @@ void arm_put(std::string color)
     //arm.setMaxAccelerationScalingFactor(0.2);
     //arm.setMaxVelocityScalingFactor(0.6);
    //根据色块的颜色判断放置位置                       根据实际修改
-         if (color == "recycle") {arm.setNamedTarget("yellow_put");  arm.move();  sleep(1);}
-    else if (color == "harm")   {arm.setNamedTarget("blue_put");    arm.move();  sleep(1);}
-    else if (color == "kitchen")  {arm.setNamedTarget("green_put");   arm.move();  sleep(1);}
-    else if (color == "others")  {arm.setNamedTarget("green_put");   arm.move();  sleep(1);ROS_INFO("sorting is done");}
+         if (sort == "recycle") {arm.setNamedTarget("yellow_put");  arm.move();  sleep(1);}
+    else if (sort == "harm")   {arm.setNamedTarget("blue_put");    arm.move();  sleep(1);}
+    else if (sort == "kitchen")  {arm.setNamedTarget("green_put");   arm.move();  sleep(1);}
+    else if (sort == "others")  {arm.setNamedTarget("green_put");   arm.move();  sleep(1);ROS_INFO("sorting is done");}
     hand.setNamedTarget("hand_open");   //机械爪张开
-    sort_done=0;  //标志位清零
-    if(j_cb >= count)//标志位清零
-    {
-      i_cb = 0;
-      j_cb = 0;
-      isBusy = 0 ;
-    }
+    
     while( !hand_open_success )  //判断是否规划成功，如果不成功则继续规划
     { 
        hand_open_success = ((hand.move() == moveit::planning_interface::MoveItErrorCode::SUCCESS)); //规划路径
@@ -203,6 +191,13 @@ void arm_put(std::string color)
     }
     hand_open_success=false;
 
+    sort_done=0;  //标志位清零
+    if(j_cb >= count)//标志位清零
+    {
+      i_cb = 0;
+      j_cb = 0;
+      isBusy = 0 ;
+    }
     arm_state="working";
     // yolo_sequence=yolo_sequence+1; //放置完成后，开始夹取下一个色块
 }
@@ -257,28 +252,28 @@ int multi_grasp_sequence()//多目标抓取
     joint_target3=cb_target_data[j_cb][2];
     if(std::cb_class[j_cb] == "recycle")
     {
-      target_color="recycle";
+      target_sort="recycle";
       arm_state="ready";
       recycle_count += 1;
       ROS_INFO("sorting is:   recycle");
     }
     else if(std::cb_class[j_cb] == "harm")
     {
-      target_color="harm";
+      target_sort="harm";
       arm_state="ready";
       harm_count += 1;
       ROS_INFO("sorting is:   harm");
     }
     else if(std::cb_class[j_cb] == "kitchen")
     {
-      target_color="kitchen";
+      target_sort="kitchen";
       arm_state="ready";
       kitchen_count += 1;
       ROS_INFO("sorting is:   kitchen");
     }
     else if(std::cb_class[j_cb] == "others")
     {
-      target_color="others";
+      target_sort="others";
       arm_state="ready";
       others_count += 1;
       ROS_INFO("sorting is:   others");
@@ -291,90 +286,5 @@ int multi_grasp_sequence()//多目标抓取
 
 }
 
-// ////抓取排序算法(多目标用)
-// int multi_grasp_sequence()
-// {
-//   float arry[4]={0},between=0;
-//   int i=0,j=0;
-//   if(((harm_ready==2)&&(yolo_confirmed_flag == 0))||((kitchen_ready==2)&&(yolo_confirmed_flag == 0))||((recycle_ready==2)&&(yolo_confirmed_flag == 0))||((others_ready==2)&&(yolo_confirmed_flag == 0))) 
-//   {
-//     yolo_confirmed_flag = 1;
-
-//   }
-
-// }
-
-//色块抓取顺序判断函数
-int color_gripping_sequence()
-{
-  float arry[4]={0},between=0;
-  int i=0,j=0;
-  //这个if条件下的内容是对色块距离机械臂的前后位置做夹取的排序，先夹取最近的色块
-  if((harm_ready==2)&&(kitchen_ready==2)&&(recycle_ready==2)&&(yolo_confirmed_flag == 0)) 
-  {
-    yolo_confirmed_flag = 1;
-    //arry[0]= red_target_data[1];
-    arry[0]= kitchen_target_data[1];
-    arry[1]= recycle_target_data[1];
-    arry[2]= harm_target_data[1];
-    arry[3]= others_target_data[1];
-    //冒泡排序法
-    for(i=0;i<4;i++)
-    {
-     for(j=3;j>i;j--)
-      {
-        if (arry[j]<arry[j-1]) 
-          { between=arry[j]; arry[j]=arry[j-1]; arry[j-1]=between; }
-      }
-    }
-    ROS_INFO("arry_is:(%4.2f)-(%4.2f)-(%4.2f)-(%4.2f)",arry[0],arry[1],arry[2],arry[3]);
-   //排序后再对应每个色块的顺序 
-   //for(j=0;j<4;j++) {  if(red_target_data[1]    == arry[j]) sequence[0]=j+1; }
-   for(j=0;j<4;j++) {  if(kitchen_target_data[1] == arry[j]) sequence[0]=j+1; }
-   for(j=0;j<4;j++) {  if(recycle_target_data[1]   == arry[j]) sequence[1]=j+1; }
-   for(j=0;j<4;j++) {  if(harm_target_data[1]  == arry[j]) sequence[2]=j+1; }
-   for(j=0;j<4;j++) {  if(others_target_data[1]  == arry[j]) sequence[3]=j+1; }
-   ROS_INFO("sequence_is:(%d)-(%d)-(%d)-(%d)",sequence[0],sequence[1],sequence[2],sequence[3]);
-
-   if((sequence[0]==sequence[1])||(sequence[1]==sequence[2])||(sequence[1]==sequence[2])) 
-   {  harm_ready=0; kitchen_ready=0; recycle_ready=0; yolo_confirmed_flag = 0;   
-      ROS_INFO("data is error");
-   }
-
-  }
-
-  if( yolo_confirmed_flag == 1) 
-  {//根据color_sequence决定夹取顺序
-      if (yolo_sequence==sequence[0]&&recycle_done==0)
-       {
-         joint_target1=kitchen_target_data[0],joint_target2=kitchen_target_data[1],joint_target3=kitchen_target_data[2],target_color="kitchen",kitchen_done=1;//关节目标值赋值
-         arm_state="ready";
-         ROS_INFO("sorting is: kitchen");
-       return 0;
-       }
-     else if (yolo_sequence==sequence[1]&&harm_done==0)
-       {
-         joint_target1=recycle_target_data[0],joint_target2=recycle_target_data[1],joint_target3=recycle_target_data[2]  ,target_color="recycle",recycle_done=1;//关节目标值赋值
-         arm_state="ready";
-         ROS_INFO("sorting is:   recycle");
-       return 0;
-       }
-     else if (yolo_sequence==sequence[2]&&kitchen_done==0)
-       {
-         joint_target1=harm_target_data[0],joint_target2=harm_target_data[1],joint_target3=harm_target_data[2] ,target_color="harm",harm_done=1;//关节目标值赋值
-         arm_state="ready";
-         ROS_INFO("sorting is:  harm");
-       return 0;
-       }
-     else if (yolo_sequence==sequence[3]&&others_done==0)
-        {
-         joint_target1=others_target_data[0],joint_target2=others_target_data[1],joint_target3=others_target_data[2] ,target_color="others",others_done=1;//关节目标值赋值
-         arm_state="ready";
-         ROS_INFO("sorting is:  others");
-        }
-     else { arm_state="none"; }
-  }
-  
-}
 
 

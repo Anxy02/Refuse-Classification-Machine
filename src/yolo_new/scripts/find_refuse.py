@@ -137,12 +137,16 @@ class Find_Color:
     def single_send(Class): #串口发送 待写（注意数据统计）
         if Class == 1:
             print('recycle')
+
         elif Class == 2:
             print('harm')
+
         elif Class == 3:
             print('kitchen')
+
         elif Class == 4:
             print('others')
+            
         else:
             print('none')
 

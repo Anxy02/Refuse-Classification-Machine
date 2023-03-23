@@ -36,10 +36,9 @@ class arm_init
   void arm_pick();
   void arm_put(std::string color);
   int take_average();
-  int mode_object();
-  int single_object();
-  int single_grasp();
-  // int multi_grasp_sequence();
-  int color_gripping_sequence();
+  // int mode_object();
+  // int single_object();
+  // int single_grasp();
+  int multi_grasp_sequence();
 
 #endif
