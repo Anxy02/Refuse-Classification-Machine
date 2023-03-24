@@ -22,7 +22,7 @@
 int yolo_sequence=1;  //夹取顺序
 int yolo_confirmed_flag =0; //启动夹取的标志位
 int grasp_mode=0;//抓取模式 0：单目标抓取  1：单目标刷子  2：多目标抓取
-int isBusy=0;//回调函数中忙状态
+int isBusy=0,countFlag=0;//回调函数中忙状态
 int i_cb,j_cb=0;//回调函数循环变量
 
 float auxiliary_angle; 
@@ -45,38 +45,48 @@ std::vector<double> joint_group_positions(5); //机械臂正解的目标关节�
 //目标色块对应逆解的目标关节角度回调函数
 void color_ik_result_callback(const yolo_new::color_ik_result_new &msg)
 {
-  count=msg.count;//总数量
-  ROS_INFO("msg sort is :%s ",msg.sort);
+  if(isBusy == 0)
+  {
+      if(countFlag == 0){
+        count=msg.count;//总数量
+        countFlag = 1;
+      }
+          
+      //ROS_INFO("msg sort is :%s ",msg.sort);
 
-  if(i_cb < count && isBusy == 0)
-  {
-    cb_target_data[i_cb][0]=msg.pedestal_angle;  //云台的目标角度
-    cb_target_data[i_cb][1]=msg.arm_angle;       //控制机械臂臂长的目标角度
-    cb_target_data[i_cb][2]=msg.hand_angle;      //控制夹取色块旋转的目标角度
-    ROS_INFO("cb_target_is  :(%4.2f)-(%4.2f)-(%4.2f)",cb_target_data[i_cb][0],cb_target_data[i_cb][1],cb_target_data[i_cb][2]);
-    cb_class[i_cb] = msg.sort; //二选一
-    // if(msg.sort=="recycle") 
-    // {
-    //   cb_class[i_cb] = "recycle";
-    // }
-    // else if(msg.sort=="harm")
-    // {
-    //   cb_class[i_cb] = "harm";
-    // }
-    // else if(msg.sort=="kitchen")
-    // {
-    //   cb_class[i_cb] = "kitchen";
-    // }
-    // else if(msg.sort=="others")
-    // {
-    //   cb_class[i_cb] = "others";
-    // }
-    ++i_cb;
+      if(i_cb < count)
+      {
+        cb_target_data[i_cb][0]=msg.pedestal_angle;  //云台的目标角度
+        cb_target_data[i_cb][1]=msg.arm_angle;       //控制机械臂臂长的目标角度
+        cb_target_data[i_cb][2]=msg.hand_angle;      //控制夹取色块旋转的目标角度
+        ROS_INFO("cb_target_is  :(%4.2f)-(%4.2f)-(%4.2f)",cb_target_data[i_cb][0],cb_target_data[i_cb][1],cb_target_data[i_cb][2]);
+        cb_class[i_cb] = msg.sort; //二选一
+        ROS_INFO("msg sort is :%s ",msg.sort);        //测试类别传输！！！！
+        ROS_INFO("cb sort is :%s ",cb_class[i_cb]);
+        // if(msg.sort=="recycle") 
+        // {
+        //   cb_class[i_cb] = "recycle";
+        // }
+        // else if(msg.sort=="harm")
+        // {
+        //   cb_class[i_cb] = "harm";
+        // }
+        // else if(msg.sort=="kitchen")
+        // {
+        //   cb_class[i_cb] = "kitchen";
+        // }
+        // else if(msg.sort=="others")
+        // {
+        //   cb_class[i_cb] = "others";
+        // }
+        ++i_cb;
+      }
+      else
+      {
+        isBusy = 1;
+      }
   }
-  else
-  {
-    isBusy = 1;
-  }
+  
 }
 
 
@@ -197,6 +207,7 @@ void arm_put(std::string sort)
       i_cb = 0;
       j_cb = 0;
       isBusy = 0 ;
+      countFlag = 0;
     }
     arm_state="working";
     // yolo_sequence=yolo_sequence+1; //放置完成后，开始夹取下一个色块
