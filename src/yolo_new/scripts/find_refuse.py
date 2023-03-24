@@ -19,6 +19,7 @@ def nothing(s):
 
 class Find_Color:
     def __init__(self):
+        
         self.bridge = cv_bridge.CvBridge()
         self.i=0
         # cv2.namedWindow("window", 1)
@@ -70,27 +71,29 @@ class Find_Color:
 
     def box_callback(self,msg):
         self.boundingBoxes = BoundingBoxes()
+        #global tmp_box
+        #global box
 
         count=0
         for i in msg.bounding_boxes:
             count+=1
 
         if count == 1:
-            self.Class = self.switch_class(box.Class)   #传入垃圾类别并进行判断分类
+            self.Class = self.switch_class(msg.bounding_boxes[0].Class)   #传入垃圾类别并进行判断分类
             self.single_send(self.Class)  #单目标直接用刷子发送
 
         elif count > 1:
-            for box in msg.bounding_boxes:
-                Xmid=box.xmid/2
-                Ymid=box.ymid/2
-                Xmin=box.xmin
-                Xmax=box.xmax
-                Ymin=box.ymin
-                Ymax=box.ymax
+            for tmp_box in msg.bounding_boxes:
+                Xmid=tmp_box.xmid/2
+                Ymid=tmp_box.ymid/2
+                Xmin=tmp_box.xmin
+                Xmax=tmp_box.xmax
+                Ymin=tmp_box.ymin
+                Ymax=tmp_box.ymax
 
                 # self.Class=box.Class
                 # rospy.loginfo("class is %s ,X is %f, Y is %f", self.Class,Xmid,Ymid)
-                self.Class = self.switch_class(box.Class)   #传入垃圾类别并进行判断分类
+                self.Class = self.switch_class(tmp_box.Class)   #传入垃圾类别并进行判断分类
 
                 angleX = self.calculateAngleX(Xmid) #做数学转换获取色块在画幅中的坐标
                 angleY = self.calculateAngleY(Ymid)
@@ -128,13 +131,13 @@ class Find_Color:
         angle = -1*np.arctan(displacement*self.tanVertical)
         return angle
     
-    def calculateRotation(Xmin,Xmax,Ymin,Ymax):
+    def calculateRotation(self,Xmin,Xmax,Ymin,Ymax):
         if abs((Xmax-Xmin)/(Ymax-Ymin)) <= 1 :
             return 0
         else :
             return -90  #待测 或90
 
-    def single_send(Class): #串口发送 待写（注意数据统计）
+    def single_send(self,Class): #串口发送 待写（注意数据统计）
         if Class == 1:
             print('recycle')
 

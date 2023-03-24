@@ -1,0 +1,27 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/moyu/Refuse-Classification-Machine/devel/include/**",
+        "/home/moyu/ros_yolov5/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/moyu/Refuse-Classification-Machine/src/arm_demo/include/**",
+        "/home/moyu/Refuse-Classification-Machine/src/table_arm/include/**",
+        "/home/moyu/Refuse-Classification-Machine/src/web_video_server/include/**",
+        "/home/moyu/Refuse-Classification-Machine/src/wheeltec_arm_rc/include/**",
+        "/home/moyu/Refuse-Classification-Machine/src/yolo_new/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
