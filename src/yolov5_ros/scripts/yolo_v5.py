@@ -61,6 +61,7 @@ class Yolo_Dect:
                                           queue_size=1, buff_size=52428800)
 
         # output publishers
+        #queue_size 实时收发信息
         self.position_pub = rospy.Publisher(
             pub_topic, BoundingBoxes, queue_size=1)
 

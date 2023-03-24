@@ -50,10 +50,6 @@ class Find_Color:
         self.harm_count=0
         self.kitchen_count=0
         self.others_count=0
-        # self.red_count=0
-        # self.green_count=0
-        # self.blue_count=0
-        # self.yellow_count=0
 
         self.basic_angle= acos( (self.link_c -self.link_h)/self.link_a ) #计算机械臂夹爪可触底的关节基础角度
         #self.basic_angle= 0.5732
@@ -81,6 +77,7 @@ class Find_Color:
         if count == 1:
             self.Class = self.switch_class(msg.bounding_boxes[0].Class)   #传入垃圾类别并进行判断分类
             self.single_send(self.Class)  #单目标直接用刷子发送
+            rospy.loginfo('msg.boundingBoxes.class :%s',self.Class)
 
         elif count > 1:
             for tmp_box in msg.bounding_boxes:
@@ -135,7 +132,7 @@ class Find_Color:
         if abs((Xmax-Xmin)/(Ymax-Ymin)) <= 1 :
             return 0
         else :
-            return -90  #待测 或90
+            return -50  #待测 -45~45度保持不变
 
     def single_send(self,Class): #串口发送 待写（注意数据统计）
         if Class == 1:
@@ -230,6 +227,7 @@ class Find_Color:
         #rospy.loginfo('hand_angle is %s' ,hand_angle)
         #通过self.Class判断是什么类别的垃圾
         #m=1绿色，m=2蓝色，m=3黄色
+        # 判断5次是否有误！！！！！！！！！
         if self.Class==1:
             self.recycle_count=self.recycle_count +1
             if self.recycle_count >5: #每五次数据再发布一次话题（控制话题发布速率）
@@ -256,7 +254,7 @@ class Find_Color:
                self.arm_ik_angle_Publisher.publish(ikMsg)
 
 
-rospy.init_node("find_color")
-find_color = Find_Color()
+rospy.init_node("yolo_detect")
+yolo_detect = Find_Color()
 rospy.spin()
 
