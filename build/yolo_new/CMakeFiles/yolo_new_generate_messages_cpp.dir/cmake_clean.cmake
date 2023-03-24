@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/BoundingBox.h"
   "/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/BoundingBoxes.h"
+  "/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/Flag.h"
   "/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/arm_init_position.h"
   "/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/arm_target.h"
   "/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/arm_target_position.h"

@@ -3,6 +3,7 @@
 
 yolo_new/CMakeFiles/yolo_execute.dir/src/yolo_execute.cpp.o
  /home/moyu/Refuse-Classification-Machine/devel/include/table_arm/color_ik_result.h
+ /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/Flag.h
  /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/color_ik_result_new.h
  /home/moyu/Refuse-Classification-Machine/src/yolo_new/include/yolo_execute.h
  /home/moyu/Refuse-Classification-Machine/src/yolo_new/src/yolo_execute.cpp

@@ -12,6 +12,7 @@ from yolo_new.msg import color_ik_result_new as color_ik_result_Msg
 from std_msgs.msg import Int8
 from std_msgs.msg import String as StringMsg
 from yolov5_ros_msgs.msg import BoundingBox,BoundingBoxes
+from yolo_new.msg import Flag
 
 last_erro=0
 def nothing(s):
@@ -32,6 +33,7 @@ class Find_Color:
         # self.image_sub = rospy.Subscriber("/usb_cam/image_raw", Image, self.image_callback)#订阅图像话题
         # self.image_sub = rospy.Subscriber("/yolov5/detection_image", Image, self.image_callback)#订阅图像话题
         self.box_sub = rospy.Subscriber("/yolov5/BoundingBoxes", BoundingBoxes, self.box_callback)#订阅识别类别话题
+        self.flag_sub = rospy.Subscriber("/Flag_pub", Flag, self.flag_callback)#订阅移动状态话题
  
         self.positionPublisher = rospy.Publisher('/color_position', PositionMsg, queue_size=10) #发布色块的位置（原始数据）
         self.arm_ik_angle_Publisher = rospy.Publisher('/color_ik_result_new', color_ik_result_Msg, queue_size=10)#发布根据色块位置求解的机械臂关节目标弧度话题
@@ -65,6 +67,10 @@ class Find_Color:
         rospy.loginfo('a=%d',visual_func_flag.data)
         print("1111111111111111111111111111111111111111111111111111111111111")
 
+    def flag_callback(self,msg):
+        print("flag_msg is %s",msg.isMoving)
+
+
     def box_callback(self,msg):
         self.boundingBoxes = BoundingBoxes()
         #global tmp_box
@@ -75,9 +81,11 @@ class Find_Color:
             count+=1
 
         if count == 1:
-            self.Class = self.switch_class(msg.bounding_boxes[0].Class)   #传入垃圾类别并进行判断分类
+            # rospy.loginfo('msg.boundingBoxes.class :%s',msg.bounding_boxes[0].Class)
+            tmp_class = msg.bounding_boxes[0].Class
+            self.Class = self.switch_class(tmp_class)   #传入垃圾类别并进行判断分类
             self.single_send(self.Class)  #单目标直接用刷子发送
-            rospy.loginfo('msg.boundingBoxes.class :%s',self.Class)
+            # rospy.loginfo('msg.boundingBoxes.class :%s',self.Class)
 
         elif count > 1:
             for tmp_box in msg.bounding_boxes:
@@ -97,7 +105,7 @@ class Find_Color:
                 # rospy.loginfo('X=%f , Y=%f',Xmid,Ymid)
                 # rospy.loginfo('X=%f , Y=%f',angleX,angleY)
                 rotation=self.calculateRotation(Xmin,Xmax,Ymin,Ymax)#角度位姿 待测试
-
+                rospy.loginfo('msg.class :%s',self.Class)
                 self.publishPosition(angleX,angleY,rotation,count) #发布话题：色块的位置（原始数据）
                 self.publishArm_Angle(angleX,angleY,rotation,count)	 #发布话题：根据色块位置求解的机械臂关节目标弧度话题
         else:
@@ -152,13 +160,13 @@ class Find_Color:
 
     
     def switch_class(self,bclass):# 根据yolo返回类别进行类别分类
-        if bclass == 'recycle_cans1' or 'recycle_cans2' or 'recycle_bottle' or 'recycle_paper':
+        if bclass is "recycle_cans1" or "recycle_cans2" or "recycle_bottle" or "recycle_paper":
             return 1
-        elif bclass == 'harm_battery':
+        elif bclass is "harm_battery" :
             return 2
-        elif bclass == 'kitchen_potato' or 'kitchen_raddish' or 'kitchen_carrot' :
+        elif bclass is "kitchen_potato" or "kitchen_raddish" or "kitchen_carrot" :
             return 3
-        elif bclass == 'others_pebble' or 'others':
+        elif bclass is "others_pebble" or "others":
             return 4
         else :
             return 999

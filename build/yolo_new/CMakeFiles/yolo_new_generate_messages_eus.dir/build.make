@@ -60,6 +60,7 @@ yolo_new/CMakeFiles/yolo_new_generate_messages_eus: /home/moyu/Refuse-Classifica
 yolo_new/CMakeFiles/yolo_new_generate_messages_eus: /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/msg/arm_init_position.l
 yolo_new/CMakeFiles/yolo_new_generate_messages_eus: /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/msg/BoundingBox.l
 yolo_new/CMakeFiles/yolo_new_generate_messages_eus: /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/msg/BoundingBoxes.l
+yolo_new/CMakeFiles/yolo_new_generate_messages_eus: /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/msg/Flag.l
 yolo_new/CMakeFiles/yolo_new_generate_messages_eus: /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/manifest.l
 
 
@@ -100,8 +101,13 @@ yolo_new/CMakeFiles/yolo_new_generate_messages_eus: /home/moyu/Refuse-Classifica
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating EusLisp code from yolo_new/BoundingBoxes.msg"
 	cd /home/moyu/Refuse-Classification-Machine/build/yolo_new && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg -Iyolo_new:/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/msg
 
+/home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/msg/Flag.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/msg/Flag.l: /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating EusLisp code from yolo_new/Flag.msg"
+	cd /home/moyu/Refuse-Classification-Machine/build/yolo_new && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg -Iyolo_new:/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/msg
+
 /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating EusLisp manifest code for yolo_new"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating EusLisp manifest code for yolo_new"
 	cd /home/moyu/Refuse-Classification-Machine/build/yolo_new && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new yolo_new std_msgs geometry_msgs
 
 yolo_new_generate_messages_eus: yolo_new/CMakeFiles/yolo_new_generate_messages_eus
@@ -112,6 +118,7 @@ yolo_new_generate_messages_eus: /home/moyu/Refuse-Classification-Machine/devel/s
 yolo_new_generate_messages_eus: /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/msg/arm_init_position.l
 yolo_new_generate_messages_eus: /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/msg/BoundingBox.l
 yolo_new_generate_messages_eus: /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/msg/BoundingBoxes.l
+yolo_new_generate_messages_eus: /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/msg/Flag.l
 yolo_new_generate_messages_eus: /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/manifest.l
 yolo_new_generate_messages_eus: yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/build.make
 

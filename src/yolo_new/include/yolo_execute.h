@@ -19,6 +19,7 @@
 #include <table_arm/color_ik_result.h>
 #include <yolo_new/color_ik_result_new.h>
 #include <moveit/move_group_interface/move_group_interface.h>
+#include "yolo_new/Flag.h"
 
 #define color_number 10 
 

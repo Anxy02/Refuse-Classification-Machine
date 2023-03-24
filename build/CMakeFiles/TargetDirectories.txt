@@ -236,6 +236,8 @@
 /home/moyu/Refuse-Classification-Machine/build/yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir
 /home/moyu/Refuse-Classification-Machine/build/yolo_new/CMakeFiles/yolo_new_gennodejs.dir
 /home/moyu/Refuse-Classification-Machine/build/yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir
+/home/moyu/Refuse-Classification-Machine/build/yolo_new/CMakeFiles/yolo_new_genlisp.dir
+/home/moyu/Refuse-Classification-Machine/build/yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir
 /home/moyu/Refuse-Classification-Machine/build/yolo_new/CMakeFiles/yolo_new_generate_messages.dir
 /home/moyu/Refuse-Classification-Machine/build/yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir
 /home/moyu/Refuse-Classification-Machine/build/yolo_new/CMakeFiles/install/strip.dir
@@ -250,8 +252,7 @@
 /home/moyu/Refuse-Classification-Machine/build/yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir
 /home/moyu/Refuse-Classification-Machine/build/yolo_new/CMakeFiles/test.dir
 /home/moyu/Refuse-Classification-Machine/build/yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir
-/home/moyu/Refuse-Classification-Machine/build/yolo_new/CMakeFiles/yolo_new_genlisp.dir
-/home/moyu/Refuse-Classification-Machine/build/yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir
+/home/moyu/Refuse-Classification-Machine/build/yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Flag.dir
 /home/moyu/Refuse-Classification-Machine/build/yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target_position.dir
 /home/moyu/Refuse-Classification-Machine/build/yolo_new/CMakeFiles/yolo_new_gencpp.dir
 /home/moyu/Refuse-Classification-Machine/build/yolov5_ros/CMakeFiles/install/strip.dir

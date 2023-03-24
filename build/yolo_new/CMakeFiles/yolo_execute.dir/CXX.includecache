@@ -22,6 +22,22 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
+/home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/Flag.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
 /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/color_ik_result_new.h
 string
 -
@@ -73,6 +89,8 @@ yolo_new/color_ik_result_new.h
 -
 moveit/move_group_interface/move_group_interface.h
 -
+yolo_new/Flag.h
+/home/moyu/Refuse-Classification-Machine/src/yolo_new/include/yolo_new/Flag.h
 
 /home/moyu/Refuse-Classification-Machine/src/yolo_new/src/yolo_execute.cpp
 ros/ros.h
@@ -107,6 +125,8 @@ moveit/move_group_interface/move_group_interface.h
 -
 yolo_execute.h
 /home/moyu/Refuse-Classification-Machine/src/yolo_new/src/yolo_execute.h
+yolo_new/Flag.h
+/home/moyu/Refuse-Classification-Machine/src/yolo_new/src/yolo_new/Flag.h
 locale
 -
 

@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "/home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/manifest.l"
   "/home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/msg/BoundingBox.l"
   "/home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/msg/BoundingBoxes.l"
+  "/home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/msg/Flag.l"
   "/home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/msg/arm_init_position.l"
   "/home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/msg/arm_target.l"
   "/home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/msg/arm_target_position.l"

@@ -16,6 +16,7 @@
 #include <std_msgs/String.h>
 #include <moveit/move_group_interface/move_group_interface.h>
 #include "yolo_execute.h"
+#include "yolo_new/Flag.h"
 
 #include<locale>
 
@@ -95,7 +96,8 @@ int main(int argc, char **argv)
     ros::init(argc, argv, "yolo_execute");
     ros::NodeHandle n;
     ros::NodeHandle nprivate("~");
-    setlocale(LC_CTYPE, "zh_CN.utf8");//chinese
+    // setlocale(LC_CTYPE, "zh_CN.utf8");//chinese
+    setlocale(LC_ALL,"");
 
     std::locale::global(std::locale(""));
     nprivate.param<float>("/auxiliary_angle", auxiliary_angle, 0.157);
@@ -120,6 +122,9 @@ int main(int argc, char **argv)
     arm.setNamedTarget("arm_look"); arm.move(); sleep(1);    //机械臂运动到观测色块的位置
     hand.setNamedTarget("hand_open"); hand.move(); sleep(1);  //机械爪张开
     ros::Subscriber color_ik_result_sub=n.subscribe("color_ik_result_new",10,color_ik_result_callback); //订阅色块目标位置对应的关节角度信息
+    ros::Publisher Flag_pub = n.advertise<yolo_new::Flag>("Flag_pub",1000);
+    yolo_new::Flag pub_flag;
+    
 
     ROS_INFO("yolo_execute_node init successful");
     ROS_INFO("finding and waitting....");
@@ -134,7 +139,10 @@ int main(int argc, char **argv)
       {
         arm_state="working";
         ROS_INFO("joint_target_is    :(%4.2f)-(%4.2f)-(%4.2f)",joint_target1,joint_target2,joint_target3);
-        // ROS_INFO("color_sequence_is  :(%d)",yolo_sequence);
+        
+        pub_flag.isMoving = 1;
+        Flag_pub.publish(pub_flag);
+
         //关节的目标旋转角度赋值
         joint_group_positions[0] =  joint_target1;
         joint_group_positions[1] =  -1.57-joint_target2+base_angle;

@@ -9,6 +9,8 @@
     (:file "_package_BoundingBox" :depends-on ("_package"))
     (:file "BoundingBoxes" :depends-on ("_package_BoundingBoxes"))
     (:file "_package_BoundingBoxes" :depends-on ("_package"))
+    (:file "Flag" :depends-on ("_package_Flag"))
+    (:file "_package_Flag" :depends-on ("_package"))
     (:file "arm_init_position" :depends-on ("_package_arm_init_position"))
     (:file "_package_arm_init_position" :depends-on ("_package"))
     (:file "arm_target" :depends-on ("_package_arm_target"))

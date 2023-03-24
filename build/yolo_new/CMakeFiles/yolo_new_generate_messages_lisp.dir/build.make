@@ -60,6 +60,7 @@ yolo_new/CMakeFiles/yolo_new_generate_messages_lisp: /home/moyu/Refuse-Classific
 yolo_new/CMakeFiles/yolo_new_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/arm_init_position.lisp
 yolo_new/CMakeFiles/yolo_new_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/BoundingBox.lisp
 yolo_new/CMakeFiles/yolo_new_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/BoundingBoxes.lisp
+yolo_new/CMakeFiles/yolo_new_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/Flag.lisp
 
 
 /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/position_color.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
@@ -99,6 +100,11 @@ yolo_new/CMakeFiles/yolo_new_generate_messages_lisp: /home/moyu/Refuse-Classific
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Lisp code from yolo_new/BoundingBoxes.msg"
 	cd /home/moyu/Refuse-Classification-Machine/build/yolo_new && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg -Iyolo_new:/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg
 
+/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/Flag.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/Flag.lisp: /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Lisp code from yolo_new/Flag.msg"
+	cd /home/moyu/Refuse-Classification-Machine/build/yolo_new && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg -Iyolo_new:/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg
+
 yolo_new_generate_messages_lisp: yolo_new/CMakeFiles/yolo_new_generate_messages_lisp
 yolo_new_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/position_color.lisp
 yolo_new_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/arm_target.lisp
@@ -107,6 +113,7 @@ yolo_new_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/
 yolo_new_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/arm_init_position.lisp
 yolo_new_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/BoundingBox.lisp
 yolo_new_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/BoundingBoxes.lisp
+yolo_new_generate_messages_lisp: /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/Flag.lisp
 yolo_new_generate_messages_lisp: yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/build.make
 
 .PHONY : yolo_new_generate_messages_lisp
