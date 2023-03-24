@@ -43,9 +43,11 @@ bool arm_success,hand_close_success,hand_open_success; //moveit正解计算（�
 std::vector<double> joint_group_positions(5); //机械臂正解的目标关节位置的数组
 
 
+
 //目标色块对应逆解的目标关节角度回调函数
 void color_ik_result_callback(const yolo_new::color_ik_result_new &msg)
 {
+  ROS_INFO("count is :%d ",msg.count);
   if(isBusy == 0)
   {
       if(countFlag == 0){
@@ -60,10 +62,12 @@ void color_ik_result_callback(const yolo_new::color_ik_result_new &msg)
         cb_target_data[i_cb][0]=msg.pedestal_angle;  //云台的目标角度
         cb_target_data[i_cb][1]=msg.arm_angle;       //控制机械臂臂长的目标角度
         cb_target_data[i_cb][2]=msg.hand_angle;      //控制夹取色块旋转的目标角度
+        ROS_INFO("tmp_i is :%d ",i_cb); 
         ROS_INFO("cb_target_is  :(%4.2f)-(%4.2f)-(%4.2f)",cb_target_data[i_cb][0],cb_target_data[i_cb][1],cb_target_data[i_cb][2]);
         cb_class[i_cb] = msg.sort; //二选一
         ROS_INFO("msg sort is :%s ",msg.sort);        //测试类别传输！！！！
         ROS_INFO("cb sort is :%s ",cb_class[i_cb]);
+        i_cb+=1;
         // if(msg.sort=="recycle") 
         // {
         //   cb_class[i_cb] = "recycle";
@@ -80,7 +84,7 @@ void color_ik_result_callback(const yolo_new::color_ik_result_new &msg)
         // {
         //   cb_class[i_cb] = "others";
         // }
-        ++i_cb;
+        
       }
       else
       {
@@ -104,7 +108,7 @@ int main(int argc, char **argv)
     nprivate.param<float>("/link_a", link_a, 0.105);
     nprivate.param<float>("/link_b", link_b, 0.100);
     nprivate.param<float>("/link_c", link_c, 0.175);
-    nprivate.param<float>("/link_h", link_h, 0.105);
+    nprivate.param<float>("/link_h", link_h, 0.100);
     i_cb=0;j_cb=0;  //初始化i,j
 
     base_angle=acos((link_c-link_h)/link_a);  //计算机械臂夹爪可触底的关节基础角度
@@ -124,6 +128,9 @@ int main(int argc, char **argv)
     ros::Subscriber color_ik_result_sub=n.subscribe("color_ik_result_new",10,color_ik_result_callback); //订阅色块目标位置对应的关节角度信息
     ros::Publisher Flag_pub = n.advertise<yolo_new::Flag>("Flag_pub",1000);
     yolo_new::Flag pub_flag;
+    pub_flag.isMoving = 0;
+    Flag_pub.publish(pub_flag);
+    
     
 
     ROS_INFO("yolo_execute_node init successful");
@@ -135,13 +142,20 @@ int main(int argc, char **argv)
       // single_object()//单目标->刷子
       // single_grasp()//单目标->抓取
       multi_grasp_sequence();//多目标抓取顺序判断函数
+
+      if(isBusy==1){
+        pub_flag.isMoving = 1;
+        Flag_pub.publish(pub_flag);
+      }
+      else{
+        pub_flag.isMoving = 0;
+        Flag_pub.publish(pub_flag);
+      }
+
       if( arm_state=="ready" )
       {
         arm_state="working";
         ROS_INFO("joint_target_is    :(%4.2f)-(%4.2f)-(%4.2f)",joint_target1,joint_target2,joint_target3);
-        
-        pub_flag.isMoving = 1;
-        Flag_pub.publish(pub_flag);
 
         //关节的目标旋转角度赋值
         joint_group_positions[0] =  joint_target1;
@@ -170,6 +184,8 @@ int main(int argc, char **argv)
         arm.setNamedTarget("arm_look");   arm.move();  sleep(1);    //机械臂运动到观测色块的位置
         arm.setNamedTarget("color_put_interval");  arm.move();  sleep(1); //机械臂臂身运动到放置色块的预位置后，再放置色块
         arm_put(target_sort); //根据颜色将色块放置到对应位置 
+        // pub_flag.isMoving = 0;
+        
       }
     ros::spinOnce();
   }

@@ -15,6 +15,7 @@ from yolov5_ros_msgs.msg import BoundingBox,BoundingBoxes
 from yolo_new.msg import Flag
 
 last_erro=0
+IsMoving = 0
 def nothing(s):
     pass
 
@@ -68,53 +69,56 @@ class Find_Color:
         print("1111111111111111111111111111111111111111111111111111111111111")
 
     def flag_callback(self,msg):
-        print("flag_msg is %s",msg.isMoving)
+        IsMoving = msg.isMoving
+        # print("flag_msg is",IsMoving)
 
 
     def box_callback(self,msg):
         self.boundingBoxes = BoundingBoxes()
         #global tmp_box
         #global box
-
         count=0
+                        
         for i in msg.bounding_boxes:
             count+=1
 
-        if count == 1:
-            # rospy.loginfo('msg.boundingBoxes.class :%s',msg.bounding_boxes[0].Class)
-            tmp_class = msg.bounding_boxes[0].Class
-            self.Class = self.switch_class(tmp_class)   #传入垃圾类别并进行判断分类
-            self.single_send(self.Class)  #单目标直接用刷子发送
-            # rospy.loginfo('msg.boundingBoxes.class :%s',self.Class)
+        if IsMoving == 0:
+            if count == 1:
+                # rospy.loginfo('msg.boundingBoxes.class :%s',msg.bounding_boxes[0].Class)
+                tmp_class = msg.bounding_boxes[0].Class
+                self.Class = self.switch_class(tmp_class)   #传入垃圾类别并进行判断分类
+                # self.single_send(self.Class)  #单目标直接用刷子发送
+                # rospy.loginfo('msg.boundingBoxes.class :%s',self.Class)
 
-        elif count > 1:
-            for tmp_box in msg.bounding_boxes:
-                Xmid=tmp_box.xmid/2
-                Ymid=tmp_box.ymid/2
-                Xmin=tmp_box.xmin
-                Xmax=tmp_box.xmax
-                Ymin=tmp_box.ymin
-                Ymax=tmp_box.ymax
+            elif count > 1:
+                for tmp_box in msg.bounding_boxes:
+                    Xmid=tmp_box.xmid/2
+                    Ymid=tmp_box.ymid/2
+                    Xmin=tmp_box.xmin
+                    Xmax=tmp_box.xmax
+                    Ymin=tmp_box.ymin
+                    Ymax=tmp_box.ymax
 
-                # self.Class=box.Class
-                # rospy.loginfo("class is %s ,X is %f, Y is %f", self.Class,Xmid,Ymid)
-                self.Class = self.switch_class(tmp_box.Class)   #传入垃圾类别并进行判断分类
+                    # self.Class=box.Class
+                    # rospy.loginfo("class is %s ,X is %f, Y is %f", self.Class,Xmid,Ymid)
+                    
+                    self.Class = self.switch_class(tmp_box.Class)   #传入垃圾类别并进行判断分类
 
-                angleX = self.calculateAngleX(Xmid) #做数学转换获取色块在画幅中的坐标
-                angleY = self.calculateAngleY(Ymid)
-                # rospy.loginfo('X=%f , Y=%f',Xmid,Ymid)
-                # rospy.loginfo('X=%f , Y=%f',angleX,angleY)
-                rotation=self.calculateRotation(Xmin,Xmax,Ymin,Ymax)#角度位姿 待测试
-                rospy.loginfo('msg.class :%s',self.Class)
-                self.publishPosition(angleX,angleY,rotation,count) #发布话题：色块的位置（原始数据）
-                self.publishArm_Angle(angleX,angleY,rotation,count)	 #发布话题：根据色块位置求解的机械臂关节目标弧度话题
-        else:
-            #没有检测到目标
-            angleX = 999
-            angleY = 999
-            rotation=999
-            self.publishPosition(angleX,angleY,rotation,count)
-            self.publishArm_Angle(angleX,angleY,rotation,count)
+                    angleX = self.calculateAngleX(Xmid) #做数学转换获取色块在画幅中的坐标
+                    angleY = self.calculateAngleY(Ymid)
+                    # rospy.loginfo('X=%f , Y=%f',Xmid,Ymid)
+                    # rospy.loginfo('X=%f , Y=%f',angleX,angleY)
+                    rotation=self.calculateRotation(Xmin,Xmax,Ymin,Ymax)#角度位姿 待测试
+                    # rospy.loginfo('msg.class :%s',tmp_box.Class)
+                    self.publishPosition(angleX,angleY,rotation,count) #发布话题：色块的位置（原始数据）
+                    self.publishArm_Angle(angleX,angleY,rotation,count)	 #发布话题：根据色块位置求解的机械臂关节目标弧度话题
+            else:
+                #没有检测到目标
+                angleX = 999
+                angleY = 999
+                rotation=999
+                self.publishPosition(angleX,angleY,rotation,count)
+                self.publishArm_Angle(angleX,angleY,rotation,count)
         
     # def image_callback(self, msg):#重写
 
@@ -159,14 +163,14 @@ class Find_Color:
             print('none')
 
     
-    def switch_class(self,bclass):# 根据yolo返回类别进行类别分类
-        if bclass is "recycle_cans1" or "recycle_cans2" or "recycle_bottle" or "recycle_paper":
+    def switch_class(self,bclass):# 根据yolo返回类别进行类别分类!!!!!注意有个空格很恶心
+        if bclass is "recycle_cans1 " or "recycle_cans2 " or "recycle_bottle " or "recycle_paper ":
             return 1
-        elif bclass is "harm_battery" :
+        elif bclass is "harm_battery " :
             return 2
-        elif bclass is "kitchen_potato" or "kitchen_raddish" or "kitchen_carrot" :
+        elif bclass is "kitchen_potato " or "kitchen_raddish " or "kitchen_carrot " :
             return 3
-        elif bclass is "others_pebble" or "others":
+        elif bclass is "others_pebble " or "others ":
             return 4
         else :
             return 999
@@ -236,30 +240,42 @@ class Find_Color:
         #通过self.Class判断是什么类别的垃圾
         #m=1绿色，m=2蓝色，m=3黄色
         # 判断5次是否有误！！！！！！！！！
+        # if self.Class==1:
+        #     self.recycle_count=self.recycle_count +1
+        #     if self.recycle_count >5: #每五次数据再发布一次话题（控制话题发布速率）
+        #        self.recycle_count = 0
+        #        ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'recycle',count)
+        #        self.arm_ik_angle_Publisher.publish(ikMsg)
+        # if self.Class==2:
+        #     self.harm_count=self.harm_count +1
+        #     if self.harm_count >5: #每五次数据再发布一次话题（控制话题发布速率）
+        #        self.harm_count = 0
+        #        ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'harm',count)
+        #        self.arm_ik_angle_Publisher.publish(ikMsg)
+        # if self.Class==3:
+        #     self.kitchen_count=self.kitchen_count +1
+        #     if self.kitchen_count >5: #每五次数据再发布一次话题（控制话题发布速率）
+        #        self.kitchen_count = 0
+        #        ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'kitchen',count)
+        #        self.arm_ik_angle_Publisher.publish(ikMsg)
+        # if self.Class==4:
+        #     self.others_count=self.others_count +1
+        #     if self.others_count >5: #每五次数据再发布一次话题（控制话题发布速率）
+        #        self.others_count = 0
+        #        ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'others',count)
+        #        self.arm_ik_angle_Publisher.publish(ikMsg)
         if self.Class==1:
-            self.recycle_count=self.recycle_count +1
-            if self.recycle_count >5: #每五次数据再发布一次话题（控制话题发布速率）
-               self.recycle_count = 0
-               ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'recycle',count)
-               self.arm_ik_angle_Publisher.publish(ikMsg)
+            ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'recycle',count)
+            self.arm_ik_angle_Publisher.publish(ikMsg)
         if self.Class==2:
-            self.harm_count=self.harm_count +1
-            if self.harm_count >5: #每五次数据再发布一次话题（控制话题发布速率）
-               self.harm_count = 0
-               ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'harm',count)
-               self.arm_ik_angle_Publisher.publish(ikMsg)
+            ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'harm',count)
+            self.arm_ik_angle_Publisher.publish(ikMsg)
         if self.Class==3:
-            self.kitchen_count=self.kitchen_count +1
-            if self.kitchen_count >5: #每五次数据再发布一次话题（控制话题发布速率）
-               self.kitchen_count = 0
-               ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'kitchen',count)
-               self.arm_ik_angle_Publisher.publish(ikMsg)
+            ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'kitchen',count)
+            self.arm_ik_angle_Publisher.publish(ikMsg)
         if self.Class==4:
-            self.others_count=self.others_count +1
-            if self.others_count >5: #每五次数据再发布一次话题（控制话题发布速率）
-               self.others_count = 0
-               ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'others',count)
-               self.arm_ik_angle_Publisher.publish(ikMsg)
+            ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'others',count)
+            self.arm_ik_angle_Publisher.publish(ikMsg)
 
 
 rospy.init_node("yolo_detect")
