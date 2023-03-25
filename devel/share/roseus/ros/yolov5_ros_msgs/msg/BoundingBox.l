@@ -14,7 +14,7 @@
 
 (defclass yolov5_ros_msgs::BoundingBox
   :super ros::object
-  :slots (_probability _xmin _ymin _xmax _ymax _num _Class _xmid _ymid ))
+  :slots (_probability _xmin _ymin _xmax _ymax _num _Class _CNum _xmid _ymid ))
 
 (defmethod yolov5_ros_msgs::BoundingBox
   (:init
@@ -26,6 +26,7 @@
     ((:ymax __ymax) 0)
     ((:num __num) 0)
     ((:Class __Class) "")
+    ((:CNum __CNum) 0)
     ((:xmid __xmid) 0.0)
     ((:ymid __ymid) 0.0)
     )
@@ -37,6 +38,7 @@
    (setq _ymax (round __ymax))
    (setq _num (round __num))
    (setq _Class (string __Class))
+   (setq _CNum (round __CNum))
    (setq _xmid (float __xmid))
    (setq _ymid (float __ymid))
    self)
@@ -61,6 +63,9 @@
   (:Class
    (&optional __Class)
    (if __Class (setq _Class __Class)) _Class)
+  (:CNum
+   (&optional __CNum)
+   (if __CNum (setq _CNum __CNum)) _CNum)
   (:xmid
    (&optional __xmid)
    (if __xmid (setq _xmid __xmid)) _xmid)
@@ -84,6 +89,8 @@
     2
     ;; string _Class
     4 (length _Class)
+    ;; int16 _CNum
+    2
     ;; float64 _xmid
     8
     ;; float64 _ymid
@@ -147,6 +154,8 @@
        (write-word _num s)
      ;; string _Class
        (write-long (length _Class) s) (princ _Class s)
+     ;; int16 _CNum
+       (write-word _CNum s)
      ;; float64 _xmid
        (sys::poke _xmid (send s :buffer) (send s :count) :double) (incf (stream-count s) 8)
      ;; float64 _ymid
@@ -209,6 +218,8 @@
      (setq _num (sys::peek buf ptr- :short)) (incf ptr- 2)
    ;; string _Class
      (let (n) (setq n (sys::peek buf ptr- :integer)) (incf ptr- 4) (setq _Class (subseq buf ptr- (+ ptr- n))) (incf ptr- n))
+   ;; int16 _CNum
+     (setq _CNum (sys::peek buf ptr- :short)) (incf ptr- 2)
    ;; float64 _xmid
      (setq _xmid (sys::peek buf ptr- :double)) (incf ptr- 8)
    ;; float64 _ymid
@@ -217,7 +228,7 @@
    self)
   )
 
-(setf (get yolov5_ros_msgs::BoundingBox :md5sum-) "fa9149a42cb6fac35b374dba4a70b43b")
+(setf (get yolov5_ros_msgs::BoundingBox :md5sum-) "d92c29ac46962e0d8547dd80ed9d31bc")
 (setf (get yolov5_ros_msgs::BoundingBox :datatype-) "yolov5_ros_msgs/BoundingBox")
 (setf (get yolov5_ros_msgs::BoundingBox :definition-)
       "float64 probability
@@ -227,6 +238,7 @@ int64 xmax
 int64 ymax
 int16 num
 string Class
+int16 CNum
 float64 xmid
 float64 ymid
 
@@ -234,6 +246,6 @@ float64 ymid
 
 
 
-(provide :yolov5_ros_msgs/BoundingBox "fa9149a42cb6fac35b374dba4a70b43b")
+(provide :yolov5_ros_msgs/BoundingBox "d92c29ac46962e0d8547dd80ed9d31bc")
 
 

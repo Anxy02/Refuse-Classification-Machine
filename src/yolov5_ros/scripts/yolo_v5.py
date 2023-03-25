@@ -116,6 +116,8 @@ class Yolo_Dect:
             boundingBox.ymid = (np.int64(box[1])+np.int64(box[3]))/2
             boundingBox.num = np.int16(count)
             boundingBox.Class = box[-1]
+            boundingBox.CNum = self.switch_class(boundingBox.Class)   #传入垃圾类别并进行判断分类
+            boundingBox.
 
             # # 深度计算
             # distance_list = []
@@ -161,6 +163,19 @@ class Yolo_Dect:
             self.position_pub.publish(self.boundingBoxes)
         self.publish_image(img, height, width)
         cv2.imshow('YOLOv5', img)
+
+    def switch_class(self,bclass):# 根据yolo返回类别进行类别分类!!!!!注意电池有个空格很恶心
+        print(bclass,1)
+        if bclass == "recycle_cans1" or bclass == "recycle_cans2" or bclass == "recycle_bottle" or bclass == "recycle_paper":
+            return 1
+        elif bclass == "harm_battery " :
+            return 2
+        elif bclass == "kitchen_potato" or bclass == "kitchen_raddish" or bclass == "kitchen_carrot" :
+            return 3
+        elif bclass == "others_pebble" or bclass == "others":
+            return 4
+        else :
+            return 999
 
     def publish_image(self, imgdata, height, width):
         image_temp = Image()

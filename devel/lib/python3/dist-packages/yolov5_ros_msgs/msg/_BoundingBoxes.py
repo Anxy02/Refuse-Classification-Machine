@@ -10,7 +10,7 @@ import std_msgs.msg
 import yolov5_ros_msgs.msg
 
 class BoundingBoxes(genpy.Message):
-  _md5sum = "6d0dc4d03152d2e964a0de88169b9fbb"
+  _md5sum = "2cfefed1ff690f33a9dc195317dbb6ac"
   _type = "yolov5_ros_msgs/BoundingBoxes"
   _has_header = True  # flag to mark the presence of a Header object
   _full_text = """Header header
@@ -42,6 +42,7 @@ int64 xmax
 int64 ymax
 int16 num
 string Class
+int16 CNum
 float64 xmid
 float64 ymid
 """
@@ -116,7 +117,7 @@ float64 ymid
           length = len(_x)
         buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
         _x = val1
-        buff.write(_get_struct_2d().pack(_x.xmid, _x.ymid))
+        buff.write(_get_struct_h2d().pack(_x.CNum, _x.xmid, _x.ymid))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -182,8 +183,8 @@ float64 ymid
           val1.Class = str[start:end]
         _x = val1
         start = end
-        end += 16
-        (_x.xmid, _x.ymid,) = _get_struct_2d().unpack(str[start:end])
+        end += 18
+        (_x.CNum, _x.xmid, _x.ymid,) = _get_struct_h2d().unpack(str[start:end])
         self.bounding_boxes.append(val1)
       return self
     except struct.error as e:
@@ -225,7 +226,7 @@ float64 ymid
           length = len(_x)
         buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
         _x = val1
-        buff.write(_get_struct_2d().pack(_x.xmid, _x.ymid))
+        buff.write(_get_struct_h2d().pack(_x.CNum, _x.xmid, _x.ymid))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -292,8 +293,8 @@ float64 ymid
           val1.Class = str[start:end]
         _x = val1
         start = end
-        end += 16
-        (_x.xmid, _x.ymid,) = _get_struct_2d().unpack(str[start:end])
+        end += 18
+        (_x.CNum, _x.xmid, _x.ymid,) = _get_struct_h2d().unpack(str[start:end])
         self.bounding_boxes.append(val1)
       return self
     except struct.error as e:
@@ -303,12 +304,6 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_2d = None
-def _get_struct_2d():
-    global _struct_2d
-    if _struct_2d is None:
-        _struct_2d = struct.Struct("<2d")
-    return _struct_2d
 _struct_3I = None
 def _get_struct_3I():
     global _struct_3I
@@ -321,3 +316,9 @@ def _get_struct_d4qh():
     if _struct_d4qh is None:
         _struct_d4qh = struct.Struct("<d4qh")
     return _struct_d4qh
+_struct_h2d = None
+def _get_struct_h2d():
+    global _struct_h2d
+    if _struct_h2d is None:
+        _struct_h2d = struct.Struct("<h2d")
+    return _struct_h2d

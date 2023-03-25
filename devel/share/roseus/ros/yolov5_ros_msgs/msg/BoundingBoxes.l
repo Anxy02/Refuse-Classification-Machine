@@ -93,7 +93,7 @@
    self)
   )
 
-(setf (get yolov5_ros_msgs::BoundingBoxes :md5sum-) "6d0dc4d03152d2e964a0de88169b9fbb")
+(setf (get yolov5_ros_msgs::BoundingBoxes :md5sum-) "2cfefed1ff690f33a9dc195317dbb6ac")
 (setf (get yolov5_ros_msgs::BoundingBoxes :datatype-) "yolov5_ros_msgs/BoundingBoxes")
 (setf (get yolov5_ros_msgs::BoundingBoxes :definition-)
       "Header header
@@ -125,6 +125,7 @@ int64 xmax
 int64 ymax
 int16 num
 string Class
+int16 CNum
 float64 xmid
 float64 ymid
 
@@ -132,6 +133,6 @@ float64 ymid
 
 
 
-(provide :yolov5_ros_msgs/BoundingBoxes "6d0dc4d03152d2e964a0de88169b9fbb")
+(provide :yolov5_ros_msgs/BoundingBoxes "2cfefed1ff690f33a9dc195317dbb6ac")
 
 

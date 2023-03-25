@@ -137,12 +137,12 @@ struct MD5Sum< ::yolov5_ros_msgs::BoundingBoxes_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "6d0dc4d03152d2e964a0de88169b9fbb";
+    return "2cfefed1ff690f33a9dc195317dbb6ac";
   }
 
   static const char* value(const ::yolov5_ros_msgs::BoundingBoxes_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x6d0dc4d03152d2e9ULL;
-  static const uint64_t static_value2 = 0x64a0de88169b9fbbULL;
+  static const uint64_t static_value1 = 0x2cfefed1ff690f33ULL;
+  static const uint64_t static_value2 = 0xa9dc195317dbb6acULL;
 };
 
 template<class ContainerAllocator>
@@ -190,6 +190,7 @@ struct Definition< ::yolov5_ros_msgs::BoundingBoxes_<ContainerAllocator> >
 "int64 ymax\n"
 "int16 num\n"
 "string Class\n"
+"int16 CNum\n"
 "float64 xmid\n"
 "float64 ymid\n"
 ;

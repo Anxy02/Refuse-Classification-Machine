@@ -25,6 +25,7 @@ class BoundingBox {
       this.ymax = null;
       this.num = null;
       this.Class = null;
+      this.CNum = null;
       this.xmid = null;
       this.ymid = null;
     }
@@ -71,6 +72,12 @@ class BoundingBox {
       else {
         this.Class = '';
       }
+      if (initObj.hasOwnProperty('CNum')) {
+        this.CNum = initObj.CNum
+      }
+      else {
+        this.CNum = 0;
+      }
       if (initObj.hasOwnProperty('xmid')) {
         this.xmid = initObj.xmid
       }
@@ -102,6 +109,8 @@ class BoundingBox {
     bufferOffset = _serializer.int16(obj.num, buffer, bufferOffset);
     // Serialize message field [Class]
     bufferOffset = _serializer.string(obj.Class, buffer, bufferOffset);
+    // Serialize message field [CNum]
+    bufferOffset = _serializer.int16(obj.CNum, buffer, bufferOffset);
     // Serialize message field [xmid]
     bufferOffset = _serializer.float64(obj.xmid, buffer, bufferOffset);
     // Serialize message field [ymid]
@@ -127,6 +136,8 @@ class BoundingBox {
     data.num = _deserializer.int16(buffer, bufferOffset);
     // Deserialize message field [Class]
     data.Class = _deserializer.string(buffer, bufferOffset);
+    // Deserialize message field [CNum]
+    data.CNum = _deserializer.int16(buffer, bufferOffset);
     // Deserialize message field [xmid]
     data.xmid = _deserializer.float64(buffer, bufferOffset);
     // Deserialize message field [ymid]
@@ -137,7 +148,7 @@ class BoundingBox {
   static getMessageSize(object) {
     let length = 0;
     length += _getByteLength(object.Class);
-    return length + 62;
+    return length + 64;
   }
 
   static datatype() {
@@ -147,7 +158,7 @@ class BoundingBox {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'fa9149a42cb6fac35b374dba4a70b43b';
+    return 'd92c29ac46962e0d8547dd80ed9d31bc';
   }
 
   static messageDefinition() {
@@ -160,6 +171,7 @@ class BoundingBox {
     int64 ymax
     int16 num
     string Class
+    int16 CNum
     float64 xmid
     float64 ymid
     
@@ -219,6 +231,13 @@ class BoundingBox {
     }
     else {
       resolved.Class = ''
+    }
+
+    if (msg.CNum !== undefined) {
+      resolved.CNum = msg.CNum;
+    }
+    else {
+      resolved.CNum = 0
     }
 
     if (msg.xmid !== undefined) {

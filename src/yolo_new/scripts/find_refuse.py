@@ -86,6 +86,7 @@ class Find_Color:
             if count == 1:
                 # rospy.loginfo('msg.boundingBoxes.class :%s',msg.bounding_boxes[0].Class)
                 tmp_class = msg.bounding_boxes[0].Class
+                # print(tmp_class,1)
                 self.Class = self.switch_class(tmp_class)   #传入垃圾类别并进行判断分类
                 # self.single_send(self.Class)  #单目标直接用刷子发送
                 # rospy.loginfo('msg.boundingBoxes.class :%s',self.Class)
@@ -101,8 +102,8 @@ class Find_Color:
 
                     # self.Class=box.Class
                     # rospy.loginfo("class is %s ,X is %f, Y is %f", self.Class,Xmid,Ymid)
-                    
                     self.Class = self.switch_class(tmp_box.Class)   #传入垃圾类别并进行判断分类
+                    print(tmp_box.Class,self.Class)
 
                     angleX = self.calculateAngleX(Xmid) #做数学转换获取色块在画幅中的坐标
                     angleY = self.calculateAngleY(Ymid)
@@ -114,6 +115,7 @@ class Find_Color:
                     self.publishArm_Angle(angleX,angleY,rotation,count)	 #发布话题：根据色块位置求解的机械臂关节目标弧度话题
             else:
                 #没有检测到目标
+                # rospy.loginfo("fuck!!!!!!!!!!")
                 angleX = 999
                 angleY = 999
                 rotation=999
@@ -144,7 +146,7 @@ class Find_Color:
         if abs((Xmax-Xmin)/(Ymax-Ymin)) <= 1 :
             return 0
         else :
-            return -50  #待测 -45~45度保持不变
+            return 70  #待测 -45~45度保持不变,可写90度
 
     def single_send(self,Class): #串口发送 待写（注意数据统计）
         if Class == 1:
@@ -163,17 +165,21 @@ class Find_Color:
             print('none')
 
     
-    def switch_class(self,bclass):# 根据yolo返回类别进行类别分类!!!!!注意有个空格很恶心
-        if bclass is "recycle_cans1 " or "recycle_cans2 " or "recycle_bottle " or "recycle_paper ":
-            return 1
-        elif bclass is "harm_battery " :
-            return 2
-        elif bclass is "kitchen_potato " or "kitchen_raddish " or "kitchen_carrot " :
-            return 3
-        elif bclass is "others_pebble " or "others ":
-            return 4
-        else :
-            return 999
+    # def switch_class(self,bclass):# 根据yolo返回类别进行类别分类!!!!!注意有个空格很恶心
+    #     if bclass is "recycle_cans1" or "recycle_cans2" or "recycle_bottle" or "recycle_paper":
+    #         print("s1")
+    #         return 1
+    #     elif bclass is "harm_battery " :
+    #         print("s2")
+    #         return 2
+    #     elif bclass is "kitchen_potato" or "kitchen_raddish" or "kitchen_carrot" :
+    #         print("s3")
+    #         return 3
+    #     elif bclass is "others_pebble" or "others":
+    #         print("s4")
+    #         return 4
+    #     else :
+    #         return 999
         
 
     def publishPosition(self, x,y,rotate,count):

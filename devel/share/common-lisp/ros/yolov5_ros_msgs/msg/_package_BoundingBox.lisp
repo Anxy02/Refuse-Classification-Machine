@@ -13,6 +13,8 @@
           NUM
           CLASS-VAL
           CLASS
+          CNUM-VAL
+          CNUM
           XMID-VAL
           XMID
           YMID-VAL

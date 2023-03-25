@@ -5,5 +5,6 @@ int64 xmax
 int64 ymax
 int16 num
 string Class
+int16 CNum
 float64 xmid
 float64 ymid

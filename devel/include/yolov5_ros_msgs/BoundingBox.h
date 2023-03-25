@@ -31,6 +31,7 @@ struct BoundingBox_
     , ymax(0)
     , num(0)
     , Class()
+    , CNum(0)
     , xmid(0.0)
     , ymid(0.0)  {
     }
@@ -42,6 +43,7 @@ struct BoundingBox_
     , ymax(0)
     , num(0)
     , Class(_alloc)
+    , CNum(0)
     , xmid(0.0)
     , ymid(0.0)  {
   (void)_alloc;
@@ -69,6 +71,9 @@ struct BoundingBox_
 
    typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _Class_type;
   _Class_type Class;
+
+   typedef int16_t _CNum_type;
+  _CNum_type CNum;
 
    typedef double _xmid_type;
   _xmid_type xmid;
@@ -112,6 +117,7 @@ bool operator==(const ::yolov5_ros_msgs::BoundingBox_<ContainerAllocator1> & lhs
     lhs.ymax == rhs.ymax &&
     lhs.num == rhs.num &&
     lhs.Class == rhs.Class &&
+    lhs.CNum == rhs.CNum &&
     lhs.xmid == rhs.xmid &&
     lhs.ymid == rhs.ymid;
 }
@@ -170,12 +176,12 @@ struct MD5Sum< ::yolov5_ros_msgs::BoundingBox_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "fa9149a42cb6fac35b374dba4a70b43b";
+    return "d92c29ac46962e0d8547dd80ed9d31bc";
   }
 
   static const char* value(const ::yolov5_ros_msgs::BoundingBox_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xfa9149a42cb6fac3ULL;
-  static const uint64_t static_value2 = 0x5b374dba4a70b43bULL;
+  static const uint64_t static_value1 = 0xd92c29ac46962e0dULL;
+  static const uint64_t static_value2 = 0x8547dd80ed9d31bcULL;
 };
 
 template<class ContainerAllocator>
@@ -201,6 +207,7 @@ struct Definition< ::yolov5_ros_msgs::BoundingBox_<ContainerAllocator> >
 "int64 ymax\n"
 "int16 num\n"
 "string Class\n"
+"int16 CNum\n"
 "float64 xmid\n"
 "float64 ymid\n"
 ;
@@ -228,6 +235,7 @@ namespace serialization
       stream.next(m.ymax);
       stream.next(m.num);
       stream.next(m.Class);
+      stream.next(m.CNum);
       stream.next(m.xmid);
       stream.next(m.ymid);
     }
@@ -262,6 +270,8 @@ struct Printer< ::yolov5_ros_msgs::BoundingBox_<ContainerAllocator> >
     Printer<int16_t>::stream(s, indent + "  ", v.num);
     s << indent << "Class: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.Class);
+    s << indent << "CNum: ";
+    Printer<int16_t>::stream(s, indent + "  ", v.CNum);
     s << indent << "xmid: ";
     Printer<double>::stream(s, indent + "  ", v.xmid);
     s << indent << "ymid: ";

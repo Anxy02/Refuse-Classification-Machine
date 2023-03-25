@@ -96,7 +96,7 @@ class BoundingBoxes {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '6d0dc4d03152d2e964a0de88169b9fbb';
+    return '2cfefed1ff690f33a9dc195317dbb6ac';
   }
 
   static messageDefinition() {
@@ -131,6 +131,7 @@ class BoundingBoxes {
     int64 ymax
     int16 num
     string Class
+    int16 CNum
     float64 xmid
     float64 ymid
     

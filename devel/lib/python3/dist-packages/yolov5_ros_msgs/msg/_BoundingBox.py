@@ -8,7 +8,7 @@ import struct
 
 
 class BoundingBox(genpy.Message):
-  _md5sum = "fa9149a42cb6fac35b374dba4a70b43b"
+  _md5sum = "d92c29ac46962e0d8547dd80ed9d31bc"
   _type = "yolov5_ros_msgs/BoundingBox"
   _has_header = False  # flag to mark the presence of a Header object
   _full_text = """float64 probability
@@ -18,11 +18,12 @@ int64 xmax
 int64 ymax
 int16 num
 string Class
+int16 CNum
 float64 xmid
 float64 ymid
 """
-  __slots__ = ['probability','xmin','ymin','xmax','ymax','num','Class','xmid','ymid']
-  _slot_types = ['float64','int64','int64','int64','int64','int16','string','float64','float64']
+  __slots__ = ['probability','xmin','ymin','xmax','ymax','num','Class','CNum','xmid','ymid']
+  _slot_types = ['float64','int64','int64','int64','int64','int16','string','int16','float64','float64']
 
   def __init__(self, *args, **kwds):
     """
@@ -32,7 +33,7 @@ float64 ymid
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       probability,xmin,ymin,xmax,ymax,num,Class,xmid,ymid
+       probability,xmin,ymin,xmax,ymax,num,Class,CNum,xmid,ymid
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -55,6 +56,8 @@ float64 ymid
         self.num = 0
       if self.Class is None:
         self.Class = ''
+      if self.CNum is None:
+        self.CNum = 0
       if self.xmid is None:
         self.xmid = 0.
       if self.ymid is None:
@@ -67,6 +70,7 @@ float64 ymid
       self.ymax = 0
       self.num = 0
       self.Class = ''
+      self.CNum = 0
       self.xmid = 0.
       self.ymid = 0.
 
@@ -91,7 +95,7 @@ float64 ymid
         length = len(_x)
       buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
       _x = self
-      buff.write(_get_struct_2d().pack(_x.xmid, _x.ymid))
+      buff.write(_get_struct_h2d().pack(_x.CNum, _x.xmid, _x.ymid))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -119,8 +123,8 @@ float64 ymid
         self.Class = str[start:end]
       _x = self
       start = end
-      end += 16
-      (_x.xmid, _x.ymid,) = _get_struct_2d().unpack(str[start:end])
+      end += 18
+      (_x.CNum, _x.xmid, _x.ymid,) = _get_struct_h2d().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -142,7 +146,7 @@ float64 ymid
         length = len(_x)
       buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
       _x = self
-      buff.write(_get_struct_2d().pack(_x.xmid, _x.ymid))
+      buff.write(_get_struct_h2d().pack(_x.CNum, _x.xmid, _x.ymid))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -171,8 +175,8 @@ float64 ymid
         self.Class = str[start:end]
       _x = self
       start = end
-      end += 16
-      (_x.xmid, _x.ymid,) = _get_struct_2d().unpack(str[start:end])
+      end += 18
+      (_x.CNum, _x.xmid, _x.ymid,) = _get_struct_h2d().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -181,15 +185,15 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_2d = None
-def _get_struct_2d():
-    global _struct_2d
-    if _struct_2d is None:
-        _struct_2d = struct.Struct("<2d")
-    return _struct_2d
 _struct_d4qh = None
 def _get_struct_d4qh():
     global _struct_d4qh
     if _struct_d4qh is None:
         _struct_d4qh = struct.Struct("<d4qh")
     return _struct_d4qh
+_struct_h2d = None
+def _get_struct_h2d():
+    global _struct_h2d
+    if _struct_h2d is None:
+        _struct_h2d = struct.Struct("<h2d")
+    return _struct_h2d
