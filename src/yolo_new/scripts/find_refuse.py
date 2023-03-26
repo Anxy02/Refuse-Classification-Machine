@@ -16,6 +16,7 @@ from yolo_new.msg import Flag
 
 last_erro=0
 IsMoving = 0
+IsPuting = 1    #后续改为0，依靠超声波判断
 def nothing(s):
     pass
 
@@ -70,6 +71,7 @@ class Find_Color:
 
     def flag_callback(self,msg):
         IsMoving = msg.isMoving
+        # IsPuting = msg.isPuting
         # print("flag_msg is",IsMoving)
 
 
@@ -82,14 +84,15 @@ class Find_Color:
         for i in msg.bounding_boxes:
             count+=1
 
-        if IsMoving == 0:
+        if IsMoving == 0 :
             if count == 1:
                 # rospy.loginfo('msg.boundingBoxes.class :%s',msg.bounding_boxes[0].Class)
                 tmp_class = msg.bounding_boxes[0].Class
                 # print(tmp_class,1)
-                self.Class = self.switch_class(tmp_class)   #传入垃圾类别并进行判断分类
+                # self.Class = self.switch_class(tmp_class)   #传入垃圾类别并进行判断分类
+                self.Class = msg.bounding_boxes[0].CNum
                 # self.single_send(self.Class)  #单目标直接用刷子发送
-                # rospy.loginfo('msg.boundingBoxes.class :%s',self.Class)
+                # IsPuting = 0  后续放出来
 
             elif count > 1:
                 for tmp_box in msg.bounding_boxes:
@@ -102,8 +105,8 @@ class Find_Color:
 
                     # self.Class=box.Class
                     # rospy.loginfo("class is %s ,X is %f, Y is %f", self.Class,Xmid,Ymid)
-                    self.Class = self.switch_class(tmp_box.Class)   #传入垃圾类别并进行判断分类
-                    print(tmp_box.Class,self.Class)
+                    # self.Class = self.switch_class(tmp_box.Class)   #传入垃圾类别并进行判断分类
+                    self.Class = tmp_box.CNum
 
                     angleX = self.calculateAngleX(Xmid) #做数学转换获取色块在画幅中的坐标
                     angleY = self.calculateAngleY(Ymid)
@@ -113,6 +116,7 @@ class Find_Color:
                     # rospy.loginfo('msg.class :%s',tmp_box.Class)
                     self.publishPosition(angleX,angleY,rotation,count) #发布话题：色块的位置（原始数据）
                     self.publishArm_Angle(angleX,angleY,rotation,count)	 #发布话题：根据色块位置求解的机械臂关节目标弧度话题
+                    # IsPuting = 0  后续放出来
             else:
                 #没有检测到目标
                 # rospy.loginfo("fuck!!!!!!!!!!")
@@ -245,31 +249,6 @@ class Find_Color:
         #rospy.loginfo('hand_angle is %s' ,hand_angle)
         #通过self.Class判断是什么类别的垃圾
         #m=1绿色，m=2蓝色，m=3黄色
-        # 判断5次是否有误！！！！！！！！！
-        # if self.Class==1:
-        #     self.recycle_count=self.recycle_count +1
-        #     if self.recycle_count >5: #每五次数据再发布一次话题（控制话题发布速率）
-        #        self.recycle_count = 0
-        #        ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'recycle',count)
-        #        self.arm_ik_angle_Publisher.publish(ikMsg)
-        # if self.Class==2:
-        #     self.harm_count=self.harm_count +1
-        #     if self.harm_count >5: #每五次数据再发布一次话题（控制话题发布速率）
-        #        self.harm_count = 0
-        #        ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'harm',count)
-        #        self.arm_ik_angle_Publisher.publish(ikMsg)
-        # if self.Class==3:
-        #     self.kitchen_count=self.kitchen_count +1
-        #     if self.kitchen_count >5: #每五次数据再发布一次话题（控制话题发布速率）
-        #        self.kitchen_count = 0
-        #        ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'kitchen',count)
-        #        self.arm_ik_angle_Publisher.publish(ikMsg)
-        # if self.Class==4:
-        #     self.others_count=self.others_count +1
-        #     if self.others_count >5: #每五次数据再发布一次话题（控制话题发布速率）
-        #        self.others_count = 0
-        #        ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'others',count)
-        #        self.arm_ik_angle_Publisher.publish(ikMsg)
         if self.Class==1:
             ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'recycle',count)
             self.arm_ik_angle_Publisher.publish(ikMsg)

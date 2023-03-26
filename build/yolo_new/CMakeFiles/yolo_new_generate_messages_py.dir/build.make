@@ -58,9 +58,8 @@ yolo_new/CMakeFiles/yolo_new_generate_messages_py: /home/moyu/Refuse-Classificat
 yolo_new/CMakeFiles/yolo_new_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_color_ik_result_new.py
 yolo_new/CMakeFiles/yolo_new_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_arm_target_position.py
 yolo_new/CMakeFiles/yolo_new_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_arm_init_position.py
-yolo_new/CMakeFiles/yolo_new_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_BoundingBox.py
-yolo_new/CMakeFiles/yolo_new_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_BoundingBoxes.py
 yolo_new/CMakeFiles/yolo_new_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_Flag.py
+yolo_new/CMakeFiles/yolo_new_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_Serial_RT.py
 yolo_new/CMakeFiles/yolo_new_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/__init__.py
 
 
@@ -89,22 +88,15 @@ yolo_new/CMakeFiles/yolo_new_generate_messages_py: /home/moyu/Refuse-Classificat
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python from MSG yolo_new/arm_init_position"
 	cd /home/moyu/Refuse-Classification-Machine/build/yolo_new && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_init_position.msg -Iyolo_new:/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg
 
-/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_BoundingBox.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_BoundingBox.py: /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python from MSG yolo_new/BoundingBox"
-	cd /home/moyu/Refuse-Classification-Machine/build/yolo_new && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg -Iyolo_new:/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg
-
-/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_BoundingBoxes.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_BoundingBoxes.py: /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg
-/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_BoundingBoxes.py: /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg
-/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_BoundingBoxes.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Python from MSG yolo_new/BoundingBoxes"
-	cd /home/moyu/Refuse-Classification-Machine/build/yolo_new && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg -Iyolo_new:/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg
-
 /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_Flag.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_Flag.py: /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Python from MSG yolo_new/Flag"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python from MSG yolo_new/Flag"
 	cd /home/moyu/Refuse-Classification-Machine/build/yolo_new && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg -Iyolo_new:/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg
+
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_Serial_RT.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_Serial_RT.py: /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Serial_RT.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Python from MSG yolo_new/Serial_RT"
+	cd /home/moyu/Refuse-Classification-Machine/build/yolo_new && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Serial_RT.msg -Iyolo_new:/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg
 
 /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/__init__.py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_position_color.py
@@ -112,10 +104,9 @@ yolo_new/CMakeFiles/yolo_new_generate_messages_py: /home/moyu/Refuse-Classificat
 /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/__init__.py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_color_ik_result_new.py
 /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/__init__.py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_arm_target_position.py
 /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/__init__.py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_arm_init_position.py
-/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/__init__.py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_BoundingBox.py
-/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/__init__.py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_BoundingBoxes.py
 /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/__init__.py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_Flag.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating Python msg __init__.py for yolo_new"
+/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/__init__.py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_Serial_RT.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Python msg __init__.py for yolo_new"
 	cd /home/moyu/Refuse-Classification-Machine/build/yolo_new && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg --initpy
 
 yolo_new_generate_messages_py: yolo_new/CMakeFiles/yolo_new_generate_messages_py
@@ -124,9 +115,8 @@ yolo_new_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/li
 yolo_new_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_color_ik_result_new.py
 yolo_new_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_arm_target_position.py
 yolo_new_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_arm_init_position.py
-yolo_new_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_BoundingBox.py
-yolo_new_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_BoundingBoxes.py
 yolo_new_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_Flag.py
+yolo_new_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_Serial_RT.py
 yolo_new_generate_messages_py: /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/__init__.py
 yolo_new_generate_messages_py: yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/build.make
 

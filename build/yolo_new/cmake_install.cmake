@@ -44,9 +44,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/color_ik_result_new.msg"
     "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_target_position.msg"
     "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_init_position.msg"
-    "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg"
-    "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg"
     "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg"
+    "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Serial_RT.msg"
     )
 endif()
 

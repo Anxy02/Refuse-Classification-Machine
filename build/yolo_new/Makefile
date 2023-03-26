@@ -56,6 +56,18 @@ CMAKE_BINARY_DIR = /home/moyu/Refuse-Classification-Machine/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -99,18 +111,6 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -228,36 +228,6 @@ yolo_new_generate_messages_nodejs/fast:
 .PHONY : yolo_new_generate_messages_nodejs/fast
 
 # Convenience name for target.
-yolo_new/CMakeFiles/yolo_new_genlisp.dir/rule:
-	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_genlisp.dir/rule
-.PHONY : yolo_new/CMakeFiles/yolo_new_genlisp.dir/rule
-
-# Convenience name for target.
-yolo_new_genlisp: yolo_new/CMakeFiles/yolo_new_genlisp.dir/rule
-
-.PHONY : yolo_new_genlisp
-
-# fast build rule for target.
-yolo_new_genlisp/fast:
-	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_genlisp.dir/build.make yolo_new/CMakeFiles/yolo_new_genlisp.dir/build
-.PHONY : yolo_new_genlisp/fast
-
-# Convenience name for target.
-yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/rule:
-	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/rule
-.PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-yolo_new_generate_messages_lisp: yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/rule
-
-.PHONY : yolo_new_generate_messages_lisp
-
-# fast build rule for target.
-yolo_new_generate_messages_lisp/fast:
-	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/build
-.PHONY : yolo_new_generate_messages_lisp/fast
-
-# Convenience name for target.
 yolo_new/CMakeFiles/yolo_new_generate_messages.dir/rule:
 	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_generate_messages.dir/rule
 .PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages.dir/rule
@@ -271,36 +241,6 @@ yolo_new_generate_messages: yolo_new/CMakeFiles/yolo_new_generate_messages.dir/r
 yolo_new_generate_messages/fast:
 	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages.dir/build
 .PHONY : yolo_new_generate_messages/fast
-
-# Convenience name for target.
-yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/rule:
-	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/rule
-.PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/rule
-
-# Convenience name for target.
-_yolo_new_generate_messages_check_deps_position_color: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/rule
-
-.PHONY : _yolo_new_generate_messages_check_deps_position_color
-
-# fast build rule for target.
-_yolo_new_generate_messages_check_deps_position_color/fast:
-	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/build
-.PHONY : _yolo_new_generate_messages_check_deps_position_color/fast
-
-# Convenience name for target.
-yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/rule:
-	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/rule
-.PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/rule
-
-# Convenience name for target.
-_yolo_new_generate_messages_check_deps_BoundingBox: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/rule
-
-.PHONY : _yolo_new_generate_messages_check_deps_BoundingBox
-
-# fast build rule for target.
-_yolo_new_generate_messages_check_deps_BoundingBox/fast:
-	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/build
-.PHONY : _yolo_new_generate_messages_check_deps_BoundingBox/fast
 
 # Convenience name for target.
 yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/rule:
@@ -393,36 +333,6 @@ _yolo_new_generate_messages_check_deps_arm_init_position/fast:
 .PHONY : _yolo_new_generate_messages_check_deps_arm_init_position/fast
 
 # Convenience name for target.
-yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/rule:
-	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/rule
-.PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/rule
-
-# Convenience name for target.
-_yolo_new_generate_messages_check_deps_BoundingBoxes: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/rule
-
-.PHONY : _yolo_new_generate_messages_check_deps_BoundingBoxes
-
-# fast build rule for target.
-_yolo_new_generate_messages_check_deps_BoundingBoxes/fast:
-	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/build
-.PHONY : _yolo_new_generate_messages_check_deps_BoundingBoxes/fast
-
-# Convenience name for target.
-yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/rule:
-	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/rule
-.PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-yolo_new_generate_messages_eus: yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/rule
-
-.PHONY : yolo_new_generate_messages_eus
-
-# fast build rule for target.
-yolo_new_generate_messages_eus/fast:
-	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/build
-.PHONY : yolo_new_generate_messages_eus/fast
-
-# Convenience name for target.
 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Flag.dir/rule:
 	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Flag.dir/rule
 .PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Flag.dir/rule
@@ -436,6 +346,36 @@ _yolo_new_generate_messages_check_deps_Flag: yolo_new/CMakeFiles/_yolo_new_gener
 _yolo_new_generate_messages_check_deps_Flag/fast:
 	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Flag.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Flag.dir/build
 .PHONY : _yolo_new_generate_messages_check_deps_Flag/fast
+
+# Convenience name for target.
+yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/rule:
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/rule
+.PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/rule
+
+# Convenience name for target.
+_yolo_new_generate_messages_check_deps_position_color: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/rule
+
+.PHONY : _yolo_new_generate_messages_check_deps_position_color
+
+# fast build rule for target.
+_yolo_new_generate_messages_check_deps_position_color/fast:
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/build
+.PHONY : _yolo_new_generate_messages_check_deps_position_color/fast
+
+# Convenience name for target.
+yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/rule:
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/rule
+.PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/rule
+
+# Convenience name for target.
+_yolo_new_generate_messages_check_deps_Serial_RT: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/rule
+
+.PHONY : _yolo_new_generate_messages_check_deps_Serial_RT
+
+# fast build rule for target.
+_yolo_new_generate_messages_check_deps_Serial_RT/fast:
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/build
+.PHONY : _yolo_new_generate_messages_check_deps_Serial_RT/fast
 
 # Convenience name for target.
 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target_position.dir/rule:
@@ -466,6 +406,51 @@ yolo_new_gencpp: yolo_new/CMakeFiles/yolo_new_gencpp.dir/rule
 yolo_new_gencpp/fast:
 	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_gencpp.dir/build.make yolo_new/CMakeFiles/yolo_new_gencpp.dir/build
 .PHONY : yolo_new_gencpp/fast
+
+# Convenience name for target.
+yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/rule:
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/rule
+.PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+yolo_new_generate_messages_eus: yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/rule
+
+.PHONY : yolo_new_generate_messages_eus
+
+# fast build rule for target.
+yolo_new_generate_messages_eus/fast:
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/build
+.PHONY : yolo_new_generate_messages_eus/fast
+
+# Convenience name for target.
+yolo_new/CMakeFiles/yolo_new_genlisp.dir/rule:
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_genlisp.dir/rule
+.PHONY : yolo_new/CMakeFiles/yolo_new_genlisp.dir/rule
+
+# Convenience name for target.
+yolo_new_genlisp: yolo_new/CMakeFiles/yolo_new_genlisp.dir/rule
+
+.PHONY : yolo_new_genlisp
+
+# fast build rule for target.
+yolo_new_genlisp/fast:
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_genlisp.dir/build.make yolo_new/CMakeFiles/yolo_new_genlisp.dir/build
+.PHONY : yolo_new_genlisp/fast
+
+# Convenience name for target.
+yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/rule:
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/rule
+.PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+yolo_new_generate_messages_lisp: yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/rule
+
+.PHONY : yolo_new_generate_messages_lisp
+
+# fast build rule for target.
+yolo_new_generate_messages_lisp/fast:
+	cd /home/moyu/Refuse-Classification-Machine/build && $(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/build
+.PHONY : yolo_new_generate_messages_lisp/fast
 
 src/yolo_execute.o: src/yolo_execute.cpp.o
 
@@ -500,6 +485,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
 	@echo "... install"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
@@ -508,12 +494,7 @@ help:
 	@echo "... yolo_new_generate_messages_py"
 	@echo "... yolo_new_gennodejs"
 	@echo "... yolo_new_generate_messages_nodejs"
-	@echo "... yolo_new_genlisp"
-	@echo "... yolo_new_generate_messages_lisp"
 	@echo "... yolo_new_generate_messages"
-	@echo "... _yolo_new_generate_messages_check_deps_position_color"
-	@echo "... install/strip"
-	@echo "... _yolo_new_generate_messages_check_deps_BoundingBox"
 	@echo "... yolo_new_generate_messages_cpp"
 	@echo "... _yolo_new_generate_messages_check_deps_arm_target"
 	@echo "... _yolo_new_generate_messages_check_deps_color_ik_result_new"
@@ -521,12 +502,15 @@ help:
 	@echo "... yolo_new_geneus"
 	@echo "... yolo_new_genpy"
 	@echo "... _yolo_new_generate_messages_check_deps_arm_init_position"
-	@echo "... _yolo_new_generate_messages_check_deps_BoundingBoxes"
-	@echo "... test"
-	@echo "... yolo_new_generate_messages_eus"
 	@echo "... _yolo_new_generate_messages_check_deps_Flag"
+	@echo "... _yolo_new_generate_messages_check_deps_position_color"
+	@echo "... _yolo_new_generate_messages_check_deps_Serial_RT"
 	@echo "... _yolo_new_generate_messages_check_deps_arm_target_position"
 	@echo "... yolo_new_gencpp"
+	@echo "... test"
+	@echo "... yolo_new_generate_messages_eus"
+	@echo "... yolo_new_genlisp"
+	@echo "... yolo_new_generate_messages_lisp"
 	@echo "... src/yolo_execute.o"
 	@echo "... src/yolo_execute.i"
 	@echo "... src/yolo_execute.s"

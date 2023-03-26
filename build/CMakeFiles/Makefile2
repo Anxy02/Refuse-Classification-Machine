@@ -456,22 +456,21 @@ yolo_new/clean: yolo_new/CMakeFiles/yolo_execute.dir/clean
 yolo_new/clean: yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/clean
 yolo_new/clean: yolo_new/CMakeFiles/yolo_new_gennodejs.dir/clean
 yolo_new/clean: yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/clean
-yolo_new/clean: yolo_new/CMakeFiles/yolo_new_genlisp.dir/clean
-yolo_new/clean: yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/clean
 yolo_new/clean: yolo_new/CMakeFiles/yolo_new_generate_messages.dir/clean
-yolo_new/clean: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/clean
-yolo_new/clean: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/clean
 yolo_new/clean: yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/clean
 yolo_new/clean: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target.dir/clean
 yolo_new/clean: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_color_ik_result_new.dir/clean
 yolo_new/clean: yolo_new/CMakeFiles/yolo_new_geneus.dir/clean
 yolo_new/clean: yolo_new/CMakeFiles/yolo_new_genpy.dir/clean
 yolo_new/clean: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_init_position.dir/clean
-yolo_new/clean: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/clean
-yolo_new/clean: yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/clean
 yolo_new/clean: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Flag.dir/clean
+yolo_new/clean: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/clean
+yolo_new/clean: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/clean
 yolo_new/clean: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target_position.dir/clean
 yolo_new/clean: yolo_new/CMakeFiles/yolo_new_gencpp.dir/clean
+yolo_new/clean: yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/clean
+yolo_new/clean: yolo_new/CMakeFiles/yolo_new_genlisp.dir/clean
+yolo_new/clean: yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/clean
 
 .PHONY : yolo_new/clean
 
@@ -666,7 +665,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googlemock/CMakeFiles/gmoc
 gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=15,16 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=16 "Built target gmock_main"
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -693,12 +692,12 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/clean:
 gtest/googlemock/CMakeFiles/gmock.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=14 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=15 "Built target gmock"
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/CMakeFiles/gmock.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/rule
@@ -720,7 +719,7 @@ gtest/googlemock/CMakeFiles/gmock.dir/clean:
 gtest/googletest/CMakeFiles/gtest_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=18,19 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=19 "Built target gtest_main"
 .PHONY : gtest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -747,12 +746,12 @@ gtest/googletest/CMakeFiles/gtest_main.dir/clean:
 gtest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=17 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=17,18 "Built target gtest"
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googletest/CMakeFiles/gtest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/rule
@@ -828,12 +827,12 @@ arm_demo/CMakeFiles/arm_cartesian_demo.dir/clean:
 arm_demo/CMakeFiles/arm_ik_demo.dir/all:
 	$(MAKE) -f arm_demo/CMakeFiles/arm_ik_demo.dir/build.make arm_demo/CMakeFiles/arm_ik_demo.dir/depend
 	$(MAKE) -f arm_demo/CMakeFiles/arm_ik_demo.dir/build.make arm_demo/CMakeFiles/arm_ik_demo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=6 "Built target arm_ik_demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=6,7 "Built target arm_ik_demo"
 .PHONY : arm_demo/CMakeFiles/arm_ik_demo.dir/all
 
 # Build rule for subdir invocation for target.
 arm_demo/CMakeFiles/arm_ik_demo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 arm_demo/CMakeFiles/arm_ik_demo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
 .PHONY : arm_demo/CMakeFiles/arm_ik_demo.dir/rule
@@ -3534,7 +3533,7 @@ table_arm/CMakeFiles/table_arm_generate_messages_nodejs.dir/all: table_arm/CMake
 table_arm/CMakeFiles/table_arm_generate_messages_nodejs.dir/all: table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position.dir/all
 	$(MAKE) -f table_arm/CMakeFiles/table_arm_generate_messages_nodejs.dir/build.make table_arm/CMakeFiles/table_arm_generate_messages_nodejs.dir/depend
 	$(MAKE) -f table_arm/CMakeFiles/table_arm_generate_messages_nodejs.dir/build.make table_arm/CMakeFiles/table_arm_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=33,34,35,36 "Built target table_arm_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=34,35,36,37 "Built target table_arm_generate_messages_nodejs"
 .PHONY : table_arm/CMakeFiles/table_arm_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3642,12 +3641,12 @@ table_arm/CMakeFiles/table_arm_gencpp.dir/clean:
 table_arm/CMakeFiles/color_stack_execute.dir/all: table_arm/CMakeFiles/table_arm_generate_messages_cpp.dir/all
 	$(MAKE) -f table_arm/CMakeFiles/color_stack_execute.dir/build.make table_arm/CMakeFiles/color_stack_execute.dir/depend
 	$(MAKE) -f table_arm/CMakeFiles/color_stack_execute.dir/build.make table_arm/CMakeFiles/color_stack_execute.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=10 "Built target color_stack_execute"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=10,11 "Built target color_stack_execute"
 .PHONY : table_arm/CMakeFiles/color_stack_execute.dir/all
 
 # Build rule for subdir invocation for target.
 table_arm/CMakeFiles/color_stack_execute.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/color_stack_execute.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
 .PHONY : table_arm/CMakeFiles/color_stack_execute.dir/rule
@@ -3675,7 +3674,7 @@ table_arm/CMakeFiles/table_arm_generate_messages_cpp.dir/all: table_arm/CMakeFil
 table_arm/CMakeFiles/table_arm_generate_messages_cpp.dir/all: table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position.dir/all
 	$(MAKE) -f table_arm/CMakeFiles/table_arm_generate_messages_cpp.dir/build.make table_arm/CMakeFiles/table_arm_generate_messages_cpp.dir/depend
 	$(MAKE) -f table_arm/CMakeFiles/table_arm_generate_messages_cpp.dir/build.make table_arm/CMakeFiles/table_arm_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=22,23,24,25 "Built target table_arm_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=23,24,25,26 "Built target table_arm_generate_messages_cpp"
 .PHONY : table_arm/CMakeFiles/table_arm_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3708,7 +3707,7 @@ table_arm/CMakeFiles/table_arm_generate_messages_lisp.dir/all: table_arm/CMakeFi
 table_arm/CMakeFiles/table_arm_generate_messages_lisp.dir/all: table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position.dir/all
 	$(MAKE) -f table_arm/CMakeFiles/table_arm_generate_messages_lisp.dir/build.make table_arm/CMakeFiles/table_arm_generate_messages_lisp.dir/depend
 	$(MAKE) -f table_arm/CMakeFiles/table_arm_generate_messages_lisp.dir/build.make table_arm/CMakeFiles/table_arm_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=30,31,32 "Built target table_arm_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=31,32,33 "Built target table_arm_generate_messages_lisp"
 .PHONY : table_arm/CMakeFiles/table_arm_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3822,7 +3821,7 @@ table_arm/CMakeFiles/table_arm_generate_messages_eus.dir/all: table_arm/CMakeFil
 table_arm/CMakeFiles/table_arm_generate_messages_eus.dir/all: table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position.dir/all
 	$(MAKE) -f table_arm/CMakeFiles/table_arm_generate_messages_eus.dir/build.make table_arm/CMakeFiles/table_arm_generate_messages_eus.dir/depend
 	$(MAKE) -f table_arm/CMakeFiles/table_arm_generate_messages_eus.dir/build.make table_arm/CMakeFiles/table_arm_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=26,27,28,29 "Built target table_arm_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=27,28,29,30 "Built target table_arm_generate_messages_eus"
 .PHONY : table_arm/CMakeFiles/table_arm_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3930,12 +3929,12 @@ table_arm/CMakeFiles/table_arm_geneus.dir/clean:
 table_arm/CMakeFiles/help_control.dir/all: table_arm/CMakeFiles/table_arm_generate_messages_cpp.dir/all
 	$(MAKE) -f table_arm/CMakeFiles/help_control.dir/build.make table_arm/CMakeFiles/help_control.dir/depend
 	$(MAKE) -f table_arm/CMakeFiles/help_control.dir/build.make table_arm/CMakeFiles/help_control.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=20 "Built target help_control"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=20,21 "Built target help_control"
 .PHONY : table_arm/CMakeFiles/help_control.dir/all
 
 # Build rule for subdir invocation for target.
 table_arm/CMakeFiles/help_control.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/help_control.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
 .PHONY : table_arm/CMakeFiles/help_control.dir/rule
@@ -4015,12 +4014,12 @@ table_arm/CMakeFiles/table_arm_generate_messages.dir/clean:
 table_arm/CMakeFiles/arm_pose_init.dir/all: table_arm/CMakeFiles/table_arm_generate_messages_cpp.dir/all
 	$(MAKE) -f table_arm/CMakeFiles/arm_pose_init.dir/build.make table_arm/CMakeFiles/arm_pose_init.dir/depend
 	$(MAKE) -f table_arm/CMakeFiles/arm_pose_init.dir/build.make table_arm/CMakeFiles/arm_pose_init.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=7,8 "Built target arm_pose_init"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=8 "Built target arm_pose_init"
 .PHONY : table_arm/CMakeFiles/arm_pose_init.dir/all
 
 # Build rule for subdir invocation for target.
 table_arm/CMakeFiles/arm_pose_init.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 table_arm/CMakeFiles/arm_pose_init.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
 .PHONY : table_arm/CMakeFiles/arm_pose_init.dir/rule
@@ -4048,7 +4047,7 @@ table_arm/CMakeFiles/table_arm_generate_messages_py.dir/all: table_arm/CMakeFile
 table_arm/CMakeFiles/table_arm_generate_messages_py.dir/all: table_arm/CMakeFiles/_table_arm_generate_messages_check_deps_arm_init_position.dir/all
 	$(MAKE) -f table_arm/CMakeFiles/table_arm_generate_messages_py.dir/build.make table_arm/CMakeFiles/table_arm_generate_messages_py.dir/depend
 	$(MAKE) -f table_arm/CMakeFiles/table_arm_generate_messages_py.dir/build.make table_arm/CMakeFiles/table_arm_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=37,38,39,40 "Built target table_arm_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=38,39,40,41 "Built target table_arm_generate_messages_py"
 .PHONY : table_arm/CMakeFiles/table_arm_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4102,7 +4101,7 @@ table_arm/CMakeFiles/ar_label_sort.dir/clean:
 table_arm/CMakeFiles/wheeltec_table_arm.dir/all: table_arm/CMakeFiles/table_arm_generate_messages_cpp.dir/all
 	$(MAKE) -f table_arm/CMakeFiles/wheeltec_table_arm.dir/build.make table_arm/CMakeFiles/wheeltec_table_arm.dir/depend
 	$(MAKE) -f table_arm/CMakeFiles/wheeltec_table_arm.dir/build.make table_arm/CMakeFiles/wheeltec_table_arm.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=49,50 "Built target wheeltec_table_arm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=51,52 "Built target wheeltec_table_arm"
 .PHONY : table_arm/CMakeFiles/wheeltec_table_arm.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4129,7 +4128,7 @@ table_arm/CMakeFiles/wheeltec_table_arm.dir/clean:
 table_arm/CMakeFiles/voice_control_arm.dir/all: table_arm/CMakeFiles/table_arm_generate_messages_cpp.dir/all
 	$(MAKE) -f table_arm/CMakeFiles/voice_control_arm.dir/build.make table_arm/CMakeFiles/voice_control_arm.dir/depend
 	$(MAKE) -f table_arm/CMakeFiles/voice_control_arm.dir/build.make table_arm/CMakeFiles/voice_control_arm.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=41 "Built target voice_control_arm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=42 "Built target voice_control_arm"
 .PHONY : table_arm/CMakeFiles/voice_control_arm.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4156,7 +4155,7 @@ table_arm/CMakeFiles/voice_control_arm.dir/clean:
 table_arm/CMakeFiles/node_feedback.dir/all: table_arm/CMakeFiles/table_arm_generate_messages_cpp.dir/all
 	$(MAKE) -f table_arm/CMakeFiles/node_feedback.dir/build.make table_arm/CMakeFiles/node_feedback.dir/depend
 	$(MAKE) -f table_arm/CMakeFiles/node_feedback.dir/build.make table_arm/CMakeFiles/node_feedback.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=21 "Built target node_feedback"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=22 "Built target node_feedback"
 .PHONY : table_arm/CMakeFiles/node_feedback.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4237,12 +4236,12 @@ table_arm/CMakeFiles/table_arm_genpy.dir/clean:
 web_video_server/CMakeFiles/web_video_server.dir/all:
 	$(MAKE) -f web_video_server/CMakeFiles/web_video_server.dir/build.make web_video_server/CMakeFiles/web_video_server.dir/depend
 	$(MAKE) -f web_video_server/CMakeFiles/web_video_server.dir/build.make web_video_server/CMakeFiles/web_video_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=42,43,44,45,46,47,48 "Built target web_video_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=43,44,45,46,47,48,49,50 "Built target web_video_server"
 .PHONY : web_video_server/CMakeFiles/web_video_server.dir/all
 
 # Build rule for subdir invocation for target.
 web_video_server/CMakeFiles/web_video_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 web_video_server/CMakeFiles/web_video_server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
 .PHONY : web_video_server/CMakeFiles/web_video_server.dir/rule
@@ -4264,12 +4263,12 @@ web_video_server/CMakeFiles/web_video_server.dir/clean:
 wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/all: wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_cpp.dir/all
 	$(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/build.make wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/depend
 	$(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/build.make wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=13 "Built target gesture_recognition_execute"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=13,14 "Built target gesture_recognition_execute"
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/all
 
 # Build rule for subdir invocation for target.
 wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/gesture_recognition_execute.dir/rule
@@ -4295,7 +4294,7 @@ wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/all: wheeltec_tracker_pkg/
 wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/all: wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/all
 	$(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/build.make wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/depend
 	$(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/build.make wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=11,12 "Built target face_tracker_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=12 "Built target face_tracker_node"
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/face_tracker_node.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4327,7 +4326,7 @@ wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_genpy.dir/all: wheeltec_tra
 
 # Build rule for subdir invocation for target.
 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_genpy.dir/rule
@@ -4358,7 +4357,7 @@ wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages.dir/all: 
 
 # Build rule for subdir invocation for target.
 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages.dir/rule
@@ -4383,7 +4382,7 @@ wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_nodejs.di
 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_nodejs.dir/all: wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_gesture.dir/all
 	$(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_nodejs.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_nodejs.dir/depend
 	$(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_nodejs.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=58,59 "Built target wheeltec_tracker_pkg_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=60,61 "Built target wheeltec_tracker_pkg_generate_messages_nodejs"
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4467,7 +4466,7 @@ wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/a
 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/all: wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_gesture.dir/all
 	$(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/depend
 	$(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=53,54,55 "Built target wheeltec_tracker_pkg_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=55,56,57 "Built target wheeltec_tracker_pkg_generate_messages_eus"
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4524,7 +4523,7 @@ wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_cpp.dir/a
 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_cpp.dir/all: wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_gesture.dir/all
 	$(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_cpp.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_cpp.dir/depend
 	$(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_cpp.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=51,52 "Built target wheeltec_tracker_pkg_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=53,54 "Built target wheeltec_tracker_pkg_generate_messages_cpp"
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4635,7 +4634,7 @@ wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/
 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/all: wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_gesture.dir/all
 	$(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/depend
 	$(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=56,57 "Built target wheeltec_tracker_pkg_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=58,59 "Built target wheeltec_tracker_pkg_generate_messages_lisp"
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4692,12 +4691,12 @@ wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/al
 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/all: wheeltec_tracker_pkg/CMakeFiles/_wheeltec_tracker_pkg_generate_messages_check_deps_gesture.dir/all
 	$(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/depend
 	$(MAKE) -f wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/build.make wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=60,61 "Built target wheeltec_tracker_pkg_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=62,63,64 "Built target wheeltec_tracker_pkg_generate_messages_py"
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
 .PHONY : wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/rule
@@ -4719,12 +4718,12 @@ wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py.dir/cl
 yolo_new/CMakeFiles/yolo_execute.dir/all: yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/all
 	$(MAKE) -f yolo_new/CMakeFiles/yolo_execute.dir/build.make yolo_new/CMakeFiles/yolo_execute.dir/depend
 	$(MAKE) -f yolo_new/CMakeFiles/yolo_execute.dir/build.make yolo_new/CMakeFiles/yolo_execute.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=62,63 "Built target yolo_execute"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=65 "Built target yolo_execute"
 .PHONY : yolo_new/CMakeFiles/yolo_execute.dir/all
 
 # Build rule for subdir invocation for target.
 yolo_new/CMakeFiles/yolo_execute.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_execute.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
 .PHONY : yolo_new/CMakeFiles/yolo_execute.dir/rule
@@ -4745,13 +4744,12 @@ yolo_new/CMakeFiles/yolo_execute.dir/clean:
 # All Build rule for target.
 yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/all: arm_demo/CMakeFiles/std_msgs_generate_messages_py.dir/all
 yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/all: arm_demo/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/all
 yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target.dir/all
 yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_color_ik_result_new.dir/all
 yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_init_position.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/all
 yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Flag.dir/all
+yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/all
+yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/all
 yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target_position.dir/all
 	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/depend
 	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/build
@@ -4808,13 +4806,12 @@ yolo_new/CMakeFiles/yolo_new_gennodejs.dir/clean:
 # All Build rule for target.
 yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/all: arm_demo/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/all: arm_demo/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/all
 yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target.dir/all
 yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_color_ik_result_new.dir/all
 yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_init_position.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/all
 yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Flag.dir/all
+yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/all
+yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/all
 yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target_position.dir/all
 	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/depend
 	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/build
@@ -4839,77 +4836,14 @@ yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/clean:
 .PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/clean
 
 #=============================================================================
-# Target rules for target yolo_new/CMakeFiles/yolo_new_genlisp.dir
-
-# All Build rule for target.
-yolo_new/CMakeFiles/yolo_new_genlisp.dir/all: yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all
-	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_genlisp.dir/build.make yolo_new/CMakeFiles/yolo_new_genlisp.dir/depend
-	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_genlisp.dir/build.make yolo_new/CMakeFiles/yolo_new_genlisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num= "Built target yolo_new_genlisp"
-.PHONY : yolo_new/CMakeFiles/yolo_new_genlisp.dir/all
-
-# Build rule for subdir invocation for target.
-yolo_new/CMakeFiles/yolo_new_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 6
-	$(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_genlisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
-.PHONY : yolo_new/CMakeFiles/yolo_new_genlisp.dir/rule
-
-# Convenience name for target.
-yolo_new_genlisp: yolo_new/CMakeFiles/yolo_new_genlisp.dir/rule
-
-.PHONY : yolo_new_genlisp
-
-# clean rule for target.
-yolo_new/CMakeFiles/yolo_new_genlisp.dir/clean:
-	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_genlisp.dir/build.make yolo_new/CMakeFiles/yolo_new_genlisp.dir/clean
-.PHONY : yolo_new/CMakeFiles/yolo_new_genlisp.dir/clean
-
-#=============================================================================
-# Target rules for target yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir
-
-# All Build rule for target.
-yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all: arm_demo/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all: arm_demo/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_color_ik_result_new.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_init_position.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Flag.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target_position.dir/all
-	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/depend
-	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=75,76,77,78,79,80 "Built target yolo_new_generate_messages_lisp"
-.PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 6
-	$(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
-.PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-yolo_new_generate_messages_lisp: yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/rule
-
-.PHONY : yolo_new_generate_messages_lisp
-
-# clean rule for target.
-yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/clean:
-	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/clean
-.PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/clean
-
-#=============================================================================
 # Target rules for target yolo_new/CMakeFiles/yolo_new_generate_messages.dir
 
 # All Build rule for target.
 yolo_new/CMakeFiles/yolo_new_generate_messages.dir/all: yolo_new/CMakeFiles/yolo_new_generate_messages_py.dir/all
 yolo_new/CMakeFiles/yolo_new_generate_messages.dir/all: yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages.dir/all: yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all
 yolo_new/CMakeFiles/yolo_new_generate_messages.dir/all: yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/all
 yolo_new/CMakeFiles/yolo_new_generate_messages.dir/all: yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/all
+yolo_new/CMakeFiles/yolo_new_generate_messages.dir/all: yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all
 	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages.dir/depend
 	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num= "Built target yolo_new_generate_messages"
@@ -4917,7 +4851,7 @@ yolo_new/CMakeFiles/yolo_new_generate_messages.dir/all: yolo_new/CMakeFiles/yolo
 
 # Build rule for subdir invocation for target.
 yolo_new/CMakeFiles/yolo_new_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 26
 	$(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
 .PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages.dir/rule
@@ -4933,76 +4867,21 @@ yolo_new/CMakeFiles/yolo_new_generate_messages.dir/clean:
 .PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages.dir/clean
 
 #=============================================================================
-# Target rules for target yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir
-
-# All Build rule for target.
-yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/all:
-	$(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/depend
-	$(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num= "Built target _yolo_new_generate_messages_check_deps_position_color"
-.PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/all
-
-# Build rule for subdir invocation for target.
-yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
-.PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/rule
-
-# Convenience name for target.
-_yolo_new_generate_messages_check_deps_position_color: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/rule
-
-.PHONY : _yolo_new_generate_messages_check_deps_position_color
-
-# clean rule for target.
-yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/clean:
-	$(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/clean
-.PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/clean
-
-#=============================================================================
-# Target rules for target yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir
-
-# All Build rule for target.
-yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/all:
-	$(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/depend
-	$(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num= "Built target _yolo_new_generate_messages_check_deps_BoundingBox"
-.PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/all
-
-# Build rule for subdir invocation for target.
-yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
-.PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/rule
-
-# Convenience name for target.
-_yolo_new_generate_messages_check_deps_BoundingBox: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/rule
-
-.PHONY : _yolo_new_generate_messages_check_deps_BoundingBox
-
-# clean rule for target.
-yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/clean:
-	$(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/clean
-.PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/clean
-
-#=============================================================================
 # Target rules for target yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir
 
 # All Build rule for target.
 yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/all: arm_demo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
 yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/all: arm_demo/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/all
 yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target.dir/all
 yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_color_ik_result_new.dir/all
 yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_init_position.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/all
 yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Flag.dir/all
+yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/all
+yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/all
 yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target_position.dir/all
 	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/depend
 	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=64,65,66,67,68 "Built target yolo_new_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=66,67,68,69,70 "Built target yolo_new_generate_messages_cpp"
 .PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5158,69 +5037,6 @@ yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_init_position.dir
 .PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_init_position.dir/clean
 
 #=============================================================================
-# Target rules for target yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir
-
-# All Build rule for target.
-yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/all:
-	$(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/depend
-	$(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num= "Built target _yolo_new_generate_messages_check_deps_BoundingBoxes"
-.PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/all
-
-# Build rule for subdir invocation for target.
-yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
-.PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/rule
-
-# Convenience name for target.
-_yolo_new_generate_messages_check_deps_BoundingBoxes: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/rule
-
-.PHONY : _yolo_new_generate_messages_check_deps_BoundingBoxes
-
-# clean rule for target.
-yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/clean:
-	$(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/clean
-.PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/clean
-
-#=============================================================================
-# Target rules for target yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir
-
-# All Build rule for target.
-yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/all: arm_demo/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/all: arm_demo/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_color_ik_result_new.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_init_position.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Flag.dir/all
-yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target_position.dir/all
-	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/depend
-	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=69,70,71,72,73,74 "Built target yolo_new_generate_messages_eus"
-.PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 6
-	$(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
-.PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-yolo_new_generate_messages_eus: yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/rule
-
-.PHONY : yolo_new_generate_messages_eus
-
-# clean rule for target.
-yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/clean:
-	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/clean
-.PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/clean
-
-#=============================================================================
 # Target rules for target yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Flag.dir
 
 # All Build rule for target.
@@ -5246,6 +5062,60 @@ _yolo_new_generate_messages_check_deps_Flag: yolo_new/CMakeFiles/_yolo_new_gener
 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Flag.dir/clean:
 	$(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Flag.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Flag.dir/clean
 .PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Flag.dir/clean
+
+#=============================================================================
+# Target rules for target yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir
+
+# All Build rule for target.
+yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/all:
+	$(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/depend
+	$(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num= "Built target _yolo_new_generate_messages_check_deps_position_color"
+.PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/all
+
+# Build rule for subdir invocation for target.
+yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
+.PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/rule
+
+# Convenience name for target.
+_yolo_new_generate_messages_check_deps_position_color: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/rule
+
+.PHONY : _yolo_new_generate_messages_check_deps_position_color
+
+# clean rule for target.
+yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/clean:
+	$(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/clean
+.PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/clean
+
+#=============================================================================
+# Target rules for target yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir
+
+# All Build rule for target.
+yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/all:
+	$(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/depend
+	$(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num= "Built target _yolo_new_generate_messages_check_deps_Serial_RT"
+.PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/all
+
+# Build rule for subdir invocation for target.
+yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
+.PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/rule
+
+# Convenience name for target.
+_yolo_new_generate_messages_check_deps_Serial_RT: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/rule
+
+.PHONY : _yolo_new_generate_messages_check_deps_Serial_RT
+
+# clean rule for target.
+yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/clean:
+	$(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/clean
+.PHONY : yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/clean
 
 #=============================================================================
 # Target rules for target yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target_position.dir
@@ -5302,6 +5172,103 @@ yolo_new/CMakeFiles/yolo_new_gencpp.dir/clean:
 .PHONY : yolo_new/CMakeFiles/yolo_new_gencpp.dir/clean
 
 #=============================================================================
+# Target rules for target yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir
+
+# All Build rule for target.
+yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/all: arm_demo/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/all: arm_demo/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target.dir/all
+yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_color_ik_result_new.dir/all
+yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_init_position.dir/all
+yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Flag.dir/all
+yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/all
+yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/all
+yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target_position.dir/all
+	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/depend
+	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=71,72,73,74,75,76 "Built target yolo_new_generate_messages_eus"
+.PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
+.PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+yolo_new_generate_messages_eus: yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/rule
+
+.PHONY : yolo_new_generate_messages_eus
+
+# clean rule for target.
+yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/clean:
+	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/clean
+.PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target yolo_new/CMakeFiles/yolo_new_genlisp.dir
+
+# All Build rule for target.
+yolo_new/CMakeFiles/yolo_new_genlisp.dir/all: yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all
+	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_genlisp.dir/build.make yolo_new/CMakeFiles/yolo_new_genlisp.dir/depend
+	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_genlisp.dir/build.make yolo_new/CMakeFiles/yolo_new_genlisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num= "Built target yolo_new_genlisp"
+.PHONY : yolo_new/CMakeFiles/yolo_new_genlisp.dir/all
+
+# Build rule for subdir invocation for target.
+yolo_new/CMakeFiles/yolo_new_genlisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_genlisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
+.PHONY : yolo_new/CMakeFiles/yolo_new_genlisp.dir/rule
+
+# Convenience name for target.
+yolo_new_genlisp: yolo_new/CMakeFiles/yolo_new_genlisp.dir/rule
+
+.PHONY : yolo_new_genlisp
+
+# clean rule for target.
+yolo_new/CMakeFiles/yolo_new_genlisp.dir/clean:
+	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_genlisp.dir/build.make yolo_new/CMakeFiles/yolo_new_genlisp.dir/clean
+.PHONY : yolo_new/CMakeFiles/yolo_new_genlisp.dir/clean
+
+#=============================================================================
+# Target rules for target yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir
+
+# All Build rule for target.
+yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all: arm_demo/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all: arm_demo/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target.dir/all
+yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_color_ik_result_new.dir/all
+yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_init_position.dir/all
+yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Flag.dir/all
+yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/all
+yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/all
+yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all: yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target_position.dir/all
+	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/depend
+	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=77,78,79,80 "Built target yolo_new_generate_messages_lisp"
+.PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
+.PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+yolo_new_generate_messages_lisp: yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/rule
+
+.PHONY : yolo_new_generate_messages_lisp
+
+# clean rule for target.
+yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/clean:
+	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/clean
+.PHONY : yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/clean
+
+#=============================================================================
 # Target rules for target yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.
@@ -5310,12 +5277,12 @@ yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_cpp.dir/all: yolov5
 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_cpp.dir/all: yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBoxes.dir/all
 	$(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_cpp.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_cpp.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=92,93 "Built target yolov5_ros_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=92 "Built target yolov5_ros_msgs_generate_messages_cpp"
 .PHONY : yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
 .PHONY : yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_cpp.dir/rule
@@ -5485,7 +5452,7 @@ yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_gencpp.dir/all: yolov5_ros_msgs/CMake
 
 # Build rule for subdir invocation for target.
 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
 .PHONY : yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_gencpp.dir/rule
@@ -5509,12 +5476,12 @@ yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_eus.dir/all: yolov5
 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_eus.dir/all: yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBoxes.dir/all
 	$(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_eus.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_eus.dir/build.make yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=94,95 "Built target yolov5_ros_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=93,94,95 "Built target yolov5_ros_msgs_generate_messages_eus"
 .PHONY : yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
 .PHONY : yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_eus.dir/rule
@@ -5541,7 +5508,7 @@ yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_geneus.dir/all: yolov5_ros_msgs/CMake
 
 # Build rule for subdir invocation for target.
 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/moyu/Refuse-Classification-Machine/build/CMakeFiles 0
 .PHONY : yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_geneus.dir/rule

@@ -2209,32 +2209,6 @@ yolo_new_generate_messages_nodejs/fast:
 .PHONY : yolo_new_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named yolo_new_genlisp
-
-# Build rule for target.
-yolo_new_genlisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 yolo_new_genlisp
-.PHONY : yolo_new_genlisp
-
-# fast build rule for target.
-yolo_new_genlisp/fast:
-	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_genlisp.dir/build.make yolo_new/CMakeFiles/yolo_new_genlisp.dir/build
-.PHONY : yolo_new_genlisp/fast
-
-#=============================================================================
-# Target rules for targets named yolo_new_generate_messages_lisp
-
-# Build rule for target.
-yolo_new_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 yolo_new_generate_messages_lisp
-.PHONY : yolo_new_generate_messages_lisp
-
-# fast build rule for target.
-yolo_new_generate_messages_lisp/fast:
-	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/build
-.PHONY : yolo_new_generate_messages_lisp/fast
-
-#=============================================================================
 # Target rules for targets named yolo_new_generate_messages
 
 # Build rule for target.
@@ -2246,32 +2220,6 @@ yolo_new_generate_messages: cmake_check_build_system
 yolo_new_generate_messages/fast:
 	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages.dir/build
 .PHONY : yolo_new_generate_messages/fast
-
-#=============================================================================
-# Target rules for targets named _yolo_new_generate_messages_check_deps_position_color
-
-# Build rule for target.
-_yolo_new_generate_messages_check_deps_position_color: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _yolo_new_generate_messages_check_deps_position_color
-.PHONY : _yolo_new_generate_messages_check_deps_position_color
-
-# fast build rule for target.
-_yolo_new_generate_messages_check_deps_position_color/fast:
-	$(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/build
-.PHONY : _yolo_new_generate_messages_check_deps_position_color/fast
-
-#=============================================================================
-# Target rules for targets named _yolo_new_generate_messages_check_deps_BoundingBox
-
-# Build rule for target.
-_yolo_new_generate_messages_check_deps_BoundingBox: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _yolo_new_generate_messages_check_deps_BoundingBox
-.PHONY : _yolo_new_generate_messages_check_deps_BoundingBox
-
-# fast build rule for target.
-_yolo_new_generate_messages_check_deps_BoundingBox/fast:
-	$(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox.dir/build
-.PHONY : _yolo_new_generate_messages_check_deps_BoundingBox/fast
 
 #=============================================================================
 # Target rules for targets named yolo_new_generate_messages_cpp
@@ -2352,32 +2300,6 @@ _yolo_new_generate_messages_check_deps_arm_init_position/fast:
 .PHONY : _yolo_new_generate_messages_check_deps_arm_init_position/fast
 
 #=============================================================================
-# Target rules for targets named _yolo_new_generate_messages_check_deps_BoundingBoxes
-
-# Build rule for target.
-_yolo_new_generate_messages_check_deps_BoundingBoxes: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _yolo_new_generate_messages_check_deps_BoundingBoxes
-.PHONY : _yolo_new_generate_messages_check_deps_BoundingBoxes
-
-# fast build rule for target.
-_yolo_new_generate_messages_check_deps_BoundingBoxes/fast:
-	$(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes.dir/build
-.PHONY : _yolo_new_generate_messages_check_deps_BoundingBoxes/fast
-
-#=============================================================================
-# Target rules for targets named yolo_new_generate_messages_eus
-
-# Build rule for target.
-yolo_new_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 yolo_new_generate_messages_eus
-.PHONY : yolo_new_generate_messages_eus
-
-# fast build rule for target.
-yolo_new_generate_messages_eus/fast:
-	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/build
-.PHONY : yolo_new_generate_messages_eus/fast
-
-#=============================================================================
 # Target rules for targets named _yolo_new_generate_messages_check_deps_Flag
 
 # Build rule for target.
@@ -2389,6 +2311,32 @@ _yolo_new_generate_messages_check_deps_Flag: cmake_check_build_system
 _yolo_new_generate_messages_check_deps_Flag/fast:
 	$(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Flag.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Flag.dir/build
 .PHONY : _yolo_new_generate_messages_check_deps_Flag/fast
+
+#=============================================================================
+# Target rules for targets named _yolo_new_generate_messages_check_deps_position_color
+
+# Build rule for target.
+_yolo_new_generate_messages_check_deps_position_color: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _yolo_new_generate_messages_check_deps_position_color
+.PHONY : _yolo_new_generate_messages_check_deps_position_color
+
+# fast build rule for target.
+_yolo_new_generate_messages_check_deps_position_color/fast:
+	$(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_position_color.dir/build
+.PHONY : _yolo_new_generate_messages_check_deps_position_color/fast
+
+#=============================================================================
+# Target rules for targets named _yolo_new_generate_messages_check_deps_Serial_RT
+
+# Build rule for target.
+_yolo_new_generate_messages_check_deps_Serial_RT: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _yolo_new_generate_messages_check_deps_Serial_RT
+.PHONY : _yolo_new_generate_messages_check_deps_Serial_RT
+
+# fast build rule for target.
+_yolo_new_generate_messages_check_deps_Serial_RT/fast:
+	$(MAKE) -f yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/build.make yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT.dir/build
+.PHONY : _yolo_new_generate_messages_check_deps_Serial_RT/fast
 
 #=============================================================================
 # Target rules for targets named _yolo_new_generate_messages_check_deps_arm_target_position
@@ -2415,6 +2363,45 @@ yolo_new_gencpp: cmake_check_build_system
 yolo_new_gencpp/fast:
 	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_gencpp.dir/build.make yolo_new/CMakeFiles/yolo_new_gencpp.dir/build
 .PHONY : yolo_new_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named yolo_new_generate_messages_eus
+
+# Build rule for target.
+yolo_new_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 yolo_new_generate_messages_eus
+.PHONY : yolo_new_generate_messages_eus
+
+# fast build rule for target.
+yolo_new_generate_messages_eus/fast:
+	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_eus.dir/build
+.PHONY : yolo_new_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named yolo_new_genlisp
+
+# Build rule for target.
+yolo_new_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 yolo_new_genlisp
+.PHONY : yolo_new_genlisp
+
+# fast build rule for target.
+yolo_new_genlisp/fast:
+	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_genlisp.dir/build.make yolo_new/CMakeFiles/yolo_new_genlisp.dir/build
+.PHONY : yolo_new_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named yolo_new_generate_messages_lisp
+
+# Build rule for target.
+yolo_new_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 yolo_new_generate_messages_lisp
+.PHONY : yolo_new_generate_messages_lisp
+
+# fast build rule for target.
+yolo_new_generate_messages_lisp/fast:
+	$(MAKE) -f yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/build.make yolo_new/CMakeFiles/yolo_new_generate_messages_lisp.dir/build
+.PHONY : yolo_new_generate_messages_lisp/fast
 
 #=============================================================================
 # Target rules for targets named yolov5_ros_msgs_generate_messages_cpp
@@ -2755,22 +2742,21 @@ help:
 	@echo "... yolo_new_generate_messages_py"
 	@echo "... yolo_new_gennodejs"
 	@echo "... yolo_new_generate_messages_nodejs"
-	@echo "... yolo_new_genlisp"
-	@echo "... yolo_new_generate_messages_lisp"
 	@echo "... yolo_new_generate_messages"
-	@echo "... _yolo_new_generate_messages_check_deps_position_color"
-	@echo "... _yolo_new_generate_messages_check_deps_BoundingBox"
 	@echo "... yolo_new_generate_messages_cpp"
 	@echo "... _yolo_new_generate_messages_check_deps_arm_target"
 	@echo "... _yolo_new_generate_messages_check_deps_color_ik_result_new"
 	@echo "... yolo_new_geneus"
 	@echo "... yolo_new_genpy"
 	@echo "... _yolo_new_generate_messages_check_deps_arm_init_position"
-	@echo "... _yolo_new_generate_messages_check_deps_BoundingBoxes"
-	@echo "... yolo_new_generate_messages_eus"
 	@echo "... _yolo_new_generate_messages_check_deps_Flag"
+	@echo "... _yolo_new_generate_messages_check_deps_position_color"
+	@echo "... _yolo_new_generate_messages_check_deps_Serial_RT"
 	@echo "... _yolo_new_generate_messages_check_deps_arm_target_position"
 	@echo "... yolo_new_gencpp"
+	@echo "... yolo_new_generate_messages_eus"
+	@echo "... yolo_new_genlisp"
+	@echo "... yolo_new_generate_messages_lisp"
 	@echo "... yolov5_ros_msgs_generate_messages_cpp"
 	@echo "... _yolov5_ros_msgs_generate_messages_check_deps_BoundingBox"
 	@echo "... _yolov5_ros_msgs_generate_messages_check_deps_BoundingBoxes"

@@ -1,12 +1,10 @@
 (cl:defpackage yolo_new-msg
   (:use )
   (:export
-   "<BOUNDINGBOX>"
-   "BOUNDINGBOX"
-   "<BOUNDINGBOXES>"
-   "BOUNDINGBOXES"
    "<FLAG>"
    "FLAG"
+   "<SERIAL_RT>"
+   "SERIAL_RT"
    "<ARM_INIT_POSITION>"
    "ARM_INIT_POSITION"
    "<ARM_TARGET>"

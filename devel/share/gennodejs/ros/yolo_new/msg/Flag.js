@@ -19,6 +19,7 @@ class Flag {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.isMoving = null;
+      this.isPuting = null;
     }
     else {
       if (initObj.hasOwnProperty('isMoving')) {
@@ -27,6 +28,12 @@ class Flag {
       else {
         this.isMoving = 0;
       }
+      if (initObj.hasOwnProperty('isPuting')) {
+        this.isPuting = initObj.isPuting
+      }
+      else {
+        this.isPuting = 0;
+      }
     }
   }
 
@@ -34,6 +41,8 @@ class Flag {
     // Serializes a message object of type Flag
     // Serialize message field [isMoving]
     bufferOffset = _serializer.int32(obj.isMoving, buffer, bufferOffset);
+    // Serialize message field [isPuting]
+    bufferOffset = _serializer.int32(obj.isPuting, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -43,11 +52,13 @@ class Flag {
     let data = new Flag(null);
     // Deserialize message field [isMoving]
     data.isMoving = _deserializer.int32(buffer, bufferOffset);
+    // Deserialize message field [isPuting]
+    data.isPuting = _deserializer.int32(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 4;
+    return 8;
   }
 
   static datatype() {
@@ -57,13 +68,14 @@ class Flag {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '50d413790f6da206e162d072e2ef3ab7';
+    return '3863caec8075fcfd7c44f1691519daf7';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
     int32 isMoving
+    int32 isPuting
     
     `;
   }
@@ -79,6 +91,13 @@ class Flag {
     }
     else {
       resolved.isMoving = 0
+    }
+
+    if (msg.isPuting !== undefined) {
+      resolved.isPuting = msg.isPuting;
+    }
+    else {
+      resolved.isPuting = 0
     }
 
     return resolved;

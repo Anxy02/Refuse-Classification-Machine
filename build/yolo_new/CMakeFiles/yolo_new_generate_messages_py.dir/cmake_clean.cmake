@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_BoundingBox.py"
-  "/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_BoundingBoxes.py"
   "/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_Flag.py"
+  "/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_Serial_RT.py"
   "/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/__init__.py"
   "/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_arm_init_position.py"
   "/home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_arm_target.py"

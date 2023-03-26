@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "yolo_new: 8 messages, 0 services")
+message(STATUS "yolo_new: 7 messages, 0 services")
 
 set(MSG_I_FLAGS "-Iyolo_new:/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg")
 
@@ -42,19 +42,14 @@ add_custom_target(_yolo_new_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "yolo_new" "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_init_position.msg" ""
 )
 
-get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg" NAME_WE)
-add_custom_target(_yolo_new_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "yolo_new" "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg" ""
-)
-
-get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg" NAME_WE)
-add_custom_target(_yolo_new_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "yolo_new" "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg" "yolo_new/BoundingBox:std_msgs/Header"
-)
-
 get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg" NAME_WE)
 add_custom_target(_yolo_new_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "yolo_new" "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg" ""
+)
+
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Serial_RT.msg" NAME_WE)
+add_custom_target(_yolo_new_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "yolo_new" "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Serial_RT.msg" ""
 )
 
 #
@@ -94,19 +89,13 @@ _generate_msg_cpp(yolo_new
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/yolo_new
 )
 _generate_msg_cpp(yolo_new
-  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/yolo_new
 )
 _generate_msg_cpp(yolo_new
-  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg"
-  "${MSG_I_FLAGS}"
-  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/yolo_new
-)
-_generate_msg_cpp(yolo_new
-  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Serial_RT.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/yolo_new
@@ -136,11 +125,9 @@ get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/y
 add_dependencies(yolo_new_generate_messages_cpp _yolo_new_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_init_position.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_cpp _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg" NAME_WE)
-add_dependencies(yolo_new_generate_messages_cpp _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg" NAME_WE)
-add_dependencies(yolo_new_generate_messages_cpp _yolo_new_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg" NAME_WE)
+add_dependencies(yolo_new_generate_messages_cpp _yolo_new_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Serial_RT.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_cpp _yolo_new_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -183,19 +170,13 @@ _generate_msg_eus(yolo_new
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/yolo_new
 )
 _generate_msg_eus(yolo_new
-  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/yolo_new
 )
 _generate_msg_eus(yolo_new
-  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg"
-  "${MSG_I_FLAGS}"
-  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/yolo_new
-)
-_generate_msg_eus(yolo_new
-  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Serial_RT.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/yolo_new
@@ -225,11 +206,9 @@ get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/y
 add_dependencies(yolo_new_generate_messages_eus _yolo_new_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_init_position.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_eus _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg" NAME_WE)
-add_dependencies(yolo_new_generate_messages_eus _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg" NAME_WE)
-add_dependencies(yolo_new_generate_messages_eus _yolo_new_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg" NAME_WE)
+add_dependencies(yolo_new_generate_messages_eus _yolo_new_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Serial_RT.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_eus _yolo_new_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -272,19 +251,13 @@ _generate_msg_lisp(yolo_new
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/yolo_new
 )
 _generate_msg_lisp(yolo_new
-  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/yolo_new
 )
 _generate_msg_lisp(yolo_new
-  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg"
-  "${MSG_I_FLAGS}"
-  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/yolo_new
-)
-_generate_msg_lisp(yolo_new
-  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Serial_RT.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/yolo_new
@@ -314,11 +287,9 @@ get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/y
 add_dependencies(yolo_new_generate_messages_lisp _yolo_new_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_init_position.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_lisp _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg" NAME_WE)
-add_dependencies(yolo_new_generate_messages_lisp _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg" NAME_WE)
-add_dependencies(yolo_new_generate_messages_lisp _yolo_new_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg" NAME_WE)
+add_dependencies(yolo_new_generate_messages_lisp _yolo_new_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Serial_RT.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_lisp _yolo_new_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -361,19 +332,13 @@ _generate_msg_nodejs(yolo_new
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/yolo_new
 )
 _generate_msg_nodejs(yolo_new
-  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/yolo_new
 )
 _generate_msg_nodejs(yolo_new
-  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg"
-  "${MSG_I_FLAGS}"
-  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/yolo_new
-)
-_generate_msg_nodejs(yolo_new
-  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Serial_RT.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/yolo_new
@@ -403,11 +368,9 @@ get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/y
 add_dependencies(yolo_new_generate_messages_nodejs _yolo_new_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_init_position.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_nodejs _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg" NAME_WE)
-add_dependencies(yolo_new_generate_messages_nodejs _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg" NAME_WE)
-add_dependencies(yolo_new_generate_messages_nodejs _yolo_new_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg" NAME_WE)
+add_dependencies(yolo_new_generate_messages_nodejs _yolo_new_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Serial_RT.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_nodejs _yolo_new_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -450,19 +413,13 @@ _generate_msg_py(yolo_new
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/yolo_new
 )
 _generate_msg_py(yolo_new
-  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/yolo_new
 )
 _generate_msg_py(yolo_new
-  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg"
-  "${MSG_I_FLAGS}"
-  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/yolo_new
-)
-_generate_msg_py(yolo_new
-  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg"
+  "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Serial_RT.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/yolo_new
@@ -492,11 +449,9 @@ get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/y
 add_dependencies(yolo_new_generate_messages_py _yolo_new_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_init_position.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_py _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg" NAME_WE)
-add_dependencies(yolo_new_generate_messages_py _yolo_new_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg" NAME_WE)
-add_dependencies(yolo_new_generate_messages_py _yolo_new_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg" NAME_WE)
+add_dependencies(yolo_new_generate_messages_py _yolo_new_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Serial_RT.msg" NAME_WE)
 add_dependencies(yolo_new_generate_messages_py _yolo_new_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

@@ -17,6 +17,7 @@
 #include <moveit/move_group_interface/move_group_interface.h>
 #include "yolo_execute.h"
 #include "yolo_new/Flag.h"
+#include "yolo_new/Serial_RT.h"
 
 #include<locale>
 
@@ -108,18 +109,24 @@ int main(int argc, char **argv)
     hand.setNamedTarget("hand_open"); hand.move(); sleep(1);  //机械爪张开
     ros::Subscriber color_ik_result_sub=n.subscribe("color_ik_result_new",10,color_ik_result_callback); //订阅色块目标位置对应的关节角度信息
     ros::Publisher Flag_pub = n.advertise<yolo_new::Flag>("Flag_pub",1000);
+    ros::Publisher Com_pub = n.advertise<yolo_new::Serial_RT>("Com_pub",1000);
     yolo_new::Flag pub_flag;
-    pub_flag.isMoving = 0;
-    Flag_pub.publish(pub_flag);
-    
-    
+    yolo_new::Serial_RT pub_com;
 
+    pub_flag.isMoving = 0;//初始化
+    pub_com.count = 0;
+    pub_com.sendClass = "none";
+    Flag_pub.publish(pub_flag);
+    Com_pub.publish(pub_com);
+    
+    
     ROS_INFO("yolo_execute_node init successful");
     ROS_INFO("finding and waitting....");
 
     while(ros::ok())
    {
       multi_grasp_sequence();//多目标抓取顺序判断函数
+      pub_com.count = count;//传入识别到的垃圾数量
 
       if(isBusy==1){     //发布moving FLAG消息-->由py接收
         pub_flag.isMoving = 1;
@@ -142,14 +149,9 @@ int main(int argc, char **argv)
         joint_group_positions[3] =  -1.57+joint_target2+auxiliary_angle;
         joint_group_positions[4] =  joint_target3;
         arm.setJointValueTarget(joint_group_positions); //输入目标关节数组
-       // while(!arm_success)
-        //{
-          arm_success = ((arm.plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS)); //规划路径
 
-          //ROS_INFO_NAMED("fk_demo_plan",success ? "plan_success" : "plan_False");
-          arm.execute(my_plan),sleep(1); //如果规划成功则执行
-        //}
-        //arm_success=false;
+        arm_success = ((arm.plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS)); //规划路径
+        arm.execute(my_plan),sleep(1); //如果规划成功则执行
                 
         hand.setNamedTarget("hand_close");  //机械爪夹取
         while( !hand_close_success ) //判断是否规划成功，如果不成功则继续规划
@@ -162,7 +164,10 @@ int main(int argc, char **argv)
         arm.setNamedTarget("arm_look");   arm.move();  sleep(1);    //机械臂运动到观测色块的位置
         arm.setNamedTarget("color_put_interval");  arm.move();  sleep(1); //机械臂臂身运动到放置色块的预位置后，再放置色块
         arm_put(target_sort); //根据颜色将色块放置到对应位置 
-        // pub_flag.isMoving = 0;
+
+        pub_com.sendClass = target_sort;//发布垃圾类别信息至通信py
+        Com_pub.publish(pub_com);
+        pub_com.sendClass = "none";
         
       }
     ros::spinOnce();

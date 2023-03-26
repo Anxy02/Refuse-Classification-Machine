@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/BoundingBox.lisp"
-  "/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/BoundingBoxes.lisp"
   "/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/Flag.lisp"
+  "/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/Serial_RT.lisp"
   "/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/arm_init_position.lisp"
   "/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/arm_target.lisp"
   "/home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/arm_target_position.lisp"

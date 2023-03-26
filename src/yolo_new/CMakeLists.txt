@@ -64,9 +64,8 @@ find_package(catkin REQUIRED COMPONENTS
    color_ik_result_new.msg
    arm_target_position.msg
    arm_init_position.msg
-   BoundingBox.msg
-   BoundingBoxes.msg
    Flag.msg
+   Serial_RT.msg
 )
 
 ## Generate services in the 'srv' folder

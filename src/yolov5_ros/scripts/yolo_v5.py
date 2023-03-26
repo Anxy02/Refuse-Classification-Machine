@@ -117,7 +117,7 @@ class Yolo_Dect:
             boundingBox.num = np.int16(count)
             boundingBox.Class = box[-1]
             boundingBox.CNum = self.switch_class(boundingBox.Class)   #传入垃圾类别并进行判断分类
-            boundingBox.
+            # boundingBox.
 
             # # 深度计算
             # distance_list = []
@@ -165,7 +165,6 @@ class Yolo_Dect:
         cv2.imshow('YOLOv5', img)
 
     def switch_class(self,bclass):# 根据yolo返回类别进行类别分类!!!!!注意电池有个空格很恶心
-        print(bclass,1)
         if bclass == "recycle_cans1" or bclass == "recycle_cans2" or bclass == "recycle_bottle" or bclass == "recycle_paper":
             return 1
         elif bclass == "harm_battery " :

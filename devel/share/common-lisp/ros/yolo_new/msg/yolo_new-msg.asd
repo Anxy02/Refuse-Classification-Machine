@@ -2,15 +2,12 @@
 (cl:in-package :asdf)
 
 (defsystem "yolo_new-msg"
-  :depends-on (:roslisp-msg-protocol :roslisp-utils :std_msgs-msg
-)
+  :depends-on (:roslisp-msg-protocol :roslisp-utils )
   :components ((:file "_package")
-    (:file "BoundingBox" :depends-on ("_package_BoundingBox"))
-    (:file "_package_BoundingBox" :depends-on ("_package"))
-    (:file "BoundingBoxes" :depends-on ("_package_BoundingBoxes"))
-    (:file "_package_BoundingBoxes" :depends-on ("_package"))
     (:file "Flag" :depends-on ("_package_Flag"))
     (:file "_package_Flag" :depends-on ("_package"))
+    (:file "Serial_RT" :depends-on ("_package_Serial_RT"))
+    (:file "_package_Serial_RT" :depends-on ("_package"))
     (:file "arm_init_position" :depends-on ("_package_arm_init_position"))
     (:file "_package_arm_init_position" :depends-on ("_package"))
     (:file "arm_target" :depends-on ("_package_arm_target"))

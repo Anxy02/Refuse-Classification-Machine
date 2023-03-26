@@ -58,9 +58,8 @@ yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs: /home/moyu/Refuse-Classif
 yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/color_ik_result_new.js
 yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/arm_target_position.js
 yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/arm_init_position.js
-yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/BoundingBox.js
-yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/BoundingBoxes.js
 yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/Flag.js
+yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/Serial_RT.js
 
 
 /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/position_color.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
@@ -88,22 +87,15 @@ yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs: /home/moyu/Refuse-Classif
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from yolo_new/arm_init_position.msg"
 	cd /home/moyu/Refuse-Classification-Machine/build/yolo_new && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/arm_init_position.msg -Iyolo_new:/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg
 
-/home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/BoundingBox.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/BoundingBox.js: /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Javascript code from yolo_new/BoundingBox.msg"
-	cd /home/moyu/Refuse-Classification-Machine/build/yolo_new && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg -Iyolo_new:/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg
-
-/home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/BoundingBoxes.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/BoundingBoxes.js: /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg
-/home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/BoundingBoxes.js: /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBox.msg
-/home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/BoundingBoxes.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Javascript code from yolo_new/BoundingBoxes.msg"
-	cd /home/moyu/Refuse-Classification-Machine/build/yolo_new && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/BoundingBoxes.msg -Iyolo_new:/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg
-
 /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/Flag.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/Flag.js: /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Javascript code from yolo_new/Flag.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Javascript code from yolo_new/Flag.msg"
 	cd /home/moyu/Refuse-Classification-Machine/build/yolo_new && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Flag.msg -Iyolo_new:/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg
+
+/home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/Serial_RT.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/Serial_RT.js: /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Serial_RT.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/moyu/Refuse-Classification-Machine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Javascript code from yolo_new/Serial_RT.msg"
+	cd /home/moyu/Refuse-Classification-Machine/build/yolo_new && ../catkin_generated/env_cached.sh /home/moyu/anaconda3/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/moyu/Refuse-Classification-Machine/src/yolo_new/msg/Serial_RT.msg -Iyolo_new:/home/moyu/Refuse-Classification-Machine/src/yolo_new/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p yolo_new -o /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg
 
 yolo_new_generate_messages_nodejs: yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs
 yolo_new_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/position_color.js
@@ -111,9 +103,8 @@ yolo_new_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/deve
 yolo_new_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/color_ik_result_new.js
 yolo_new_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/arm_target_position.js
 yolo_new_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/arm_init_position.js
-yolo_new_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/BoundingBox.js
-yolo_new_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/BoundingBoxes.js
 yolo_new_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/Flag.js
+yolo_new_generate_messages_nodejs: /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/Serial_RT.js
 yolo_new_generate_messages_nodejs: yolo_new/CMakeFiles/yolo_new_generate_messages_nodejs.dir/build.make
 
 .PHONY : yolo_new_generate_messages_nodejs

@@ -10,6 +10,7 @@ f7d3c0978413bba930c9f7f6d49105ca /home/moyu/Refuse-Classification-Machine/devel/
 84e54538d350f807d3d2113783fd760a /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/BoundingBox.h
 4078f19f2b127f207115bd49dd40440b /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/BoundingBoxes.h
 1de933fac724905405b99aabc7ae1616 /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/Flag.h
+5f2f10055a7ed95a1d0a42050e59c3cc /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/Serial_RT.h
 703f65715ae5c5fa8bec1265e94ecc82 /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/arm_init_position.h
 2cee6be2164160eed470ed47fe6c3a65 /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/arm_target.h
 48f89ee709048cbd5051d0b1911d0388 /home/moyu/Refuse-Classification-Machine/devel/include/yolo_new/arm_target_position.h
@@ -30,6 +31,7 @@ aa77a1255141878b7239df215e326f17 /home/moyu/Refuse-Classification-Machine/devel/
 41e9fc49625bcfe1d735d68238a2dc90 /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_BoundingBox.py
 56697be23e808a1d1f1da2e3f16f2fc8 /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_BoundingBoxes.py
 c6d66425113296df46ffcfcad174b5ab /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_Flag.py
+5c6b32a90d4a256d651fe15b62d9b29e /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_Serial_RT.py
 c5b05e8d94536996a58c0213f0a40fc5 /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/__init__.py
 cdcc2bc05e3c254a24b21be65cfb7a7b /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_arm_init_position.py
 452707d6fa153a6633c957079901e4b5 /home/moyu/Refuse-Classification-Machine/devel/lib/python3/dist-packages/yolo_new/msg/_arm_target.py
@@ -50,6 +52,7 @@ a52e8eec0b06329cc6d6217a53abcdb6 /home/moyu/Refuse-Classification-Machine/devel/
 0609466d64f6b4e9ed856eff3ef2f431 /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/BoundingBox.lisp
 3e49a6fd31b336be1ec853e8eca04420 /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/BoundingBoxes.lisp
 830e7166fab2db151f32d81af0436653 /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/Flag.lisp
+dc6dc815ac99e3cecb593022dfe374ac /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/Serial_RT.lisp
 0cf95301f690716e749d2837b9c96562 /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/arm_init_position.lisp
 548251cb6701c8e8fb79903468b0cdab /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/arm_target.lisp
 c65b78be92eddd300e52a9b5affee000 /home/moyu/Refuse-Classification-Machine/devel/share/common-lisp/ros/yolo_new/msg/arm_target_position.lisp
@@ -68,6 +71,7 @@ b1252e4b131259f36d9ecfb685111391 /home/moyu/Refuse-Classification-Machine/devel/
 040ab4b9e47778930c7e4894cb120739 /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/BoundingBox.js
 741169f85f173cc4b8ca98a632a41d1c /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/BoundingBoxes.js
 f8e7aa94f6dd3a6a8a1e94c64afdcd07 /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/Flag.js
+6ae91f5ed0cffc599a29dfbdcb327684 /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/Serial_RT.js
 f2d4648c9515a68a10a2ebd2b1ccfc71 /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/arm_init_position.js
 5e743aaea96f3739e7fba7c325e360d4 /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/arm_target.js
 c57c595ae07862c12718e23a859b7252 /home/moyu/Refuse-Classification-Machine/devel/share/gennodejs/ros/yolo_new/msg/arm_target_position.js
@@ -89,6 +93,7 @@ b27b8de99b8600f62378bfc9b5235175 /home/moyu/Refuse-Classification-Machine/devel/
 22cb15f824e5f0a347d6dd877c6169e4 /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/msg/BoundingBox.l
 a4a7c00662f8697476e0bfcd706f6dea /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/msg/BoundingBoxes.l
 55d7a6948cb642ac99efa9c5ca292155 /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/msg/Flag.l
+6f638180ea0041bc79343dc38beb35a4 /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/msg/Serial_RT.l
 79fb765ea725a885f8d6341b782e1b95 /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/msg/arm_init_position.l
 e799d739a9822b962d394f29cf66bf45 /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/msg/arm_target.l
 ede5a4eb98aa772df8bcf3c3aade19a9 /home/moyu/Refuse-Classification-Machine/devel/share/roseus/ros/yolo_new/msg/arm_target_position.l
@@ -116,9 +121,8 @@ c522449e4748709f9a2aa4fafb172b0a wheeltec_tracker_pkg/CMakeFiles/_wheeltec_track
 029305486f10337dd5d4ec23ea05c857 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_lisp
 029305486f10337dd5d4ec23ea05c857 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_nodejs
 029305486f10337dd5d4ec23ea05c857 wheeltec_tracker_pkg/CMakeFiles/wheeltec_tracker_pkg_generate_messages_py
-edbc51e0a838dedcf1c81048cfb3ebfe yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBox
-801aa908939e712cff8bbedc4a492b52 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_BoundingBoxes
 f5752e6cb4a77d7cea028f2bdfbe67c0 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Flag
+34752aa576131817d463171fb18b2b77 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_Serial_RT
 3f4f557e40ab9e8d732660e5fdacc09d yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_init_position
 38c7b0a83bdf7635161102f415c76240 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target
 1c2e1e1e1a803bbc924c6273b80b84b4 yolo_new/CMakeFiles/_yolo_new_generate_messages_check_deps_arm_target_position

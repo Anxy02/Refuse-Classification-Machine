@@ -8,13 +8,14 @@ import struct
 
 
 class Flag(genpy.Message):
-  _md5sum = "50d413790f6da206e162d072e2ef3ab7"
+  _md5sum = "3863caec8075fcfd7c44f1691519daf7"
   _type = "yolo_new/Flag"
   _has_header = False  # flag to mark the presence of a Header object
   _full_text = """int32 isMoving
+int32 isPuting
 """
-  __slots__ = ['isMoving']
-  _slot_types = ['int32']
+  __slots__ = ['isMoving','isPuting']
+  _slot_types = ['int32','int32']
 
   def __init__(self, *args, **kwds):
     """
@@ -24,7 +25,7 @@ class Flag(genpy.Message):
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       isMoving
+       isMoving,isPuting
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -35,8 +36,11 @@ class Flag(genpy.Message):
       # message fields cannot be None, assign default values for those that are
       if self.isMoving is None:
         self.isMoving = 0
+      if self.isPuting is None:
+        self.isPuting = 0
     else:
       self.isMoving = 0
+      self.isPuting = 0
 
   def _get_types(self):
     """
@@ -50,8 +54,8 @@ class Flag(genpy.Message):
     :param buff: buffer, ``StringIO``
     """
     try:
-      _x = self.isMoving
-      buff.write(_get_struct_i().pack(_x))
+      _x = self
+      buff.write(_get_struct_2i().pack(_x.isMoving, _x.isPuting))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -64,9 +68,10 @@ class Flag(genpy.Message):
       codecs.lookup_error("rosmsg").msg_type = self._type
     try:
       end = 0
+      _x = self
       start = end
-      end += 4
-      (self.isMoving,) = _get_struct_i().unpack(str[start:end])
+      end += 8
+      (_x.isMoving, _x.isPuting,) = _get_struct_2i().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -79,8 +84,8 @@ class Flag(genpy.Message):
     :param numpy: numpy python module
     """
     try:
-      _x = self.isMoving
-      buff.write(_get_struct_i().pack(_x))
+      _x = self
+      buff.write(_get_struct_2i().pack(_x.isMoving, _x.isPuting))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -94,9 +99,10 @@ class Flag(genpy.Message):
       codecs.lookup_error("rosmsg").msg_type = self._type
     try:
       end = 0
+      _x = self
       start = end
-      end += 4
-      (self.isMoving,) = _get_struct_i().unpack(str[start:end])
+      end += 8
+      (_x.isMoving, _x.isPuting,) = _get_struct_2i().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -105,9 +111,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_i = None
-def _get_struct_i():
-    global _struct_i
-    if _struct_i is None:
-        _struct_i = struct.Struct("<i")
-    return _struct_i
+_struct_2i = None
+def _get_struct_2i():
+    global _struct_2i
+    if _struct_2i is None:
+        _struct_2i = struct.Struct("<2i")
+    return _struct_2i

@@ -24,10 +24,12 @@ struct Flag_
   typedef Flag_<ContainerAllocator> Type;
 
   Flag_()
-    : isMoving(0)  {
+    : isMoving(0)
+    , isPuting(0)  {
     }
   Flag_(const ContainerAllocator& _alloc)
-    : isMoving(0)  {
+    : isMoving(0)
+    , isPuting(0)  {
   (void)_alloc;
     }
 
@@ -35,6 +37,9 @@ struct Flag_
 
    typedef int32_t _isMoving_type;
   _isMoving_type isMoving;
+
+   typedef int32_t _isPuting_type;
+  _isPuting_type isPuting;
 
 
 
@@ -65,7 +70,8 @@ return s;
 template<typename ContainerAllocator1, typename ContainerAllocator2>
 bool operator==(const ::yolo_new::Flag_<ContainerAllocator1> & lhs, const ::yolo_new::Flag_<ContainerAllocator2> & rhs)
 {
-  return lhs.isMoving == rhs.isMoving;
+  return lhs.isMoving == rhs.isMoving &&
+    lhs.isPuting == rhs.isPuting;
 }
 
 template<typename ContainerAllocator1, typename ContainerAllocator2>
@@ -122,12 +128,12 @@ struct MD5Sum< ::yolo_new::Flag_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "50d413790f6da206e162d072e2ef3ab7";
+    return "3863caec8075fcfd7c44f1691519daf7";
   }
 
   static const char* value(const ::yolo_new::Flag_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x50d413790f6da206ULL;
-  static const uint64_t static_value2 = 0xe162d072e2ef3ab7ULL;
+  static const uint64_t static_value1 = 0x3863caec8075fcfdULL;
+  static const uint64_t static_value2 = 0x7c44f1691519daf7ULL;
 };
 
 template<class ContainerAllocator>
@@ -147,6 +153,7 @@ struct Definition< ::yolo_new::Flag_<ContainerAllocator> >
   static const char* value()
   {
     return "int32 isMoving\n"
+"int32 isPuting\n"
 ;
   }
 
@@ -166,6 +173,7 @@ namespace serialization
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
       stream.next(m.isMoving);
+      stream.next(m.isPuting);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -186,6 +194,8 @@ struct Printer< ::yolo_new::Flag_<ContainerAllocator> >
   {
     s << indent << "isMoving: ";
     Printer<int32_t>::stream(s, indent + "  ", v.isMoving);
+    s << indent << "isPuting: ";
+    Printer<int32_t>::stream(s, indent + "  ", v.isPuting);
   }
 };
 

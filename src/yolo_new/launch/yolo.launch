@@ -11,8 +11,9 @@
 
   <node name='pick_color' pkg="yolo_new" type="yolo_execute" output="screen">
   </node>
- 
- <node name='yolo_detect' pkg="yolo_new" type="find_refuse.py" output="screen">
+  <node name='communication' pkg="yolo_new" type="serialCom.py" output="screen">
+  </node>
+  <node name='yolo_detect' pkg="yolo_new" type="find_refuse.py" output="screen">
   <param name='x_offset' value='0.01' type='double' />
   <param name='y_offset' value='0.006' type='double' />
   </node>
