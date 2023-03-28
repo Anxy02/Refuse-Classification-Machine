@@ -1,2 +1,5 @@
+build/
+devel/
+src/.vscode/
 src/yolo_new/src/.DS_Store
 .DS_Store

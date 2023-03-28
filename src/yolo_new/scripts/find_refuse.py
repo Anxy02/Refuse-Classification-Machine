@@ -15,7 +15,7 @@ from yolov5_ros_msgs.msg import BoundingBox,BoundingBoxes
 from yolo_new.msg import Flag
 
 last_erro=0
-IsMoving = 0
+IsMoving = 1
 IsPuting = 1    #后续改为0，依靠超声波判断
 Sort_show = []  #图像输出的信息
 tmp_ok = "OK!"
@@ -41,13 +41,14 @@ class Find_Color:
         self.image_sub = rospy.Subscriber('/yolov5/detection_image', Image, self.image_callback,queue_size=1, buff_size=52428800)
         self.box_sub = rospy.Subscriber("/yolov5/BoundingBoxes", BoundingBoxes, self.box_callback)#订阅识别类别话题
         self.flag_sub = rospy.Subscriber("/Flag_pub", Flag, self.flag_callback)#订阅移动状态话题
+        self.com_sub = rospy.Subscriber("/Com_pub", Serial_RT, self.com_callback)#订阅分类通讯话题
  
         self.positionPublisher = rospy.Publisher('/color_position', PositionMsg, queue_size=10) #发布色块的位置（原始数据）
         self.arm_ik_angle_Publisher = rospy.Publisher('/color_ik_result_new', color_ik_result_Msg, queue_size=10)#发布根据色块位置求解的机械臂关节目标弧度话题
         self.visual_flagPublisher = rospy.Publisher('/visual_func_flag', Int8, queue_size =1)
         self.twist = Twist()
         # self.m=1            #更换检测颜色的标志位  #m=1绿色，m=2蓝色，m=3黄色
-        self.count=0       #每个色块检测次数的计数值
+        # self.count=0       #每个色块检测次数的计数值
         self.link_a=rospy.get_param('link_a')   #机械参数
         self.link_b=rospy.get_param('link_b')    #机械参数
         self.link_c=rospy.get_param('link_c')    #机械参数
@@ -74,32 +75,42 @@ class Find_Color:
         rospy.loginfo('a=%d',visual_func_flag.data)
         print("1111111111111111111111111111111111111111111111111111111111111")
 
+    def com_callback(self,msg):
+        global show_i
+        global Sort_show
+        # 添加输出数组
+        tmp_str = f"{show_i} {msg.sendClass} {msg.count} {tmp_ok}"
+        show_i += 1
+        Sort_show.append(tmp_str)
+
+
     def flag_callback(self,msg):
         global IsMoving
         IsMoving = msg.isMoving
         # IsPuting = msg.isPuting
-        # print("flag_msg is",IsMoving)
+        print("flag_msg is",IsMoving)
 
 
     def box_callback(self,msg):
         global IsMoving
         global show_i
-        self.boundingBoxes = BoundingBoxes()
         count=0
                         
         for i in msg.bounding_boxes:
             count+=1
 
         if IsMoving == 0 :
-            if count == 1:
-                # rospy.loginfo('msg.boundingBoxes.class :%s',msg.bounding_boxes[0].Class)
+            if count == 1:  ###似乎没进这个判断！！！！！！！！！
+                rospy.loginfo('单目标：：：%s',msg.bounding_boxes[0].Class)
                 tmp_class = msg.bounding_boxes[0].Class
                 # self.Class = self.switch_class(tmp_class)   #传入垃圾类别并进行判断分类
                 self.Class = msg.bounding_boxes[0].CNum #垃圾类别号码
-                # 添加输出数组
-                tmp_str = f"{show_i} {tmp_class} {count} {tmp_ok}"
-                show_i += 1
-                Sort_show.append(tmp_str)
+
+                # # 添加输出数组
+                # tmp_str = f"{show_i} {tmp_class} {count} {tmp_ok}"
+                # show_i += 1
+                # Sort_show.append(tmp_str)
+
                 # self.single_send(self.Class)  #单目标直接用刷子发送
                 # IsPuting = 0  后续放出来
 
@@ -112,15 +123,11 @@ class Find_Color:
                     Ymin=tmp_box.ymin
                     Ymax=tmp_box.ymax
 
-                    tmp_class=box.Class
+                    tmp_class=tmp_box.Class
                     # rospy.loginfo("class is %s ,X is %f, Y is %f", self.Class,Xmid,Ymid)
                     # self.Class = self.switch_class(tmp_box.Class)   #传入垃圾类别并进行判断分类
                     self.Class = tmp_box.CNum   #垃圾类别号码
 
-                    # 添加输出数组
-                    tmp_str = f"{show_i} {tmp_class} {count} {tmp_ok}"
-                    show_i += 1
-                    Sort_show.append(tmp_str)
 
                     angleX = self.calculateAngleX(Xmid) #做数学转换获取色块在画幅中的坐标
                     angleY = self.calculateAngleY(Ymid)
@@ -137,21 +144,22 @@ class Find_Color:
                 self.publishPosition(angleX,angleY,rotation,count)
                 self.publishArm_Angle(angleX,angleY,rotation,count)
         
-    def image_callback(self, image):#重写 待测
+    def image_callback(self, image):
         # 将垃圾分类信息在此显示
-
+        global Sort_show
         # self.getImageStatus = True
         self.color_image = np.frombuffer(image.data, dtype=np.uint8).reshape(
             image.height, image.width, -1)
         self.color_image = cv2.cvtColor(self.color_image, cv2.COLOR_BGR2RGB)
 
         length = len(Sort_show)
-        tmp_y = 0
-        for i in length:
+        tmp_x = 0
+        tmp_y = 20
+        for i in range(length):
             cv2.putText(self.color_image, Sort_show[i],
-                        (int(0), int(tmp_y)), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 0), 2,
+                        (int(tmp_x), int(tmp_y)), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 0), 1,
                         cv2.LINE_AA)
-            tmp_y += 10
+            tmp_y += 20
 
         # cv2.rectangle(self.color_image, (int(box[0]), int(box[1])),
         #                   (int(box[2]), int(box[3])), (int(color[0]), int(color[1]), int(color[2])), 2)
@@ -179,7 +187,7 @@ class Find_Color:
         if abs((Xmax-Xmin)/(Ymax-Ymin)) <= 1 :
             return 0
         else :
-            return 70  #待测 -45~45度保持不变,可写90度
+            return 60  #待测 -45~45度保持不变,可写90度
 
     def single_send(self,Class): #串口发送 待写（注意数据统计）
         if Class == 1:
@@ -219,7 +227,7 @@ class Find_Color:
     def publishArm_Angle(self, x,y,rotate,count):
 
         if x > 0.5 or y >0.4: # 如果色块的位置太偏，则认为数据有误
-             return 
+            return 
         #print(x)
         true_x= x*(-0.354)+0.105+self.x_offset  #色块的原始坐标在（左右方向）从左开始是0到0.56，因此减0.28是将0点坐标移到整个画幅的中间
 

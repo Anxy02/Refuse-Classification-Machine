@@ -29,7 +29,7 @@ class Serial_COM:
         # self.visual_flagPublisher = rospy.Publisher('/visual_func_flag', Int8, queue_size =1)
 
 	def com_callback(self,msg):
-		rospy.loginfo("com_callback: %s,%d",msg.sendClass, msg.count)
+		rospy.loginfo("~~~~通信回调收到: %s,%d",msg.sendClass, msg.count)
 		# self.send_message(msg.count,msg.sendClass)
 
 	def pub_flag():	#超声波判断投入发布flag
@@ -118,5 +118,3 @@ rospy.spin()
 
 #在收到超声波后，发布Flag-isPuting（待完善）
 #收到分类信息后，串口发送信息(待测)
-#待解决：仅能收到count>1的值
-#思路：count=1放在find.py实现

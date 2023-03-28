@@ -24,7 +24,7 @@
 int yolo_sequence=1;  //夹取顺序
 int yolo_confirmed_flag =0; //启动夹取的标志位
 int grasp_mode=0;//抓取模式 0：单目标抓取  1：单目标刷子  2：多目标抓取
-int isBusy=0,countFlag=0;//回调函数中忙状态
+int isBusy=0,isSingle=0,countFlag=0;//回调函数中忙状态
 int i_cb,j_cb=0;//回调函数循环变量
 
 float auxiliary_angle; 
@@ -34,6 +34,7 @@ int count=0;//识别到的垃圾总数量
 int grasp_done=0;  //色块是否已经夹取标志位
 float cb_target_data[10][3]={0};  //回调函数目标值保存
 std::string cb_class[10]={};
+std::string single_class={};
 float joint_target1=0,joint_target2=0,joint_target3=0; //赋值给moveit做正解的目标关节值
 float link_a,link_b,link_c,link_h; //机械参数
 float base_angle;
@@ -49,7 +50,15 @@ std::vector<double> joint_group_positions(5); //机械臂正解的目标关节�
 void color_ik_result_callback(const yolo_new::color_ik_result_new &msg)
 {
   // ROS_INFO("count is :%d ",msg.count);
-  if(isBusy == 0)
+  if(isBusy == 0 && isSingle == 0 && msg.count == 1){
+    ROS_INFO("!!!!!!!!!!!single object :%s !!!!!!!!!!!!",msg.sort); 
+    count = msg.count;
+    single_class = msg.sort;
+    isBusy = 1;
+    isSingle = 1;
+  }
+
+  if(isBusy == 0 && msg.count > 1)
   {
       if(countFlag == 0){
         count=msg.count;//总数量
@@ -131,6 +140,16 @@ int main(int argc, char **argv)
       //发布moving FLAG消息-->由py接收
       pub_flag.isMoving = isBusy ? 1: 0;
       Flag_pub.publish(pub_flag);
+
+      //发布单目标信息 待测
+      if(isSingle == 1 && count == 1){
+        pub_com.count = 1;
+        pub_com.sendClass = single_class;
+        Com_pub.publish(pub_com);
+        isBusy = 0;
+        isSingle = 0;
+        count = 0;
+      }
 
 
       if( arm_state=="ready" )
@@ -217,6 +236,8 @@ void arm_put(std::string sort)
 
 int multi_grasp_sequence()//多目标抓取
 {
+  if (isBusy == 1 && count == 1)
+    return 1;
   //ROS_INFO("多目标---->>>抓取");
   if(isBusy == 1 && j_cb < count && grasp_done == 0)
   {
