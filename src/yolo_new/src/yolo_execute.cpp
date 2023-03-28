@@ -31,7 +31,7 @@ float auxiliary_angle;
 int recycle_count_cb=0,harm_count_cb=0,kitchen_count_cb=0,others_count_cb=0; //接收到该数据帧的回调函数次数callback
 int recycle_count=0,harm_count=0,kitchen_count=0,others_count=0; //垃圾计数
 int count=0;//识别到的垃圾总数量
-int sort_done=0;  //色块是否已经夹取标志位
+int grasp_done=0;  //色块是否已经夹取标志位
 float cb_target_data[10][3]={0};  //回调函数目标值保存
 std::string cb_class[10]={};
 float joint_target1=0,joint_target2=0,joint_target3=0; //赋值给moveit做正解的目标关节值
@@ -65,7 +65,7 @@ void color_ik_result_callback(const yolo_new::color_ik_result_new &msg)
         cb_target_data[i_cb][2]=msg.hand_angle;      //控制夹取色块旋转的目标角度
         ROS_INFO("tmp_i is :%d ",i_cb); 
         ROS_INFO("cb_target_is  :(%4.2f)-(%4.2f)-(%4.2f)",cb_target_data[i_cb][0],cb_target_data[i_cb][1],cb_target_data[i_cb][2]);
-        cb_class[i_cb] = msg.sort; //二选一
+        cb_class[i_cb] = msg.sort; 
         i_cb+=1;
       }
       else
@@ -128,14 +128,10 @@ int main(int argc, char **argv)
       multi_grasp_sequence();//多目标抓取顺序判断函数
       pub_com.count = count;//传入识别到的垃圾数量
 
-      if(isBusy==1){     //发布moving FLAG消息-->由py接收
-        pub_flag.isMoving = 1;
-        Flag_pub.publish(pub_flag);
-      }
-      else{
-        pub_flag.isMoving = 0;
-        Flag_pub.publish(pub_flag);
-      }
+      //发布moving FLAG消息-->由py接收
+      pub_flag.isMoving = isBusy ? 1: 0;
+      Flag_pub.publish(pub_flag);
+
 
       if( arm_state=="ready" )
       {
@@ -208,7 +204,7 @@ void arm_put(std::string sort)
     }
     hand_open_success=false;
 
-    sort_done=0;  //标志位清零
+    grasp_done=0;  //标志位清零
     if(j_cb >= count)//标志位清零
     {
       i_cb = 0;
@@ -218,51 +214,11 @@ void arm_put(std::string sort)
     }
     arm_state="working";
 }
-/*
-int mode_object()//根据模式执行相应决策
-{
-  //抓取模式 0：单目标抓取  1：单目标刷子  2：多目标抓取
-  if(grasp_mode == 0) single_grasp();
-  else if(grasp_mode == 1)  single_object();
-  // else multi_grasp_sequence();
-}
-int single_object()
-{
-  //ROS_INFO("单分类模式---->>>刷子");
-  if(recycle_ready == 2 && recycle_done == 0){
-    //串口发送消息刷子
 
-    recycle_done = 1;
-    recycle_count += 1;
-    ROS_INFO("sorting is:   recycle");
-  }
-  else if(harm_ready == 2 && harm_done == 0){
-    //串口发送消息刷子
-
-    harm_done = 1;
-    harm_count += 1;
-    ROS_INFO("sorting is:   harm");
-  }
-  else if(kitchen_ready == 2 && kitchen_done == 0){
-    //串口发送消息刷子
-
-    kitchen_done = 1;
-    kitchen_count += 1;
-    ROS_INFO("sorting is:   kitchen");
-  }
-  else if(others_ready == 2 && others_done == 0){
-    //串口发送消息刷子
-
-    others_done = 1;
-    others_count += 1;
-    ROS_INFO("sorting is:   others");
-  }
-}
-*/
 int multi_grasp_sequence()//多目标抓取
 {
   //ROS_INFO("多目标---->>>抓取");
-  if(isBusy == 1 && j_cb < count && sort_done == 0)
+  if(isBusy == 1 && j_cb < count && grasp_done == 0)
   {
     joint_target1=cb_target_data[j_cb][0];//关节目标值赋值
     joint_target2=cb_target_data[j_cb][1];
@@ -295,7 +251,7 @@ int multi_grasp_sequence()//多目标抓取
       others_count += 1;
       ROS_INFO("sorting is:   others");
     }
-    sort_done=1;
+    grasp_done=1;
     ++j_cb;
 
 

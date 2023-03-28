@@ -17,6 +17,9 @@ from yolo_new.msg import Flag
 last_erro=0
 IsMoving = 0
 IsPuting = 1    #后续改为0，依靠超声波判断
+Sort_show = []  #图像输出的信息
+tmp_ok = "OK!"
+show_i = 1
 def nothing(s):
     pass
 
@@ -34,6 +37,8 @@ class Find_Color:
         self.tanVertical = np.tan(vertAngle)
         # self.image_sub = rospy.Subscriber("/usb_cam/image_raw", Image, self.image_callback)#订阅图像话题
         # self.image_sub = rospy.Subscriber("/yolov5/detection_image", Image, self.image_callback)#订阅图像话题
+        self.color_image = Image()
+        self.image_sub = rospy.Subscriber('/yolov5/detection_image', Image, self.image_callback,queue_size=1, buff_size=52428800)
         self.box_sub = rospy.Subscriber("/yolov5/BoundingBoxes", BoundingBoxes, self.box_callback)#订阅识别类别话题
         self.flag_sub = rospy.Subscriber("/Flag_pub", Flag, self.flag_callback)#订阅移动状态话题
  
@@ -70,15 +75,16 @@ class Find_Color:
         print("1111111111111111111111111111111111111111111111111111111111111")
 
     def flag_callback(self,msg):
+        global IsMoving
         IsMoving = msg.isMoving
         # IsPuting = msg.isPuting
         # print("flag_msg is",IsMoving)
 
 
     def box_callback(self,msg):
+        global IsMoving
+        global show_i
         self.boundingBoxes = BoundingBoxes()
-        #global tmp_box
-        #global box
         count=0
                         
         for i in msg.bounding_boxes:
@@ -88,9 +94,12 @@ class Find_Color:
             if count == 1:
                 # rospy.loginfo('msg.boundingBoxes.class :%s',msg.bounding_boxes[0].Class)
                 tmp_class = msg.bounding_boxes[0].Class
-                # print(tmp_class,1)
                 # self.Class = self.switch_class(tmp_class)   #传入垃圾类别并进行判断分类
-                self.Class = msg.bounding_boxes[0].CNum
+                self.Class = msg.bounding_boxes[0].CNum #垃圾类别号码
+                # 添加输出数组
+                tmp_str = f"{show_i} {tmp_class} {count} {tmp_ok}"
+                show_i += 1
+                Sort_show.append(tmp_str)
                 # self.single_send(self.Class)  #单目标直接用刷子发送
                 # IsPuting = 0  后续放出来
 
@@ -103,17 +112,19 @@ class Find_Color:
                     Ymin=tmp_box.ymin
                     Ymax=tmp_box.ymax
 
-                    # self.Class=box.Class
+                    tmp_class=box.Class
                     # rospy.loginfo("class is %s ,X is %f, Y is %f", self.Class,Xmid,Ymid)
                     # self.Class = self.switch_class(tmp_box.Class)   #传入垃圾类别并进行判断分类
-                    self.Class = tmp_box.CNum
+                    self.Class = tmp_box.CNum   #垃圾类别号码
+
+                    # 添加输出数组
+                    tmp_str = f"{show_i} {tmp_class} {count} {tmp_ok}"
+                    show_i += 1
+                    Sort_show.append(tmp_str)
 
                     angleX = self.calculateAngleX(Xmid) #做数学转换获取色块在画幅中的坐标
                     angleY = self.calculateAngleY(Ymid)
-                    # rospy.loginfo('X=%f , Y=%f',Xmid,Ymid)
-                    # rospy.loginfo('X=%f , Y=%f',angleX,angleY)
-                    rotation=self.calculateRotation(Xmin,Xmax,Ymin,Ymax)#角度位姿 待测试
-                    # rospy.loginfo('msg.class :%s',tmp_box.Class)
+                    rotation=self.calculateRotation(Xmin,Xmax,Ymin,Ymax)#角度位姿
                     self.publishPosition(angleX,angleY,rotation,count) #发布话题：色块的位置（原始数据）
                     self.publishArm_Angle(angleX,angleY,rotation,count)	 #发布话题：根据色块位置求解的机械臂关节目标弧度话题
                     # IsPuting = 0  后续放出来
@@ -126,12 +137,30 @@ class Find_Color:
                 self.publishPosition(angleX,angleY,rotation,count)
                 self.publishArm_Angle(angleX,angleY,rotation,count)
         
-    # def image_callback(self, msg):#重写
+    def image_callback(self, image):#重写 待测
+        # 将垃圾分类信息在此显示
 
-        # image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
-        # image = cv2.resize(image, (320,240), interpolation=cv2.INTER_AREA)#提高帧率
-        # cv2.imshow("window", image)
-        # cv2.waitKey(3)
+        # self.getImageStatus = True
+        self.color_image = np.frombuffer(image.data, dtype=np.uint8).reshape(
+            image.height, image.width, -1)
+        self.color_image = cv2.cvtColor(self.color_image, cv2.COLOR_BGR2RGB)
+
+        length = len(Sort_show)
+        tmp_y = 0
+        for i in length:
+            cv2.putText(self.color_image, Sort_show[i],
+                        (int(0), int(tmp_y)), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 0), 2,
+                        cv2.LINE_AA)
+            tmp_y += 10
+
+        # cv2.rectangle(self.color_image, (int(box[0]), int(box[1])),
+        #                   (int(box[2]), int(box[3])), (int(color[0]), int(color[1]), int(color[2])), 2)
+        # cv2.putText(self.color_image, box[-1],
+        #                 (int(box[0]), int(text_pos_y) - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 2,
+        #                 cv2.LINE_AA)
+
+        cv2.imshow('YOLOv5_show', self.color_image)
+        cv2.waitKey(3)
 
 
     def calculateAngleX(self, pos):
@@ -168,23 +197,6 @@ class Find_Color:
         else:
             print('none')
 
-    
-    # def switch_class(self,bclass):# 根据yolo返回类别进行类别分类!!!!!注意有个空格很恶心
-    #     if bclass is "recycle_cans1" or "recycle_cans2" or "recycle_bottle" or "recycle_paper":
-    #         print("s1")
-    #         return 1
-    #     elif bclass is "harm_battery " :
-    #         print("s2")
-    #         return 2
-    #     elif bclass is "kitchen_potato" or "kitchen_raddish" or "kitchen_carrot" :
-    #         print("s3")
-    #         return 3
-    #     elif bclass is "others_pebble" or "others":
-    #         print("s4")
-    #         return 4
-    #     else :
-    #         return 999
-        
 
     def publishPosition(self, x,y,rotate,count):
         # publish the position (angleX, angleY, distance)

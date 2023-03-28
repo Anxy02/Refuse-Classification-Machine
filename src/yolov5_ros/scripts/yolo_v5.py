@@ -40,25 +40,12 @@ class Yolo_Dect:
         self.depth_image = Image()
         self.getImageStatus = False
 
-        # # 创建深度对象
-        # self.pipeline = rs.pipeline()
-        # self.depth_frame = None
-        # 创建 config 对象：
-        # config = rs.config()
-        # config.enable_stream(rs.stream.depth, 640, 480, rs.format.z16, 30)
-        # config.enable_stream(rs.stream.depth, 640, 480, rs.format.z16, 60)
-        # config.enable_stream(rs.stream.color, 640, 480, rs.format.bgr8, 60)
-
-        # Start streaming
-        # self.pipeline.start(config)
-        # self.align_to_color = rs.align(rs.stream.color)
-        # ——————————————
-        # Load class color
         self.classes_colors = {}
 
         # image subscribe
         self.color_sub = rospy.Subscriber(image_topic, Image, self.image_callback,
                                           queue_size=1, buff_size=52428800)
+        
 
         # output publishers
         #queue_size 实时收发信息
@@ -81,15 +68,8 @@ class Yolo_Dect:
         self.color_image = np.frombuffer(image.data, dtype=np.uint8).reshape(
             image.height, image.width, -1)
         self.color_image = cv2.cvtColor(self.color_image, cv2.COLOR_BGR2RGB)
-        # # 深度信息检测
-        # # Wait for a coherent pair of frames（一对连贯的帧）: depth and color
-        # frames = self.pipeline.wait_for_frames()
-        # frames = self.align_to_color.process(frames)
-        # # depth_frame = frames.get_depth_frame()
-        # self.depth_frame = frames.get_depth_frame()
-        # depth_image = np.asanyarray(self.depth_frame.get_data())
-        # # ————————
 
+        # 可在此添加标志位，进行单帧检测
         results = self.model(self.color_image)
         # xmin    ymin    xmax   ymax  confidence  class    name
 
@@ -119,24 +99,6 @@ class Yolo_Dect:
             boundingBox.CNum = self.switch_class(boundingBox.Class)   #传入垃圾类别并进行判断分类
             # boundingBox.
 
-            # # 深度计算
-            # distance_list = []
-            # mid_pos = [int((int(box[0]) + int(box[2])) / 2),
-            #            int((int(box[1]) + int(box[3])) / 2)]  # 确定索引深度的中心像素位置左上角和右下角相加在/2
-            # min_val = min(abs(int(box[2]) - int(box[0])), abs(int(box[3]) - int(box[1])))  # 确定深度搜索范围
-            # randnum = 40
-            # for i in range(randnum):
-            #     bias = random.randint(-min_val // 4, min_val // 4)
-            #     dist = self.depth_frame.get_distance(int(mid_pos[0] + bias), int(mid_pos[1] + bias))
-            #     # print(int(mid_pos[1] + bias), int(mid_pos[0] + bias))
-            #     if dist:
-            #         distance_list.append(dist)
-            # distance_list = np.array(distance_list)
-            # distance_list = np.sort(distance_list)[
-            #                 randnum // 2 - randnum // 4:randnum // 2 + randnum // 4]  # 冒泡排序+中值滤波
-            # label = '%.2f%s' % (np.mean(distance_list), 'm')  # 距离标签
-            # boundingBox.distance = '%.2f' % (np.mean(distance_list))
-            # ————————————
 
             if box[-1] in self.classes_colors.keys():
                 color = self.classes_colors[box[-1]]
@@ -162,7 +124,7 @@ class Yolo_Dect:
             self.boundingBoxes.bounding_boxes.append(boundingBox)
             self.position_pub.publish(self.boundingBoxes)
         self.publish_image(img, height, width)
-        cv2.imshow('YOLOv5', img)
+        # cv2.imshow('YOLOv5', img)
 
     def switch_class(self,bclass):# 根据yolo返回类别进行类别分类!!!!!注意电池有个空格很恶心
         if bclass == "recycle_cans1" or bclass == "recycle_cans2" or bclass == "recycle_bottle" or bclass == "recycle_paper":
