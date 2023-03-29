@@ -51,9 +51,9 @@ void color_ik_result_callback(const yolo_new::color_ik_result_new &msg)
 {
   // ROS_INFO("count is :%d ",msg.count);
   if(isBusy == 0 && isSingle == 0 && msg.count == 1){
-    ROS_INFO("!!!!!!!!!!!single object :%s !!!!!!!!!!!!",msg.sort); 
+    // ROS_INFO("!!!!!!!!!!!single object :%s !!!!!!!!!!!!",msg.sort.c_str()); 
     count = msg.count;
-    single_class = msg.sort;
+    single_class = msg.sort.c_str();
     isBusy = 1;
     isSingle = 1;
   }
@@ -139,7 +139,8 @@ int main(int argc, char **argv)
       pub_com.count = count;//传入识别到的垃圾数量
 
       //发布moving FLAG消息-->由py接收
-      pub_flag.isMoving = isBusy ? 1: 0;
+      // pub_flag.isMoving = isBusy ? 1: 0;
+      pub_flag.isMoving = isBusy;
       Flag_pub.publish(pub_flag);
 
       //发布单目标信息 待测
@@ -178,7 +179,7 @@ int main(int argc, char **argv)
         hand_close_success=false;
  
         arm.setNamedTarget("arm_look");   arm.move();  sleep(1);    //机械臂运动到观测色块的位置
-        arm.setNamedTarget("color_put_interval");  arm.move();  sleep(1); //机械臂臂身运动到放置色块的预位置后，再放置色块
+        // arm.setNamedTarget("color_put_interval");  arm.move();  sleep(1); //机械臂臂身运动到放置色块的预位置后，再放置色块
         arm_put(target_sort); //根据颜色将色块放置到对应位置 
 
         pub_com.sendClass = target_sort;//发布垃圾类别信息至通信py
@@ -201,10 +202,10 @@ void arm_put(std::string sort)
     //arm.setMaxAccelerationScalingFactor(0.2);
     //arm.setMaxVelocityScalingFactor(0.6);
    //根据色块的颜色判断放置位置                       根据实际修改
-         if (sort == "recycle") {arm.setNamedTarget("yellow_put");  arm.move();  sleep(1);}
-    else if (sort == "harm")   {arm.setNamedTarget("blue_put");    arm.move();  sleep(1);}
-    else if (sort == "kitchen")  {arm.setNamedTarget("green_put");   arm.move();  sleep(1);}
-    else if (sort == "others")  {arm.setNamedTarget("green_put");   arm.move();  sleep(1);ROS_INFO("sorting is done");}
+         if (sort == "recycle") {arm.setNamedTarget("recycle_put");  arm.move();  sleep(1);}
+    else if (sort == "harm")   {arm.setNamedTarget("other_put");    arm.move();  sleep(1);}
+    else if (sort == "kitchen")  {arm.setNamedTarget("other_put");   arm.move();  sleep(1);}
+    else if (sort == "others")  {arm.setNamedTarget("other_put");   arm.move();  sleep(1);ROS_INFO("sorting is done");}
     hand.setNamedTarget("hand_open");   //机械爪张开
     
     while( !hand_open_success )  //判断是否规划成功，如果不成功则继续规划
@@ -214,7 +215,7 @@ void arm_put(std::string sort)
     }
     hand_open_success=false;
 
-    arm.setNamedTarget("color_put_interval");   arm.move();  sleep(1);  //机械臂臂身运动到放置色块的预位置
+    // arm.setNamedTarget("color_put_interval");   arm.move();  sleep(1);  //机械臂臂身运动到放置色块的预位置
     arm.setNamedTarget("arm_look");   arm.move();  sleep(1);      //机械臂运动到观测色块的位置
     hand.setNamedTarget("hand_open");  //机械爪张开
     while( !hand_open_success ) //判断是否规划成功，如果不成功则继续规划
@@ -239,6 +240,7 @@ int multi_grasp_sequence()//多目标抓取
 {
   if (isSingle == 1 && isBusy == 1 && count == 1)
     return 1;
+
   //ROS_INFO("多目标---->>>抓取");
   if(isBusy == 1 && j_cb < count && grasp_done == 0)
   {

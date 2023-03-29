@@ -12,7 +12,7 @@ from yolo_new.msg import color_ik_result_new as color_ik_result_Msg
 from std_msgs.msg import Int8
 from std_msgs.msg import String as StringMsg
 from yolov5_ros_msgs.msg import BoundingBox,BoundingBoxes
-from yolo_new.msg import Flag
+from yolo_new.msg import Flag,Serial_RT
 
 last_erro=0
 IsMoving = 1
@@ -88,7 +88,7 @@ class Find_Color:
         global IsMoving
         IsMoving = msg.isMoving
         # IsPuting = msg.isPuting
-        print("flag_msg is",IsMoving)
+        # print("flag_msg is",IsMoving)
 
 
     def box_callback(self,msg):
@@ -100,12 +100,13 @@ class Find_Color:
             count+=1
 
         if IsMoving == 0 :  #机械臂没有运动
-            if count == 1:  ###似乎没进这个判断！！！！！！！！！
+            if count == 1:  
                 rospy.loginfo('单目标：：：%s',msg.bounding_boxes[0].Class)
                 tmp_class = msg.bounding_boxes[0].Class #垃圾类别
                 self.Class = msg.bounding_boxes[0].CNum #垃圾类别号码
 
-                self.single_send(self.Class)  #单目标发送
+                # self.single_send(self.Class)  #单目标发送  todo:解决单次只接收一个物品的问题
+                
                 # IsPuting = 0  后续放出来
 
             elif count > 1:

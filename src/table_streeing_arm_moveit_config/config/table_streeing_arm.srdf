@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--This does not replace URDF, and is not an extension of URDF.
     This is a format for representing semantic information about the robot structure.
     A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
@@ -10,215 +10,229 @@
     <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
     <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
     <group name="arm">
-        <chain base_link="base_link" tip_link="link_5" />
+        <chain base_link="base_link" tip_link="link_5"/>
     </group>
     <group name="hand">
-        <joint name="joint_6" />
-        <joint name="joint_10" />
-        <joint name="joint_7" />
-        <joint name="joint_11" />
-        <joint name="joint_8" />
-        <joint name="joint_9" />
+        <joint name="joint_6"/>
+        <joint name="joint_10"/>
+        <joint name="joint_7"/>
+        <joint name="joint_11"/>
+        <joint name="joint_8"/>
+        <joint name="joint_9"/>
     </group>
     <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
-     <group_state name="arm_home" group="arm">
-        <joint name="joint_1" value="0" />
-        <joint name="joint_2" value="0" />
-        <joint name="joint_3" value="0" />
-        <joint name="joint_4" value="0" />
-        <joint name="joint_5" value="0" />
+    <group_state name="arm_home" group="arm">
+        <joint name="joint_1" value="0"/>
+        <joint name="joint_2" value="0.38"/>
+        <joint name="joint_3" value="-1.45"/>
+        <joint name="joint_4" value="-1.4"/>
+        <joint name="joint_5" value="0"/>
     </group_state>
     <group_state name="voice_control_wait" group="arm">
-        <joint name="joint_1" value="0" />
-        <joint name="joint_2" value="0" />
-        <joint name="joint_3" value="0" />
-        <joint name="joint_4" value="-1.57" />
-        <joint name="joint_5" value="0" />
+        <joint name="joint_1" value="0"/>
+        <joint name="joint_2" value="0"/>
+        <joint name="joint_3" value="0"/>
+        <joint name="joint_4" value="-1.57"/>
+        <joint name="joint_5" value="0"/>
     </group_state>
     <group_state name="arm_look" group="arm">
-        <joint name="joint_1" value="0" />
-        <joint name="joint_2" value="0.38" />
-        <joint name="joint_3" value="-1.45" /><!-- -1.157 -->
-        <joint name="joint_4" value="-1.40" /><!-- -1.157 -->
-        <joint name="joint_5" value="0" />
+        <joint name="joint_1" value="0"/>
+        <joint name="joint_2" value="0.38"/>
+        <joint name="joint_3" value="-1.45"/>
+        <joint name="joint_4" value="-1.4"/>
+        <joint name="joint_5" value="0"/>
     </group_state>
     <group_state name="blue_put" group="arm">
-        <joint name="joint_1" value="1.23" />
-        <joint name="joint_2" value="-0.47" />
-        <joint name="joint_3" value="-1.12" />
-        <joint name="joint_4" value="-1.41" />
-        <joint name="joint_5" value="-0.38" />
+        <joint name="joint_1" value="1.23"/>
+        <joint name="joint_2" value="-0.47"/>
+        <joint name="joint_3" value="-1.12"/>
+        <joint name="joint_4" value="-1.41"/>
+        <joint name="joint_5" value="-0.38"/>
     </group_state>
     <group_state name="yellow_put" group="arm">
-        <joint name="joint_1" value="1.57" />
-        <joint name="joint_2" value="-0.55" />
-        <joint name="joint_3" value="-1.04" />
-        <joint name="joint_4" value="-1.17" />
-        <joint name="joint_5" value="0" />
+        <joint name="joint_1" value="1.57"/>
+        <joint name="joint_2" value="-0.55"/>
+        <joint name="joint_3" value="-1.04"/>
+        <joint name="joint_4" value="-1.17"/>
+        <joint name="joint_5" value="0"/>
     </group_state>
     <group_state name="green_put" group="arm">
-        <joint name="joint_1" value="1.30" />
-        <joint name="joint_2" value="-0.54" />
-        <joint name="joint_3" value="-1.02" />
-        <joint name="joint_4" value="-1.10" />
-        <joint name="joint_5" value="-0.28" />
+        <joint name="joint_1" value="1.3"/>
+        <joint name="joint_2" value="-0.54"/>
+        <joint name="joint_3" value="-1.02"/>
+        <joint name="joint_4" value="-1.1"/>
+        <joint name="joint_5" value="-0.28"/>
     </group_state>
     <group_state name="color_put_interval" group="arm">
-        <joint name="joint_1" value="1.2" />
-        <joint name="joint_2" value="0.0" />
-        <joint name="joint_3" value="-0.63" />
-        <joint name="joint_4" value="-1.3" />
-        <joint name="joint_5" value="0" />
+        <joint name="joint_1" value="1.2"/>
+        <joint name="joint_2" value="0"/>
+        <joint name="joint_3" value="-0.63"/>
+        <joint name="joint_4" value="-1.3"/>
+        <joint name="joint_5" value="0"/>
     </group_state>
     <group_state name="color_stack_put_interval" group="arm">
-        <joint name="joint_1" value="1.57" />
-        <joint name="joint_2" value="0.53" />
-        <joint name="joint_3" value="-1.3" />
-        <joint name="joint_4" value="-1.3" />
-        <joint name="joint_5" value="0" />
+        <joint name="joint_1" value="1.57"/>
+        <joint name="joint_2" value="0.53"/>
+        <joint name="joint_3" value="-1.3"/>
+        <joint name="joint_4" value="-1.3"/>
+        <joint name="joint_5" value="0"/>
     </group_state>
     <group_state name="color_stack_put_position1" group="arm">
-        <joint name="joint_1" value="1.57" />
-        <joint name="joint_2" value="-0.36" />
-        <joint name="joint_3" value="-1.27" />
-        <joint name="joint_4" value="-1.38" />
-        <joint name="joint_5" value="0" />
+        <joint name="joint_1" value="1.57"/>
+        <joint name="joint_2" value="-0.36"/>
+        <joint name="joint_3" value="-1.27"/>
+        <joint name="joint_4" value="-1.38"/>
+        <joint name="joint_5" value="0"/>
     </group_state>
     <group_state name="color_stack_put_position2" group="arm">
-        <joint name="joint_1" value="1.57" />
-        <joint name="joint_2" value="-0.20" />
-        <joint name="joint_3" value="-1.31" />
-        <joint name="joint_4" value="-1.42" />
-        <joint name="joint_5" value="0" />
+        <joint name="joint_1" value="1.57"/>
+        <joint name="joint_2" value="-0.2"/>
+        <joint name="joint_3" value="-1.31"/>
+        <joint name="joint_4" value="-1.42"/>
+        <joint name="joint_5" value="0"/>
     </group_state>
     <group_state name="color_stack_put_position3" group="arm">
-        <joint name="joint_1" value="1.57" />
-        <joint name="joint_2" value="0.08" />
-        <joint name="joint_3" value="-1.40" />
-        <joint name="joint_4" value="-1.44" />
-        <joint name="joint_5" value="0" />
+        <joint name="joint_1" value="1.57"/>
+        <joint name="joint_2" value="0.08"/>
+        <joint name="joint_3" value="-1.4"/>
+        <joint name="joint_4" value="-1.44"/>
+        <joint name="joint_5" value="0"/>
     </group_state>
     <group_state name="ar_put_interval" group="arm">
-        <joint name="joint_1" value="-1.2" />
-        <joint name="joint_2" value="0.0" />
-        <joint name="joint_3" value="-0.63" />
-        <joint name="joint_4" value="-1.3" />
-        <joint name="joint_5" value="0" />
+        <joint name="joint_1" value="-1.2"/>
+        <joint name="joint_2" value="0"/>
+        <joint name="joint_3" value="-0.63"/>
+        <joint name="joint_4" value="-1.3"/>
+        <joint name="joint_5" value="0"/>
     </group_state>
     <group_state name="77_put" group="arm">
-        <joint name="joint_1" value="-1.00" />
-        <joint name="joint_2" value="-0.42" />
-        <joint name="joint_3" value="-1.32" />
-        <joint name="joint_4" value="-1.19" />
-        <joint name="joint_5" value="0.4" />
+        <joint name="joint_1" value="-1"/>
+        <joint name="joint_2" value="-0.42"/>
+        <joint name="joint_3" value="-1.32"/>
+        <joint name="joint_4" value="-1.19"/>
+        <joint name="joint_5" value="0.4"/>
     </group_state>
     <group_state name="88_put" group="arm">
-        <joint name="joint_1" value="-1.10" />
-        <joint name="joint_2" value="-0.58" />
-        <joint name="joint_3" value="-1.04" />
-        <joint name="joint_4" value="-1.12" />
-        <joint name="joint_5" value="0.34" />
+        <joint name="joint_1" value="-1.1"/>
+        <joint name="joint_2" value="-0.58"/>
+        <joint name="joint_3" value="-1.04"/>
+        <joint name="joint_4" value="-1.12"/>
+        <joint name="joint_5" value="0.34"/>
     </group_state>
     <group_state name="99_put" group="arm">
-        <joint name="joint_1" value="-1.37" />
-        <joint name="joint_2" value="-0.55" />
-        <joint name="joint_3" value="-1.06" />
-        <joint name="joint_4" value="-1.15" />
-        <joint name="joint_5" value="0" />
+        <joint name="joint_1" value="-1.37"/>
+        <joint name="joint_2" value="-0.55"/>
+        <joint name="joint_3" value="-1.06"/>
+        <joint name="joint_4" value="-1.15"/>
+        <joint name="joint_5" value="0"/>
     </group_state>
     <group_state name="ar_stack_put_interval" group="arm">
-        <joint name="joint_1" value="-1.57" />
-        <joint name="joint_2" value="0.53" />
-        <joint name="joint_3" value="-1.3" />
-        <joint name="joint_4" value="-1.3" />
-        <joint name="joint_5" value="0" />
+        <joint name="joint_1" value="-1.57"/>
+        <joint name="joint_2" value="0.53"/>
+        <joint name="joint_3" value="-1.3"/>
+        <joint name="joint_4" value="-1.3"/>
+        <joint name="joint_5" value="0"/>
     </group_state>
     <group_state name="ar_stack_put_position1" group="arm">
-        <joint name="joint_1" value="-1.43" />
-        <joint name="joint_2" value="-0.38" />
-        <joint name="joint_3" value="-1.27" />
-        <joint name="joint_4" value="-1.38" />
-        <joint name="joint_5" value="0" />
+        <joint name="joint_1" value="-1.43"/>
+        <joint name="joint_2" value="-0.38"/>
+        <joint name="joint_3" value="-1.27"/>
+        <joint name="joint_4" value="-1.38"/>
+        <joint name="joint_5" value="0"/>
     </group_state>
     <group_state name="ar_stack_put_position2" group="arm">
-        <joint name="joint_1" value="-1.43" />
-        <joint name="joint_2" value="-0.17" />
-        <joint name="joint_3" value="-1.31" />
-        <joint name="joint_4" value="-1.47" />
-        <joint name="joint_5" value="0" />
+        <joint name="joint_1" value="-1.43"/>
+        <joint name="joint_2" value="-0.17"/>
+        <joint name="joint_3" value="-1.31"/>
+        <joint name="joint_4" value="-1.47"/>
+        <joint name="joint_5" value="0"/>
     </group_state>
     <group_state name="ar_stack_put_position3" group="arm">
-        <joint name="joint_1" value="-1.43" />
-        <joint name="joint_2" value="0.07" />
-        <joint name="joint_3" value="-1.39" />
-        <joint name="joint_4" value="-1.42" />
-        <joint name="joint_5" value="0" />
+        <joint name="joint_1" value="-1.43"/>
+        <joint name="joint_2" value="0.07"/>
+        <joint name="joint_3" value="-1.39"/>
+        <joint name="joint_4" value="-1.42"/>
+        <joint name="joint_5" value="0"/>
     </group_state>
     <group_state name="hand_open" group="hand">
-        <joint name="joint_10" value="-0.2" />
-        <joint name="joint_11" value="0.2" />
-        <joint name="joint_6" value="0.2" />
-        <joint name="joint_7" value="0.2" />
-        <joint name="joint_9" value="-0.2" />
-        <joint name="joint_8" value="0.2" />
+        <joint name="joint_10" value="-0.2"/>
+        <joint name="joint_11" value="0.2"/>
+        <joint name="joint_6" value="0.2"/>
+        <joint name="joint_7" value="0.2"/>
+        <joint name="joint_8" value="0.2"/>
+        <joint name="joint_9" value="-0.2"/>
     </group_state>
     <group_state name="hand_half_open" group="hand">
-        <joint name="joint_10" value="0.3" />
-        <joint name="joint_11" value="-0.3" />
-        <joint name="joint_6" value="-0.3" />
-        <joint name="joint_7" value="-0.3" />
-        <joint name="joint_9" value="0.3" />
-        <joint name="joint_8" value="-0.3" />
+        <joint name="joint_10" value="0.3"/>
+        <joint name="joint_11" value="-0.3"/>
+        <joint name="joint_6" value="-0.3"/>
+        <joint name="joint_7" value="-0.3"/>
+        <joint name="joint_8" value="-0.3"/>
+        <joint name="joint_9" value="0.3"/>
     </group_state>
     <group_state name="hand_close" group="hand">
-        <joint name="joint_10" value="0.8" />
-        <joint name="joint_11" value="-0.8" />
-        <joint name="joint_6" value="-0.8" />
-        <joint name="joint_7" value="-0.8" />
-        <joint name="joint_9" value="0.8" />
-        <joint name="joint_8" value="-0.8" />
+        <joint name="joint_10" value="0.8"/>
+        <joint name="joint_11" value="-0.8"/>
+        <joint name="joint_6" value="-0.8"/>
+        <joint name="joint_7" value="-0.8"/>
+        <joint name="joint_8" value="-0.8"/>
+        <joint name="joint_9" value="0.8"/>
+    </group_state>
+    <group_state name="other_put" group="arm">
+        <joint name="joint_1" value="0.75"/>
+        <joint name="joint_2" value="-0.47"/>
+        <joint name="joint_3" value="-1.12"/>
+        <joint name="joint_4" value="-1.41"/>
+        <joint name="joint_5" value="-0.38"/>
+    </group_state>
+    <group_state name="recycle_put" group="arm">
+        <joint name="joint_1" value="-0.55"/>
+        <joint name="joint_2" value="-0.47"/>
+        <joint name="joint_3" value="-1.12"/>
+        <joint name="joint_4" value="-1.41"/>
+        <joint name="joint_5" value="-0.38"/>
     </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
-    <end_effector name="end_link" parent_link="link_5" group="hand" parent_group="arm" />
+    <end_effector name="end_link" parent_link="link_5" group="hand" parent_group="arm"/>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
-    <disable_collisions link1="base_link" link2="link_1" reason="Adjacent" />
-    <disable_collisions link1="base_link" link2="link_2" reason="Never" />
-    <disable_collisions link1="link_1" link2="link_2" reason="Adjacent" />
-    <disable_collisions link1="link_1" link2="link_3" reason="Never" />
-    <disable_collisions link1="link_1" link2="link_5" reason="Never" />
-    <disable_collisions link1="link_1" link2="link_6" reason="Never" />
-    <disable_collisions link1="link_1" link2="link_7" reason="Never" />
-    <disable_collisions link1="link_10" link2="link_3" reason="Never" />
-    <disable_collisions link1="link_10" link2="link_4" reason="Never" />
-    <disable_collisions link1="link_10" link2="link_5" reason="Never" />
-    <disable_collisions link1="link_10" link2="link_6" reason="Adjacent" />
-    <disable_collisions link1="link_10" link2="link_8" reason="Default" />
-    <disable_collisions link1="link_11" link2="link_3" reason="Never" />
-    <disable_collisions link1="link_11" link2="link_4" reason="Never" />
-    <disable_collisions link1="link_11" link2="link_5" reason="Never" />
-    <disable_collisions link1="link_11" link2="link_7" reason="Adjacent" />
-    <disable_collisions link1="link_11" link2="link_9" reason="Default" />
-    <disable_collisions link1="link_2" link2="link_3" reason="Adjacent" />
-    <disable_collisions link1="link_2" link2="link_5" reason="Never" />
-    <disable_collisions link1="link_2" link2="link_6" reason="Never" />
-    <disable_collisions link1="link_2" link2="link_7" reason="Never" />
-    <disable_collisions link1="link_2" link2="link_9" reason="Never" />
-    <disable_collisions link1="link_3" link2="link_4" reason="Adjacent" />
-    <disable_collisions link1="link_3" link2="link_5" reason="Never" />
-    <disable_collisions link1="link_3" link2="link_6" reason="Never" />
-    <disable_collisions link1="link_3" link2="link_7" reason="Never" />
-    <disable_collisions link1="link_3" link2="link_8" reason="Never" />
-    <disable_collisions link1="link_3" link2="link_9" reason="Never" />
-    <disable_collisions link1="link_4" link2="link_5" reason="Adjacent" />
-    <disable_collisions link1="link_4" link2="link_6" reason="Never" />
-    <disable_collisions link1="link_4" link2="link_7" reason="Never" />
-    <disable_collisions link1="link_4" link2="link_8" reason="Never" />
-    <disable_collisions link1="link_4" link2="link_9" reason="Never" />
-    <disable_collisions link1="link_5" link2="link_6" reason="Adjacent" />
-    <disable_collisions link1="link_5" link2="link_7" reason="Adjacent" />
-    <disable_collisions link1="link_5" link2="link_8" reason="Adjacent" />
-    <disable_collisions link1="link_5" link2="link_9" reason="Adjacent" />
-    <disable_collisions link1="link_6" link2="link_9" reason="Never" />
-    <disable_collisions link1="link_7" link2="link_8" reason="Never" />
-    <disable_collisions link1="link_8" link2="link_9" reason="Never" />
+    <disable_collisions link1="base_link" link2="link_1" reason="Adjacent"/>
+    <disable_collisions link1="base_link" link2="link_2" reason="Never"/>
+    <disable_collisions link1="link_1" link2="link_2" reason="Adjacent"/>
+    <disable_collisions link1="link_1" link2="link_3" reason="Never"/>
+    <disable_collisions link1="link_1" link2="link_5" reason="Never"/>
+    <disable_collisions link1="link_1" link2="link_6" reason="Never"/>
+    <disable_collisions link1="link_1" link2="link_7" reason="Never"/>
+    <disable_collisions link1="link_10" link2="link_3" reason="Never"/>
+    <disable_collisions link1="link_10" link2="link_4" reason="Never"/>
+    <disable_collisions link1="link_10" link2="link_5" reason="Never"/>
+    <disable_collisions link1="link_10" link2="link_6" reason="Adjacent"/>
+    <disable_collisions link1="link_10" link2="link_8" reason="Default"/>
+    <disable_collisions link1="link_11" link2="link_3" reason="Never"/>
+    <disable_collisions link1="link_11" link2="link_4" reason="Never"/>
+    <disable_collisions link1="link_11" link2="link_5" reason="Never"/>
+    <disable_collisions link1="link_11" link2="link_7" reason="Adjacent"/>
+    <disable_collisions link1="link_11" link2="link_9" reason="Default"/>
+    <disable_collisions link1="link_2" link2="link_3" reason="Adjacent"/>
+    <disable_collisions link1="link_2" link2="link_5" reason="Never"/>
+    <disable_collisions link1="link_2" link2="link_6" reason="Never"/>
+    <disable_collisions link1="link_2" link2="link_7" reason="Never"/>
+    <disable_collisions link1="link_2" link2="link_9" reason="Never"/>
+    <disable_collisions link1="link_3" link2="link_4" reason="Adjacent"/>
+    <disable_collisions link1="link_3" link2="link_5" reason="Never"/>
+    <disable_collisions link1="link_3" link2="link_6" reason="Never"/>
+    <disable_collisions link1="link_3" link2="link_7" reason="Never"/>
+    <disable_collisions link1="link_3" link2="link_8" reason="Never"/>
+    <disable_collisions link1="link_3" link2="link_9" reason="Never"/>
+    <disable_collisions link1="link_4" link2="link_5" reason="Adjacent"/>
+    <disable_collisions link1="link_4" link2="link_6" reason="Never"/>
+    <disable_collisions link1="link_4" link2="link_7" reason="Never"/>
+    <disable_collisions link1="link_4" link2="link_8" reason="Never"/>
+    <disable_collisions link1="link_4" link2="link_9" reason="Never"/>
+    <disable_collisions link1="link_5" link2="link_6" reason="Adjacent"/>
+    <disable_collisions link1="link_5" link2="link_7" reason="Adjacent"/>
+    <disable_collisions link1="link_5" link2="link_8" reason="Adjacent"/>
+    <disable_collisions link1="link_5" link2="link_9" reason="Adjacent"/>
+    <disable_collisions link1="link_6" link2="link_9" reason="Never"/>
+    <disable_collisions link1="link_7" link2="link_8" reason="Never"/>
+    <disable_collisions link1="link_8" link2="link_9" reason="Never"/>
 </robot>
