@@ -1,8 +1,0 @@
-prefix=/home/moyu/Refuse-Classification-Machine/install
-
-Name: table_streeing_arm_moveit_config
-Description: Description of table_streeing_arm_moveit_config
-Version: 0.3.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

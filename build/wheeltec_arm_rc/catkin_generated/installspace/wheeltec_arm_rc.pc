@@ -1,8 +1,0 @@
-prefix=/home/moyu/Refuse-Classification-Machine/install
-
-Name: wheeltec_arm_rc
-Description: Description of wheeltec_arm_rc
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

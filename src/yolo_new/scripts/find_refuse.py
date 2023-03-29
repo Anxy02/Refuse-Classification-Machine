@@ -99,19 +99,13 @@ class Find_Color:
         for i in msg.bounding_boxes:
             count+=1
 
-        if IsMoving == 0 :
+        if IsMoving == 0 :  #机械臂没有运动
             if count == 1:  ###似乎没进这个判断！！！！！！！！！
                 rospy.loginfo('单目标：：：%s',msg.bounding_boxes[0].Class)
-                tmp_class = msg.bounding_boxes[0].Class
-                # self.Class = self.switch_class(tmp_class)   #传入垃圾类别并进行判断分类
+                tmp_class = msg.bounding_boxes[0].Class #垃圾类别
                 self.Class = msg.bounding_boxes[0].CNum #垃圾类别号码
 
-                # # 添加输出数组
-                # tmp_str = f"{show_i} {tmp_class} {count} {tmp_ok}"
-                # show_i += 1
-                # Sort_show.append(tmp_str)
-
-                # self.single_send(self.Class)  #单目标直接用刷子发送
+                self.single_send(self.Class)  #单目标发送
                 # IsPuting = 0  后续放出来
 
             elif count > 1:
@@ -189,18 +183,26 @@ class Find_Color:
         else :
             return 60  #待测 -45~45度保持不变,可写90度
 
-    def single_send(self,Class): #串口发送 待写（注意数据统计）
+    def single_send(self,Class): #单目标发送
         if Class == 1:
-            print('recycle')
+            ikMsg=color_ik_result_Msg(999,999,999,'recycle',1)
+            self.arm_ik_angle_Publisher.publish(ikMsg)
+            print('single_recycle')
 
         elif Class == 2:
-            print('harm')
+            ikMsg=color_ik_result_Msg(999,999,999,'harm',1)
+            self.arm_ik_angle_Publisher.publish(ikMsg)
+            print('single_harm')
 
         elif Class == 3:
-            print('kitchen')
+            ikMsg=color_ik_result_Msg(999,999,999,'kitchen',1)
+            self.arm_ik_angle_Publisher.publish(ikMsg)
+            print('single_kitchen')
 
         elif Class == 4:
-            print('others')
+            ikMsg=color_ik_result_Msg(999,999,999,'others',1)
+            self.arm_ik_angle_Publisher.publish(ikMsg)
+            print('single_others')
             
         else:
             print('none')
@@ -243,32 +245,23 @@ class Find_Color:
              pedestal_angle  = pedestal_angle
         else :
              pedestal_angle  = -pedestal_angle
-        #arm_angle=degrees( atan( (self.link_a*sin(self.basic_angle) +  self.link_c )/self.link_a*cos(self.basic_angle) ) )
+
         caculate_A=self.link_a*sin(self.basic_angle) +sin(self.auxiliary_angle)*self.link_c
         caculate_B=self.link_a*cos(self.basic_angle) +cos(self.auxiliary_angle)*self.link_c
         caculate_C=(sqrt(pow(true_x,2)+ pow(true_y,2))-self.link_b)
         caculate_D= acos( caculate_C/(sqrt(pow(caculate_A,2)+ pow(caculate_B,2) ) ) )
-        #kk=sqrt(pow(x,2)+ pow(y,2))
-        #rospy.loginfo('DD is %s' ,DD)
         caculate_E= atan(caculate_B/caculate_A) 
         caculate_G=(caculate_E-caculate_D)
-        #print(GG)
-        #rospy.loginfo('DD is %s,EE is %s,GG is %s' ,DD,EE,GG)
-        #rospy.loginfo('GG is %s' ,GG)
+
 
         hand_angle = rotate + 90 #角度正反关系转换
         if  hand_angle >45 :
              hand_angle  = hand_angle -90
 
         pedestal_angle = radians(pedestal_angle) #云台的目标运动角度,radians函数是弧度转角度
-        #pedestal_angle=pedestal_angle
-        #rospy.loginfo('pedestal_angle is %s' ,pedestal_angle)
         arm_angle      = (caculate_G)  #控制机械臂臂长的目标角度,radians函数是弧度转角度
-        #rospy.loginfo('arm_angle is %s' ,arm_angle)
         hand_angle     = radians(hand_angle) #控制夹取色块旋转的目标角度,radians函数是弧度转角度
-        #rospy.loginfo('hand_angle is %s' ,hand_angle)
         #通过self.Class判断是什么类别的垃圾
-        #m=1绿色，m=2蓝色，m=3黄色
         if self.Class==1:
             ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'recycle',count)
             self.arm_ik_angle_Publisher.publish(ikMsg)

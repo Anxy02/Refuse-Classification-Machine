@@ -1,8 +1,0 @@
-prefix=/home/moyu/Refuse-Classification-Machine/devel
-
-Name: table_arm
-Description: Description of table_arm
-Version: 0.0.0
-Cflags: -I/home/moyu/Refuse-Classification-Machine/devel/include
-Libs: -L${prefix}/lib 
-Requires: 

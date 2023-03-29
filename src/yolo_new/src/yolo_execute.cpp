@@ -123,6 +123,7 @@ int main(int argc, char **argv)
     yolo_new::Serial_RT pub_com;
 
     pub_flag.isMoving = 0;//初始化
+    pub_flag.isPuting = 0;
     pub_com.count = 0;
     pub_com.sendClass = "none";
     Flag_pub.publish(pub_flag);
@@ -236,7 +237,7 @@ void arm_put(std::string sort)
 
 int multi_grasp_sequence()//多目标抓取
 {
-  if (isBusy == 1 && count == 1)
+  if (isSingle == 1 && isBusy == 1 && count == 1)
     return 1;
   //ROS_INFO("多目标---->>>抓取");
   if(isBusy == 1 && j_cb < count && grasp_done == 0)

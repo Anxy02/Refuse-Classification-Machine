@@ -1,8 +1,0 @@
-prefix=/home/moyu/Refuse-Classification-Machine/devel
-
-Name: yolov5_ros_msgs
-Description: Description of yolov5_ros_msgs
-Version: 1.0.0
-Cflags: -I/home/moyu/Refuse-Classification-Machine/devel/include
-Libs: -L${prefix}/lib 
-Requires: 

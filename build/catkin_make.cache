@@ -1,2 +1,0 @@
-arm_demo:table_arm:table_streeing_arm:table_streeing_arm_moveit_config:web_video_server:wheeltec_arm_rc:wheeltec_tracker_pkg:yolo_new:yolov5_ros:yolov5_ros_msgs
--DCATKIN_DEVEL_PREFIX=/home/moyu/Refuse-Classification-Machine/devel -DCMAKE_INSTALL_PREFIX=/home/moyu/Refuse-Classification-Machine/install -G Unix Makefiles
