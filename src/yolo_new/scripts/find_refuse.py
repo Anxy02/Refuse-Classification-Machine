@@ -15,8 +15,9 @@ from yolov5_ros_msgs.msg import BoundingBox,BoundingBoxes
 from yolo_new.msg import Flag,Serial_RT
 
 last_erro=0
-IsMoving = 1
+IsMoving = 0
 IsPuting = 1    #后续改为0，依靠超声波判断
+SingleSortOK = 1
 Sort_show = []  #图像输出的信息
 tmp_ok = "OK!"
 show_i = 1
@@ -86,13 +87,16 @@ class Find_Color:
 
     def flag_callback(self,msg):
         global IsMoving
+        global SingleSortOK
         IsMoving = msg.isMoving
+        SingleSortOK = msg.singleSortOK
         # IsPuting = msg.isPuting
         # print("flag_msg is",IsMoving)
 
 
     def box_callback(self,msg):
         global IsMoving
+        global SingleSortOK
         global show_i
         count=0
                         
@@ -100,16 +104,7 @@ class Find_Color:
             count+=1
 
         if IsMoving == 0 :  #机械臂没有运动
-            if count == 1:  
-                rospy.loginfo('单目标：：：%s',msg.bounding_boxes[0].Class)
-                tmp_class = msg.bounding_boxes[0].Class #垃圾类别
-                self.Class = msg.bounding_boxes[0].CNum #垃圾类别号码
-
-                # self.single_send(self.Class)  #单目标发送  todo:解决单次只接收一个物品的问题
-                
-                # IsPuting = 0  后续放出来
-
-            elif count > 1:
+            if count > 1:
                 for tmp_box in msg.bounding_boxes:
                     Xmid=tmp_box.xmid/2
                     Ymid=tmp_box.ymid/2
@@ -130,14 +125,26 @@ class Find_Color:
                     self.publishPosition(angleX,angleY,rotation,count) #发布话题：色块的位置（原始数据）
                     self.publishArm_Angle(angleX,angleY,rotation,count)	 #发布话题：根据色块位置求解的机械臂关节目标弧度话题
                     # IsPuting = 0  后续放出来
+                    return
+            
+            elif count == 1 and SingleSortOK == 1:  
+                rospy.loginfo('单目标：：：%s',msg.bounding_boxes[0].Class)
+                tmp_class = msg.bounding_boxes[0].Class #垃圾类别
+                self.Class = msg.bounding_boxes[0].CNum #垃圾类别号码
+
+                self.single_send(self.Class)  #单目标发送  todo:解决单次只接收一个物品的问题
+                SingleSortOK = 0
+                
+                # IsPuting = 0  后续放出来
+
             else:
                 #没有检测到目标
                 # rospy.loginfo("fuck!!!!!!!!!!")
                 angleX = 999
                 angleY = 999
                 rotation=999
-                self.publishPosition(angleX,angleY,rotation,count)
-                self.publishArm_Angle(angleX,angleY,rotation,count)
+                # self.publishPosition(angleX,angleY,rotation,count)
+                # self.publishArm_Angle(angleX,angleY,rotation,count)
         
     def image_callback(self, image):
         # 将垃圾分类信息在此显示

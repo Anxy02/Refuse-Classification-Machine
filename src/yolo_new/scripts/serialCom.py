@@ -32,15 +32,22 @@ class Serial_COM:
 		rospy.loginfo("~~~~通信回调收到: %s,%d",msg.sendClass, msg.count)
 		# self.send_message(msg.count,msg.sendClass)
 
-	def pub_flag():	#超声波判断投入发布flag
+	def input_pubflag():	#超声波判断投入发布flag
 		ismoving = 0
 		isputing = 1
+		singleOK = 1
     	# count  预留，为超声波计数
-		flagMSG = Flag(ismoving,isputing)
+		flagMSG = Flag(ismoving,isputing,singleOK)
 		self.flagPublisher.publish(flagMSG)
 		isputing = 0
 
-		
+	def single_pubflag():	# 刷子完成分拣后，接收到串口消息时进行发送
+		ismoving = 0
+		isputing = 0
+		singleOK = 1
+		flagMSG = Flag(ismoving,isputing,singleOK)
+		self.flagPublisher.publish(flagMSG)
+	
 
        
 	def send_message(self,bcount,bclass):
@@ -118,3 +125,6 @@ rospy.spin()
 
 #在收到超声波后，发布Flag-isPuting（待完善）
 #收到分类信息后，串口发送信息(待测)
+# 收到单分类完成标志后，需要发送flag.msg,singleSortOK=1,isMoving=0 (single_pubflag函数)
+
+#rostopic pub /Flag_pub yolo_new/Flag "isMoving: 0 isPuting: 0 singleSortOK: 1"

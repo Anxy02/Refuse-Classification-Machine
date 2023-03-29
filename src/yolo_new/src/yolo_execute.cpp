@@ -51,7 +51,7 @@ void color_ik_result_callback(const yolo_new::color_ik_result_new &msg)
 {
   // ROS_INFO("count is :%d ",msg.count);
   if(isBusy == 0 && isSingle == 0 && msg.count == 1){
-    // ROS_INFO("!!!!!!!!!!!single object :%s !!!!!!!!!!!!",msg.sort.c_str()); 
+    ROS_INFO("!!!!!!!!!!!single object :%s !!!!!!!!!!!!",msg.sort.c_str()); 
     count = msg.count;
     single_class = msg.sort.c_str();
     isBusy = 1;
@@ -60,6 +60,8 @@ void color_ik_result_callback(const yolo_new::color_ik_result_new &msg)
 
   if(isBusy == 0 && msg.count > 1)
   {
+      isSingle = 0;//强制赋值
+
       if(countFlag == 0){
         count=msg.count;//总数量
         countFlag = 1;
@@ -124,6 +126,7 @@ int main(int argc, char **argv)
 
     pub_flag.isMoving = 0;//初始化
     pub_flag.isPuting = 0;
+    pub_flag.singleSortOK = 1;
     pub_com.count = 0;
     pub_com.sendClass = "none";
     Flag_pub.publish(pub_flag);
@@ -140,18 +143,38 @@ int main(int argc, char **argv)
 
       //发布moving FLAG消息-->由py接收
       // pub_flag.isMoving = isBusy ? 1: 0;
-      pub_flag.isMoving = isBusy;
-      Flag_pub.publish(pub_flag);
+      if(isBusy){
+        pub_flag.isMoving = isBusy;
 
-      //发布单目标信息 待测
-      if(isSingle == 1 && count == 1){
-        pub_com.count = 1;
-        pub_com.sendClass = single_class;
-        Com_pub.publish(pub_com);
-        isBusy = 0;
-        isSingle = 0;
-        count = 0;
+        if (isSingle == 1 && count == 1){
+          ROS_INFO("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+          pub_com.count = 1;
+          pub_com.sendClass = single_class;
+          Com_pub.publish(pub_com);
+          pub_flag.singleSortOK = 0;
+          ROS_INFO("测试是否来这里");
+          Flag_pub.publish(pub_flag);
+          pub_flag.singleSortOK = 1;  //防止不会再次进入单分类模式
+          isBusy = 0;
+          isSingle = 0;
+          count = 0;
+        }
+        else
+          // ROS_INFO("是否忙碌：");
+          Flag_pub.publish(pub_flag);
       }
+      
+
+      // //发布单目标信息 待测
+      // if(isSingle == 1 && count == 1){
+      //   pub_com.count = 1;
+      //   pub_com.sendClass = single_class;
+      //   Com_pub.publish(pub_com);
+      //   pub_flag.singleSortOK = 0;
+      //   isBusy = 0;
+      //   isSingle = 0;
+      //   count = 0;
+      // }
 
 
       if( arm_state=="ready" )
@@ -181,6 +204,17 @@ int main(int argc, char **argv)
         arm.setNamedTarget("arm_look");   arm.move();  sleep(1);    //机械臂运动到观测色块的位置
         // arm.setNamedTarget("color_put_interval");  arm.move();  sleep(1); //机械臂臂身运动到放置色块的预位置后，再放置色块
         arm_put(target_sort); //根据颜色将色块放置到对应位置 
+
+        grasp_done=0;  //标志位清零
+        if(j_cb >= count)//标志位清零
+        {
+          i_cb = 0;
+          j_cb = 0;
+          isBusy = 0 ;
+          countFlag = 0;
+          pub_flag.isMoving = isBusy;
+          Flag_pub.publish(pub_flag);
+        }
 
         pub_com.sendClass = target_sort;//发布垃圾类别信息至通信py
         Com_pub.publish(pub_com);
@@ -225,14 +259,14 @@ void arm_put(std::string sort)
     }
     hand_open_success=false;
 
-    grasp_done=0;  //标志位清零
-    if(j_cb >= count)//标志位清零
-    {
-      i_cb = 0;
-      j_cb = 0;
-      isBusy = 0 ;
-      countFlag = 0;
-    }
+    // grasp_done=0;  //标志位清零
+    // if(j_cb >= count)//标志位清零
+    // {
+    //   i_cb = 0;
+    //   j_cb = 0;
+    //   isBusy = 0 ;
+    //   countFlag = 0;
+    // }
     arm_state="working";
 }
 
@@ -241,9 +275,10 @@ int multi_grasp_sequence()//多目标抓取
   if (isSingle == 1 && isBusy == 1 && count == 1)
     return 1;
 
-  //ROS_INFO("多目标---->>>抓取");
+  
   if(isBusy == 1 && j_cb < count && grasp_done == 0)
   {
+    ROS_INFO("多目标---->>>抓取");
     joint_target1=cb_target_data[j_cb][0];//关节目标值赋值
     joint_target2=cb_target_data[j_cb][1];
     joint_target3=cb_target_data[j_cb][2];
