@@ -9,7 +9,9 @@ import numpy as np
 from std_msgs.msg import Header
 from sensor_msgs.msg import Image
 from yolov5_ros_msgs.msg import BoundingBox, BoundingBoxes
-
+from yolo_new.msg import Flag,Serial_RT
+IsMoving = 0
+SingleSortOK = 1
 
 class Yolo_Dect:
     def __init__(self):
@@ -45,6 +47,7 @@ class Yolo_Dect:
         # image subscribe
         self.color_sub = rospy.Subscriber(image_topic, Image, self.image_callback,
                                           queue_size=1, buff_size=52428800)
+        self.flag_sub = rospy.Subscriber("/Flag_pub", Flag, self.flag_callback)#订阅移动状态话题
         
 
         # output publishers
@@ -60,23 +63,33 @@ class Yolo_Dect:
             rospy.loginfo("waiting for image.")
             rospy.sleep(2)
 
+    def flag_callback(self,msg):
+        global IsMoving
+        global SingleSortOK
+        IsMoving = msg.isMoving
+        SingleSortOK = msg.singleSortOK
+
     def image_callback(self, image):
-        self.boundingBoxes = BoundingBoxes()
-        self.boundingBoxes.header = image.header
-        self.boundingBoxes.image_header = image.header
-        self.getImageStatus = True
-        self.color_image = np.frombuffer(image.data, dtype=np.uint8).reshape(
-            image.height, image.width, -1)
-        self.color_image = cv2.cvtColor(self.color_image, cv2.COLOR_BGR2RGB)
+        global IsMoving
+        global SingleSortOK
 
-        # 可在此添加标志位，进行单帧检测
-        results = self.model(self.color_image)
-        # xmin    ymin    xmax   ymax  confidence  class    name
+        if IsMoving == 0:   #待测
+            self.boundingBoxes = BoundingBoxes()
+            self.boundingBoxes.header = image.header
+            self.boundingBoxes.image_header = image.header
+            self.getImageStatus = True
+            self.color_image = np.frombuffer(image.data, dtype=np.uint8).reshape(
+                image.height, image.width, -1)
+            self.color_image = cv2.cvtColor(self.color_image, cv2.COLOR_BGR2RGB)
 
-        boxs = results.pandas().xyxy[0].values
-        self.dectshow(self.color_image, boxs, image.height, image.width)
+            # 可在此添加标志位，进行单帧检测
+            results = self.model(self.color_image)
+            # xmin    ymin    xmax   ymax  confidence  class    name
 
-        cv2.waitKey(3)
+            boxs = results.pandas().xyxy[0].values
+            self.dectshow(self.color_image, boxs, image.height, image.width)
+
+            cv2.waitKey(3)
 
     def dectshow(self, org_img, boxs, height, width):
         img = org_img.copy()
@@ -97,7 +110,7 @@ class Yolo_Dect:
             boundingBox.num = np.int16(count)
             boundingBox.Class = box[-1]
             boundingBox.CNum = self.switch_class(boundingBox.Class)   #传入垃圾类别并进行判断分类
-            # boundingBox.
+            # boundingBox.ONum = self.switch_num(boundingBox.Class)
 
 
             if box[-1] in self.classes_colors.keys():
@@ -137,6 +150,29 @@ class Yolo_Dect:
             return 4
         else :
             return 999
+    
+    def switch_num(self,bclass):    #定义垃圾类别
+        if bclass == 'recycle_can':
+            return 1
+        elif bclass == 'recycle_bottle':
+            return 2
+        elif bclass == 'recycle_paper':
+            return 3
+        elif bclass == 'harm_battery':
+            return 4
+        elif bclass == 'kitchen_ternip':#白萝卜
+            return 5
+        elif bclass == 'kitchen_carrot':
+            return 6
+        elif bclass == 'kitchen_potato':
+            return 7
+        elif bclass == 'others_chip':#瓷片
+            return 8
+        elif bclass == 'others_stone':
+            return 9
+        else :
+            return 999
+        
 
     def publish_image(self, imgdata, height, width):
         image_temp = Image()

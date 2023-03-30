@@ -31,6 +31,7 @@ float auxiliary_angle;
 int recycle_count_cb=0,harm_count_cb=0,kitchen_count_cb=0,others_count_cb=0; //接收到该数据帧的回调函数次数callback
 int recycle_count=0,harm_count=0,kitchen_count=0,others_count=0; //垃圾计数
 int count=0;//识别到的垃圾总数量
+int ObjectNum[10]={0};//识别到的垃圾号码
 int grasp_done=0;  //色块是否已经夹取标志位
 float cb_target_data[10][3]={0};  //回调函数目标值保存
 std::string cb_class[10]={};
@@ -53,6 +54,7 @@ void color_ik_result_callback(const yolo_new::color_ik_result_new &msg)
   if(isBusy == 0 && isSingle == 0 && msg.count == 1){
     ROS_INFO("!!!!!!!!!!!single object :%s !!!!!!!!!!!!",msg.sort.c_str()); 
     count = msg.count;
+    ObjectNum[0] = msg.ONum;
     single_class = msg.sort.c_str();
     isBusy = 1;
     isSingle = 1;
@@ -77,6 +79,7 @@ void color_ik_result_callback(const yolo_new::color_ik_result_new &msg)
         ROS_INFO("tmp_i is :%d ",i_cb); 
         ROS_INFO("cb_target_is  :(%4.2f)-(%4.2f)-(%4.2f)",cb_target_data[i_cb][0],cb_target_data[i_cb][1],cb_target_data[i_cb][2]);
         cb_class[i_cb] = msg.sort; 
+        ObjectNum[i_cb] = msg.ONum;
         i_cb+=1;
       }
       else
@@ -128,6 +131,7 @@ int main(int argc, char **argv)
     pub_flag.isPuting = 0;
     pub_flag.singleSortOK = 1;
     pub_com.count = 0;
+    pub_com.ONum = 0;
     pub_com.sendClass = "none";
     Flag_pub.publish(pub_flag);
     Com_pub.publish(pub_com);
@@ -150,6 +154,7 @@ int main(int argc, char **argv)
           ROS_INFO("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
           pub_com.count = 1;
           pub_com.sendClass = single_class;
+          pub_com.ONum = ObjectNum[0];
           Com_pub.publish(pub_com);
           pub_flag.singleSortOK = 0;
           ROS_INFO("测试是否来这里");
@@ -205,6 +210,11 @@ int main(int argc, char **argv)
         // arm.setNamedTarget("color_put_interval");  arm.move();  sleep(1); //机械臂臂身运动到放置色块的预位置后，再放置色块
         arm_put(target_sort); //根据颜色将色块放置到对应位置 
 
+        pub_com.sendClass = target_sort;//发布垃圾类别信息至通信py
+        pub_com.ONum = ObjectNum[j_cb];
+        Com_pub.publish(pub_com);
+        pub_com.sendClass = "none";
+
         grasp_done=0;  //标志位清零
         if(j_cb >= count)//标志位清零
         {
@@ -214,12 +224,7 @@ int main(int argc, char **argv)
           countFlag = 0;
           pub_flag.isMoving = isBusy;
           Flag_pub.publish(pub_flag);
-        }
-
-        pub_com.sendClass = target_sort;//发布垃圾类别信息至通信py
-        Com_pub.publish(pub_com);
-        pub_com.sendClass = "none";
-        
+        }    
       }
     ros::spinOnce();
   }

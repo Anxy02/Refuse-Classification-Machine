@@ -21,6 +21,7 @@ SingleSortOK = 1
 Sort_show = []  #图像输出的信息
 tmp_ok = "OK!"
 show_i = 1
+objectNum = 0
 def nothing(s):
     pass
 
@@ -79,10 +80,16 @@ class Find_Color:
     def com_callback(self,msg):
         global show_i
         global Sort_show
+        global objectNum
+
+        objectNum = msg.ONum
+        out_str = self.switchONum(objectNum)
         # 添加输出数组
-        tmp_str = f"{show_i} {msg.sendClass} {msg.count} {tmp_ok}"
-        show_i += 1
-        Sort_show.append(tmp_str)
+        # tmp_str = f"{show_i} {msg.sendClass} {1} {tmp_ok}"
+        if out_str is not 'none':
+            tmp_str = f"{show_i} {out_str} {1} {tmp_ok}"
+            show_i += 1
+            Sort_show.append(tmp_str)
 
 
     def flag_callback(self,msg):
@@ -113,10 +120,11 @@ class Find_Color:
                     Ymin=tmp_box.ymin
                     Ymax=tmp_box.ymax
 
-                    tmp_class=tmp_box.Class
+                    tmp_class=tmp_box.Class     #垃圾文字
                     # rospy.loginfo("class is %s ,X is %f, Y is %f", self.Class,Xmid,Ymid)
                     # self.Class = self.switch_class(tmp_box.Class)   #传入垃圾类别并进行判断分类
                     self.Class = tmp_box.CNum   #垃圾类别号码
+                    self.ONum = tmp_box.ONum    #垃圾号码
 
 
                     angleX = self.calculateAngleX(Xmid) #做数学转换获取色块在画幅中的坐标
@@ -171,6 +179,28 @@ class Find_Color:
 
         cv2.imshow('YOLOv5_show', self.color_image)
         cv2.waitKey(3)
+    
+    def switchONum(self,num):
+        if num == 1:
+            return 'recycle_can'
+        elif num == 2:
+            return 'recycle_bottle'
+        elif num == 3:
+            return 'recycle_paper'
+        elif num == 4:
+            return 'harm_battery'
+        elif num == 5:#白萝卜
+            return 'kitchen_ternip'
+        elif num == 6:
+            return 'kitchen_carrot'
+        elif num == 7:
+            return 'kitchen_potato'
+        elif num == 8:#瓷片
+            return 'others_chip'
+        elif num == 9:
+            return 'others_stone'
+        else :
+            return 'none'
 
 
     def calculateAngleX(self, pos):
@@ -271,16 +301,16 @@ class Find_Color:
         hand_angle     = radians(hand_angle) #控制夹取色块旋转的目标角度,radians函数是弧度转角度
         #通过self.Class判断是什么类别的垃圾
         if self.Class==1:
-            ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'recycle',count)
+            ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'recycle',count,self.ONum)
             self.arm_ik_angle_Publisher.publish(ikMsg)
         if self.Class==2:
-            ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'harm',count)
+            ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'harm',count,self.ONum)
             self.arm_ik_angle_Publisher.publish(ikMsg)
         if self.Class==3:
-            ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'kitchen',count)
+            ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'kitchen',count,self.ONum)
             self.arm_ik_angle_Publisher.publish(ikMsg)
         if self.Class==4:
-            ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'others',count)
+            ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'others',count,self.ONum)
             self.arm_ik_angle_Publisher.publish(ikMsg)
 
 

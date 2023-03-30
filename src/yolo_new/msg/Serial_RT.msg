@@ -1,2 +1,3 @@
 string sendClass
-int32 count
+int16 count
+int16 ONum
