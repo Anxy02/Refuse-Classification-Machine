@@ -72,24 +72,22 @@ class Yolo_Dect:
     def image_callback(self, image):
         global IsMoving
         global SingleSortOK
+        
+        self.boundingBoxes = BoundingBoxes()
+        self.boundingBoxes.header = image.header
+        self.boundingBoxes.image_header = image.header
+        self.getImageStatus = True
+        self.color_image = np.frombuffer(image.data, dtype=np.uint8).reshape(
+            image.height, image.width, -1)
+        self.color_image = cv2.cvtColor(self.color_image, cv2.COLOR_BGR2RGB)
 
-        if IsMoving == 0:   #待测
-            self.boundingBoxes = BoundingBoxes()
-            self.boundingBoxes.header = image.header
-            self.boundingBoxes.image_header = image.header
-            self.getImageStatus = True
-            self.color_image = np.frombuffer(image.data, dtype=np.uint8).reshape(
-                image.height, image.width, -1)
-            self.color_image = cv2.cvtColor(self.color_image, cv2.COLOR_BGR2RGB)
+        results = self.model(self.color_image)
+        # xmin    ymin    xmax   ymax  confidence  class    name
 
-            # 可在此添加标志位，进行单帧检测
-            results = self.model(self.color_image)
-            # xmin    ymin    xmax   ymax  confidence  class    name
+        boxs = results.pandas().xyxy[0].values
+        self.dectshow(self.color_image, boxs, image.height, image.width)
 
-            boxs = results.pandas().xyxy[0].values
-            self.dectshow(self.color_image, boxs, image.height, image.width)
-
-            cv2.waitKey(3)
+        cv2.waitKey(3)
 
     def dectshow(self, org_img, boxs, height, width):
         img = org_img.copy()

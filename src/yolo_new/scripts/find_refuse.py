@@ -22,6 +22,8 @@ Sort_show = []  #图像输出的信息
 tmp_ok = "OK!"
 show_i = 1
 objectNum = 0
+judge_class = 0
+judge_i = 0
 def nothing(s):
     pass
 
@@ -84,12 +86,16 @@ class Find_Color:
 
         objectNum = msg.ONum
         out_str = self.switchONum(objectNum)
-        # 添加输出数组
-        # tmp_str = f"{show_i} {msg.sendClass} {1} {tmp_ok}"
-        if out_str is not 'none':
-            tmp_str = f"{show_i} {out_str} {1} {tmp_ok}"
-            show_i += 1
-            Sort_show.append(tmp_str)
+        # 添加输出数组 旧模型使用测试
+        tmp_str = f"{show_i} {msg.sendClass} {1} {tmp_ok}"
+        show_i += 1
+        Sort_show.append(tmp_str)
+
+        # # 等待新模型训练好后将下面放出来
+        # if out_str is not 'none':
+        #     tmp_str = f"{show_i} {out_str} {1} {tmp_ok}"
+        #     show_i += 1
+        #     Sort_show.append(tmp_str)
 
 
     def flag_callback(self,msg):
@@ -105,6 +111,8 @@ class Find_Color:
         global IsMoving
         global SingleSortOK
         global show_i
+        global judge_class
+        global judge_i
         count=0
                         
         for i in msg.bounding_boxes:
@@ -132,16 +140,30 @@ class Find_Color:
                     rotation=self.calculateRotation(Xmin,Xmax,Ymin,Ymax)#角度位姿
                     self.publishPosition(angleX,angleY,rotation,count) #发布话题：色块的位置（原始数据）
                     self.publishArm_Angle(angleX,angleY,rotation,count)	 #发布话题：根据色块位置求解的机械臂关节目标弧度话题
+                    SingleSortOK = 0    #强制清零
                     # IsPuting = 0  后续放出来
-                    return
             
             elif count == 1 and SingleSortOK == 1:  
-                rospy.loginfo('单目标：：：%s',msg.bounding_boxes[0].Class)
-                tmp_class = msg.bounding_boxes[0].Class #垃圾类别
-                self.Class = msg.bounding_boxes[0].CNum #垃圾类别号码
+                # 进行5次判断防止误进入
+                if judge_class != msg.bounding_boxes[0].CNum :
+                    judge_class = msg.bounding_boxes[0].CNum #垃圾类别
+                    judge_i = 0
+                    return
+                else:
+                    if judge_i < 5:
+                        judge_i += 1
+                        return
+                    else:
+                        rospy.loginfo('单目标：：：%s',msg.bounding_boxes[0].Class)
+                        
+                        self.Class = msg.bounding_boxes[0].CNum #垃圾类别号码
+                        self.ONum = msg.bounding_boxes[0].ONum  #垃圾号码
 
-                self.single_send(self.Class)  #单目标发送  todo:解决单次只接收一个物品的问题
-                SingleSortOK = 0
+                        self.single_send(self.Class)  #单目标发送  todo:解决单次只接收一个物品的问题
+                        SingleSortOK = 0
+                        judge_class = 0
+                        judge_i = 0
+                    
                 
                 # IsPuting = 0  后续放出来
 
@@ -223,22 +245,22 @@ class Find_Color:
 
     def single_send(self,Class): #单目标发送
         if Class == 1:
-            ikMsg=color_ik_result_Msg(999,999,999,'recycle',1)
+            ikMsg=color_ik_result_Msg(999,999,999,'recycle',1,self.ONum)
             self.arm_ik_angle_Publisher.publish(ikMsg)
             print('single_recycle')
 
         elif Class == 2:
-            ikMsg=color_ik_result_Msg(999,999,999,'harm',1)
+            ikMsg=color_ik_result_Msg(999,999,999,'harm',1,self.ONum)
             self.arm_ik_angle_Publisher.publish(ikMsg)
             print('single_harm')
 
         elif Class == 3:
-            ikMsg=color_ik_result_Msg(999,999,999,'kitchen',1)
+            ikMsg=color_ik_result_Msg(999,999,999,'kitchen',1,self.ONum)
             self.arm_ik_angle_Publisher.publish(ikMsg)
             print('single_kitchen')
 
         elif Class == 4:
-            ikMsg=color_ik_result_Msg(999,999,999,'others',1)
+            ikMsg=color_ik_result_Msg(999,999,999,'others',1,self.ONum)
             self.arm_ik_angle_Publisher.publish(ikMsg)
             print('single_others')
             
