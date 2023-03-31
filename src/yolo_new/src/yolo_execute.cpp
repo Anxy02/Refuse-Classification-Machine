@@ -52,7 +52,7 @@ void color_ik_result_callback(const yolo_new::color_ik_result_new &msg)
 {
   // 单分类
   if(isBusy == 0 && isSingle == 0 && msg.count == 1){
-    // ROS_INFO("!!!!!!!!!!!single object :%s !!!!!!!!!!!!",msg.sort.c_str()); 
+    ROS_INFO("!!!!!!!!!!!single object :%s !!!!!!!!!!!!",msg.sort.c_str()); 
     count = msg.count;
     ObjectNum[0] = msg.ONum;
     single_class = msg.sort.c_str();
@@ -164,7 +164,10 @@ int main(int argc, char **argv)
       {
         arm_state="working";
         // ROS_INFO("joint_target_is    :(%4.2f)-(%4.2f)-(%4.2f)",joint_target1,joint_target2,joint_target3);
-
+        // pub_com.sendClass = target_sort;//发布垃圾类别信息至通信py
+        // pub_com.ONum = ObjectNum[j_cb];
+        // Com_pub.publish(pub_com);
+        // pub_com.sendClass = "none";
         //关节的目标旋转角度赋值
         joint_group_positions[0] =  joint_target1;
         joint_group_positions[1] =  -1.57-joint_target2+base_angle;
@@ -282,8 +285,6 @@ int multi_grasp_sequence()//多目标抓取
     }
     grasp_done=1;
     ++j_cb;
-
-
   }
 
 }

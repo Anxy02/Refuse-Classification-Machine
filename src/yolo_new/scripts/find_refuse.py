@@ -16,7 +16,7 @@ from yolo_new.msg import Flag,Serial_RT
 
 last_erro=0
 IsMoving = 0
-IsPuting = 1    #后续改为0，依靠超声波判断
+# IsPuting = 1    #后续改为0，依靠超声波判断
 SingleSortOK = 1
 Sort_show = []  #图像输出的信息
 tmp_ok = "OK!"
@@ -86,12 +86,12 @@ class Find_Color:
 
         objectNum = msg.ONum
         out_str = self.switchONum(objectNum)
-        # 添加输出数组 旧模型使用测试
+        # 添加输出数组 (旧模型使用测试
         tmp_str = f"{show_i} {msg.sendClass} {1} {tmp_ok}"
         show_i += 1
         Sort_show.append(tmp_str)
 
-        # # 等待新模型训练好后将下面放出来
+        # # 等待新模型训练好后将下面放出来  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         # if out_str is not 'none':
         #     tmp_str = f"{show_i} {out_str} {1} {tmp_ok}"
         #     show_i += 1
@@ -159,7 +159,7 @@ class Find_Color:
                         self.Class = msg.bounding_boxes[0].CNum #垃圾类别号码
                         self.ONum = msg.bounding_boxes[0].ONum  #垃圾号码
 
-                        self.single_send(self.Class)  #单目标发送  todo:解决单次只接收一个物品的问题
+                        self.single_send(self.Class)  #单目标发送
                         SingleSortOK = 0
                         judge_class = 0
                         judge_i = 0
@@ -182,7 +182,7 @@ class Find_Color:
         # self.getImageStatus = True
         self.color_image = np.frombuffer(image.data, dtype=np.uint8).reshape(
             image.height, image.width, -1)
-        self.color_image = cv2.cvtColor(self.color_image, cv2.COLOR_BGR2RGB)
+        # self.color_image = cv2.cvtColor(self.color_image, cv2.COLOR_BGR2RGB)
 
         length = len(Sort_show)
         tmp_x = 0

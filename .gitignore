@@ -1,6 +1,7 @@
 build
 devel
 .vscode
+src/.vscode
 src/yolo_new/src/.DS_Store
 .DS_Store
 src/web_video_server

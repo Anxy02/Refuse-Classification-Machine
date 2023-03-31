@@ -137,7 +137,7 @@ class Yolo_Dect:
         self.publish_image(img, height, width)
         # cv2.imshow('YOLOv5', img)
 
-    def switch_class(self,bclass):# 根据yolo返回类别进行类别分类!!!!!注意电池有个空格很恶心
+    def switch_class(self,bclass):# 根据yolo返回类别进行类别分类 CNum
         if bclass == "recycle_cans1" or bclass == "recycle_cans2" or bclass == "recycle_bottle" or bclass == "recycle_paper":
             return 1
         elif bclass == "harm_battery " :
@@ -149,7 +149,7 @@ class Yolo_Dect:
         else :
             return 999
     
-    def switch_num(self,bclass):    #定义垃圾类别
+    def switch_num(self,bclass):    #定义垃圾类别 ONum
         if bclass == 'recycle_can':
             return 1
         elif bclass == 'recycle_bottle':
