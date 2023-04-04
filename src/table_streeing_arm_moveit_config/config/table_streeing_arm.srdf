@@ -155,12 +155,12 @@
         <joint name="joint_5" value="0"/>
     </group_state>
     <group_state name="hand_open" group="hand">
-        <joint name="joint_10" value="-0.2"/>
-        <joint name="joint_11" value="0.2"/>
-        <joint name="joint_6" value="0.2"/>
-        <joint name="joint_7" value="0.2"/>
-        <joint name="joint_8" value="0.2"/>
-        <joint name="joint_9" value="-0.2"/>
+        <joint name="joint_10" value="-0.0905"/>
+        <joint name="joint_11" value="-0.028"/>
+        <joint name="joint_6" value="0.2183"/>
+        <joint name="joint_7" value="0.2396"/>
+        <joint name="joint_8" value="0.2929"/>
+        <joint name="joint_9" value="-0.3994"/>
     </group_state>
     <group_state name="hand_half_open" group="hand">
         <joint name="joint_10" value="0.3"/>
@@ -179,18 +179,18 @@
         <joint name="joint_9" value="0.8"/>
     </group_state>
     <group_state name="other_put" group="arm">
-        <joint name="joint_1" value="0.75"/>
-        <joint name="joint_2" value="-0.47"/>
-        <joint name="joint_3" value="-1.12"/>
+        <joint name="joint_1" value="0.994"/>
+        <joint name="joint_2" value="-0.4366"/>
+        <joint name="joint_3" value="-1.0126"/>
         <joint name="joint_4" value="-1.41"/>
         <joint name="joint_5" value="-0.38"/>
     </group_state>
     <group_state name="recycle_put" group="arm">
-        <joint name="joint_1" value="-0.55"/>
-        <joint name="joint_2" value="-0.47"/>
+        <joint name="joint_1" value="-0.9197"/>
+        <joint name="joint_2" value="-0.4552"/>
         <joint name="joint_3" value="-1.12"/>
-        <joint name="joint_4" value="-1.41"/>
-        <joint name="joint_5" value="-0.38"/>
+        <joint name="joint_4" value="-1.1898"/>
+        <joint name="joint_5" value="0.065"/>
     </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="end_link" parent_link="link_5" group="hand" parent_group="arm"/>

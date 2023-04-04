@@ -78,7 +78,9 @@ void color_ik_result_callback(const yolo_new::color_ik_result_new &msg)
         ROS_INFO("cb_target_is  :(%4.2f)-(%4.2f)-(%4.2f)",cb_target_data[i_cb][0],cb_target_data[i_cb][1],cb_target_data[i_cb][2]);
         cb_class[i_cb] = msg.sort; 
         ObjectNum[i_cb] = msg.ONum;
+        ROS_INFO("~~~~~~~~~~~~~~~~~~cpp ONum is :%d ~~~~~~~~~~~~~~~~~~~~~",ObjectNum[i_cb]); 
         i_cb+=1;
+        
       }
       else
       {
@@ -130,6 +132,101 @@ int main(int argc, char **argv)
     Flag_pub.publish(pub_flag);
     Com_pub.publish(pub_com);
     
+    //************************************************************
+      ros::Publisher planning_scene_diff_publisher = n.advertise<moveit_msgs::PlanningScene>("planning_scene", 1);
+      ros::WallDuration sleep_t(0.5);
+      while (planning_scene_diff_publisher.getNumSubscribers() < 1)
+      {
+        sleep_t.sleep();
+      }
+      moveit_msgs::CollisionObject obj;
+
+      //顶板
+      obj.header.frame_id = "base_link";
+      obj.id="box";
+      //定义物体形状尺寸
+      shape_msgs::SolidPrimitive primitive;
+      primitive.type=primitive.BOX;
+      primitive.dimensions.resize(3); //dimensions是一个vector,为其分配3个元素空间
+      primitive.dimensions[0] =0.5;   //x轴上长度
+      primitive.dimensions[1] =0.5;   //y轴上长度
+      primitive.dimensions[2] =0.01;   //z轴上长度
+      //定义物体方位
+      geometry_msgs::Pose pose;
+      pose.position.x = 0.1;
+      pose.position.z = 0.36;
+      //将形状添加到obj
+      obj.primitives.push_back(primitive);
+      obj.primitive_poses.push_back(pose);
+      //定义操作为添加
+      obj.operation = obj.ADD;
+      //定义一个PlanningScene消息
+      moveit_msgs::PlanningScene planning_scene;
+      planning_scene.world.collision_objects.push_back(obj);
+      planning_scene.is_diff = true;
+      //发布该消息
+      planning_scene_diff_publisher.publish(planning_scene);
+
+      //右边刷子
+      obj.header.frame_id = "base_link";
+      obj.id="box1";
+      //定义物体形状尺寸
+      shape_msgs::SolidPrimitive primitive1;
+      primitive1.type=primitive1.BOX;
+      primitive1.dimensions.resize(3); //dimensions是一个vector,为其分配3个元素空间
+      primitive1.dimensions[0] =0.02;   //x轴上长度
+      primitive1.dimensions[1] =0.22;   //y轴上长度
+      primitive1.dimensions[2] =0.08;   //z轴上长度
+      //定义物体方位
+      // geometry_msgs::Pose pose;
+      pose.position.x = 0.25;
+      pose.position.y = -0.11;
+      pose.position.z = 0.05;
+      pose.orientation.w = 0.924;
+      pose.orientation.z = 0.383;
+      //将形状添加到obj
+      obj.primitives.push_back(primitive1);
+      obj.primitive_poses.push_back(pose);
+      //定义操作为添加
+      obj.operation = obj.ADD;
+      //定义一个PlanningScene消息
+      // moveit_msgs::PlanningScene planning_scene;
+      planning_scene.world.collision_objects.push_back(obj);
+      planning_scene.is_diff = true;
+      //发布该消息
+      planning_scene_diff_publisher.publish(planning_scene);
+
+      //左刷子
+      obj.header.frame_id = "base_link";
+      obj.id="box2";
+      //定义物体形状尺寸
+      shape_msgs::SolidPrimitive primitive2;
+      primitive2.type=primitive2.BOX;
+      primitive2.dimensions.resize(3); //dimensions是一个vector,为其分配3个元素空间
+      primitive2.dimensions[0] =0.02;   //x轴上长度
+      primitive2.dimensions[1] =0.22;   //y轴上长度
+      primitive2.dimensions[2] =0.08;   //z轴上长度
+      //定义物体方位
+      // geometry_msgs::Pose pose;
+      pose.position.x = 0.25;
+      pose.position.y = 0.11;
+      pose.position.z = 0.05;
+      pose.orientation.w = 0.924;
+      pose.orientation.z = -0.383;
+      //将形状添加到obj
+      obj.primitives.push_back(primitive2);
+      obj.primitive_poses.push_back(pose);
+      //定义操作为添加
+      obj.operation = obj.ADD;
+      //定义一个PlanningScene消息
+      // moveit_msgs::PlanningScene planning_scene;
+      planning_scene.world.collision_objects.push_back(obj);
+      planning_scene.is_diff = true;
+      //发布该消息
+      planning_scene_diff_publisher.publish(planning_scene);
+
+
+    //***********************************************************
     
     ROS_INFO("yolo_execute_node init successful");
     ROS_INFO("finding and waitting....");
@@ -155,6 +252,7 @@ int main(int argc, char **argv)
           isBusy = 0;
           isSingle = 0;
           count = 0;
+          ObjectNum[0]=0; //清零测试
         }
         else
           Flag_pub.publish(pub_flag);
@@ -192,7 +290,7 @@ int main(int argc, char **argv)
         arm_put(target_sort); //根据颜色将色块放置到对应位置 
 
         pub_com.sendClass = target_sort;//发布垃圾类别信息至通信py
-        pub_com.ONum = ObjectNum[j_cb];
+        pub_com.ONum = ObjectNum[j_cb-1];
         Com_pub.publish(pub_com);
         pub_com.sendClass = "none";
 

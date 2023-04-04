@@ -86,16 +86,17 @@ class Find_Color:
 
         objectNum = msg.ONum
         out_str = self.switchONum(objectNum)
-        # 添加输出数组 (旧模型使用测试
-        tmp_str = f"{show_i} {msg.sendClass} {1} {tmp_ok}"
-        show_i += 1
-        Sort_show.append(tmp_str)
 
-        # # 等待新模型训练好后将下面放出来  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        # if out_str is not 'none':
-        #     tmp_str = f"{show_i} {out_str} {1} {tmp_ok}"
-        #     show_i += 1
-        #     Sort_show.append(tmp_str)
+        # # 添加输出数组 (旧模型使用测试
+        # tmp_str = f"{show_i} {msg.sendClass} {1} {tmp_ok}"
+        # show_i += 1
+        # Sort_show.append(tmp_str)
+
+        # 等待新模型训练好后将下面放出来  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        if out_str != 'none':
+            tmp_str = f"{show_i} {out_str} {1} {tmp_ok}"
+            show_i += 1
+            Sort_show.append(tmp_str)
 
 
     def flag_callback(self,msg):
@@ -334,7 +335,7 @@ class Find_Color:
         if self.Class==4:
             ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'others',count,self.ONum)
             self.arm_ik_angle_Publisher.publish(ikMsg)
-
+        rospy.loginfo('py层发送ONum is %d~~~~~~~~~~~~~~~~~~~~~~~~~~~' ,self.ONum)
 
 rospy.init_node("yolo_detect")
 yolo_detect = Find_Color()

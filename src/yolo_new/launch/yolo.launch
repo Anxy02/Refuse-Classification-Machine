@@ -9,6 +9,9 @@
 
   <include file="$(find yolo_new)/launch/base_serial.launch" />
 
+  <node name='mp4' pkg="yolo_new" type="video.py" output="screen">
+  </node>
+
   <node name='pick_color' pkg="yolo_new" type="yolo_execute" output="screen">
   </node>
   <node name='communication' pkg="yolo_new" type="serialCom.py" output="screen">
@@ -25,11 +28,11 @@
 
   <!-- Start yolov5 and ros wrapper -->
   <node pkg="yolov5_ros" type="yolo_v5.py" name="yolov5_ros" output="screen" >
-    <param name="weight_path"       value="$(find yolov5_ros)/weights/best_v6.pt"/>
+    <param name="weight_path"       value="$(find yolov5_ros)/weights/best_0402.pt"/>
     <param name="image_topic"       value="/usb_cam/image_raw" />
     <param name="pub_topic"         value="/yolov5/BoundingBoxes" />
     <param name="camera_frame"       value="camera_color_frame"/>
-    <param name="conf"              value="0.6" />
+    <param name="conf"              value="0.65" />
   </node>
 
 </launch>

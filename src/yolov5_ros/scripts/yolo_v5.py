@@ -38,6 +38,7 @@ class Yolo_Dect:
         #    self.model.cuda()
 
         self.model.conf = conf
+        self.model.iou = 0.25    #待测试~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         self.color_image = Image()
         self.depth_image = Image()
         self.getImageStatus = False
@@ -97,6 +98,12 @@ class Yolo_Dect:
             count += 1
 
         for box in boxs:
+            
+            # tmp_flag = judge_result(box)    # 判断识别结果是否合格
+            # if tmp_flag == 0:
+            #     count -= 1
+            #     continue
+
             boundingBox = BoundingBox()
             boundingBox.probability = np.float64(box[4])
             boundingBox.xmin = np.int64(box[0])
@@ -108,7 +115,7 @@ class Yolo_Dect:
             boundingBox.num = np.int16(count)
             boundingBox.Class = box[-1]
             boundingBox.CNum = self.switch_class(boundingBox.Class)   #传入垃圾类别并进行判断分类
-            # boundingBox.ONum = self.switch_num(boundingBox.Class)
+            boundingBox.ONum = self.switch_num(boundingBox.Class)
 
 
             if box[-1] in self.classes_colors.keys():
@@ -137,14 +144,26 @@ class Yolo_Dect:
         self.publish_image(img, height, width)
         # cv2.imshow('YOLOv5', img)
 
+    # def switch_class(self,bclass):# 根据yolo返回类别进行类别分类 CNum
+    #     if bclass == "recycle_cans1" or bclass == "recycle_cans2" or bclass == "recycle_bottle" or bclass == "recycle_paper":
+    #         return 1
+    #     elif bclass == "harm_battery " :
+    #         return 2
+    #     elif bclass == "kitchen_potato" or bclass == "kitchen_raddish" or bclass == "kitchen_carrot" :
+    #         return 3
+    #     elif bclass == "others_pebble" or bclass == "others":
+    #         return 4
+    #     else :
+    #         return 999
+        
     def switch_class(self,bclass):# 根据yolo返回类别进行类别分类 CNum
-        if bclass == "recycle_cans1" or bclass == "recycle_cans2" or bclass == "recycle_bottle" or bclass == "recycle_paper":
+        if bclass == "recycle_can" or bclass == "recycle_bottle" or bclass == "recycle_paper":
             return 1
-        elif bclass == "harm_battery " :
+        elif bclass == "harm_battery" :
             return 2
-        elif bclass == "kitchen_potato" or bclass == "kitchen_raddish" or bclass == "kitchen_carrot" :
+        elif bclass == "kitchen_potato" or bclass == "kitchen_ternip" or bclass == "kitchen_carrot" :
             return 3
-        elif bclass == "others_pebble" or bclass == "others":
+        elif bclass == "others_chip" or bclass == "others_stone":
             return 4
         else :
             return 999
@@ -170,6 +189,25 @@ class Yolo_Dect:
             return 9
         else :
             return 999
+
+    def judge_result(self,box): #判断检测结果是否合格 默认返回1，不合格返回0
+        xmin = np.int64(box[0])
+        ymin = np.int64(box[1])
+        xmax = np.int64(box[2])
+        ymax = np.int64(box[3])
+        aera = (xmax-xmin)*(ymax-ymin)
+
+        xmid = (np.int64(box[0])+np.int64(box[2]))/2
+        ymid = (np.int64(box[1])+np.int64(box[3]))/2
+        Class = box[-1]
+        CNum = self.switch_class(Class)
+        ONum = self.switch_num(Class)
+
+        if boundingBox.ONum == 4:   #电池
+            if aera > 100:  # 示例，待测
+                return 0
+
+        return 1
         
 
     def publish_image(self, imgdata, height, width):
