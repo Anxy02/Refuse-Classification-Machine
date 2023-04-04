@@ -132,7 +132,7 @@ int main(int argc, char **argv)
     Flag_pub.publish(pub_flag);
     Com_pub.publish(pub_com);
     
-    //************************************************************
+    //*****************************添加避障障碍物*******************************
       ros::Publisher planning_scene_diff_publisher = n.advertise<moveit_msgs::PlanningScene>("planning_scene", 1);
       ros::WallDuration sleep_t(0.5);
       while (planning_scene_diff_publisher.getNumSubscribers() < 1)
@@ -224,8 +224,6 @@ int main(int argc, char **argv)
       planning_scene.is_diff = true;
       //发布该消息
       planning_scene_diff_publisher.publish(planning_scene);
-
-
     //***********************************************************
     
     ROS_INFO("yolo_execute_node init successful");
@@ -275,13 +273,13 @@ int main(int argc, char **argv)
         arm.setJointValueTarget(joint_group_positions); //输入目标关节数组
 
         arm_success = ((arm.plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS)); //规划路径
-        arm.execute(my_plan),sleep(1); //如果规划成功则执行
-                
+        arm.execute(my_plan); //如果规划成功则执行
+        // sleep(1);
         hand.setNamedTarget("hand_close");  //机械爪夹取
         while( !hand_close_success ) //判断是否规划成功，如果不成功则继续规划
         { 
            hand_close_success = ((hand.move() == moveit::planning_interface::MoveItErrorCode::SUCCESS)); //规划路径
-           sleep(1);
+          //  sleep(1);
         }
         hand_close_success=false;
  
@@ -326,7 +324,7 @@ void arm_put(std::string sort)
     while( !hand_open_success )  //判断是否规划成功，如果不成功则继续规划
     { 
        hand_open_success = ((hand.move() == moveit::planning_interface::MoveItErrorCode::SUCCESS)); //规划路径
-       sleep(1);
+      //  sleep(1);
     }
     hand_open_success=false;
 
@@ -336,7 +334,7 @@ void arm_put(std::string sort)
     while( !hand_open_success ) //判断是否规划成功，如果不成功则继续规划
     { 
        hand_open_success = ((hand.move() == moveit::planning_interface::MoveItErrorCode::SUCCESS)); //规划路径
-       sleep(1);
+      //  sleep(1);
     }
     hand_open_success=false;
     arm_state="working";

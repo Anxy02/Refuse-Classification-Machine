@@ -9,7 +9,8 @@
 
   <include file="$(find yolo_new)/launch/base_serial.launch" />
 
-  <node name='mp4' pkg="yolo_new" type="video.py" output="screen">
+  <node name='video_mp4' pkg="yolo_new" type="video.py" output="screen">
+    <param name="video_path"       value="$(find yolo_new)/scripts/video1.mp4"/>
   </node>
 
   <node name='pick_color' pkg="yolo_new" type="yolo_execute" output="screen">

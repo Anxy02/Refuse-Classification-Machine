@@ -51,7 +51,6 @@ class Find_Color:
         self.arm_ik_angle_Publisher = rospy.Publisher('/color_ik_result_new', color_ik_result_Msg, queue_size=10)#发布根据色块位置求解的机械臂关节目标弧度话题
         self.visual_flagPublisher = rospy.Publisher('/visual_func_flag', Int8, queue_size =1)
         self.twist = Twist()
-        # self.m=1            #更换检测颜色的标志位  #m=1绿色，m=2蓝色，m=3黄色
         # self.count=0       #每个色块检测次数的计数值
         self.link_a=rospy.get_param('link_a')   #机械参数
         self.link_b=rospy.get_param('link_b')    #机械参数

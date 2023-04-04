@@ -144,17 +144,6 @@ class Yolo_Dect:
         self.publish_image(img, height, width)
         # cv2.imshow('YOLOv5', img)
 
-    # def switch_class(self,bclass):# 根据yolo返回类别进行类别分类 CNum
-    #     if bclass == "recycle_cans1" or bclass == "recycle_cans2" or bclass == "recycle_bottle" or bclass == "recycle_paper":
-    #         return 1
-    #     elif bclass == "harm_battery " :
-    #         return 2
-    #     elif bclass == "kitchen_potato" or bclass == "kitchen_raddish" or bclass == "kitchen_carrot" :
-    #         return 3
-    #     elif bclass == "others_pebble" or bclass == "others":
-    #         return 4
-    #     else :
-    #         return 999
         
     def switch_class(self,bclass):# 根据yolo返回类别进行类别分类 CNum
         if bclass == "recycle_can" or bclass == "recycle_bottle" or bclass == "recycle_paper":
