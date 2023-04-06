@@ -63,14 +63,17 @@ void color_ik_result_callback(const yolo_new::color_ik_result_new &msg)
   if(isBusy == 0 && msg.count > 1)
   {
       isSingle = 0;//强制赋值
+      //判断只要不是瓶子罐子就抓取  存在问题：如果多目标都是瓶子罐子，就会寄
+      if(msg.ONum == 1 || msg.ONum == 2)
+          return
 
       if(countFlag == 0){
         count=msg.count;//总数量
         countFlag = 1;
       }
-
-      if(i_cb < count)
-      {
+      
+      // if(i_cb < count)
+      // {
         cb_target_data[i_cb][0]=msg.pedestal_angle;  //云台的目标角度
         cb_target_data[i_cb][1]=msg.arm_angle;       //控制机械臂臂长的目标角度
         cb_target_data[i_cb][2]=msg.hand_angle;      //控制夹取色块旋转的目标角度
@@ -79,13 +82,13 @@ void color_ik_result_callback(const yolo_new::color_ik_result_new &msg)
         cb_class[i_cb] = msg.sort; 
         ObjectNum[i_cb] = msg.ONum;
         ROS_INFO("~~~~~~~~~~~~~~~~~~cpp ONum is :%d ~~~~~~~~~~~~~~~~~~~~~",ObjectNum[i_cb]); 
-        i_cb+=1;
+        // i_cb+=1;
         
-      }
-      else
-      {
+      // }
+      // else
+      // {
         isBusy = 1;
-      }
+      // }
   }
   
 }
@@ -115,8 +118,8 @@ int main(int argc, char **argv)
     moveit::planning_interface::MoveGroupInterface hand("hand"); 
     moveit::planning_interface::MoveGroupInterface::Plan my_plan; 
 
-    arm.setNamedTarget("arm_look"); arm.move(); sleep(1);    //机械臂运动到观测色块的位置
-    hand.setNamedTarget("hand_open"); hand.move(); sleep(1);  //机械爪张开
+    arm.setNamedTarget("arm_look"); arm.move(); //sleep(1);    //机械臂运动到观测色块的位置
+    hand.setNamedTarget("hand_open"); hand.move(); //sleep(1);  //机械爪张开
     ros::Subscriber color_ik_result_sub=n.subscribe("color_ik_result_new",10,color_ik_result_callback); //订阅色块目标位置对应的关节角度信息
     ros::Publisher Flag_pub = n.advertise<yolo_new::Flag>("Flag_pub",1000);
     ros::Publisher Com_pub = n.advertise<yolo_new::Serial_RT>("Com_pub",1000);
@@ -294,15 +297,14 @@ int main(int argc, char **argv)
         pub_com.sendClass = "none";
 
         grasp_done=0;  //标志位清零
-        if(j_cb >= count)//标志位清零
-        {
-          i_cb = 0;
-          j_cb = 0;
+        // if(j_cb >= count)//标志位清零
+        // {
+          i_cb = 0,j_cb = 0;
           isBusy = 0 ;
           countFlag = 0;
           pub_flag.isMoving = isBusy;
           Flag_pub.publish(pub_flag);
-        }    
+        // }    
       }
     ros::spinOnce();
   }
@@ -381,7 +383,7 @@ int multi_grasp_sequence()//多目标抓取
       ROS_INFO("sorting is:   others");
     }
     grasp_done=1;
-    ++j_cb;
+    // ++j_cb;
   }
 
 }
