@@ -103,7 +103,7 @@ int main(int argc, char **argv)
     nprivate.param<float>("/link_a", link_a, 0.105);
     nprivate.param<float>("/link_b", link_b, 0.100);
     nprivate.param<float>("/link_c", link_c, 0.175);
-    nprivate.param<float>("/link_h", link_h, 0.110);//0.110
+    nprivate.param<float>("/link_h", link_h, 0.108);//0.110
     i_cb=0;j_cb=0;  //初始化i,j
 
     base_angle=acos((link_c-link_h)/link_a);  //计算机械臂夹爪可触底的关节基础角度
@@ -167,63 +167,64 @@ int main(int argc, char **argv)
       //发布该消息
       planning_scene_diff_publisher.publish(planning_scene);
 
-      //右边刷子
-      obj.header.frame_id = "base_link";
-      obj.id="box1";
-      //定义物体形状尺寸
-      shape_msgs::SolidPrimitive primitive1;
-      primitive1.type=primitive1.BOX;
-      primitive1.dimensions.resize(3); //dimensions是一个vector,为其分配3个元素空间
-      primitive1.dimensions[0] =0.02;   //x轴上长度
-      primitive1.dimensions[1] =0.22;   //y轴上长度
-      primitive1.dimensions[2] =0.08;   //z轴上长度
-      //定义物体方位
-      // geometry_msgs::Pose pose;
-      pose.position.x = 0.25;
-      pose.position.y = -0.11;
-      pose.position.z = 0.05;
-      pose.orientation.w = 0.924;
-      pose.orientation.z = 0.383;
-      //将形状添加到obj
-      obj.primitives.push_back(primitive1);
-      obj.primitive_poses.push_back(pose);
-      //定义操作为添加
-      obj.operation = obj.ADD;
-      //定义一个PlanningScene消息
-      // moveit_msgs::PlanningScene planning_scene;
-      planning_scene.world.collision_objects.push_back(obj);
-      planning_scene.is_diff = true;
-      //发布该消息
-      planning_scene_diff_publisher.publish(planning_scene);
+      // //右边刷子
+      // obj.header.frame_id = "base_link";
+      // obj.id="box1";
+      // //定义物体形状尺寸
+      // shape_msgs::SolidPrimitive primitive1;
+      // primitive1.type=primitive1.BOX;
+      // primitive1.dimensions.resize(3); //dimensions是一个vector,为其分配3个元素空间
+      // primitive1.dimensions[0] =0.02;   //x轴上长度
+      // primitive1.dimensions[1] =0.22;   //y轴上长度
+      // primitive1.dimensions[2] =0.07;   //z轴上长度
+      // //定义物体方位
+      // // geometry_msgs::Pose pose;
+      // pose.position.x = 0.26;//0.25
+      // pose.position.y = -0.08;//-0.11
+      // pose.position.z = 0.03;//0.05
+      // pose.orientation.w = 0.924;
+      // pose.orientation.z = 0.383;
+      // //将形状添加到obj
+      // obj.primitives.push_back(primitive1);
+      // obj.primitive_poses.push_back(pose);
+      // //定义操作为添加
+      // obj.operation = obj.ADD;
+      // //定义一个PlanningScene消息
+      // // moveit_msgs::PlanningScene planning_scene;
+      // planning_scene.world.collision_objects.push_back(obj);
+      // planning_scene.is_diff = true;
+      // //发布该消息
+      // planning_scene_diff_publisher.publish(planning_scene);
 
-      //左刷子
-      obj.header.frame_id = "base_link";
-      obj.id="box2";
-      //定义物体形状尺寸
-      shape_msgs::SolidPrimitive primitive2;
-      primitive2.type=primitive2.BOX;
-      primitive2.dimensions.resize(3); //dimensions是一个vector,为其分配3个元素空间
-      primitive2.dimensions[0] =0.02;   //x轴上长度
-      primitive2.dimensions[1] =0.22;   //y轴上长度
-      primitive2.dimensions[2] =0.08;   //z轴上长度
-      //定义物体方位
-      // geometry_msgs::Pose pose;
-      pose.position.x = 0.25;
-      pose.position.y = 0.11;
-      pose.position.z = 0.05;
-      pose.orientation.w = 0.924;
-      pose.orientation.z = -0.383;
-      //将形状添加到obj
-      obj.primitives.push_back(primitive2);
-      obj.primitive_poses.push_back(pose);
-      //定义操作为添加
-      obj.operation = obj.ADD;
-      //定义一个PlanningScene消息
-      // moveit_msgs::PlanningScene planning_scene;
-      planning_scene.world.collision_objects.push_back(obj);
-      planning_scene.is_diff = true;
-      //发布该消息
-      planning_scene_diff_publisher.publish(planning_scene);
+      // //左刷子1
+      // obj.header.frame_id = "base_link";
+      // obj.id="box2";
+      // //定义物体形状尺寸
+      // shape_msgs::SolidPrimitive primitive2;
+      // primitive2.type=primitive2.BOX;
+      // primitive2.dimensions.resize(3); //dimensions是一个vector,为其分配3个元素空间
+      // primitive2.dimensions[0] =0.02;   //x轴上长度
+      // primitive2.dimensions[1] =0.22;   //y轴上长度
+      // primitive2.dimensions[2] =0.07;   //z轴上长度
+      // //定义物体方位
+      // // geometry_msgs::Pose pose;
+      // pose.position.x = 0.26;//0.25
+      // pose.position.y = 0.08;//0.11
+      // pose.position.z = 0.03;//0.05
+      // pose.orientation.w = 0.924;
+      // pose.orientation.z = -0.383;
+      // //将形状添加到obj
+      // obj.primitives.push_back(primitive2);
+      // obj.primitive_poses.push_back(pose);
+      // //定义操作为添加
+      // obj.operation = obj.ADD;
+      // //定义一个PlanningScene消息
+      // // moveit_msgs::PlanningScene planning_scene;
+      // planning_scene.world.collision_objects.push_back(obj);
+      // planning_scene.is_diff = true;
+      // //发布该消息
+      // planning_scene_diff_publisher.publish(planning_scene);
+      
     //***********************************************************
     
     ROS_INFO("yolo_execute_node init successful");

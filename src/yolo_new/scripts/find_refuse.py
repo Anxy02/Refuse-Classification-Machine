@@ -340,3 +340,4 @@ rospy.init_node("yolo_detect")
 yolo_detect = Find_Color()
 rospy.spin()
 
+#kinematics_solver: trac_ik_kinematics_plugin/TRAC_IKKinematicsPlugin

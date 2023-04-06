@@ -24,7 +24,7 @@ class Serial_COM:
 		self.com_sub = rospy.Subscriber("/Com_pub", Serial_RT, self.com_callback)#订阅识别类别话题
 		self.flagPublisher = rospy.Publisher('/Flag_pub', Flag, queue_size=10) #发布色块的位置（原始数据）
 
-		# self.port_open_recv()		#后续放出来!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		self.port_open_recv()		#后续放出来!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 	def com_callback(self,msg):
 		rospy.loginfo("~~~~通信回调收到: %s,%d,%d",msg.sendClass, msg.count,msg.ONum)
@@ -178,15 +178,16 @@ class Serial_COM:
 rospy.init_node("Serial_COM")
 rt_serial = Serial_COM()
 # 实际调试放出来！！！！！！！！！！！！！！！！！！！！！！！！
-# while 1:
-# 	strRead = ser.read().decode()#"utf-8"
-# 	if strRead:
-# 		rospy.loginfo("串口读取到：%s",strRead)
-# 		rt_serial.single_pubflag()	
-# 	rospy.spin()
+while 1:
+	strRead = ser.read().decode()#"utf-8"
+	if strRead:
+		rospy.loginfo("串口读取到：%s",strRead)
+		rt_serial.single_pubflag()	
+		rospy.spin()
+
 
 # 测试用！！！！！！！！！！！！！！！！！！！！！！！！！！！！
-rospy.spin()
+# rospy.spin()
 
 # 主程序循环读取串口信息
 #  在收到超声波后，发布Flag-isPuting（待完善）

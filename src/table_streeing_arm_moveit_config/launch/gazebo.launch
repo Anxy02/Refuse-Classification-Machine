@@ -5,7 +5,7 @@
   <arg name="paused" default="false" doc="Start Gazebo paused"/>
   <arg name="world_name" default="worlds/empty.world" doc="Gazebo world file"/>
   <arg name="world_pose" default="-x 0 -y 0 -z 0 -R 0 -P 0 -Y 0" doc="Pose to spawn the robot at"/>
-  <arg name="initial_joint_positions" default=" -J joint_1 0 -J joint_10 -0.0905 -J joint_11 -0.028 -J joint_2 0.38 -J joint_3 -1.45 -J joint_4 -1.4 -J joint_5 0 -J joint_6 0.2183 -J joint_7 0.2396 -J joint_8 0.2929 -J joint_9 -0.3994" doc="Initial joint configuration of the robot"/>
+  <arg name="initial_joint_positions" default=" -J joint_1 0 -J joint_10 -0.0905 -J joint_11 -0.028 -J joint_2 0.59 -J joint_3 -1.45 -J joint_4 -1.47 -J joint_5 0 -J joint_6 0.2183 -J joint_7 0.2396 -J joint_8 0.2929 -J joint_9 -0.3994" doc="Initial joint configuration of the robot"/>
 
   <!-- Start Gazebo paused to allow the controllers to pickup the initial pose -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch" pass_all_args="true">
@@ -13,7 +13,7 @@
   </include>
 
   <!-- Set the robot urdf on the parameter server -->
-  <param name="robot_description" textfile="$(find table_streeing_arm_moveit_config)/config/gazebo_table_streeing_arm.urdf" />
+  <param name="robot_description" textfile="$(find table_streeing_arm)/urdf/table_streeing_arm.urdf" />
 
   <!-- Unpause the simulation after loading the robot model -->
   <arg name="unpause" value="$(eval '' if arg('paused') else '-unpause')" />

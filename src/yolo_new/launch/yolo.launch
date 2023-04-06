@@ -19,7 +19,7 @@
   </node>
   <node name='yolo_detect' pkg="yolo_new" type="find_refuse.py" output="screen">
   <param name='x_offset' value='0.01' type='double' />
-  <param name='y_offset' value='0.006' type='double' />
+  <param name='y_offset' value='0.01' type='double' />
   </node>
 
   <!-- Load Parameter -->
