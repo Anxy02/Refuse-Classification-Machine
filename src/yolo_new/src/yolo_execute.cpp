@@ -63,8 +63,8 @@ void color_ik_result_callback(const yolo_new::color_ik_result_new &msg)
   if(isBusy == 0 && msg.count > 1)
   {
       isSingle = 0;//强制赋值
-      //判断只要不是瓶子罐子就抓取  存在问题：如果多目标都是瓶子罐子，就会寄
-      if(msg.ONum == 1 || msg.ONum == 2)
+      //判断只要不是瓶子、罐子、石头就抓取  存在问题：如果多目标都是瓶子罐子，就会寄
+      if(msg.ONum == 1 || msg.ONum == 2 || msg.ONum == 9)
           return;
 
       if(countFlag == 0){

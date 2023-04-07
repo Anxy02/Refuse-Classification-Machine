@@ -204,23 +204,23 @@ class Find_Color:
     
     def switchONum(self,num):
         if num == 1:
-            return 'recycle_can'
+            return '易拉罐'
         elif num == 2:
-            return 'recycle_bottle'
+            return '瓶子'
         elif num == 3:
-            return 'recycle_paper'
+            return '纸团'
         elif num == 4:
-            return 'harm_battery'
+            return '电池'
         elif num == 5:#白萝卜
-            return 'kitchen_ternip'
+            return '白萝卜'
         elif num == 6:
-            return 'kitchen_carrot'
+            return '胡萝卜'
         elif num == 7:
-            return 'kitchen_potato'
+            return '土豆'
         elif num == 8:#瓷片
-            return 'others_chip'
+            return '瓷片'
         elif num == 9:
-            return 'others_stone'
+            return '鹅卵石'
         else :
             return 'none'
 
