@@ -183,13 +183,13 @@
         <joint name="joint_2" value="-0.4366"/>
         <joint name="joint_3" value="-1.0126"/>
         <joint name="joint_4" value="-1.41"/>
-        <joint name="joint_5" value="-0.38"/>
+        <joint name="joint_5" value="-0.065"/>
     </group_state>
     <group_state name="recycle_put" group="arm">
         <joint name="joint_1" value="-0.8598"/>
-        <joint name="joint_2" value="-0.4552"/>
-        <joint name="joint_3" value="-1.12"/>
-        <joint name="joint_4" value="-1.1898"/>
+        <joint name="joint_2" value="-0.3511"/>
+        <joint name="joint_3" value="-1.2255"/>
+        <joint name="joint_4" value="-1.4724"/>
         <joint name="joint_5" value="0.0125"/>
     </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->

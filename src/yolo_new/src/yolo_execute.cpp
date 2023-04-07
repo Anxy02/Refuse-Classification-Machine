@@ -65,7 +65,7 @@ void color_ik_result_callback(const yolo_new::color_ik_result_new &msg)
       isSingle = 0;//强制赋值
       //判断只要不是瓶子罐子就抓取  存在问题：如果多目标都是瓶子罐子，就会寄
       if(msg.ONum == 1 || msg.ONum == 2)
-          return
+          return;
 
       if(countFlag == 0){
         count=msg.count;//总数量
@@ -106,7 +106,7 @@ int main(int argc, char **argv)
     nprivate.param<float>("/link_a", link_a, 0.105);
     nprivate.param<float>("/link_b", link_b, 0.100);
     nprivate.param<float>("/link_c", link_c, 0.175);
-    nprivate.param<float>("/link_h", link_h, 0.108);//0.110
+    nprivate.param<float>("/link_h", link_h, 0.110);//0.110
     i_cb=0;j_cb=0;  //初始化i,j
 
     base_angle=acos((link_c-link_h)/link_a);  //计算机械臂夹爪可触底的关节基础角度
@@ -292,7 +292,7 @@ int main(int argc, char **argv)
         arm_put(target_sort); //根据颜色将色块放置到对应位置 
 
         pub_com.sendClass = target_sort;//发布垃圾类别信息至通信py
-        pub_com.ONum = ObjectNum[j_cb-1];
+        pub_com.ONum = ObjectNum[j_cb];
         Com_pub.publish(pub_com);
         pub_com.sendClass = "none";
 

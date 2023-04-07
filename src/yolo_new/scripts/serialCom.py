@@ -24,7 +24,7 @@ class Serial_COM:
 		self.com_sub = rospy.Subscriber("/Com_pub", Serial_RT, self.com_callback)#订阅识别类别话题
 		self.flagPublisher = rospy.Publisher('/Flag_pub', Flag, queue_size=10) #发布色块的位置（原始数据）
 
-		self.port_open_recv()		#后续放出来!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		self.port_open_recv()		#实机测试放出来!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 	def com_callback(self,msg):
 		rospy.loginfo("~~~~通信回调收到: %s,%d,%d",msg.sendClass, msg.count,msg.ONum)
