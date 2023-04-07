@@ -106,7 +106,7 @@ int main(int argc, char **argv)
     nprivate.param<float>("/link_a", link_a, 0.105);
     nprivate.param<float>("/link_b", link_b, 0.100);
     nprivate.param<float>("/link_c", link_c, 0.175);
-    nprivate.param<float>("/link_h", link_h, 0.110);//0.110
+    nprivate.param<float>("/link_h", link_h, 0.105);//0.110
     i_cb=0;j_cb=0;  //初始化i,j
 
     base_angle=acos((link_c-link_h)/link_a);  //计算机械臂夹爪可触底的关节基础角度
@@ -287,7 +287,7 @@ int main(int argc, char **argv)
         }
         hand_close_success=false;
  
-        arm.setNamedTarget("arm_look");   arm.move();  sleep(1);    //机械臂运动到观测色块的位置
+        arm.setNamedTarget("arm_look");   arm.move();  //sleep(1);    //机械臂运动到观测色块的位置
         // arm.setNamedTarget("color_put_interval");  arm.move();  sleep(1); //机械臂臂身运动到放置色块的预位置后，再放置色块
         arm_put(target_sort); //根据颜色将色块放置到对应位置 
 
@@ -318,10 +318,10 @@ void arm_put(std::string sort)
     moveit::planning_interface::MoveGroupInterface arm("arm");
     moveit::planning_interface::MoveGroupInterface hand("hand");
    //根据色块的颜色判断放置位置                       根据实际修改
-         if (sort == "recycle") {arm.setNamedTarget("recycle_put");  arm.move();  sleep(1);}
-    else if (sort == "harm")   {arm.setNamedTarget("other_put");    arm.move();  sleep(1);}
-    else if (sort == "kitchen")  {arm.setNamedTarget("other_put");   arm.move();  sleep(1);}
-    else if (sort == "others")  {arm.setNamedTarget("other_put");   arm.move();  sleep(1);ROS_INFO("sorting is done");}
+         if (sort == "recycle") {arm.setNamedTarget("recycle_put");  arm.move();  }//sleep(1);}
+    else if (sort == "harm")   {arm.setNamedTarget("other_put");    arm.move();  }//sleep(1);}
+    else if (sort == "kitchen")  {arm.setNamedTarget("other_put");   arm.move();  }//sleep(1);}
+    else if (sort == "others")  {arm.setNamedTarget("other_put");   arm.move();  ROS_INFO("sorting is done");}//sleep(1);}
     hand.setNamedTarget("hand_open");   //机械爪张开
     
     while( !hand_open_success )  //判断是否规划成功，如果不成功则继续规划
@@ -332,7 +332,7 @@ void arm_put(std::string sort)
     hand_open_success=false;
 
     // arm.setNamedTarget("color_put_interval");   arm.move();  sleep(1);  //机械臂臂身运动到放置色块的预位置
-    arm.setNamedTarget("arm_look");   arm.move();  sleep(1);      //机械臂运动到观测色块的位置
+    arm.setNamedTarget("arm_look");   arm.move();  //sleep(1);      //机械臂运动到观测色块的位置
     hand.setNamedTarget("hand_open");  //机械爪张开
     while( !hand_open_success ) //判断是否规划成功，如果不成功则继续规划
     { 
