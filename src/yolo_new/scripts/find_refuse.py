@@ -19,6 +19,7 @@ IsMoving = 0
 # IsPuting = 1    #后续改为0，依靠超声波判断
 SingleSortOK = 1
 overLoad = 'none'
+overLoadStr = ''
 Sort_show = []  #图像输出的信息
 tmp_ok = "OK!"
 show_i = 1
@@ -183,10 +184,21 @@ class Find_Color:
         # 将垃圾分类信息在此显示
         global Sort_show
         global overLoad
+        global overLoadStr
         # self.getImageStatus = True
         self.color_image = np.frombuffer(image.data, dtype=np.uint8).reshape(
             image.height, image.width, -1)
         # self.color_image = cv2.cvtColor(self.color_image, cv2.COLOR_BGR2RGB)
+        if overLoad != 'none':
+            if overLoad == 'A':
+                overLoadStr = 'Machine OverLoad'+'-recycle !!!'
+            elif overLoad == 'B':
+                overLoadStr = 'Machine OverLoad'+'-harm !!!'
+            elif overLoad == 'C':
+                overLoadStr = 'Machine OverLoad'+'-kitchen !!!'
+            elif overLoad == 'D':
+                overLoadStr = 'Machine OverLoad'+'-others !!!'
+            overLoad = 'none'
 
         length = len(Sort_show)
         tmp_x = 0
@@ -196,25 +208,11 @@ class Find_Color:
                         (int(tmp_x), int(tmp_y)), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 0), 1,
                         cv2.LINE_AA)
             tmp_y += 20
+            cv2.putText(self.color_image, overLoadStr,
+                        (150, 150), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1,
+                        cv2.LINE_AA)
         
-        if overLoad != 'none':
-            if overLoad == 'A':
-                cv2.putText(self.color_image, 'Machine OverLoad'+'recycle !!!',
-                        (100, 20), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1,
-                        cv2.LINE_AA)
-            elif overLoad == 'B':
-                cv2.putText(self.color_image, 'Machine OverLoad'+'harm !!!',
-                        (100, 20), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1,
-                        cv2.LINE_AA)
-            elif overLoad == 'C':
-                cv2.putText(self.color_image, 'Machine OverLoad'+'kitchen !!!',
-                        (100, 20), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1,
-                        cv2.LINE_AA)
-            elif overLoad == 'D':
-                cv2.putText(self.color_image, 'Machine OverLoad'+'others !!!',
-                        (100, 20), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1,
-                        cv2.LINE_AA)
-            overLoad = 'none'
+        
 
         # cv2.rectangle(self.color_image, (int(box[0]), int(box[1])),
         #                   (int(box[2]), int(box[3])), (int(color[0]), int(color[1]), int(color[2])), 2)

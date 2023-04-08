@@ -160,8 +160,10 @@ while 1:
 	if strRead:
 		rospy.loginfo("串口读取到：%s",strRead)
 		if strRead == 'A' or strRead == 'B' or strRead == 'C' or strRead == 'D':
+			rospy.loginfo("满载返包！")
 			rt_serial.overload_pubflag(strRead)
 		elif strRead == 'S':
+			rospy.loginfo("单目标返包！")
 			rt_serial.single_pubflag()	
 rospy.spin()
 
