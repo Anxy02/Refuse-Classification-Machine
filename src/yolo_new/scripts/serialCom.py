@@ -169,10 +169,3 @@ rospy.spin()
 
 # 测试用！！！！！！！！！！！！！！！！！！！！！！！！！！！！
 # rospy.spin()
-
-# 主程序循环读取串口信息
-#  在收到超声波后，发布Flag-isPuting（待完善）
-# 收到分类信息后，串口发送信息(send_message函数)
-# 收到单分类完成标志后，需要发送flag.msg,singleSortOK=1,isMoving=0 (single_pubflag函数)
-
-#rostopic pub /Flag_pub yolo_new/Flag "isMoving: 0 isPuting: 0 singleSortOK: 1"

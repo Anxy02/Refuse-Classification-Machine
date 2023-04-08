@@ -24,3 +24,18 @@ sudo usermod -aG dialout USERNAME
 报错
 warnings.warn('User provided device_type of \'cuda\', but CUDA is not available. Disabling')
 解决：注释掉
+
+## 执行方式
+1. 拉取最新版本代码
+进入主文件夹-进入Refuse-Classification-Machine文件夹-右键打开终端-输入
+git pull
+2. 编译代码
+在Refuse-Classification-Machine文件夹-右键打开终端-输入
+catkin_make
+3. 执行代码
+在Refuse-Classification-Machine文件夹-右键打开终端-输入
+roslaunch yolo_new yolo.launch 
+4. 其他操作
+关闭程序：在终端中，Ctrl+C键同时按下
+自动补全按键：Tab键
+

@@ -88,11 +88,6 @@ class Find_Color:
         objectNum = msg.ONum
         out_str = self.switchONum(objectNum)
 
-        # # 添加输出数组 (旧模型使用测试
-        # tmp_str = f"{show_i} {msg.sendClass} {1} {tmp_ok}"
-        # show_i += 1
-        # Sort_show.append(tmp_str)
-
         # 等待新模型训练好后将下面放出来  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         if out_str != 'none':
             tmp_str = f"{show_i} {out_str} {1} {tmp_ok}"
@@ -168,8 +163,6 @@ class Find_Color:
                         judge_class = 0
                         judge_i = 0
                     
-                
-                # IsPuting = 0  后续放出来
 
             else:
                 #没有检测到目标
