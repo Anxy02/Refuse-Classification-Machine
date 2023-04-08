@@ -129,6 +129,7 @@ int main(int argc, char **argv)
     pub_flag.isMoving = 0;//初始化
     pub_flag.isPuting = 0;
     pub_flag.singleSortOK = 1;
+    pub_flag.OverLoad = "none";
     pub_com.count = 0;
     pub_com.ONum = 0;
     pub_com.sendClass = "none";

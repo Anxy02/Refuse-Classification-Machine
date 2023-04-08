@@ -21,6 +21,7 @@ class video_show:
                 self.cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
                 continue
             cv2.imshow('video', self.frame)
+            cv2.moveWindow('video',100,100)#移动窗口
             if cv2.waitKey(25) & 0xFF == ord('q'):
                 break
 

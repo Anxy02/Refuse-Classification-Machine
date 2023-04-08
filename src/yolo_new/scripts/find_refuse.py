@@ -18,6 +18,7 @@ last_erro=0
 IsMoving = 0
 # IsPuting = 1    #后续改为0，依靠超声波判断
 SingleSortOK = 1
+overLoad = 'none'
 Sort_show = []  #图像输出的信息
 tmp_ok = "OK!"
 show_i = 1
@@ -101,8 +102,10 @@ class Find_Color:
     def flag_callback(self,msg):
         global IsMoving
         global SingleSortOK
+        global overLoad
         IsMoving = msg.isMoving
         SingleSortOK = msg.singleSortOK
+        overLoad= msg.OverLoad
         # IsPuting = msg.isPuting
         # print("flag_msg is",IsMoving)
 
@@ -179,6 +182,7 @@ class Find_Color:
     def image_callback(self, image):
         # 将垃圾分类信息在此显示
         global Sort_show
+        global overLoad
         # self.getImageStatus = True
         self.color_image = np.frombuffer(image.data, dtype=np.uint8).reshape(
             image.height, image.width, -1)
@@ -192,6 +196,25 @@ class Find_Color:
                         (int(tmp_x), int(tmp_y)), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 0), 1,
                         cv2.LINE_AA)
             tmp_y += 20
+        
+        if overLoad != 'none':
+            if overLoad == 'A':
+                cv2.putText(self.color_image, 'Machine OverLoad'+'recycle !!!',
+                        (100, 20), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1,
+                        cv2.LINE_AA)
+            elif overLoad == 'B':
+                cv2.putText(self.color_image, 'Machine OverLoad'+'harm !!!',
+                        (100, 20), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1,
+                        cv2.LINE_AA)
+            elif overLoad == 'C':
+                cv2.putText(self.color_image, 'Machine OverLoad'+'kitchen !!!',
+                        (100, 20), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1,
+                        cv2.LINE_AA)
+            elif overLoad == 'D':
+                cv2.putText(self.color_image, 'Machine OverLoad'+'others !!!',
+                        (100, 20), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1,
+                        cv2.LINE_AA)
+            overLoad = 'none'
 
         # cv2.rectangle(self.color_image, (int(box[0]), int(box[1])),
         #                   (int(box[2]), int(box[3])), (int(color[0]), int(color[1]), int(color[2])), 2)
@@ -199,28 +222,35 @@ class Find_Color:
         #                 (int(box[0]), int(text_pos_y) - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 2,
         #                 cv2.LINE_AA)
 
+        # cv2.namedWindow('YOLOv5_show', cv2.WINDOW_NORMAL) #WINDOW_NORMAL：可以调整窗口大小
+        # cv2.setWindowProperty('YOLOv5_show', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN) #全屏显示
+        # cv2.moveWindow("winname",x,y)
+            # winname ： 将被设置的窗口的名字。
+            # x ：窗口左上角的x坐标。
+            # y ：窗口左上角的y坐标。
         cv2.imshow('YOLOv5_show', self.color_image)
+        cv2.moveWindow('YOLOv5_show',1000,100)#移动窗口
         cv2.waitKey(3)
     
     def switchONum(self,num):
         if num == 1:
-            return '易拉罐'
+            return 'recycle_can'
         elif num == 2:
-            return '瓶子'
+            return 'recycle_bottle'
         elif num == 3:
-            return '纸团'
+            return 'recycle_paper'
         elif num == 4:
-            return '电池'
+            return 'harm_battery'
         elif num == 5:#白萝卜
-            return '白萝卜'
+            return 'kitchen_ternip'
         elif num == 6:
-            return '胡萝卜'
+            return 'kitchen_carrot'
         elif num == 7:
-            return '土豆'
+            return 'kitchen_potato'
         elif num == 8:#瓷片
-            return '瓷片'
+            return 'others_chip'
         elif num == 9:
-            return '鹅卵石'
+            return 'others_stone'
         else :
             return 'none'
 

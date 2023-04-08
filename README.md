@@ -12,6 +12,10 @@ pip3 install pyserial
 串口开权限
 ls /dev/tty*
 sudo chmod 777 /dev/ttyACM0
+永久开权限
+ls -l /dev/ttyACM0
+whoami
+sudo usermod -aG dialout USERNAME
 
 关闭相机显示
 /opt/ros/noetic/share/usb_cam/launch

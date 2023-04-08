@@ -44,7 +44,16 @@ class Serial_COM:
 		ismoving = 0
 		isputing = 0
 		singleOK = 1
-		flagMSG = Flag(ismoving,isputing,singleOK)
+		OverLoad = "none"
+		flagMSG = Flag(ismoving,isputing,singleOK,OverLoad)
+		self.flagPublisher.publish(flagMSG)
+
+	def overload_pubflag(self,sort):
+		ismoving = 1
+		isputing = 0
+		singleOK = 1
+		OverLoad = sort
+		flagMSG = Flag(ismoving,isputing,singleOK,OverLoad)
 		self.flagPublisher.publish(flagMSG)
        
 	def send_message(self,bcount,bclass,bONum):
@@ -115,38 +124,6 @@ class Serial_COM:
 		else :
 			rospy.loginfo("未发送！！！")
 
-		# if bclass == 'recycle':
-		# 	if bcount == 1:
-		# 		self.send('0A')
-		# 		rospy.loginfo("0A")
-		# 	elif bcount >1:
-		# 		self.send('1A')
-		# 		rospy.loginfo("1A")
-		# elif bclass == 'harm':
-		# 	if bcount == 1:
-		# 		self.send('0B')
-		# 		rospy.loginfo("0B")
-		# 	elif bcount >1:
-		# 		self.send('1B')
-		# 		rospy.loginfo("1B")
-		# elif bclass == 'kitchen':
-		# 	if bcount == 1:
-		# 		self.send('0C')
-		# 		rospy.loginfo("0C")
-		# 	elif bcount >1:
-		# 		self.send('1C')
-		# 		rospy.loginfo("1C")
-		# elif bclass == 'others':
-		# 	if bcount == 1:
-		# 		self.send('0D')
-		# 		rospy.loginfo("0D")
-		# 	elif bcount >1:
-		# 		self.send('1D')
-		# 		rospy.loginfo("1D")
-		# else :
-		# 	rospy.loginfo("未发送")
-
-
 	def port_open_recv(self):#对串口的参数进行配置
 		ser.port='/dev/ttyACM0'	
 		ser.baudrate=9600
@@ -182,16 +159,11 @@ while 1:
 	strRead = ser.read().decode()#"utf-8"
 	if strRead:
 		rospy.loginfo("串口读取到：%s",strRead)
-		rt_serial.single_pubflag()	
+		if strRead == 'A' or strRead == 'B' or strRead == 'C' or strRead == 'D':
+			rt_serial.overload_pubflag(strRead)
+		elif strRead == 'S':
+			rt_serial.single_pubflag()	
 rospy.spin()
-# while 1:
-# 	if ser.in_waiting() > 0 :
-# 		strRead = ser.read(ser.in_waiting()).decode()
-# 		rospy.loginfo("串口读取到：%s",strRead)
-# 		rt_serial.single_pubflag()
-# 		rospy.spin()
-
-
 
 # 测试用！！！！！！！！！！！！！！！！！！！！！！！！！！！！
 # rospy.spin()
