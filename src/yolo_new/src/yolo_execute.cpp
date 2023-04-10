@@ -25,7 +25,7 @@ int yolo_sequence=1;  //夹取顺序
 int yolo_confirmed_flag =0; //启动夹取的标志位
 int grasp_mode=0;//抓取模式 0：单目标抓取  1：单目标刷子  2：多目标抓取
 int isBusy=0,isSingle=0,countFlag=0;//回调函数中忙状态
-int i_cb,j_cb=0;//回调函数循环变量
+int i_cb=0,j_cb=0,tmp_i=0;//回调函数循环变量
 
 float auxiliary_angle; 
 int recycle_count_cb=0,harm_count_cb=0,kitchen_count_cb=0,others_count_cb=0; //接收到该数据帧的回调函数次数callback
@@ -52,8 +52,10 @@ void color_ik_result_callback(const yolo_new::color_ik_result_new &msg)
 {
   // 单分类
   if(isBusy == 0 && isSingle == 0 && msg.count == 1){
+  singleSort:
+    tmp_i = 0;
     ROS_INFO("!!!!!!!!!!!single object :%s !!!!!!!!!!!!",msg.sort.c_str()); 
-    count = msg.count;
+    count = 1;
     ObjectNum[0] = msg.ONum;
     single_class = msg.sort.c_str();
     isBusy = 1;
@@ -63,10 +65,27 @@ void color_ik_result_callback(const yolo_new::color_ik_result_new &msg)
   if(isBusy == 0 && msg.count > 1)
   {
       isSingle = 0;//强制赋值
-      //判断只要不是瓶子、罐子、石头就抓取  存在问题：如果多目标都是瓶子罐子，就会寄
+      //判断只要不是瓶子、罐子、石头就抓取  
       if(msg.ONum == 1 || msg.ONum == 2 || msg.ONum == 9)
+      {
+        tmp_i += 1;
+        if (tmp_i == 10)
+          {
+            if(msg.ONum != 1 && msg.ONum != 2) // 非瓶子罐子進行抓取
+            {
+              goto multiSort;
+            }
+            else  // 瓶子罐子進行單目標抓取
+            {
+              goto singleSort;
+            }
+          }
+        else
           return;
+      }
 
+    multiSort:        
+      tmp_i = 0;
       if(countFlag == 0){
         count=msg.count;//总数量
         countFlag = 1;
