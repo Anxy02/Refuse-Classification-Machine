@@ -99,9 +99,23 @@ class Find_Color:
         global IsMoving
         global SingleSortOK
         global overLoad
+        global overLoadStr
         IsMoving = msg.isMoving
         SingleSortOK = msg.singleSortOK
         overLoad= msg.OverLoad
+        if overLoad != 'none':
+            if overLoad == 'A':
+                overLoadStr = 'Machine OverLoad'+'-recycle !!!'
+            elif overLoad == 'B':
+                overLoadStr = 'Machine OverLoad'+'-harm !!!'
+            elif overLoad == 'C':
+                overLoadStr = 'Machine OverLoad'+'-kitchen !!!'
+            elif overLoad == 'D':
+                overLoadStr = 'Machine OverLoad'+'-others !!!'
+            overLoad = 'none'
+            print(overLoadStr)
+        # if overLoad != 'none':
+        #     rospy.loginfo('overLoad is %s' ,overLoad)
         # IsPuting = msg.isPuting
         # print("flag_msg is",IsMoving)
 
@@ -182,28 +196,21 @@ class Find_Color:
         self.color_image = np.frombuffer(image.data, dtype=np.uint8).reshape(
             image.height, image.width, -1)
         # self.color_image = cv2.cvtColor(self.color_image, cv2.COLOR_BGR2RGB)
-        if overLoad != 'none':
-            if overLoad == 'A':
-                overLoadStr = 'Machine OverLoad'+'-recycle !!!'
-            elif overLoad == 'B':
-                overLoadStr = 'Machine OverLoad'+'-harm !!!'
-            elif overLoad == 'C':
-                overLoadStr = 'Machine OverLoad'+'-kitchen !!!'
-            elif overLoad == 'D':
-                overLoadStr = 'Machine OverLoad'+'-others !!!'
-            overLoad = 'none'
+        # print(overLoad)
+        
 
         length = len(Sort_show)
         tmp_x = 0
         tmp_y = 20
         for i in range(length):
             cv2.putText(self.color_image, Sort_show[i],
-                        (int(tmp_x), int(tmp_y)), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 0), 1,
+                        (int(tmp_x), int(tmp_y)), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 255), 1,
                         cv2.LINE_AA)
-            tmp_y += 20
             cv2.putText(self.color_image, overLoadStr,
                         (150, 150), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1,
                         cv2.LINE_AA)
+            tmp_y += 20
+            
         
         
 
@@ -213,6 +220,7 @@ class Find_Color:
         #                 (int(box[0]), int(text_pos_y) - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 2,
         #                 cv2.LINE_AA)
 
+        # 最终放出来
         cv2.namedWindow('YOLOv5_show', cv2.WINDOW_NORMAL) #WINDOW_NORMAL：可以调整窗口大小
         cv2.setWindowProperty('YOLOv5_show', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN) #全屏显示
         
