@@ -52,7 +52,7 @@ class Serial_COM:
 		ismoving = 1
 		isputing = 0
 		singleOK = 1
-		OverLoad = sort
+		OverLoad = sort	# ABCD
 		flagMSG = Flag(ismoving,isputing,singleOK,OverLoad)
 		self.flagPublisher.publish(flagMSG)
        

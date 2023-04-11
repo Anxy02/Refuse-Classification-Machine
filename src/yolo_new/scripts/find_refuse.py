@@ -213,14 +213,14 @@ class Find_Color:
         #                 (int(box[0]), int(text_pos_y) - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 2,
         #                 cv2.LINE_AA)
 
-        # cv2.namedWindow('YOLOv5_show', cv2.WINDOW_NORMAL) #WINDOW_NORMAL：可以调整窗口大小
-        # cv2.setWindowProperty('YOLOv5_show', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN) #全屏显示
+        cv2.namedWindow('YOLOv5_show', cv2.WINDOW_NORMAL) #WINDOW_NORMAL：可以调整窗口大小
+        cv2.setWindowProperty('YOLOv5_show', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN) #全屏显示
+        
         # cv2.moveWindow("winname",x,y)
             # winname ： 将被设置的窗口的名字。
             # x ：窗口左上角的x坐标。
             # y ：窗口左上角的y坐标。
         cv2.imshow('YOLOv5_show', self.color_image)
-        cv2.moveWindow('YOLOv5_show',1000,100)#移动窗口
         cv2.waitKey(3)
     
     def switchONum(self,num):
@@ -355,7 +355,7 @@ class Find_Color:
         if self.Class==4:
             ikMsg=color_ik_result_Msg(pedestal_angle,arm_angle,hand_angle,'others',count,self.ONum)
             self.arm_ik_angle_Publisher.publish(ikMsg)
-        rospy.loginfo('py层发送ONum is %d~~~~~~~~~~~~~~~~~~~~~~~~~~~' ,self.ONum)
+        # rospy.loginfo('py层发送ONum is %d~~~~~~~~~~~~~~~~~~~~~~~~~~~' ,self.ONum)
 
 rospy.init_node("yolo_detect")
 yolo_detect = Find_Color()
