@@ -221,8 +221,8 @@ class Find_Color:
         #                 cv2.LINE_AA)
 
         # 最终放出来
-        cv2.namedWindow('YOLOv5_show', cv2.WINDOW_NORMAL) #WINDOW_NORMAL：可以调整窗口大小
-        cv2.setWindowProperty('YOLOv5_show', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN) #全屏显示
+        #cv2.namedWindow('YOLOv5_show', cv2.WINDOW_NORMAL) #WINDOW_NORMAL：可以调整窗口大小
+       #cv2.setWindowProperty('YOLOv5_show', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN) #全屏显示
         
         # cv2.moveWindow("winname",x,y)
             # winname ： 将被设置的窗口的名字。

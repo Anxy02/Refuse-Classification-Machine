@@ -38,4 +38,4 @@ roslaunch yolo_new yolo.launch
 4. 其他操作
 关闭程序：在终端中，Ctrl+C键同时按下
 自动补全按键：Tab键
-
+管理员密码：1
