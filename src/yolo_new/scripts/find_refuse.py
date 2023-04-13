@@ -133,6 +133,8 @@ class Find_Color:
 
         if IsMoving == 0 :  #机械臂没有运动
             if count > 1:
+                return      #初赛用！！！！！！！！！！！！！！！！！！！！！！！！决赛放出来！
+
                 for tmp_box in msg.bounding_boxes:
                     Xmid=tmp_box.xmid/2
                     Ymid=tmp_box.ymid/2

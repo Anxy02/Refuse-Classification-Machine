@@ -38,7 +38,7 @@ class Yolo_Dect:
         #    self.model.cuda()
 
         self.model.conf = conf
-        self.model.iou = 0.25    #待测试~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        self.model.iou = 0.15    #待测试~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         self.color_image = Image()
         self.depth_image = Image()
         self.getImageStatus = False
