@@ -23,8 +23,8 @@ class video_show:
                 self.cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
                 continue
             # 最终放出来
-            # cv2.namedWindow('video', cv2.WINDOW_NORMAL) #WINDOW_NORMAL：可以调整窗口大小
-            # cv2.setWindowProperty('video', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+            cv2.namedWindow('video', cv2.WINDOW_NORMAL) #WINDOW_NORMAL：可以调整窗口大小
+            cv2.setWindowProperty('video', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
             cv2.imshow('video', self.frame)
             cv2.moveWindow('video',100,100)#移动窗口
             if cv2.waitKey(25) & 0xFF == ord('q'):

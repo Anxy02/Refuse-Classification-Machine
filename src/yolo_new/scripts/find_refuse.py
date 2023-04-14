@@ -197,7 +197,10 @@ class Find_Color:
         # self.getImageStatus = True
         self.color_image = np.frombuffer(image.data, dtype=np.uint8).reshape(
             image.height, image.width, -1)
-        # self.color_image = cv2.cvtColor(self.color_image, cv2.COLOR_BGR2RGB)
+        self.color_image = cv2.cvtColor(self.color_image, cv2.COLOR_BGR2RGB)
+        self.color_image = self.white_balance_1(self.color_image)
+        
+        
         # print(overLoad)
         
 
@@ -223,8 +226,8 @@ class Find_Color:
         #                 cv2.LINE_AA)
 
         # 最终放出来
-        #cv2.namedWindow('YOLOv5_show', cv2.WINDOW_NORMAL) #WINDOW_NORMAL：可以调整窗口大小
-       #cv2.setWindowProperty('YOLOv5_show', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN) #全屏显示
+        cv2.namedWindow('YOLOv5_show', cv2.WINDOW_NORMAL) #WINDOW_NORMAL：可以调整窗口大小
+        cv2.setWindowProperty('YOLOv5_show', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN) #全屏显示
         
         # cv2.moveWindow("winname",x,y)
             # winname ： 将被设置的窗口的名字。
@@ -232,6 +235,29 @@ class Find_Color:
             # y ：窗口左上角的y坐标。
         cv2.imshow('YOLOv5_show', self.color_image)
         cv2.waitKey(3)
+
+    def white_balance_1(self,img):
+        '''
+        第一种简单的求均值白平衡法
+        :param img: cv2.imread读取的图片数据
+        :return: 返回的白平衡结果图片数据
+        '''
+        # 读取图像
+        r, g, b = cv2.split(img)
+        r_avg = cv2.mean(r)[0]
+        g_avg = cv2.mean(g)[0]
+        b_avg = cv2.mean(b)[0]
+        # 求各个通道所占增益
+        k = (r_avg + g_avg + b_avg) / 3
+        kr = k / r_avg + 0.1
+        kg = k / g_avg + 0.1
+        kb = k / b_avg
+        r = cv2.addWeighted(src1=r, alpha=kr, src2=0, beta=0, gamma=0)
+        g = cv2.addWeighted(src1=g, alpha=kg, src2=0, beta=0, gamma=0)
+        b = cv2.addWeighted(src1=b, alpha=kb, src2=0, beta=0, gamma=0)
+        balance_img = cv2.merge([b, g, r])
+        return balance_img
+
     
     def switchONum(self,num):
         if num == 1:
@@ -254,7 +280,6 @@ class Find_Color:
             return 'others_stone'
         else :
             return 'none'
-
 
     def calculateAngleX(self, pos):
         centerX = pos
