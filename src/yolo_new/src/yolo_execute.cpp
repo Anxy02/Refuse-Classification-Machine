@@ -125,7 +125,7 @@ int main(int argc, char **argv)
     nprivate.param<float>("/link_a", link_a, 0.105);
     nprivate.param<float>("/link_b", link_b, 0.100);
     nprivate.param<float>("/link_c", link_c, 0.175);
-    nprivate.param<float>("/link_h", link_h, 0.102);//0.105
+    nprivate.param<float>("/link_h", link_h, 0.09);//0.105
     i_cb=0;j_cb=0;  //初始化i,j
 
     base_angle=acos((link_c-link_h)/link_a);  //计算机械臂夹爪可触底的关节基础角度
@@ -152,6 +152,7 @@ int main(int argc, char **argv)
     pub_com.count = 0;
     pub_com.ONum = 0;
     pub_com.sendClass = "none";
+    pub_com.close = "none";
     Flag_pub.publish(pub_flag);
     Com_pub.publish(pub_com);
     
@@ -262,6 +263,10 @@ int main(int argc, char **argv)
       if(isBusy){
         pub_flag.isMoving = isBusy;
 
+        pub_com.close = "ok";
+        Com_pub.publish(pub_com);
+        pub_com.close = "none";
+
         if (isSingle == 1 && count == 1){ //单分类
           // ROS_INFO("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
           pub_com.count = 1;
@@ -325,6 +330,7 @@ int main(int argc, char **argv)
           pub_flag.isMoving = isBusy;
           Flag_pub.publish(pub_flag);
         // }    
+        sleep(3); //为刷子延时
       }
     ros::spinOnce();
   }

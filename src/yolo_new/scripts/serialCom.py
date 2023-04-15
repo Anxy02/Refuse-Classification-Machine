@@ -28,7 +28,12 @@ class Serial_COM:
 
 	def com_callback(self,msg):
 		rospy.loginfo("~~~~通信回调收到: %s,%d,%d",msg.sendClass, msg.count,msg.ONum)
-		self.send_message(msg.count,msg.sendClass,msg.ONum)
+		if msg.close == "ok":
+			self.send('1P')
+			rospy.loginfo("~~~~通信关闭盖子: %s",msg.sendClass)
+			sleep(1)
+		else:
+			self.send_message(msg.count,msg.sendClass,msg.ONum)
 
 	# # 超声波投入发布flag（暂时不用）
 	# def input_pubflag(self):	#超声波判断投入发布flag

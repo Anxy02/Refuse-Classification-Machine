@@ -26,6 +26,7 @@ show_i = 1
 objectNum = 0
 judge_class = 0
 judge_i = 0
+judge_j = 0
 def nothing(s):
     pass
 
@@ -126,6 +127,7 @@ class Find_Color:
         global show_i
         global judge_class
         global judge_i
+        global judge_j
         count=0
                         
         for i in msg.bounding_boxes:
@@ -133,7 +135,11 @@ class Find_Color:
 
         if IsMoving == 0 :  #机械臂没有运动
             if count > 1:
-                return      #初赛用！！！！！！！！！！！！！！！！！！！！！！！！决赛放出来！
+                # return      #初赛用！！！！！！！！！！！！！！！！！！！！！！！！决赛放出来！
+                if judge_j < 5: # 延时
+                    judge_j += 1
+                    return
+                judge_j = 0
 
                 for tmp_box in msg.bounding_boxes:
                     Xmid=tmp_box.xmid/2
@@ -165,7 +171,7 @@ class Find_Color:
                     judge_i = 0
                     return
                 else:
-                    if judge_i < 5:
+                    if judge_i < 10:
                         judge_i += 1
                         return
                     else:
@@ -198,7 +204,7 @@ class Find_Color:
         self.color_image = np.frombuffer(image.data, dtype=np.uint8).reshape(
             image.height, image.width, -1)
         self.color_image = cv2.cvtColor(self.color_image, cv2.COLOR_BGR2RGB)
-        self.color_image = self.white_balance_1(self.color_image)
+        
         
         
         # print(overLoad)
